@@ -24,6 +24,8 @@ class StateBase():
                 changed = True
         self._state[state] = value
         return changed
+    def getValue(self, state: str) -> any:
+        return  self._state.get(state)
 
 class StateObject(object):
     def __init__(self, event_object: EventObject) -> None:

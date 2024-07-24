@@ -37,7 +37,7 @@ class Component(StateBase, EventObject):
         "Whether or not to automatically activate this component upon declaration"
         self.fl = _fl
         """FL Studio modules object: This object hold a reference to all Fl Studio modules and functions."""
-
+    
     def notify(self, event_name: str, *a, **k):
         """Helper method to publish event sourced form this component. The event_id is component_name.event. This is useful for communication between components if you need."""
         self.global_event_object.notify_listeners(

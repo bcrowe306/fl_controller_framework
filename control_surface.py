@@ -34,16 +34,17 @@ class ControlSurface(Component):
 
     def OnUpdateMeters(self):
         self.global_event_object.notify_listeners('OnUpdateMeters')
-        
-    def _get_components(self):
-        components = dict()
+
+    def _get_components(self) -> dict[str, Component]:
+        components : dict[str, Component] = dict()
         for attr in dir(self):
             component = getattr(self, attr)
             if isinstance(component, Component):
                 components[attr] = component
         return components
-    
-    def activate(self):
+
+    def activate(self) -> None:
+        """Activates this control surface and all member components of this control surface where component.auto_active = True"""
         super().activate()
         components = self._get_components()
         for component in components:
