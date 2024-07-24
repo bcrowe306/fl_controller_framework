@@ -1,8 +1,5 @@
-from framework.component import Component
-from framework.control import ControlBase
-from framework.controls.button import ButtonControl
-from mpc_studio_mk2.controls import Controls
-
+from fl_controller_framework.component import Component
+from fl_controller_framework.controls.button import ButtonControl
 
 class TransportComponent(Component):
     """This Component hold basic transport functionality. Instantiate this with your own ButtonControls as arguments."""
