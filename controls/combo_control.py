@@ -4,6 +4,8 @@ from ..util.midi import MIDI_STATUS
 from .button import ButtonControl
 from .jog_control import JogControl
 from .fader import FaderControl
+from .knob import KnobControl
+from .encoder import EncoderControl
 class CC(ControlBase):
     def __init__(self, name: str, channel: int, identifier: int, status=MIDI_STATUS.NOTE_ON_STATUS, playable=False, *a, **k):
         super().__init__(name, channel, identifier, status, playable, *a, **k)
@@ -53,11 +55,24 @@ class ComboControl(ControlBase):
                 self.notify(event, button_events[event])
 
         elif isinstance(self.primary_control, FaderControl):
-            pass
+            events = FaderControl.generate_event(event_data)
+            for event in events:
+                setattr(self, '_{}'.format(event), events[event])
+                self.notify(event, events[event])
+
+        elif isinstance(self.primary_control, KnobControl):
+            events = KnobControl.generate_event(event_data)
+            for event in events:
+                setattr(self, '_{}'.format(event), events[event])
+                self.notify(event, events[event])
+
+        elif isinstance(self.primary_control, EncoderControl):
+            events = EncoderControl.generate_encoder_events(event_data)
+            for event in events:
+                setattr(self, '_{}'.format(event), events[event])
+                self.notify(event, events[event])
 
     def activate(self):
         self.modifier_button.activate()
         self.event_object.subscribe('{}.{}'.format(self.name, 'value'), self._on_modified_primary_value)
         self.event_object.subscribe('{}.{}'.format(self.modifier_button.name, self.modifier_button_event), self._on_modifier_button_event)
-    
-        

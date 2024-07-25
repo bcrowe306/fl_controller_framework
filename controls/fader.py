@@ -28,7 +28,7 @@ from ..util.midi import MIDI_STATUS
 from ..fl_class import flMidiMsg
 
 class FaderControl(Control):
-    """This control type is for knobs on your midi controller. It accepts the same parameters as the base Control Type, but emmits special events along with the value of the fader.
+    """This control type is for faders on your midi controller. It accepts the same parameters as the base Control Type, but emmits special events along with the value of the fader.
     Events:
         * unit_value: This event is emitted with the fader position represented as a float from 0 - 1.0.
         * inverse_value: this event is emitted with fader position reverse, so value of 127 is 0 and 0 is 127.
