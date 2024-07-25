@@ -44,8 +44,8 @@ class Scales:
             Returns the midi_note: int, given an octave: int [0-10] and scale_degree: int [0-11]
         """
         octave_index = limit_range(octave_index, 0, Scales.midi_octaves_length)
-        scale_degree = limit_range(scale_degree, 0, 12)
-        midiNote = octave_index * 12 + scale_degree
+        # scale_degree = limit_range(scale_degree, 0, 12)
+        midiNote = (octave_index * 12) + scale_degree
         return  limit_range(midiNote, 0, 127)
     
     def getNoteIndexByNameSharp(key_name: str) -> int:

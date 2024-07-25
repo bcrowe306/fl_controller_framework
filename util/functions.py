@@ -25,9 +25,8 @@ def cycle_bounds(current_index: int, length: int, shift_amount: int) -> int:
         Negative shift amounts will decrease the index looping around to the index (length - 1)
     """
     last_index: int = length - 1
-    if shift_amount < (0 - last_index):
-        shift_amount = 0 - last_index
-    newIndex = current_index + shift_amount
+    if shift_amount < 0:
+        newIndex = current_index + shift_amount
     if newIndex >= length:
         newIndex = newIndex % length
     if newIndex < 0:

@@ -74,7 +74,11 @@ class Control(ControlBase):
         # self.notify_listeners('value', event)
 
     def activate(self):
-        """Is called by the component when activating. It registers the control with the Global control registry, and subscribes to it's own "value" events."""
+        """
+        activate() is called by the component when the component is activating. 
+        It registers the control with the Global Control Registry, and subscribes to it's own "value" events, that is, when a midiMsg comes from this control.
+        the _on_value() method is auto-registered to receive these events.
+        """
         self._initialize()
         self.event_object.subscribe('{}.value'.format(self.name), self._on_value)        
         self.registry.register_control(self)
