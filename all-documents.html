@@ -2289,7 +2289,7 @@
             <div class="type">Class</div>
             <div class="kind">Class</div>
             <div class="privacy">PUBLIC</div>
-            <div class="summary">This is the actual control Class. Inherit from this class when building your own controls if necessary. This is also the class from which the included controls are derrived.</div>
+            <div class="summary">This is the actual control Class. Inherit from this class when building your own controls if necessary. This is also the class from which the included controls are derived.</div>
           </li><li id="fl_controller_framework.control.Control.__init__">
             
             <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.control<wbr></wbr>.<wbr></wbr>Control<wbr></wbr>.__init__</div>
@@ -2305,7 +2305,7 @@
             <div class="type">Attribute</div>
             <div class="kind">Instance Variable</div>
             <div class="privacy">PRIVATE</div>
-            <div class="summary">Skin for this controller. A skin holds attributes on how to draw a particular "color" to the device. By color, I mean what midi message to send to the device to acheive the desired look, ie... LEDs, RGB leds, etc ...</div>
+            <div class="summary">Skin for this controller. A skin holds attributes on how to draw a particular "color" to the device. By color, I mean what midi message to send to the device to achieve the desired look, ie... LEDs, RGB leds, etc ...</div>
           </li><li id="fl_controller_framework.control.Control.feedback">
             
             <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.control<wbr></wbr>.<wbr></wbr>Control<wbr></wbr>.feedback</div>
@@ -2345,7 +2345,7 @@
             <div class="type">Function</div>
             <div class="kind">Method</div>
             <div class="privacy">PRIVATE</div>
-            <div class="summary">This function is called whenever a value from the control is sent. Example. If you move a knob on a CC#37, the values for that control change are sent as event arguments to this funciton. This is useful for emitting your own custom events for a control, or reacting to the raw data sent by the control.</div>
+            <div class="summary">This function is called whenever a value from the control is sent. Example. If you move a knob on a CC#37, the values for that control change are sent as event arguments to this function. This is useful for emitting your own custom events for a control, or reacting to the raw data sent by the control.</div>
           </li><li id="fl_controller_framework.control.Control.activate">
             
             <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.control<wbr></wbr>.<wbr></wbr>Control<wbr></wbr>.activate</div>
@@ -2353,7 +2353,7 @@
             <div class="type">Function</div>
             <div class="kind">Method</div>
             <div class="privacy">PUBLIC</div>
-            <div class="summary">activate() is called by the component when the component is activating.  It registers the control with the Global Control Registry, and subscribes to it's own "value" events, that is, when a midiMsg comes from this control...</div>
+            <div class="summary">activate() is called by the component when the component is activating.  It registers the control with the Global Control Registry, and subscribes to its own "value" events, that is, when a midiMsg comes from this control.</div>
           </li><li id="fl_controller_framework.control.Control.deactivate">
             
             <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.control<wbr></wbr>.<wbr></wbr>Control<wbr></wbr>.deactivate</div>
@@ -2361,31 +2361,7 @@
             <div class="type">Function</div>
             <div class="kind">Method</div>
             <div class="privacy">PUBLIC</div>
-            <div class="summary">This is called to deactivate the control. It removes the control from the global registry, and unsubscribes from it's own events. The activate and deactivation of cotnrols allows the control to be used in multiple scenarios and modes.</div>
-          </li><li id="fl_controller_framework.control.Control._initialize">
-            
-            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.control<wbr></wbr>.<wbr></wbr>Control<wbr></wbr>._initialize</div>
-            <div class="url">fl_controller_framework.control.Control.html#_initialize</div>
-            <div class="type">Function</div>
-            <div class="kind">Method</div>
-            <div class="privacy">PRIVATE</div>
-            <div class="summary">Initializes the control to its default color</div>
-          </li><li id="fl_controller_framework.control.Control.reset">
-            
-            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.control<wbr></wbr>.<wbr></wbr>Control<wbr></wbr>.reset</div>
-            <div class="url">fl_controller_framework.control.Control.html#reset</div>
-            <div class="type">Function</div>
-            <div class="kind">Method</div>
-            <div class="privacy">PUBLIC</div>
-            <div class="summary">Resets the control to its default color</div>
-          </li><li id="fl_controller_framework.control.Control.blackout">
-            
-            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.control<wbr></wbr>.<wbr></wbr>Control<wbr></wbr>.blackout</div>
-            <div class="url">fl_controller_framework.control.Control.html#blackout</div>
-            <div class="type">Function</div>
-            <div class="kind">Method</div>
-            <div class="privacy">PUBLIC</div>
-            <div class="summary">Blackout the control to its blackout color</div>
+            <div class="summary">deactivate() is called by the component when the component is deactivating. It unregisters the control from the Global Control Registry and unsubscribes from its own "value" events.</div>
           </li><li id="fl_controller_framework.control.Control.set_light">
             
             <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.control<wbr></wbr>.<wbr></wbr>Control<wbr></wbr>.set<wbr></wbr>_light</div>
@@ -2393,7 +2369,7 @@
             <div class="type">Function</div>
             <div class="kind">Method</div>
             <div class="privacy">PUBLIC</div>
-            <div class="summary">Method to send a color to the control by "value". A skin must be provided with the "value" arguments existing as an attribute on the skin. </div>
+            <div class="summary">Method to send a color to the control by "value". A skin must be provided to the control for set_light to function. A skin is a class with color members. Each color member has a draw method. The draw method contains the code to send color messages to the MIDI device.</div>
           </li><li id="fl_controller_framework.component.Component">
             
             <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.component<wbr></wbr>.<wbr></wbr>Component</div>
@@ -3281,7 +3257,7 @@
             <div class="type">Function</div>
             <div class="kind">Method</div>
             <div class="privacy">PRIVATE</div>
-            <div class="summary">This function is called whenever a value from the control is sent. Example. If you move a knob on a CC#37, the values for that control change are sent as event arguments to this funciton. This is useful for emitting your own custom events for a control, or reacting to the raw data sent by the control.</div>
+            <div class="summary">This function is called whenever a value from the control is sent. Example. If you move a knob on a CC#37, the values for that control change are sent as event arguments to this function. This is useful for emitting your own custom events for a control, or reacting to the raw data sent by the control.</div>
           </li><li id="fl_controller_framework.controls.fader.FaderControl 0">
             
             <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.controls<wbr></wbr>.fader<wbr></wbr>.<wbr></wbr>Fader<wbr></wbr>Control 0</div>
@@ -3313,7 +3289,7 @@
             <div class="type">Function</div>
             <div class="kind">Method</div>
             <div class="privacy">PRIVATE</div>
-            <div class="summary">This function is called whenever a value from the control is sent. Example. If you move a knob on a CC#37, the values for that control change are sent as event arguments to this funciton. This is useful for emitting your own custom events for a control, or reacting to the raw data sent by the control.</div>
+            <div class="summary">This function is called whenever a value from the control is sent. Example. If you move a knob on a CC#37, the values for that control change are sent as event arguments to this function. This is useful for emitting your own custom events for a control, or reacting to the raw data sent by the control.</div>
           </li><li id="fl_controller_framework.controls.fader.FaderControl">
             
             <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.controls<wbr></wbr>.fader<wbr></wbr>.<wbr></wbr>Fader<wbr></wbr>Control</div>
@@ -3345,7 +3321,7 @@
             <div class="type">Function</div>
             <div class="kind">Method</div>
             <div class="privacy">PRIVATE</div>
-            <div class="summary">This function is called whenever a value from the control is sent. Example. If you move a knob on a CC#37, the values for that control change are sent as event arguments to this funciton. This is useful for emitting your own custom events for a control, or reacting to the raw data sent by the control.</div>
+            <div class="summary">This function is called whenever a value from the control is sent. Example. If you move a knob on a CC#37, the values for that control change are sent as event arguments to this function. This is useful for emitting your own custom events for a control, or reacting to the raw data sent by the control.</div>
           </li><li id="fl_controller_framework.controls.knob.KnobControl">
             
             <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.controls<wbr></wbr>.knob<wbr></wbr>.<wbr></wbr>Knob<wbr></wbr>Control</div>
@@ -3377,7 +3353,7 @@
             <div class="type">Function</div>
             <div class="kind">Method</div>
             <div class="privacy">PRIVATE</div>
-            <div class="summary">This function is called whenever a value from the control is sent. Example. If you move a knob on a CC#37, the values for that control change are sent as event arguments to this funciton. This is useful for emitting your own custom events for a control, or reacting to the raw data sent by the control.</div>
+            <div class="summary">This function is called whenever a value from the control is sent. Example. If you move a knob on a CC#37, the values for that control change are sent as event arguments to this function. This is useful for emitting your own custom events for a control, or reacting to the raw data sent by the control.</div>
           </li><li id="fl_controller_framework.controls.encoder.EncoderControl">
             
             <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.controls<wbr></wbr>.encoder<wbr></wbr>.<wbr></wbr>Encoder<wbr></wbr>Control</div>

@@ -140,27 +140,7 @@
         
 
         
-            <div class="itemName"><code><a href="fl_controller_framework.control.Control.html#blackout" class="internal-link" title="fl_controller_framework.control.Control.blackout">blackout</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
             <div class="itemName"><code><a href="fl_controller_framework.control.Control.html#deactivate" class="internal-link" title="fl_controller_framework.control.Control.deactivate">deactivate</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
-            <div class="itemName"><code><a href="fl_controller_framework.control.Control.html#reset" class="internal-link" title="fl_controller_framework.control.Control.reset">reset</a></code>
             </div>
         
 
@@ -180,7 +160,27 @@
         
 
         
+            <div class="itemName"><code><a href="fl_controller_framework.control.ControlBase.html#blackout" class="internal-link" title="fl_controller_framework.control.ControlBase.blackout">blackout</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="fl_controller_framework.control.ControlBase.html#notify" class="internal-link" title="fl_controller_framework.control.ControlBase.notify">notify</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.control.ControlBase.html#reset" class="internal-link" title="fl_controller_framework.control.ControlBase.reset">reset</a></code>
             </div>
         
 
@@ -231,16 +231,6 @@
 
         
             <div class="itemName"><code><a href="fl_controller_framework.state.StateBase.html#isChanged" class="internal-link" title="fl_controller_framework.state.StateBase.isChanged">is<wbr></wbr>Changed</a></code>
-            </div>
-        
-
-    </li><li class="private">
-        
-        
-        
-
-        
-            <div class="itemName"><code><a href="fl_controller_framework.control.Control.html#_initialize" class="internal-link" title="fl_controller_framework.control.Control._initialize">_initialize</a></code>
             </div>
         
 
@@ -566,7 +556,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">JogControl</span>(<a href="fl_controller_framework.control.Control.html" class="internal-link" title="fl_controller_framework.control.Control">Control</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/controls/jog_control.py#L5" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.controls.jog_control.JogControl.__init__">JogControl(name, channel, identifier, status, ...)</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">JogControl</span>(<a href="fl_controller_framework.control.Control.html" class="internal-link" title="fl_controller_framework.control.Control">Control</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/7f575ccb6605e6dd4d67f31249926243c8e15915/controls/jog_control.py#L5" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.controls.jog_control.JogControl.__init__">JogControl(name, channel, identifier, status, ...)</a></code></p>
           <p><a href="classIndex.html#fl_controller_framework.controls.jog_control.JogControl">View In Hierarchy</a></p>
         </div>
 
@@ -621,7 +611,7 @@ Args:
     
     <td>Method</td>
     <td><code><a href="#_on_value" class="internal-link" title="fl_controller_framework.controls.jog_control.JogControl._on_value">_on<wbr></wbr>_value</a></code></td>
-    <td>This function is called whenever a value from the control is sent. Example. If you move a knob on a CC#37, the values for that control change are sent as event arguments to this funciton. This is useful for emitting your own custom events for a control, or reacting to the raw data sent by the control.</td>
+    <td>This function is called whenever a value from the control is sent. Example. If you move a knob on a CC#37, the values for that control change are sent as event arguments to this function. This is useful for emitting your own custom events for a control, or reacting to the raw data sent by the control.</td>
   </tr>
 </table>
           
@@ -635,27 +625,17 @@ Args:
     
     <td>Method</td>
     <td><code><a href="fl_controller_framework.control.Control.html#activate" class="internal-link" title="fl_controller_framework.control.Control.activate">activate</a></code></td>
-    <td>activate() is called by the component when the component is activating.  It registers the control with the Global Control Registry, and subscribes to it's own "value" events, that is, when a midiMsg comes from this control...</td>
-  </tr><tr class="basemethod">
-    
-    <td>Method</td>
-    <td><code><a href="fl_controller_framework.control.Control.html#blackout" class="internal-link" title="fl_controller_framework.control.Control.blackout">blackout</a></code></td>
-    <td>Blackout the control to its blackout color</td>
+    <td>activate() is called by the component when the component is activating.  It registers the control with the Global Control Registry, and subscribes to its own "value" events, that is, when a midiMsg comes from this control.</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
     <td><code><a href="fl_controller_framework.control.Control.html#deactivate" class="internal-link" title="fl_controller_framework.control.Control.deactivate">deactivate</a></code></td>
-    <td>This is called to deactivate the control. It removes the control from the global registry, and unsubscribes from it's own events. The activate and deactivation of cotnrols allows the control to be used in multiple scenarios and modes.</td>
-  </tr><tr class="basemethod">
-    
-    <td>Method</td>
-    <td><code><a href="fl_controller_framework.control.Control.html#reset" class="internal-link" title="fl_controller_framework.control.Control.reset">reset</a></code></td>
-    <td>Resets the control to its default color</td>
+    <td>deactivate() is called by the component when the component is deactivating. It unregisters the control from the Global Control Registry and unsubscribes from its own "value" events.</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
     <td><code><a href="fl_controller_framework.control.Control.html#set_light" class="internal-link" title="fl_controller_framework.control.Control.set_light">set<wbr></wbr>_light</a></code></td>
-    <td>Method to send a color to the control by "value". A skin must be provided with the "value" arguments existing as an attribute on the skin. </td>
+    <td>Method to send a color to the control by "value". A skin must be provided to the control for set_light to function. A skin is a class with color members. Each color member has a draw method. The draw method contains the code to send color messages to the MIDI device.</td>
   </tr><tr class="baseinstancevariable">
     
     <td>Instance Variable</td>
@@ -676,16 +656,11 @@ Args:
     <td>Instance Variable</td>
     <td><code><a href="fl_controller_framework.control.Control.html#feedback_process" class="internal-link" title="fl_controller_framework.control.Control.feedback_process">feedback<wbr></wbr>_process</a></code></td>
     <td>This is a function that processes the feedback before it is sent back.</td>
-  </tr><tr class="basemethod private">
-    
-    <td>Method</td>
-    <td><code><a href="fl_controller_framework.control.Control.html#_initialize" class="internal-link" title="fl_controller_framework.control.Control._initialize">_initialize</a></code></td>
-    <td>Initializes the control to its default color</td>
   </tr><tr class="baseinstancevariable private">
     
     <td>Instance Variable</td>
     <td><code><a href="fl_controller_framework.control.Control.html#_skin" class="internal-link" title="fl_controller_framework.control.Control._skin">_skin</a></code></td>
-    <td>Skin for this controller. A skin holds attributes on how to draw a particular "color" to the device. By color, I mean what midi message to send to the device to acheive the desired look, ie... LEDs, RGB leds, etc ...</td>
+    <td>Skin for this controller. A skin holds attributes on how to draw a particular "color" to the device. By color, I mean what midi message to send to the device to achieve the desired look, ie... LEDs, RGB leds, etc ...</td>
   </tr>
 </table>
             
@@ -698,8 +673,18 @@ Args:
   <tr class="basemethod">
     
     <td>Method</td>
+    <td><code><a href="fl_controller_framework.control.ControlBase.html#blackout" class="internal-link" title="fl_controller_framework.control.ControlBase.blackout">blackout</a></code></td>
+    <td>Override Method: Inheriting classes should override this method.. This turns the the control to blackout state.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
     <td><code><a href="fl_controller_framework.control.ControlBase.html#notify" class="internal-link" title="fl_controller_framework.control.ControlBase.notify">notify</a></code></td>
     <td>Alias convenience method for self.event_object.notify_listeners. Calling this method automatically prefixed the event name with the name of the control.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.control.ControlBase.html#reset" class="internal-link" title="fl_controller_framework.control.ControlBase.reset">reset</a></code></td>
+    <td>Override Method: Inheriting classes should override this method.. This resets the control to default state.</td>
   </tr><tr class="baseinstancevariable">
     
     <td>Instance Variable</td>
@@ -809,7 +794,7 @@ Args:
     
     @<a href="https://docs.python.org/3/library/functions.html#staticmethod" class="intersphinx-link">staticmethod</a><br />
     <span class="py-keyword">def</span> <span class="py-defname">generate_jog_events</span><span class="function-signature">(status, inc_value, dec_value, event_data: <code><a href="fl_controller_framework.fl_class.flMidiMsg.html" class="internal-link" title="fl_controller_framework.fl_class.flMidiMsg">flMidiMsg</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/controls/jog_control.py#L24">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/7f575ccb6605e6dd4d67f31249926243c8e15915/controls/jog_control.py#L24">
       
       (source)
     </a>
@@ -845,7 +830,7 @@ Returns:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, channel: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>, identifier: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>, status: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> = <a href="fl_controller_framework.util.midi.MIDI_STATUS.html#CC_STATUS" class="internal-link" title="fl_controller_framework.util.midi.MIDI_STATUS.CC_STATUS">MIDI_STATUS.CC_STATUS</a>, inc_value: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> = 1, dec_value: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> = 127, playable=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, feedback=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, feedback_process=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, default_color=<span class="rst-variable-quote">'</span><span class="rst-variable-string">Default</span><span class="rst-variable-quote">'</span>, blackout_color=<span class="rst-variable-quote">'</span><span class="rst-variable-string">Off</span><span class="rst-variable-quote">'</span>, skin=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/controls/jog_control.py#L50">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/7f575ccb6605e6dd4d67f31249926243c8e15915/controls/jog_control.py#L50">
       
       (source)
     </a>
@@ -871,7 +856,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">dec_value</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/controls/jog_control.py#L54">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/7f575ccb6605e6dd4d67f31249926243c8e15915/controls/jog_control.py#L54">
       
       (source)
     </a>
@@ -898,7 +883,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">inc_value</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/controls/jog_control.py#L53">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/7f575ccb6605e6dd4d67f31249926243c8e15915/controls/jog_control.py#L53">
       
       (source)
     </a>
@@ -925,7 +910,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">status</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/controls/jog_control.py#L55">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/7f575ccb6605e6dd4d67f31249926243c8e15915/controls/jog_control.py#L55">
       
       (source)
     </a>
@@ -953,7 +938,7 @@ Returns:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_on_value</span><span class="function-signature">(self, event_data: <code><a href="fl_controller_framework.fl_class.flMidiMsg.html" class="internal-link" title="fl_controller_framework.fl_class.flMidiMsg">flMidiMsg</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/controls/jog_control.py#L57">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/7f575ccb6605e6dd4d67f31249926243c8e15915/controls/jog_control.py#L57">
       
       (source)
     </a>
@@ -966,7 +951,7 @@ Returns:
   <div class="docstring functionBody">
     <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.control.Control.html#_on_value" class="internal-link">fl_controller_framework.control.Control._on_value</a></code></div>
     <div><p class="pre">This function is called whenever a value from the control is sent.
-Example. If you move a knob on a CC#37, the values for that control change are sent as event arguments to this funciton.
+Example. If you move a knob on a CC#37, the values for that control change are sent as event arguments to this function.
 This is useful for emitting your own custom events for a control, or reacting to the raw data sent by the control.</p></div>
   </div>
 </div>
@@ -982,7 +967,7 @@ This is useful for emitting your own custom events for a control, or reacting to
     <div class="container">
       <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
     generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-      24.3.3 at 2024-07-26 02:47:51.
+      24.3.3 at 2024-07-26 03:14:45.
     </div>
     
     <script src="ajax.js" type="text/javascript"></script>
