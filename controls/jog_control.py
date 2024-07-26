@@ -4,7 +4,7 @@ from ..fl_class import flMidiMsg
 
 class JogControl(Control):
     """
-    Represents a jog control that generates events based on MIDI input.
+    Represents a Jog control that generates events based on MIDI input.
 
     Args:
         name (str): The name of the control.
