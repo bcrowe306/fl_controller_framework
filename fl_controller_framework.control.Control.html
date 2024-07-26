@@ -12,8 +12,8 @@
     </meta>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
-    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="readthedocstheme.css" />
     <link rel="stylesheet" type="text/css" href="extra.css" />
 </head>
 
@@ -59,83 +59,14 @@
 
       </div>
 
-      <div id="search-results-container" style="display: none;">
-        
-        <div id="search-buttons">
-          <span class="label label-default" id="search-docstrings-button">
-          <label class="checkbox-inline">
-            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
-              search in docstrings
-            </input>
-          </label>
-          </span>
-          
-        </div>
-        
-        <noscript>
-            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
-        </noscript>
-
-        <div class="hint" id="search-help-box">
-          <p class="rst-last">
-      
-            Search bar offers the following options:
-            <ul>   
-                <li>
-                  <strong>Term presence.</strong> The below example searches for documents that 
-                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
-                </li> 
-
-                <li>
-                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
-                </li> 
-
-                <li>
-                  <strong>Search in specific fields.</strong> The following search matches all objects 
-                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
-
-                  <p>
-                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
-                    Last two fields are only applicable if "search in docstrings" is enabled.
-                  </p>
-                </li>
-
-                <li>
-                  <strong>Fuzzy matches.</strong> The following search matches all documents 
-                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
-                </li>
-            </ul>
-
-          </p>
-        </div>
-
-        <div id="search-status"> </div>
-
-        <div class="warning" id="search-warn-box" style="display: none;">
-          <p class="rst-last"><span id="search-warn"></span></p>
-        </div>
-
-        <table id="search-results">
-          <!-- Filled dynamically by JS -->
-        </table>
-        
-        <div style="margin-top: 8px;">
-          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
-        </div>
-      </div>
-
     </div>
 
-
   </div>
-</nav>
-    
-    <div class="container-fluid">
 
-      <!-- Side navigation -->
-      <div class="sidebarcontainer" style="display: none;">
-        
-        <div class="sidebar"><nav class="sidebar">
+    
+        <!-- Side navigation -->
+      <div class="sidebarcontainer">
+        <nav class="sidebar">
   
 
   <div>
@@ -524,19 +455,84 @@
   </div>
 
 </nav>
-        </div>
-        <div id="collapseSideBar">
-          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
-          </a>
-        </div> 
-        <script src="sidebartoggle.js" type="text/javascript"></script>
-       
+        <!-- No sidebar toggle for read the docs theme, the sidebar is always
+          visible when the screen is width enough.
+        -->
       </div>
+
+    </nav>
+    
+    <div class="container-fluid">
 
       <div id="main" class="">
         
 
         
+
+        <div id="search-results-container" style="display: none;">
+        
+          <div id="search-buttons">
+            <span class="label label-default" id="search-docstrings-button">
+            <label class="checkbox-inline">
+              <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+                search in docstrings
+              </input>
+            </label>
+            </span>
+            
+          </div>
+          
+          <noscript>
+              <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+          </noscript>
+  
+          <div class="hint" id="search-help-box">
+            <p class="rst-last">
+        
+              Search bar offers the following options:
+              <ul>   
+                  <li>
+                    <strong>Term presence.</strong> The below example searches for documents that 
+                      must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                  </li> 
+  
+                  <li>
+                    <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                  </li> 
+  
+                  <li>
+                    <strong>Search in specific fields.</strong> The following search matches all objects 
+                    in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+  
+                    <p>
+                      Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                      Last two fields are only applicable if "search in docstrings" is enabled.
+                    </p>
+                  </li>
+  
+                  <li>
+                    <strong>Fuzzy matches.</strong> The following search matches all documents 
+                    that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                  </li>
+              </ul>
+  
+            </p>
+          </div>
+  
+          <div id="search-status"> </div>
+  
+          <div class="warning" id="search-warn-box" style="display: none;">
+            <p class="rst-last"><span id="search-warn"></span></p>
+          </div>
+  
+          <table id="search-results">
+            <!-- Filled dynamically by JS -->
+          </table>
+          
+          <div style="margin-top: 8px;">
+            <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+          </div>
+        </div>
 
         <div class="page-header">
           <h1 class="class"><code><code><a href="index.html" class="internal-link">fl_controller_framework</a></code><wbr></wbr>.<code><a href="fl_controller_framework.control.html" class="internal-link" title="fl_controller_framework.control">control</a></code><wbr></wbr>.<code><a href="fl_controller_framework.control.Control.html" class="internal-link" title="fl_controller_framework.control.Control">Control</a></code></code></h1>
@@ -550,7 +546,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">Control</span>(<a href="fl_controller_framework.control.ControlBase.html" class="internal-link" title="fl_controller_framework.control.ControlBase">ControlBase</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/control.py#L53" class="sourceLink">(source)</a></code></p><p>Known subclasses: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link">fl_controller_framework.controls.button.ButtonControl</a></code>, <code><a href="fl_controller_framework.controls.encoder.EncoderControl.html" class="internal-link">fl_controller_framework.controls.encoder.EncoderControl</a></code>, <code><a href="fl_controller_framework.controls.fader.FaderControl.html" class="internal-link">fl_controller_framework.controls.fader.FaderControl</a></code>, <code><a href="fl_controller_framework.controls.fader.FaderControl%200.html" class="internal-link">fl_controller_framework.controls.fader.FaderControl 0</a></code>, <code><a href="fl_controller_framework.controls.jog_control.JogControl.html" class="internal-link">fl_controller_framework.controls.jog_control.JogControl</a></code>, <code><a href="fl_controller_framework.controls.knob.KnobControl.html" class="internal-link">fl_controller_framework.controls.knob.KnobControl</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.control.Control.__init__">Control(name, channel, identifier, playable, ...)</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">Control</span>(<a href="fl_controller_framework.control.ControlBase.html" class="internal-link" title="fl_controller_framework.control.ControlBase">ControlBase</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/control.py#L53" class="sourceLink">(source)</a></code></p><p>Known subclasses: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link">fl_controller_framework.controls.button.ButtonControl</a></code>, <code><a href="fl_controller_framework.controls.encoder.EncoderControl.html" class="internal-link">fl_controller_framework.controls.encoder.EncoderControl</a></code>, <code><a href="fl_controller_framework.controls.fader.FaderControl.html" class="internal-link">fl_controller_framework.controls.fader.FaderControl</a></code>, <code><a href="fl_controller_framework.controls.fader.FaderControl%200.html" class="internal-link">fl_controller_framework.controls.fader.FaderControl 0</a></code>, <code><a href="fl_controller_framework.controls.jog_control.JogControl.html" class="internal-link">fl_controller_framework.controls.jog_control.JogControl</a></code>, <code><a href="fl_controller_framework.controls.knob.KnobControl.html" class="internal-link">fl_controller_framework.controls.knob.KnobControl</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.control.Control.__init__">Control(name, channel, identifier, playable, ...)</a></code></p>
           <p><a href="classIndex.html#fl_controller_framework.control.Control">View In Hierarchy</a></p>
         </div>
 
@@ -755,7 +751,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, name, channel, identifier, playable=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, status=<a href="fl_controller_framework.util.midi.MIDI_STATUS.html#NOTE_ON_STATUS" class="internal-link" title="fl_controller_framework.util.midi.MIDI_STATUS.NOTE_ON_STATUS">MIDI_STATUS.NOTE_ON_STATUS</a>, feedback=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, feedback_process=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, default_color=<span class="rst-variable-quote">'</span><span class="rst-variable-string">Default</span><span class="rst-variable-quote">'</span>, blackout_color=<span class="rst-variable-quote">'</span><span class="rst-variable-string">Off</span><span class="rst-variable-quote">'</span>, skin=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/control.py#L55">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/control.py#L55">
       
       (source)
     </a>
@@ -782,7 +778,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">activate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/control.py#L76">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/control.py#L76">
       
       (source)
     </a>
@@ -811,7 +807,7 @@ the _on_value() method is auto-registered to receive these events.</p></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">blackout</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/control.py#L100">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/control.py#L100">
       
       (source)
     </a>
@@ -838,7 +834,7 @@ the _on_value() method is auto-registered to receive these events.</p></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">deactivate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/control.py#L86">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/control.py#L86">
       
       (source)
     </a>
@@ -865,7 +861,7 @@ the _on_value() method is auto-registered to receive these events.</p></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">reset</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/control.py#L96">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/control.py#L96">
       
       (source)
     </a>
@@ -892,7 +888,7 @@ the _on_value() method is auto-registered to receive these events.</p></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">set_light</span><span class="function-signature">(self, value, *a, **k)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/control.py#L104">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/control.py#L104">
       
       (source)
     </a>
@@ -918,7 +914,7 @@ the _on_value() method is auto-registered to receive these events.</p></div>
   <div class="functionHeader">
     
     <span class="py-defname">blackout_color</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/control.py#L65">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/control.py#L65">
       
       (source)
     </a>
@@ -945,7 +941,7 @@ the _on_value() method is auto-registered to receive these events.</p></div>
   <div class="functionHeader">
     
     <span class="py-defname">default_color</span>: <code><a href="fl_controller_framework.skin.SkinColor.html" class="internal-link" title="fl_controller_framework.skin.SkinColor">SkinColor</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/control.py#L63">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/control.py#L63">
       
       (source)
     </a>
@@ -972,7 +968,7 @@ the _on_value() method is auto-registered to receive these events.</p></div>
   <div class="functionHeader">
     
     <span class="py-defname">feedback</span>: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/control.py#L59">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/control.py#L59">
       
       (source)
     </a>
@@ -999,7 +995,7 @@ the _on_value() method is auto-registered to receive these events.</p></div>
   <div class="functionHeader">
     
     <span class="py-defname">feedback_process</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/control.py#L61">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/control.py#L61">
       
       (source)
     </a>
@@ -1027,7 +1023,7 @@ the _on_value() method is auto-registered to receive these events.</p></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_initialize</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/control.py#L92">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/control.py#L92">
       
       (source)
     </a>
@@ -1054,7 +1050,7 @@ the _on_value() method is auto-registered to receive these events.</p></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_on_value</span><span class="function-signature">(self, event)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/control.py#L68">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/control.py#L68">
       
       (source)
     </a>
@@ -1082,7 +1078,7 @@ This is useful for emitting your own custom events for a control, or reacting to
   <div class="functionHeader">
     
     <span class="py-defname">_skin</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/control.py#L57">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/control.py#L57">
       
       (source)
     </a>
@@ -1104,21 +1100,20 @@ This is useful for emitting your own custom events for a control, or reacting to
     </div>
 
     <footer class="navbar navbar-default">
-
+    <hr />
+    
+    
+    <div class="container">
+      <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
+    generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+      24.3.3 at 2024-07-26 02:47:51.
+    </div>
+    
+    <script src="ajax.js" type="text/javascript"></script>
+    <script src="searchlib.js" type="text/javascript"></script>
+    <script src="search.js" type="text/javascript"></script>
   
-  <div class="container">
-    <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
-  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.3.3 at 2024-07-26 02:44:22.
-  </div>
-
-  <!-- Search related scripts needs to be loaded at the end of HTML 
-    parsing not to introduce overhead and display HTML data asap -->
-  <script src="ajax.js" type="text/javascript"></script>
-  <script src="searchlib.js" type="text/javascript"></script>
-  <script src="search.js" type="text/javascript"></script>
-
-</footer>
+  </footer>
   
     <script src="pydoctor.js" type="text/javascript"></script>
 

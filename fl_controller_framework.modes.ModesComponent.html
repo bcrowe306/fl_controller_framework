@@ -12,8 +12,8 @@
     </meta>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
-    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="readthedocstheme.css" />
     <link rel="stylesheet" type="text/css" href="extra.css" />
 </head>
 
@@ -59,83 +59,14 @@
 
       </div>
 
-      <div id="search-results-container" style="display: none;">
-        
-        <div id="search-buttons">
-          <span class="label label-default" id="search-docstrings-button">
-          <label class="checkbox-inline">
-            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
-              search in docstrings
-            </input>
-          </label>
-          </span>
-          
-        </div>
-        
-        <noscript>
-            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
-        </noscript>
-
-        <div class="hint" id="search-help-box">
-          <p class="rst-last">
-      
-            Search bar offers the following options:
-            <ul>   
-                <li>
-                  <strong>Term presence.</strong> The below example searches for documents that 
-                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
-                </li> 
-
-                <li>
-                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
-                </li> 
-
-                <li>
-                  <strong>Search in specific fields.</strong> The following search matches all objects 
-                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
-
-                  <p>
-                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
-                    Last two fields are only applicable if "search in docstrings" is enabled.
-                  </p>
-                </li>
-
-                <li>
-                  <strong>Fuzzy matches.</strong> The following search matches all documents 
-                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
-                </li>
-            </ul>
-
-          </p>
-        </div>
-
-        <div id="search-status"> </div>
-
-        <div class="warning" id="search-warn-box" style="display: none;">
-          <p class="rst-last"><span id="search-warn"></span></p>
-        </div>
-
-        <table id="search-results">
-          <!-- Filled dynamically by JS -->
-        </table>
-        
-        <div style="margin-top: 8px;">
-          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
-        </div>
-      </div>
-
     </div>
 
-
   </div>
-</nav>
-    
-    <div class="container-fluid">
 
-      <!-- Side navigation -->
-      <div class="sidebarcontainer" style="display: none;">
-        
-        <div class="sidebar"><nav class="sidebar">
+    
+        <!-- Side navigation -->
+      <div class="sidebarcontainer">
+        <nav class="sidebar">
   
 
   <div>
@@ -584,19 +515,84 @@
   </div>
 
 </nav>
-        </div>
-        <div id="collapseSideBar">
-          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
-          </a>
-        </div> 
-        <script src="sidebartoggle.js" type="text/javascript"></script>
-       
+        <!-- No sidebar toggle for read the docs theme, the sidebar is always
+          visible when the screen is width enough.
+        -->
       </div>
+
+    </nav>
+    
+    <div class="container-fluid">
 
       <div id="main" class="">
         
 
         
+
+        <div id="search-results-container" style="display: none;">
+        
+          <div id="search-buttons">
+            <span class="label label-default" id="search-docstrings-button">
+            <label class="checkbox-inline">
+              <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+                search in docstrings
+              </input>
+            </label>
+            </span>
+            
+          </div>
+          
+          <noscript>
+              <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+          </noscript>
+  
+          <div class="hint" id="search-help-box">
+            <p class="rst-last">
+        
+              Search bar offers the following options:
+              <ul>   
+                  <li>
+                    <strong>Term presence.</strong> The below example searches for documents that 
+                      must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                  </li> 
+  
+                  <li>
+                    <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                  </li> 
+  
+                  <li>
+                    <strong>Search in specific fields.</strong> The following search matches all objects 
+                    in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+  
+                    <p>
+                      Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                      Last two fields are only applicable if "search in docstrings" is enabled.
+                    </p>
+                  </li>
+  
+                  <li>
+                    <strong>Fuzzy matches.</strong> The following search matches all documents 
+                    that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                  </li>
+              </ul>
+  
+            </p>
+          </div>
+  
+          <div id="search-status"> </div>
+  
+          <div class="warning" id="search-warn-box" style="display: none;">
+            <p class="rst-last"><span id="search-warn"></span></p>
+          </div>
+  
+          <table id="search-results">
+            <!-- Filled dynamically by JS -->
+          </table>
+          
+          <div style="margin-top: 8px;">
+            <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+          </div>
+        </div>
 
         <div class="page-header">
           <h1 class="class"><code><code><a href="index.html" class="internal-link">fl_controller_framework</a></code><wbr></wbr>.<code><a href="fl_controller_framework.modes.html" class="internal-link" title="fl_controller_framework.modes">modes</a></code><wbr></wbr>.<code><a href="fl_controller_framework.modes.ModesComponent.html" class="internal-link" title="fl_controller_framework.modes.ModesComponent">ModesComponent</a></code></code></h1>
@@ -610,7 +606,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">ModesComponent</span>(<a href="fl_controller_framework.component.Component.html" class="internal-link" title="fl_controller_framework.component.Component">Component</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/modes.py#L32" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.modes.ModesComponent.__init__">ModesComponent(name, cycle_control, default_mode, *a, **k)</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">ModesComponent</span>(<a href="fl_controller_framework.component.Component.html" class="internal-link" title="fl_controller_framework.component.Component">Component</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/modes.py#L32" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.modes.ModesComponent.__init__">ModesComponent(name, cycle_control, default_mode, *a, **k)</a></code></p>
           <p><a href="classIndex.html#fl_controller_framework.modes.ModesComponent">View In Hierarchy</a></p>
         </div>
 
@@ -845,7 +841,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, cycle_control: <code><a href="fl_controller_framework.control.Control.html" class="internal-link" title="fl_controller_framework.control.Control">Control</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, default_mode: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, *a, **k)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/modes.py#L34">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/modes.py#L34">
       
       (source)
     </a>
@@ -872,7 +868,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">activate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/modes.py#L106">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/modes.py#L106">
       
       (source)
     </a>
@@ -899,7 +895,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">add_control</span><span class="function-signature">(self, mode_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, control: <code><a href="fl_controller_framework.control.Control.html" class="internal-link" title="fl_controller_framework.control.Control">Control</a></code>, event_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> = <span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/modes.py#L65">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/modes.py#L65">
       
       (source)
     </a>
@@ -926,7 +922,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">add_mode</span><span class="function-signature">(self, mode: <code><a href="fl_controller_framework.modes.Mode.html" class="internal-link" title="fl_controller_framework.modes.Mode">Mode</a></code>, behavior: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> = <span class="rst-variable-quote">'</span><span class="rst-variable-string">default</span><span class="rst-variable-quote">'</span>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/modes.py#L61">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/modes.py#L61">
       
       (source)
     </a>
@@ -953,7 +949,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">deactivate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/modes.py#L120">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/modes.py#L120">
       
       (source)
     </a>
@@ -980,7 +976,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">set_active_mode</span><span class="function-signature">(self, mode_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/modes.py#L75">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/modes.py#L75">
       
       (source)
     </a>
@@ -1006,7 +1002,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">cycle_control</span>: <code><a href="fl_controller_framework.control.Control.html" class="internal-link" title="fl_controller_framework.control.Control">Control</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/modes.py#L39">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/modes.py#L39">
       
       (source)
     </a>
@@ -1033,7 +1029,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">default_mode</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/modes.py#L42">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/modes.py#L42">
       
       (source)
     </a>
@@ -1060,7 +1056,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">modes</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="intersphinx-link">dict</a>[<wbr></wbr><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a>, <wbr></wbr><a href="fl_controller_framework.modes.Mode.html" class="internal-link" title="fl_controller_framework.modes.Mode">Mode</a>]</code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/modes.py#L45">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/modes.py#L45">
       
       (source)
     </a>
@@ -1087,7 +1083,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">name</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/modes.py#L36">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/modes.py#L36">
       
       (source)
     </a>
@@ -1115,7 +1111,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__activate_mode</span><span class="function-signature">(self, mode_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/modes.py#L88">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/modes.py#L88">
       
       (source)
     </a>
@@ -1142,7 +1138,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__deactivate_current_mode</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/modes.py#L95">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/modes.py#L95">
       
       (source)
     </a>
@@ -1169,7 +1165,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_generate_mode_name</span><span class="function-signature">(self, mode_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/modes.py#L101">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/modes.py#L101">
       
       (source)
     </a>
@@ -1196,7 +1192,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_get_components</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/modes.py#L52">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/modes.py#L52">
       
       (source)
     </a>
@@ -1223,7 +1219,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_get_ctrl_from_mode_name</span><span class="function-signature">(self, mode_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>) -&gt; <code><a href="fl_controller_framework.control.Control.html" class="internal-link" title="fl_controller_framework.control.Control">Control</a></code></span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/modes.py#L70">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/modes.py#L70">
       
       (source)
     </a>
@@ -1250,7 +1246,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_on_control_event</span><span class="function-signature">(self, mode_name)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/modes.py#L117">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/modes.py#L117">
       
       (source)
     </a>
@@ -1276,7 +1272,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">_active_mode</span>: <code><a href="fl_controller_framework.modes.Mode.html" class="internal-link" title="fl_controller_framework.modes.Mode">Mode</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/modes.py#L49">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/modes.py#L49">
       
       (source)
     </a>
@@ -1303,7 +1299,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">_controls</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/modes.py#L48">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/modes.py#L48">
       
       (source)
     </a>
@@ -1330,7 +1326,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">_previous_mode</span>: <code><a href="fl_controller_framework.modes.Mode.html" class="internal-link" title="fl_controller_framework.modes.Mode">Mode</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/modes.py#L50">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/modes.py#L50">
       
       (source)
     </a>
@@ -1352,21 +1348,20 @@
     </div>
 
     <footer class="navbar navbar-default">
-
+    <hr />
+    
+    
+    <div class="container">
+      <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
+    generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+      24.3.3 at 2024-07-26 02:47:51.
+    </div>
+    
+    <script src="ajax.js" type="text/javascript"></script>
+    <script src="searchlib.js" type="text/javascript"></script>
+    <script src="search.js" type="text/javascript"></script>
   
-  <div class="container">
-    <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
-  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.3.3 at 2024-07-26 02:44:22.
-  </div>
-
-  <!-- Search related scripts needs to be loaded at the end of HTML 
-    parsing not to introduce overhead and display HTML data asap -->
-  <script src="ajax.js" type="text/javascript"></script>
-  <script src="searchlib.js" type="text/javascript"></script>
-  <script src="search.js" type="text/javascript"></script>
-
-</footer>
+  </footer>
   
     <script src="pydoctor.js" type="text/javascript"></script>
 

@@ -12,8 +12,8 @@
     </meta>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
-    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="readthedocstheme.css" />
     <link rel="stylesheet" type="text/css" href="extra.css" />
 </head>
 
@@ -59,83 +59,14 @@
 
       </div>
 
-      <div id="search-results-container" style="display: none;">
-        
-        <div id="search-buttons">
-          <span class="label label-default" id="search-docstrings-button">
-          <label class="checkbox-inline">
-            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
-              search in docstrings
-            </input>
-          </label>
-          </span>
-          
-        </div>
-        
-        <noscript>
-            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
-        </noscript>
-
-        <div class="hint" id="search-help-box">
-          <p class="rst-last">
-      
-            Search bar offers the following options:
-            <ul>   
-                <li>
-                  <strong>Term presence.</strong> The below example searches for documents that 
-                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
-                </li> 
-
-                <li>
-                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
-                </li> 
-
-                <li>
-                  <strong>Search in specific fields.</strong> The following search matches all objects 
-                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
-
-                  <p>
-                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
-                    Last two fields are only applicable if "search in docstrings" is enabled.
-                  </p>
-                </li>
-
-                <li>
-                  <strong>Fuzzy matches.</strong> The following search matches all documents 
-                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
-                </li>
-            </ul>
-
-          </p>
-        </div>
-
-        <div id="search-status"> </div>
-
-        <div class="warning" id="search-warn-box" style="display: none;">
-          <p class="rst-last"><span id="search-warn"></span></p>
-        </div>
-
-        <table id="search-results">
-          <!-- Filled dynamically by JS -->
-        </table>
-        
-        <div style="margin-top: 8px;">
-          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
-        </div>
-      </div>
-
     </div>
 
-
   </div>
-</nav>
-    
-    <div class="container-fluid">
 
-      <!-- Side navigation -->
-      <div class="sidebarcontainer" style="display: none;">
-        
-        <div class="sidebar"><nav class="sidebar">
+    
+        <!-- Side navigation -->
+      <div class="sidebarcontainer">
+        <nav class="sidebar">
   
 
   <div>
@@ -605,19 +536,84 @@
   </div>
 
 </nav>
-        </div>
-        <div id="collapseSideBar">
-          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
-          </a>
-        </div> 
-        <script src="sidebartoggle.js" type="text/javascript"></script>
-       
+        <!-- No sidebar toggle for read the docs theme, the sidebar is always
+          visible when the screen is width enough.
+        -->
       </div>
+
+    </nav>
+    
+    <div class="container-fluid">
 
       <div id="main" class="">
         
 
         
+
+        <div id="search-results-container" style="display: none;">
+        
+          <div id="search-buttons">
+            <span class="label label-default" id="search-docstrings-button">
+            <label class="checkbox-inline">
+              <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+                search in docstrings
+              </input>
+            </label>
+            </span>
+            
+          </div>
+          
+          <noscript>
+              <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+          </noscript>
+  
+          <div class="hint" id="search-help-box">
+            <p class="rst-last">
+        
+              Search bar offers the following options:
+              <ul>   
+                  <li>
+                    <strong>Term presence.</strong> The below example searches for documents that 
+                      must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                  </li> 
+  
+                  <li>
+                    <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                  </li> 
+  
+                  <li>
+                    <strong>Search in specific fields.</strong> The following search matches all objects 
+                    in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+  
+                    <p>
+                      Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                      Last two fields are only applicable if "search in docstrings" is enabled.
+                    </p>
+                  </li>
+  
+                  <li>
+                    <strong>Fuzzy matches.</strong> The following search matches all documents 
+                    that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                  </li>
+              </ul>
+  
+            </p>
+          </div>
+  
+          <div id="search-status"> </div>
+  
+          <div class="warning" id="search-warn-box" style="display: none;">
+            <p class="rst-last"><span id="search-warn"></span></p>
+          </div>
+  
+          <table id="search-results">
+            <!-- Filled dynamically by JS -->
+          </table>
+          
+          <div style="margin-top: 8px;">
+            <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+          </div>
+        </div>
 
         <div class="page-header">
           <h1 class="class"><code><code><a href="index.html" class="internal-link">fl_controller_framework</a></code><wbr></wbr>.<code><a href="fl_controller_framework.event.html" class="internal-link" title="fl_controller_framework.event">event</a></code><wbr></wbr>.<code><a href="fl_controller_framework.event.FLEvents.html" class="internal-link" title="fl_controller_framework.event.FLEvents">FLEvents</a></code><wbr></wbr>.<code><a href="fl_controller_framework.event.FLEvents.playlist.html" class="internal-link" title="fl_controller_framework.event.FLEvents.playlist">playlist</a></code></code></h1>
@@ -631,7 +627,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">playlist</span>: <a href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L265" class="sourceLink">(source)</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">playlist</span>: <a href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L265" class="sourceLink">(source)</a></code></p>
           <p><a href="classIndex.html#fl_controller_framework.event.FLEvents.playlist">View In Hierarchy</a></p>
         </div>
 
@@ -848,7 +844,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">deselectAll</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L308">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L308">
       
       (source)
     </a>
@@ -875,7 +871,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">getDisplayZone</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L317">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L317">
       
       (source)
     </a>
@@ -902,7 +898,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">getLiveBlockColor</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L344">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L344">
       
       (source)
     </a>
@@ -929,7 +925,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">getLiveBlockStatus</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L341">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L341">
       
       (source)
     </a>
@@ -956,7 +952,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">getLiveLoopMode</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L326">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L326">
       
       (source)
     </a>
@@ -983,7 +979,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">getLivePosSnap</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L332">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L332">
       
       (source)
     </a>
@@ -1010,7 +1006,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">getLiveStatus</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L338">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L338">
       
       (source)
     </a>
@@ -1037,7 +1033,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">getLiveTriggerMode</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L329">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L329">
       
       (source)
     </a>
@@ -1064,7 +1060,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">getLiveTrigSnap</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L335">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L335">
       
       (source)
     </a>
@@ -1091,7 +1087,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">getPerformanceModeState</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L374">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L374">
       
       (source)
     </a>
@@ -1118,7 +1114,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">getTrackActivityLevel</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L311">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L311">
       
       (source)
     </a>
@@ -1145,7 +1141,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">getTrackActivityLevelVis</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L314">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L314">
       
       (source)
     </a>
@@ -1172,7 +1168,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">getTrackColor</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L275">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L275">
       
       (source)
     </a>
@@ -1199,7 +1195,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">getTrackName</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L269">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L269">
       
       (source)
     </a>
@@ -1226,7 +1222,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">getVisTimeBar</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L365">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L365">
       
       (source)
     </a>
@@ -1253,7 +1249,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">getVisTimeStep</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L371">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L371">
       
       (source)
     </a>
@@ -1280,7 +1276,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">getVisTimeTick</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L368">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L368">
       
       (source)
     </a>
@@ -1307,7 +1303,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">incLiveLoopMode</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L359">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L359">
       
       (source)
     </a>
@@ -1334,7 +1330,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">incLivePosSnap</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L353">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L353">
       
       (source)
     </a>
@@ -1361,7 +1357,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">incLiveTrigMode</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L362">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L362">
       
       (source)
     </a>
@@ -1388,7 +1384,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">incLiveTrigSnap</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L356">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L356">
       
       (source)
     </a>
@@ -1415,7 +1411,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">isTrackMuted</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L281">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L281">
       
       (source)
     </a>
@@ -1442,7 +1438,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">isTrackMuteLock</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L287">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L287">
       
       (source)
     </a>
@@ -1469,7 +1465,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">isTrackSelected</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L299">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L299">
       
       (source)
     </a>
@@ -1496,7 +1492,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">isTrackSolo</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L293">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L293">
       
       (source)
     </a>
@@ -1523,7 +1519,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">liveDisplayZone</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L323">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L323">
       
       (source)
     </a>
@@ -1550,7 +1546,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">lockDisplayZone</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L320">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L320">
       
       (source)
     </a>
@@ -1577,7 +1573,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">muteTrack</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L284">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L284">
       
       (source)
     </a>
@@ -1604,7 +1600,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">muteTrackLock</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L290">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L290">
       
       (source)
     </a>
@@ -1631,7 +1627,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">refreshLiveClips</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L350">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L350">
       
       (source)
     </a>
@@ -1658,7 +1654,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">selectAll</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L305">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L305">
       
       (source)
     </a>
@@ -1685,7 +1681,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">selectTrack</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L302">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L302">
       
       (source)
     </a>
@@ -1712,7 +1708,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">setTrackColor</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L278">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L278">
       
       (source)
     </a>
@@ -1739,7 +1735,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">setTrackName</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L272">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L272">
       
       (source)
     </a>
@@ -1766,7 +1762,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">soloTrack</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L296">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L296">
       
       (source)
     </a>
@@ -1793,7 +1789,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">trackCount</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L266">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L266">
       
       (source)
     </a>
@@ -1820,7 +1816,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">triggerLiveClip</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/event.py#L347">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad8c8304cd48869a7cb7b1ee66c773edd44df487/event.py#L347">
       
       (source)
     </a>
@@ -1842,21 +1838,20 @@
     </div>
 
     <footer class="navbar navbar-default">
-
+    <hr />
+    
+    
+    <div class="container">
+      <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
+    generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+      24.3.3 at 2024-07-26 02:47:51.
+    </div>
+    
+    <script src="ajax.js" type="text/javascript"></script>
+    <script src="searchlib.js" type="text/javascript"></script>
+    <script src="search.js" type="text/javascript"></script>
   
-  <div class="container">
-    <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
-  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.3.3 at 2024-07-26 02:44:22.
-  </div>
-
-  <!-- Search related scripts needs to be loaded at the end of HTML 
-    parsing not to introduce overhead and display HTML data asap -->
-  <script src="ajax.js" type="text/javascript"></script>
-  <script src="searchlib.js" type="text/javascript"></script>
-  <script src="search.js" type="text/javascript"></script>
-
-</footer>
+  </footer>
   
     <script src="pydoctor.js" type="text/javascript"></script>
 
