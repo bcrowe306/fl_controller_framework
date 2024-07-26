@@ -6,17 +6,43 @@ from .jog_control import JogControl
 from .fader import FaderControl
 from .knob import KnobControl
 from .encoder import EncoderControl
+
 class CC(ControlBase):
     def __init__(self, name: str, channel: int, identifier: int, status=MIDI_STATUS.NOTE_ON_STATUS, playable=False, *a, **k):
         super().__init__(name, channel, identifier, status, playable, *a, **k)
 
 class ComboControl(ControlBase):
-    def __init__(self, 
-    name: str,
-    primary_control: Control,
-    modifier_button: ButtonControl,
-    modifier_button_event: str = 'pressed', *a, **k):
+    """
+    Represents a combo control that combines a primary control with a modifier button.
 
+    Args:
+        name (str): The name of the combo control.
+        primary_control (Control): The primary control to be combined with the modifier button.
+        modifier_button (ButtonControl): The modifier button control.
+        modifier_button_event (str, optional): The event type of the modifier button. Defaults to 'pressed'.
+
+    Attributes:
+        name (str): The name of the combo control.
+        channel (int): The MIDI channel of the primary control.
+        identifier (int): The MIDI identifier of the primary control.
+        primary_control (Control): The primary control.
+        modifier_button (ButtonControl): The modifier button control.
+        modifier_button_event (str): The event type of the modifier button.
+        _toggled (bool): Flag indicating if the combo control is toggled.
+        _pressed (bool): Flag indicating if the combo control is pressed.
+        _hold (bool): Flag indicating if the combo control is being held.
+        _hold_counter (int): Counter for hold duration.
+        hold_time (int): The duration threshold for a hold event.
+
+    Methods:
+        _on_modifier_button_event(event_data): Handles the modifier button event.
+        _set_jogged(value): Sets the jogged value and notifies subscribers.
+        _on_modified_primary_value(event_data): Handles the modified primary value event.
+        activate(): Activates the combo control.
+
+    """
+
+    def __init__(self, name: str, primary_control: Control, modifier_button: ButtonControl, modifier_button_event: str = 'pressed', *a, **k):
         super(ComboControl, self).__init__(name, modifier_button.channel, modifier_button.identifier, status=primary_control.status, *a, **k)
         self.name: str = name
         self.channel: int = primary_control.channel
@@ -31,16 +57,43 @@ class ComboControl(ControlBase):
         self.hold_time: int = 10
 
     def _on_modifier_button_event(self, event_data):
+        """
+        Handles the modifier button event.
+
+        Args:
+            event_data: The event data for the modifier button.
+
+        Returns:
+            None
+        """
         if event_data:
             self.registry.register_control(self)
         else:
             self.registry.unregister_control(self)
 
     def _set_jogged(self, value):
+        """
+        Sets the jogged value and notifies subscribers.
+
+        Args:
+            value: The jogged value.
+
+        Returns:
+            None
+        """
         self.notify('jogged', value)
         self.notify('inc', value) if value else self.notify('dec', value)
 
     def _on_modified_primary_value(self, event_data: flMidiMsg):
+        """
+        Handles the modified primary value event.
+
+        Args:
+            event_data (flMidiMsg): The event data containing the MIDI message.
+
+        Returns:
+            None
+        """
         if isinstance(self.primary_control, JogControl):
             events = JogControl.generate_jog_events(
                 self.primary_control.status, self.primary_control.inc_value, self.primary_control.dec_value, event_data)
@@ -73,6 +126,12 @@ class ComboControl(ControlBase):
                 self.notify(event, events[event])
 
     def activate(self):
+        """
+        Activates the combo control.
+
+        Returns:
+            None
+        """
         self.modifier_button.activate()
         self.event_object.subscribe('{}.{}'.format(self.name, 'value'), self._on_modified_primary_value)
         self.event_object.subscribe('{}.{}'.format(self.modifier_button.name, self.modifier_button_event), self._on_modifier_button_event)
