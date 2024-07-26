@@ -78,13 +78,13 @@ class PadsControl(ControlBase):
                 changed = True
         self.pad_state[pad_number][event_name] = value
         return changed
-    
+
     def get_pad_event_state(self, pad_number, event_name):
         return self.pad_state[pad_number].get(event_name)
-    
+
     def set_pad_event_state(self, pad_number, event_name, value):
         self.pad_state[pad_number][event_name] = value
-    
+
     def _on_idle(self):
         for pad_number in self.pad_state:
             if self.get_pad_event_state(pad_number, 'pressed'):
@@ -96,7 +96,7 @@ class PadsControl(ControlBase):
                 self.pad_state[pad_number]['hold_counter'] = 0
                 if self._pad_state_is_changed(pad_number, 'hold', False):
                     self._set_hold(pad_number, False)
-    
+
     def _set_multi_hold(self, pad_number, hold):
         self.multi_hold[pad_number] = hold
         self.notify('multi_hold', self.multi_hold)
@@ -145,6 +145,11 @@ class PadsControl(ControlBase):
     def set_feedback(self, feedback_func):
         for pad in self.pads:
             pad.feedback = feedback_func
+
+    def set_translation(self, translation_func):
+        for pad in self.pads:
+            pad.translation = translation_func
+        
     def activate(self):
         self.event_object.subscribe('idle', self._on_idle)
         for pad in self.pads:
