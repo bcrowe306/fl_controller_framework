@@ -1,3 +1,4 @@
+
 from .control_registry import ControlRegistry
 from .util.midi import MIDI_STATUS
 from .skin import SkinColor
@@ -36,38 +37,42 @@ class ControlBase(EventObject, StateBase):
     def activate(self):
         """Override Method. Inheriting classes should override this method. This method is called by the component it is attached to when the component activates."""
         pass
+    
     def deactivate(self):
         """Override Method. Inheriting classes should override this method. This method is called by the component it is attached to when the component activates."""
         pass
+    
     def _on_value(self, event):
         """Override Method: Inheriting classes should override this method. This is the function that is bound to value events sent by the control."""
         pass
+    
     def reset(self):
         """Override Method: Inheriting classes should override this method.. This resets the control to default state."""
         pass
+    
     def blackout(self):
         """Override Method: Inheriting classes should override this method.. This turns the the control to blackout state."""
         pass
 
 
 class Control(ControlBase):
-    """This is the actual control Class. Inherit from this class when building your own controls if necessary. This is also the class from which the included controls are derrived."""
-    def __init__(self, name, channel, identifier, playable=False, status=MIDI_STATUS.NOTE_ON_STATUS,  feedback=False, feedback_process=None, default_color='Default', blackout_color='Off', skin=None):
+    """This is the actual control Class. Inherit from this class when building your own controls if necessary. This is also the class from which the included controls are derived."""
+    def __init__(self, name, channel, identifier, playable=False, status=MIDI_STATUS.NOTE_ON_STATUS, feedback=False, feedback_process=None, default_color='Default', blackout_color='Off', skin=None):
         super(Control, self).__init__(name, channel, identifier, status, playable)
         self._skin = skin
-        """Skin for this controller. A skin holds attributes on how to draw a particular "color" to the device. By color, I mean what midi message to send to the device to acheive the desired look, ie... LEDs, RGB leds, etc """
-        self.feedback: bool =feedback
+        """Skin for this controller. A skin holds attributes on how to draw a particular "color" to the device. By color, I mean what midi message to send to the device to achieve the desired look, ie... LEDs, RGB leds, etc """
+        self.feedback: bool = feedback
         """The attribute defines whether or not the control should send feedback to itself. This is useful for lighting pad, or LEDs back to controller."""
-        self.feedback_process=feedback_process
+        self.feedback_process = feedback_process
         """This is a function that processes the feedback before it is sent back."""
         self.default_color: SkinColor = default_color
         """This is the default color for the control. When it is activated, it will be set to this color if skin and default_color are provided."""
-        self.blackout_color=blackout_color
+        self.blackout_color = blackout_color
         """This is the blackout color for the control. Can be called to blackout the control."""
 
     def _on_value(self, event):
         """This function is called whenever a value from the control is sent.
-            Example. If you move a knob on a CC#37, the values for that control change are sent as event arguments to this funciton.
+            Example. If you move a knob on a CC#37, the values for that control change are sent as event arguments to this function.
             This is useful for emitting your own custom events for a control, or reacting to the raw data sent by the control.
         """
         print('original on_value')
@@ -76,36 +81,27 @@ class Control(ControlBase):
     def activate(self):
         """
         activate() is called by the component when the component is activating. 
-        It registers the control with the Global Control Registry, and subscribes to it's own "value" events, that is, when a midiMsg comes from this control.
-        the _on_value() method is auto-registered to receive these events.
+        It registers the control with the Global Control Registry, and subscribes to its own "value" events, that is, when a midiMsg comes from this control.
         """
-        self._initialize()
-        self.event_object.subscribe('{}.value'.format(self.name), self._on_value)        
-        self.registry.register_control(self)
+        super().activate()
+        self.set_light(self.default_color)
 
     def deactivate(self):
-        """This is called to deactivate the control. It removes the control from the global registry, and unsubscribes from it's own events. The activate and deactivation of cotnrols allows the control to be used in multiple scenarios and modes."""
-        self.reset()
-        self.event_object.unsubscribe('{}.value'.format(self.name), self._on_value)
-        self.registry.unregister_control(self)
-
-    def _initialize(self):
-        """Initializes the control to its default color"""
-        self.set_light(self.default_color)
-    
-    def reset(self):
-        """Resets the control to its default color"""
-        self.set_light(self.default_color)
-
-    def blackout(self):
-        """Blackout the control to its blackout color"""
+        """
+        deactivate() is called by the component when the component is deactivating.
+        It unregisters the control from the Global Control Registry and unsubscribes from its own "value" events.
+        """
+        super().deactivate()
         self.set_light(self.blackout_color)
-    
+
     def set_light(self, value, *a, **k):
-        """Method to send a color to the control by "value". A skin must be provided with the "value" arguments existing as an attribute on the skin. """
+        """
+        Method to send a color to the control by "value". A skin must be provided to the control for set_light to function.
+        A skin is a class with color members. Each color member has a draw method. The draw method contains the code to send color messages to the MIDI device.
+        """
         try:
             if self._skin:
                 color: SkinColor = getattr(self._skin, value)
                 color.draw(self, *a, **k)
-        except:
-            print('Skin Color: {}.{} Not found'.format(self._skin, value))
+        except AttributeError:
+            print(f'Skin Color: {self._skin}.{value} Not found')
