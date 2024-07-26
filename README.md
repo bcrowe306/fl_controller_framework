@@ -1,2 +1,0 @@
-# FL Studio Controller Framework
-Framework to implement a MIDI controller in FL Studio using Python. It provides sets of classes and data structures that make the process simple to implement complex functionality from your MIDI controller.

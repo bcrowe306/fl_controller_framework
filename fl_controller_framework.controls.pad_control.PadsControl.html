@@ -1,0 +1,2092 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>fl_controller_framework.controls.pad_control.PadsControl</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a> <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="fl_controller_framework.controls.pad_control.PadsControl.html" class="internal-link" title="This class"><wbr></wbr>Pads<wbr></wbr>Control</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#activate" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.activate">activate</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#blackout" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.blackout">blackout</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#deactivate" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.deactivate">deactivate</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_pad_event_state" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.get_pad_event_state">get<wbr></wbr>_pad<wbr></wbr>_event<wbr></wbr>_state</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#reset" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.reset">reset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set_feedback" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.set_feedback">set<wbr></wbr>_feedback</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set_pad_event_state" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.set_pad_event_state">set<wbr></wbr>_pad<wbr></wbr>_event<wbr></wbr>_state</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set_translation" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.set_translation">set<wbr></wbr>_translation</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#size" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.size">size</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__generate_pad_control" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.__generate_pad_control">__generate<wbr></wbr>_pad<wbr></wbr>_control</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_initialize" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl._initialize">_initialize</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_idle" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl._on_idle">_on<wbr></wbr>_idle</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_value" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl._on_value">_on<wbr></wbr>_value</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_pad_state_is_changed" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl._pad_state_is_changed">_pad<wbr></wbr>_state<wbr></wbr>_is<wbr></wbr>_changed</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_set_hold" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl._set_hold">_set<wbr></wbr>_hold</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_set_multi_hold" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl._set_multi_hold">_set<wbr></wbr>_multi<wbr></wbr>_hold</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_set_pressed" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl._set_pressed">_set<wbr></wbr>_pressed</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_set_released" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl._set_released">_set<wbr></wbr>_released</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.control.ControlBase.html#notify" class="internal-link" title="fl_controller_framework.control.ControlBase.notify">notify</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.event.EventObject.html#notify_listeners" class="internal-link" title="fl_controller_framework.event.EventObject.notify_listeners">notify<wbr></wbr>_listeners</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.event.EventObject.html#subscribe" class="internal-link" title="fl_controller_framework.event.EventObject.subscribe">subscribe</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.event.EventObject.html#unsubscribe" class="internal-link" title="fl_controller_framework.event.EventObject.unsubscribe">unsubscribe</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.state.StateBase.html#getValue" class="internal-link" title="fl_controller_framework.state.StateBase.getValue">get<wbr></wbr>Value</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.state.StateBase.html#isChanged" class="internal-link" title="fl_controller_framework.state.StateBase.isChanged">is<wbr></wbr>Changed</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#channel" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.channel">channel</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#draw" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.draw">draw</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#event_object" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.event_object">event<wbr></wbr>_object</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#feedback" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.feedback">feedback</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#hold_time" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.hold_time">hold<wbr></wbr>_time</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#multi_hold" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.multi_hold">multi<wbr></wbr>_hold</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#name" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.name">name</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#off_msg_type" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.off_msg_type">off<wbr></wbr>_msg<wbr></wbr>_type</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#on_msg_type" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.on_msg_type">on<wbr></wbr>_msg<wbr></wbr>_type</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#pad_mapping" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.pad_mapping">pad<wbr></wbr>_mapping</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#pad_state" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.pad_state">pad<wbr></wbr>_state</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#pads" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.pads">pads</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#playable" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.playable">playable</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#registry" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.registry">registry</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#shift" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.shift">shift</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#short_press_time" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.short_press_time">short<wbr></wbr>_press<wbr></wbr>_time</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#translation" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.translation">translation</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.control.ControlBase.html#device" class="internal-link" title="fl_controller_framework.control.ControlBase.device">device</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.control.ControlBase.html#identifier" class="internal-link" title="fl_controller_framework.control.ControlBase.identifier">identifier</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.control.ControlBase.html#status" class="internal-link" title="fl_controller_framework.control.ControlBase.status">status</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.event.EventObject.html#observers" class="internal-link" title="fl_controller_framework.event.EventObject.observers">observers</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.state.StateBase.html#_state" class="internal-link" title="fl_controller_framework.state.StateBase._state">_state</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="fl_controller_framework.controls.pad_control.html" class="internal-link" title="The parent of this class">pad<wbr></wbr>_control</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.controls.pad_control.cc.html" class="internal-link" title="fl_controller_framework.controls.pad_control.cc">cc</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.controls.pad_control.PadControl.html" class="internal-link" title="fl_controller_framework.controls.pad_control.PadControl"><wbr></wbr>Pad<wbr></wbr>Control</a></code>
+            </div>
+        
+
+    </li><li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.controls.pad_control.PadsControl.html" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl"><wbr></wbr>Pads<wbr></wbr>Control</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">fl_controller_framework</a></code><wbr></wbr>.<code><a href="fl_controller_framework.controls.html" class="internal-link" title="fl_controller_framework.controls">controls</a></code><wbr></wbr>.<code><a href="fl_controller_framework.controls.pad_control.html" class="internal-link" title="fl_controller_framework.controls.pad_control">pad_control</a></code><wbr></wbr>.<code><a href="fl_controller_framework.controls.pad_control.PadsControl.html" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl">PadsControl</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">PadsControl</span>(<a href="fl_controller_framework.control.ControlBase.html" class="internal-link" title="fl_controller_framework.control.ControlBase">ControlBase</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L72" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.__init__">PadsControl(name, channel, pad_mapping, on_msg_type, ...)</a></code></p>
+          <p><a href="classIndex.html#fl_controller_framework.controls.pad_control.PadsControl">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="undocumented">Undocumented</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id77">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.__init__">__init__</a></code></td>
+    <td>Represents a group of pad controls.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#activate" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.activate">activate</a></code></td>
+    <td>Activates the pads control.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#blackout" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.blackout">blackout</a></code></td>
+    <td>Turns off the lights of the pads control.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#deactivate" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.deactivate">deactivate</a></code></td>
+    <td>Deactivates the pads control.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get_pad_event_state" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.get_pad_event_state">get<wbr></wbr>_pad<wbr></wbr>_event<wbr></wbr>_state</a></code></td>
+    <td>Gets the event state of a pad.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#reset" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.reset">reset</a></code></td>
+    <td>Resets the pads control.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_feedback" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.set_feedback">set<wbr></wbr>_feedback</a></code></td>
+    <td>Sets the feedback function for the pads.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_pad_event_state" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.set_pad_event_state">set<wbr></wbr>_pad<wbr></wbr>_event<wbr></wbr>_state</a></code></td>
+    <td>Sets the event state of a pad.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_translation" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.set_translation">set<wbr></wbr>_translation</a></code></td>
+    <td>Sets the translation function for the pads.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#size" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.size">size</a></code></td>
+    <td>Returns the amount of pads in this PadsControl Control.</td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#channel" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.channel">channel</a></code></td>
+    <td>Midi Channel the control is registered to. 0-15</td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#draw" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.draw">draw</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#event_object" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.event_object">event<wbr></wbr>_object</a></code></td>
+    <td>Global Event Object</td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#feedback" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.feedback">feedback</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#hold_time" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.hold_time">hold<wbr></wbr>_time</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#multi_hold" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.multi_hold">multi<wbr></wbr>_hold</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#name" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.name">name</a></code></td>
+    <td>Name of the control. Must be unique. The name of the control is used to identify and subscribe to events generated by the control.</td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#off_msg_type" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.off_msg_type">off<wbr></wbr>_msg<wbr></wbr>_type</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#on_msg_type" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.on_msg_type">on<wbr></wbr>_msg<wbr></wbr>_type</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#pad_mapping" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.pad_mapping">pad<wbr></wbr>_mapping</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#pad_state" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.pad_state">pad<wbr></wbr>_state</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#pads" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.pads">pads</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#playable" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.playable">playable</a></code></td>
+    <td>Is this control playable. This will determine if the values sent by this control are forwarded into FL Studio for playing devices.</td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#registry" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.registry">registry</a></code></td>
+    <td>Global Control Registry</td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#shift" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.shift">shift</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#short_press_time" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.short_press_time">short<wbr></wbr>_press<wbr></wbr>_time</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#translation" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.translation">translation</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#__generate_pad_control" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.__generate_pad_control">__generate<wbr></wbr>_pad<wbr></wbr>_control</a></code></td>
+    <td>Generates a pad control.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_initialize" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl._initialize">_initialize</a></code></td>
+    <td>Initializes the pads control.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_idle" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl._on_idle">_on<wbr></wbr>_idle</a></code></td>
+    <td>Event handler for idle event.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_value" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl._on_value">_on<wbr></wbr>_value</a></code></td>
+    <td>Event handler for value event.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_pad_state_is_changed" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl._pad_state_is_changed">_pad<wbr></wbr>_state<wbr></wbr>_is<wbr></wbr>_changed</a></code></td>
+    <td>Checks if the state of a pad has changed.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_set_hold" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl._set_hold">_set<wbr></wbr>_hold</a></code></td>
+    <td>Sets the hold state of a pad.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_set_multi_hold" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl._set_multi_hold">_set<wbr></wbr>_multi<wbr></wbr>_hold</a></code></td>
+    <td>Sets the multi-hold state of a pad.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_set_pressed" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl._set_pressed">_set<wbr></wbr>_pressed</a></code></td>
+    <td>Sets the pressed state of a pad.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_set_released" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl._set_released">_set<wbr></wbr>_released</a></code></td>
+    <td>Sets the released state of a pad.</td>
+  </tr>
+</table>
+          
+            <p class="inheritedFrom">
+              Inherited from <code><a href="fl_controller_framework.control.ControlBase.html" class="internal-link" title="fl_controller_framework.control.ControlBase">ControlBase</a></code>:
+            </p>
+            <table class="children sortable" id="id78">
+  
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.control.ControlBase.html#notify" class="internal-link" title="fl_controller_framework.control.ControlBase.notify">notify</a></code></td>
+    <td>Alias convenience method for self.event_object.notify_listeners. Calling this method automatically prefixed the event name with the name of the control.</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.control.ControlBase.html#device" class="internal-link" title="fl_controller_framework.control.ControlBase.device">device</a></code></td>
+    <td>This is the FL Studio device module. It allows you to send midi messages directly from the control.</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.control.ControlBase.html#identifier" class="internal-link" title="fl_controller_framework.control.ControlBase.identifier">identifier</a></code></td>
+    <td>Midi Data1 of the Midi message. This is the note/CC the control transmits on.  Valid input = 0-127.  Example: identifier=0, "This would note C0" </td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.control.ControlBase.html#status" class="internal-link" title="fl_controller_framework.control.ControlBase.status">status</a></code></td>
+    <td>This is the status byte of the midi msg. The default is a midi note state. Do not include the full status byte with the channel bits.</td>
+  </tr>
+</table>
+            
+            <p class="inheritedFrom">
+              Inherited from <code><a href="fl_controller_framework.event.EventObject.html" class="internal-link" title="fl_controller_framework.event.EventObject">EventObject</a></code> (via <code><a href="fl_controller_framework.control.ControlBase.html" class="internal-link" title="fl_controller_framework.control.ControlBase">ControlBase</a></code>):
+            </p>
+            <table class="children sortable" id="id79">
+  
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.event.EventObject.html#notify_listeners" class="internal-link" title="fl_controller_framework.event.EventObject.notify_listeners">notify<wbr></wbr>_listeners</a></code></td>
+    <td>This function is called whenever a new event(event_id) is received. All functions registered by subscribe are called by the specified event_id.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.event.EventObject.html#subscribe" class="internal-link" title="fl_controller_framework.event.EventObject.subscribe">subscribe</a></code></td>
+    <td>Subscribe to an event by event_id. This function add the supplied observer func to the list identified by event_id.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.event.EventObject.html#unsubscribe" class="internal-link" title="fl_controller_framework.event.EventObject.unsubscribe">unsubscribe</a></code></td>
+    <td>Unsubscribe removed the supplied function from the list of observers by event_id.</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.event.EventObject.html#observers" class="internal-link" title="fl_controller_framework.event.EventObject.observers">observers</a></code></td>
+    <td>dictionary instance variable that houses the registry of observer functions.  They key for this dictionary is a str of the event_id. Events are referenced by this key and the list of observers are called by it.</td>
+  </tr>
+</table>
+            
+            <p class="inheritedFrom">
+              Inherited from <code><a href="fl_controller_framework.state.StateBase.html" class="internal-link" title="fl_controller_framework.state.StateBase">StateBase</a></code> (via <code><a href="fl_controller_framework.control.ControlBase.html" class="internal-link" title="fl_controller_framework.control.ControlBase">ControlBase</a></code>, <code><a href="fl_controller_framework.event.EventObject.html" class="internal-link" title="fl_controller_framework.event.EventObject">EventObject</a></code>):
+            </p>
+            <table class="children sortable" id="id80">
+  
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.state.StateBase.html#getValue" class="internal-link" title="fl_controller_framework.state.StateBase.getValue">get<wbr></wbr>Value</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.state.StateBase.html#isChanged" class="internal-link" title="fl_controller_framework.state.StateBase.isChanged">is<wbr></wbr>Changed</a></code></td>
+    <td>This is the method that checks for state changes. It takes the state represented as a string, and the value for comparison. It returns true is the value passed into the function is different from the value stored in the dictionary...</td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.state.StateBase.html#_state" class="internal-link" title="fl_controller_framework.state.StateBase._state">_state</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+            
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, channel: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>, pad_mapping: <code><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="intersphinx-link">dict</a>[<wbr></wbr>int:int]</code>, on_msg_type: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> = <a href="fl_controller_framework.util.midi.MIDI_STATUS.html#NOTE_ON_STATUS" class="internal-link" title="fl_controller_framework.util.midi.MIDI_STATUS.NOTE_ON_STATUS">MIDI_STATUS.NOTE_ON_STATUS</a>, off_msg_type: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> = <a href="fl_controller_framework.util.midi.MIDI_STATUS.html#NOTE_OFF_STATUS" class="internal-link" title="fl_controller_framework.util.midi.MIDI_STATUS.NOTE_OFF_STATUS">MIDI_STATUS.NOTE_OFF_STATUS</a>, hold_time=10, short_press_time=2, playable=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>, feedback=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, translation=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, draw=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L73">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#__init__" title="fl_controller_framework.controls.pad_control.PadsControl.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.control.ControlBase.html#__init__" class="internal-link">fl_controller_framework.control.ControlBase.__init__</a></code></div>
+    <div><p class="pre">Represents a group of pad controls.
+
+Args:
+    name (str): The name of the control.
+    channel (int): The MIDI channel of the control.
+    pad_mapping (dict[int: int]): The mapping of pad IDs to pad numbers.
+    on_msg_type (int, optional): The MIDI status byte for note on messages. Defaults to MIDI_STATUS.NOTE_ON_STATUS.
+    off_msg_type (int, optional): The MIDI status byte for note off messages. Defaults to MIDI_STATUS.NOTE_OFF_STATUS.
+    hold_time (int, optional): The hold time in milliseconds. Defaults to 10.
+    short_press_time (int, optional): The short press time in milliseconds. Defaults to 2.
+    playable (bool, optional): Whether the pads are playable. Defaults to True.
+    feedback (None, optional): Feedback function for the pads. Defaults to None.
+    translation (None, optional): Translation function for the pads. Defaults to None.
+    draw (None, optional): Draw function for the pads. Defaults to None.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.activate">
+    
+  </a>
+  <a name="activate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">activate</span><span class="function-signature">(self)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L296">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#activate" title="fl_controller_framework.controls.pad_control.PadsControl.activate">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.control.ControlBase.html#activate" class="internal-link">fl_controller_framework.control.ControlBase.activate</a></code></div>
+    <div><p class="pre">Activates the pads control.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.blackout">
+    
+  </a>
+  <a name="blackout">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">blackout</span><span class="function-signature">(self)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L325">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#blackout" title="fl_controller_framework.controls.pad_control.PadsControl.blackout">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.control.ControlBase.html#blackout" class="internal-link">fl_controller_framework.control.ControlBase.blackout</a></code></div>
+    <div><p class="pre">Turns off the lights of the pads control.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.deactivate">
+    
+  </a>
+  <a name="deactivate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">deactivate</span><span class="function-signature">(self)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L305">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#deactivate" title="fl_controller_framework.controls.pad_control.PadsControl.deactivate">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.control.ControlBase.html#deactivate" class="internal-link">fl_controller_framework.control.ControlBase.deactivate</a></code></div>
+    <div><p class="pre">Deactivates the pads control.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.get_pad_event_state">
+    
+  </a>
+  <a name="get_pad_event_state">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_pad_event_state</span><span class="function-signature">(self, pad_number, event_name)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L147">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#get_pad_event_state" title="fl_controller_framework.controls.pad_control.PadsControl.get_pad_event_state">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Gets the event state of a pad.
+
+Args:
+    pad_number (int): The pad number.
+    event_name (str): The name of the event.
+
+Returns:
+    Any: The event state.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.reset">
+    
+  </a>
+  <a name="reset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">reset</span><span class="function-signature">(self)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L319">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#reset" title="fl_controller_framework.controls.pad_control.PadsControl.reset">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.control.ControlBase.html#reset" class="internal-link">fl_controller_framework.control.ControlBase.reset</a></code></div>
+    <div><p class="pre">Resets the pads control.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.set_feedback">
+    
+  </a>
+  <a name="set_feedback">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_feedback</span><span class="function-signature">(self, feedback_func)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L276">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#set_feedback" title="fl_controller_framework.controls.pad_control.PadsControl.set_feedback">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Sets the feedback function for the pads.
+
+Args:
+    feedback_func: The feedback function.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.set_pad_event_state">
+    
+  </a>
+  <a name="set_pad_event_state">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_pad_event_state</span><span class="function-signature">(self, pad_number, event_name, value)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L160">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#set_pad_event_state" title="fl_controller_framework.controls.pad_control.PadsControl.set_pad_event_state">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Sets the event state of a pad.
+
+Args:
+    pad_number (int): The pad number.
+    event_name (str): The name of the event.
+    value: The value of the event.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.set_translation">
+    
+  </a>
+  <a name="set_translation">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_translation</span><span class="function-signature">(self, translation_func)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L286">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#set_translation" title="fl_controller_framework.controls.pad_control.PadsControl.set_translation">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Sets the translation function for the pads.
+
+Args:
+    translation_func: The translation function.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.size">
+    
+  </a>
+  <a name="size">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">size</span><span class="function-signature">(self) -&gt; <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code></span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L115">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#size" title="fl_controller_framework.controls.pad_control.PadsControl.size">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Returns the amount of pads in this PadsControl Control.
+
+Returns:
+    int: The number of pads.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.channel">
+    
+  </a>
+  <a name="channel">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">channel</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L94">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#channel" title="fl_controller_framework.controls.pad_control.PadsControl.channel">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.control.ControlBase.html#channel" class="internal-link">fl_controller_framework.control.ControlBase.channel</a></code></div>
+    <div><p class="pre">Midi Channel the control is registered to. 0-15</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.draw">
+    
+  </a>
+  <a name="draw">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">draw</span> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L101">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#draw" title="fl_controller_framework.controls.pad_control.PadsControl.draw">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.event_object">
+    
+  </a>
+  <a name="event_object">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">event_object</span>: <code><a href="fl_controller_framework.event.GlobalEventObject.html" class="internal-link" title="fl_controller_framework.event.GlobalEventObject">GlobalEventObject</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L91">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#event_object" title="fl_controller_framework.controls.pad_control.PadsControl.event_object">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.control.ControlBase.html#event_object" class="internal-link">fl_controller_framework.control.ControlBase.event_object</a></code></div>
+    <div><p class="pre">Global Event Object</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.feedback">
+    
+  </a>
+  <a name="feedback">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">feedback</span> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L99">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#feedback" title="fl_controller_framework.controls.pad_control.PadsControl.feedback">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.hold_time">
+    
+  </a>
+  <a name="hold_time">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">hold_time</span> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L104">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#hold_time" title="fl_controller_framework.controls.pad_control.PadsControl.hold_time">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.multi_hold">
+    
+  </a>
+  <a name="multi_hold">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">multi_hold</span> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L107">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#multi_hold" title="fl_controller_framework.controls.pad_control.PadsControl.multi_hold">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.name">
+    
+  </a>
+  <a name="name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">name</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L93">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#name" title="fl_controller_framework.controls.pad_control.PadsControl.name">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.control.ControlBase.html#name" class="internal-link">fl_controller_framework.control.ControlBase.name</a></code></div>
+    <div><p class="pre">Name of the control. Must be unique. The name of the control is used to identify and subscribe to events generated by the control.</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.off_msg_type">
+    
+  </a>
+  <a name="off_msg_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">off_msg_type</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L96">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#off_msg_type" title="fl_controller_framework.controls.pad_control.PadsControl.off_msg_type">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.on_msg_type">
+    
+  </a>
+  <a name="on_msg_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">on_msg_type</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L95">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#on_msg_type" title="fl_controller_framework.controls.pad_control.PadsControl.on_msg_type">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.pad_mapping">
+    
+  </a>
+  <a name="pad_mapping">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">pad_mapping</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="intersphinx-link">dict</a>[<wbr></wbr>int:int]</code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L97">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#pad_mapping" title="fl_controller_framework.controls.pad_control.PadsControl.pad_mapping">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.pad_state">
+    
+  </a>
+  <a name="pad_state">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">pad_state</span> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L106">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#pad_state" title="fl_controller_framework.controls.pad_control.PadsControl.pad_state">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.pads">
+    
+  </a>
+  <a name="pads">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">pads</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="fl_controller_framework.controls.pad_control.PadControl.html" class="internal-link" title="fl_controller_framework.controls.pad_control.PadControl">PadControl</a>]</code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L103">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#pads" title="fl_controller_framework.controls.pad_control.PadsControl.pads">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.playable">
+    
+  </a>
+  <a name="playable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">playable</span> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L98">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#playable" title="fl_controller_framework.controls.pad_control.PadsControl.playable">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.control.ControlBase.html#playable" class="internal-link">fl_controller_framework.control.ControlBase.playable</a></code></div>
+    <div><p class="pre">Is this control playable. This will determine if the values sent by this control are forwarded into FL Studio for playing devices.</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.registry">
+    
+  </a>
+  <a name="registry">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">registry</span>: <code><a href="fl_controller_framework.control_registry.ControlRegistry.html" class="internal-link" title="fl_controller_framework.control_registry.ControlRegistry">ControlRegistry</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L92">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#registry" title="fl_controller_framework.controls.pad_control.PadsControl.registry">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.control.ControlBase.html#registry" class="internal-link">fl_controller_framework.control.ControlBase.registry</a></code></div>
+    <div><p class="pre">Global Control Registry</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.shift">
+    
+  </a>
+  <a name="shift">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">shift</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L102">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#shift" title="fl_controller_framework.controls.pad_control.PadsControl.shift">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.short_press_time">
+    
+  </a>
+  <a name="short_press_time">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">short_press_time</span> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L105">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#short_press_time" title="fl_controller_framework.controls.pad_control.PadsControl.short_press_time">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.translation">
+    
+  </a>
+  <a name="translation">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">translation</span> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L100">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#translation" title="fl_controller_framework.controls.pad_control.PadsControl.translation">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.__generate_pad_control">
+    
+  </a>
+  <a name="__generate_pad_control">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__generate_pad_control</span><span class="function-signature">(self, pad_id)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L252">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#__generate_pad_control" title="fl_controller_framework.controls.pad_control.PadsControl.__generate_pad_control">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Generates a pad control.
+
+Args:
+    pad_id: The pad ID.
+
+Returns:
+    PadControl: The generated pad control.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl._initialize">
+    
+  </a>
+  <a name="_initialize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_initialize</span><span class="function-signature">(self)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L313">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_initialize" title="fl_controller_framework.controls.pad_control.PadsControl._initialize">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Initializes the pads control.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl._on_idle">
+    
+  </a>
+  <a name="_on_idle">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_on_idle</span><span class="function-signature">(self)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L171">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_idle" title="fl_controller_framework.controls.pad_control.PadsControl._on_idle">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Event handler for idle event.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl._on_value">
+    
+  </a>
+  <a name="_on_value">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_on_value</span><span class="function-signature">(self, event)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L235">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_value" title="fl_controller_framework.controls.pad_control.PadsControl._on_value">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.control.ControlBase.html#_on_value" class="internal-link">fl_controller_framework.control.ControlBase._on_value</a></code></div>
+    <div><p class="pre">Event handler for value event.
+
+Args:
+    event: The event object.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl._pad_state_is_changed">
+    
+  </a>
+  <a name="_pad_state_is_changed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_pad_state_is_changed</span><span class="function-signature">(self, pad_number, event_name, value)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L124">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_pad_state_is_changed" title="fl_controller_framework.controls.pad_control.PadsControl._pad_state_is_changed">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Checks if the state of a pad has changed.
+
+Args:
+    pad_number (int): The pad number.
+    event_name (str): The name of the event.
+    value: The value of the event.
+
+Returns:
+    bool: True if the state has changed, False otherwise.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl._set_hold">
+    
+  </a>
+  <a name="_set_hold">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_set_hold</span><span class="function-signature">(self, pad_number, hold)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L197">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_set_hold" title="fl_controller_framework.controls.pad_control.PadsControl._set_hold">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Sets the hold state of a pad.
+
+Args:
+    pad_number (int): The pad number.
+    hold (bool): Whether the pad is in hold state.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl._set_multi_hold">
+    
+  </a>
+  <a name="_set_multi_hold">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_set_multi_hold</span><span class="function-signature">(self, pad_number, hold)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L186">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_set_multi_hold" title="fl_controller_framework.controls.pad_control.PadsControl._set_multi_hold">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Sets the multi-hold state of a pad.
+
+Args:
+    pad_number (int): The pad number.
+    hold (bool): Whether the pad is in multi-hold state.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl._set_pressed">
+    
+  </a>
+  <a name="_set_pressed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_set_pressed</span><span class="function-signature">(self, pad_number: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>, pressed: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code>, event)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L208">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_set_pressed" title="fl_controller_framework.controls.pad_control.PadsControl._set_pressed">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Sets the pressed state of a pad.
+
+Args:
+    pad_number (int): The pad number.
+    pressed (bool): Whether the pad is pressed.
+    event: The event object.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.controls.pad_control.PadsControl._set_released">
+    
+  </a>
+  <a name="_set_released">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_set_released</span><span class="function-signature">(self, pad_number: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>, released: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code>, event)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/controls/pad_control.py#L220">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_set_released" title="fl_controller_framework.controls.pad_control.PadsControl._set_released">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Sets the released state of a pad.
+
+Args:
+    pad_number (int): The pad number.
+    released (bool): Whether the pad is released.
+    event: The event object.</p></div>
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-07-26 02:44:22.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,2249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>fl_controller_framework.components.transport.TransportComponent</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a> <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="fl_controller_framework.components.transport.TransportComponent.html" class="internal-link" title="This class"><wbr></wbr>Transport<wbr></wbr>Component</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#change_song_position" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.change_song_position">change<wbr></wbr>_song<wbr></wbr>_position</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#on_isPlaying" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.on_isPlaying">on_is<wbr></wbr>Playing</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_beat" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_beat">_on<wbr></wbr>_beat</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_isLoopRecEnabled" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_isLoopRecEnabled">_on_is<wbr></wbr>Loop<wbr></wbr>Rec<wbr></wbr>Enabled</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_isRecording" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_isRecording">_on_is<wbr></wbr>Recording</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_locate_button_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_locate_button_pressed">_on<wbr></wbr>_locate<wbr></wbr>_button<wbr></wbr>_pressed</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_loop_mode" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_loop_mode">_on<wbr></wbr>_loop<wbr></wbr>_mode</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_loop_recording_toggled" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_loop_recording_toggled">_on<wbr></wbr>_loop<wbr></wbr>_recording<wbr></wbr>_toggled</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_metronome_button_toggled" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_metronome_button_toggled">_on<wbr></wbr>_metronome<wbr></wbr>_button<wbr></wbr>_toggled</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_overdub_button_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_overdub_button_pressed">_on<wbr></wbr>_overdub<wbr></wbr>_button<wbr></wbr>_pressed</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_play_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_play_pressed">_on<wbr></wbr>_play<wbr></wbr>_pressed</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_quantize_button_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_quantize_button_pressed">_on<wbr></wbr>_quantize<wbr></wbr>_button<wbr></wbr>_pressed</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_record_button_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_record_button_pressed">_on<wbr></wbr>_record<wbr></wbr>_button<wbr></wbr>_pressed</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_seek_back_button_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_seek_back_button_pressed">_on<wbr></wbr>_seek<wbr></wbr>_back<wbr></wbr>_button<wbr></wbr>_pressed</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_seek_forward_button_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_seek_forward_button_pressed">_on<wbr></wbr>_seek<wbr></wbr>_forward<wbr></wbr>_button<wbr></wbr>_pressed</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_shift_button_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_shift_button_pressed">_on<wbr></wbr>_shift<wbr></wbr>_button<wbr></wbr>_pressed</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_song_mode_button_toggled" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_song_mode_button_toggled">_on<wbr></wbr>_song<wbr></wbr>_mode<wbr></wbr>_button<wbr></wbr>_toggled</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_stop_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_stop_pressed">_on<wbr></wbr>_stop<wbr></wbr>_pressed</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_tap_tempo_button_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_tap_tempo_button_pressed">_on<wbr></wbr>_tap<wbr></wbr>_tempo<wbr></wbr>_button<wbr></wbr>_pressed</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_undo_button_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_undo_button_pressed">_on<wbr></wbr>_undo<wbr></wbr>_button<wbr></wbr>_pressed</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_undo_shift_button_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_undo_shift_button_pressed">_on<wbr></wbr>_undo<wbr></wbr>_shift<wbr></wbr>_button<wbr></wbr>_pressed</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_set_metronome_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._set_metronome_button">_set<wbr></wbr>_metronome<wbr></wbr>_button</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.component.Component.html#activate" class="internal-link" title="fl_controller_framework.component.Component.activate">activate</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.component.Component.html#deactivate" class="internal-link" title="fl_controller_framework.component.Component.deactivate">deactivate</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.component.Component.html#listens" class="internal-link" title="fl_controller_framework.component.Component.listens">listens</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.component.Component.html#notify" class="internal-link" title="fl_controller_framework.component.Component.notify">notify</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.component.Component.subscribe">subscribe</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.event.EventObject.html#notify_listeners" class="internal-link" title="fl_controller_framework.event.EventObject.notify_listeners">notify<wbr></wbr>_listeners</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.event.EventObject.html#unsubscribe" class="internal-link" title="fl_controller_framework.event.EventObject.unsubscribe">unsubscribe</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.state.StateBase.html#getValue" class="internal-link" title="fl_controller_framework.state.StateBase.getValue">get<wbr></wbr>Value</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.state.StateBase.html#isChanged" class="internal-link" title="fl_controller_framework.state.StateBase.isChanged">is<wbr></wbr>Changed</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.component.Component.html#_control_subscribe" class="internal-link" title="fl_controller_framework.component.Component._control_subscribe">_control<wbr></wbr>_subscribe</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.component.Component.html#_control_unsubscribe" class="internal-link" title="fl_controller_framework.component.Component._control_unsubscribe">_control<wbr></wbr>_unsubscribe</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.component.Component.html#_get_controls" class="internal-link" title="fl_controller_framework.component.Component._get_controls">_get<wbr></wbr>_controls</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.component.Component.html#_get_observers" class="internal-link" title="fl_controller_framework.component.Component._get_observers">_get<wbr></wbr>_observers</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#beat_color_map" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.beat_color_map">beat<wbr></wbr>_color<wbr></wbr>_map</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#locate_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.locate_button">locate<wbr></wbr>_button</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#loop_recording" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.loop_recording">loop<wbr></wbr>_recording</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#metronome_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.metronome_button">metronome<wbr></wbr>_button</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#overdub_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.overdub_button">overdub<wbr></wbr>_button</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#play_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.play_button">play<wbr></wbr>_button</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#quantize_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.quantize_button">quantize<wbr></wbr>_button</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#record_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.record_button">record<wbr></wbr>_button</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#seek_back_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.seek_back_button">seek<wbr></wbr>_back<wbr></wbr>_button</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#seek_forward_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.seek_forward_button">seek<wbr></wbr>_forward<wbr></wbr>_button</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#shift_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.shift_button">shift<wbr></wbr>_button</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#song_mode_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.song_mode_button">song<wbr></wbr>_mode<wbr></wbr>_button</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#stop_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.stop_button">stop<wbr></wbr>_button</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#tap_tempo_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.tap_tempo_button">tap<wbr></wbr>_tempo<wbr></wbr>_button</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#undo_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.undo_button">undo<wbr></wbr>_button</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#undo_shift_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.undo_shift_button">undo<wbr></wbr>_shift<wbr></wbr>_button</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.component.Component.html#auto_active" class="internal-link" title="fl_controller_framework.component.Component.auto_active">auto<wbr></wbr>_active</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.component.Component.html#fl" class="internal-link" title="fl_controller_framework.component.Component.fl">fl</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.component.Component.html#global_event_object" class="internal-link" title="fl_controller_framework.component.Component.global_event_object">global<wbr></wbr>_event<wbr></wbr>_object</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.component.Component.html#name" class="internal-link" title="fl_controller_framework.component.Component.name">name</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.event.EventObject.html#observers" class="internal-link" title="fl_controller_framework.event.EventObject.observers">observers</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.state.StateBase.html#_state" class="internal-link" title="fl_controller_framework.state.StateBase._state">_state</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="fl_controller_framework.components.transport.html" class="internal-link" title="The parent of this class">transport</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.components.transport.TransportComponent.html" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent"><wbr></wbr>Transport<wbr></wbr>Component</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">fl_controller_framework</a></code><wbr></wbr>.<code><a href="fl_controller_framework.components.html" class="internal-link" title="fl_controller_framework.components">components</a></code><wbr></wbr>.<code><a href="fl_controller_framework.components.transport.html" class="internal-link" title="fl_controller_framework.components.transport">transport</a></code><wbr></wbr>.<code><a href="fl_controller_framework.components.transport.TransportComponent.html" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent">TransportComponent</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">TransportComponent</span>(<a href="fl_controller_framework.component.Component.html" class="internal-link" title="fl_controller_framework.component.Component">Component</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L4" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.__init__">TransportComponent(play_button, loop_recording, stop_button, record_button, ...)</a></code></p>
+          <p><a href="classIndex.html#fl_controller_framework.components.transport.TransportComponent">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="pre">This Component hold basic transport functionality. Instantiate this with your own ButtonControls as arguments.</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id8">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#change_song_position" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.change_song_position">change<wbr></wbr>_song<wbr></wbr>_position</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#on_isPlaying" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.on_isPlaying">on_is<wbr></wbr>Playing</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#beat_color_map" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.beat_color_map">beat<wbr></wbr>_color<wbr></wbr>_map</a></code></td>
+    <td>This is a dictionary of skin color for each beat that FL Studio sends. When playing, FL Studio sends beats as integers, 0, 1, 2</td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#locate_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.locate_button">locate<wbr></wbr>_button</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#loop_recording" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.loop_recording">loop<wbr></wbr>_recording</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#metronome_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.metronome_button">metronome<wbr></wbr>_button</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#overdub_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.overdub_button">overdub<wbr></wbr>_button</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#play_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.play_button">play<wbr></wbr>_button</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#quantize_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.quantize_button">quantize<wbr></wbr>_button</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#record_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.record_button">record<wbr></wbr>_button</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#seek_back_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.seek_back_button">seek<wbr></wbr>_back<wbr></wbr>_button</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#seek_forward_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.seek_forward_button">seek<wbr></wbr>_forward<wbr></wbr>_button</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#shift_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.shift_button">shift<wbr></wbr>_button</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#song_mode_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.song_mode_button">song<wbr></wbr>_mode<wbr></wbr>_button</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#stop_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.stop_button">stop<wbr></wbr>_button</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#tap_tempo_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.tap_tempo_button">tap<wbr></wbr>_tempo<wbr></wbr>_button</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#undo_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.undo_button">undo<wbr></wbr>_button</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#undo_shift_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.undo_shift_button">undo<wbr></wbr>_shift<wbr></wbr>_button</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_beat" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_beat">_on<wbr></wbr>_beat</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_isLoopRecEnabled" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_isLoopRecEnabled">_on_is<wbr></wbr>Loop<wbr></wbr>Rec<wbr></wbr>Enabled</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_isRecording" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_isRecording">_on_is<wbr></wbr>Recording</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_locate_button_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_locate_button_pressed">_on<wbr></wbr>_locate<wbr></wbr>_button<wbr></wbr>_pressed</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_loop_mode" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_loop_mode">_on<wbr></wbr>_loop<wbr></wbr>_mode</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_loop_recording_toggled" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_loop_recording_toggled">_on<wbr></wbr>_loop<wbr></wbr>_recording<wbr></wbr>_toggled</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_metronome_button_toggled" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_metronome_button_toggled">_on<wbr></wbr>_metronome<wbr></wbr>_button<wbr></wbr>_toggled</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_overdub_button_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_overdub_button_pressed">_on<wbr></wbr>_overdub<wbr></wbr>_button<wbr></wbr>_pressed</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_play_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_play_pressed">_on<wbr></wbr>_play<wbr></wbr>_pressed</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_quantize_button_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_quantize_button_pressed">_on<wbr></wbr>_quantize<wbr></wbr>_button<wbr></wbr>_pressed</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_record_button_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_record_button_pressed">_on<wbr></wbr>_record<wbr></wbr>_button<wbr></wbr>_pressed</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_seek_back_button_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_seek_back_button_pressed">_on<wbr></wbr>_seek<wbr></wbr>_back<wbr></wbr>_button<wbr></wbr>_pressed</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_seek_forward_button_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_seek_forward_button_pressed">_on<wbr></wbr>_seek<wbr></wbr>_forward<wbr></wbr>_button<wbr></wbr>_pressed</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_shift_button_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_shift_button_pressed">_on<wbr></wbr>_shift<wbr></wbr>_button<wbr></wbr>_pressed</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_song_mode_button_toggled" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_song_mode_button_toggled">_on<wbr></wbr>_song<wbr></wbr>_mode<wbr></wbr>_button<wbr></wbr>_toggled</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_stop_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_stop_pressed">_on<wbr></wbr>_stop<wbr></wbr>_pressed</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_tap_tempo_button_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_tap_tempo_button_pressed">_on<wbr></wbr>_tap<wbr></wbr>_tempo<wbr></wbr>_button<wbr></wbr>_pressed</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_undo_button_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_undo_button_pressed">_on<wbr></wbr>_undo<wbr></wbr>_button<wbr></wbr>_pressed</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_undo_shift_button_pressed" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._on_undo_shift_button_pressed">_on<wbr></wbr>_undo<wbr></wbr>_shift<wbr></wbr>_button<wbr></wbr>_pressed</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_set_metronome_button" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent._set_metronome_button">_set<wbr></wbr>_metronome<wbr></wbr>_button</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+            <p class="inheritedFrom">
+              Inherited from <code><a href="fl_controller_framework.component.Component.html" class="internal-link" title="fl_controller_framework.component.Component">Component</a></code>:
+            </p>
+            <table class="children sortable" id="id9">
+  
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.component.Component.html#activate" class="internal-link" title="fl_controller_framework.component.Component.activate">activate</a></code></td>
+    <td>Activate this Component and all its controls. This method also subscribes to all control events listed in the Component.subscribe(decorator, and register all functions decorated with Component.listens()) ...</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.component.Component.html#deactivate" class="internal-link" title="fl_controller_framework.component.Component.deactivate">deactivate</a></code></td>
+    <td>Deactivate this Component and all its controls. This method also unsubscribes to all control events listed in the Component.subscribe(decorator, and unregister all functions decorated with Component.listens()) ...</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.component.Component.html#listens" class="internal-link" title="fl_controller_framework.component.Component.listens">listens</a></code></td>
+    <td>A static method the is used to listen to FL studio event and react to them by the function they are decorating. Upon component activation, each function that is decorated with Component.listens() will be registered in the global event object...</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.component.Component.html#notify" class="internal-link" title="fl_controller_framework.component.Component.notify">notify</a></code></td>
+    <td>Helper method to publish event sourced form this component. The event_id is component_name.event. This is useful for communication between components if you need.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.component.Component.subscribe">subscribe</a></code></td>
+    <td>A static method that is used to subscribe functions to control on the Component instance. Upon component activation, each function that is decorated with Component.subscribe will be subscribed using the global event object...</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.component.Component.html#auto_active" class="internal-link" title="fl_controller_framework.component.Component.auto_active">auto<wbr></wbr>_active</a></code></td>
+    <td>Whether or not to automatically activate this component upon declaration</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.component.Component.html#fl" class="internal-link" title="fl_controller_framework.component.Component.fl">fl</a></code></td>
+    <td>FL Studio modules object: This object hold a reference to all Fl Studio modules and functions.</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.component.Component.html#global_event_object" class="internal-link" title="fl_controller_framework.component.Component.global_event_object">global<wbr></wbr>_event<wbr></wbr>_object</a></code></td>
+    <td>A reference to the global event registry</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.component.Component.html#name" class="internal-link" title="fl_controller_framework.component.Component.name">name</a></code></td>
+    <td>Component Name: Must be unique. The name is used when publishing events from this component.</td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.component.Component.html#_control_subscribe" class="internal-link" title="fl_controller_framework.component.Component._control_subscribe">_control<wbr></wbr>_subscribe</a></code></td>
+    <td>Finds each function with the Decorator @Component.subscribe(control_name: str, event_id: str). Once found it binds the function to the control event specified in the decorator. It does this with the global event object...</td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.component.Component.html#_control_unsubscribe" class="internal-link" title="fl_controller_framework.component.Component._control_unsubscribe">_control<wbr></wbr>_unsubscribe</a></code></td>
+    <td>Finds each function with the Decorator @Component.subscribe(control_name: str, event_id: str). Once found it unsubscribes the function to the control event specified in the decorator. It does on the global event object...</td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.component.Component.html#_get_controls" class="internal-link" title="fl_controller_framework.component.Component._get_controls">_get<wbr></wbr>_controls</a></code></td>
+    <td>Gets all controls on this Component instance</td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.component.Component.html#_get_observers" class="internal-link" title="fl_controller_framework.component.Component._get_observers">_get<wbr></wbr>_observers</a></code></td>
+    <td>Get all functions on this Component instance that are decorated with @Component.listens(). </td>
+  </tr>
+</table>
+            
+            <p class="inheritedFrom">
+              Inherited from <code><a href="fl_controller_framework.state.StateBase.html" class="internal-link" title="fl_controller_framework.state.StateBase">StateBase</a></code> (via <code><a href="fl_controller_framework.component.Component.html" class="internal-link" title="fl_controller_framework.component.Component">Component</a></code>):
+            </p>
+            <table class="children sortable" id="id10">
+  
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.state.StateBase.html#getValue" class="internal-link" title="fl_controller_framework.state.StateBase.getValue">get<wbr></wbr>Value</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.state.StateBase.html#isChanged" class="internal-link" title="fl_controller_framework.state.StateBase.isChanged">is<wbr></wbr>Changed</a></code></td>
+    <td>This is the method that checks for state changes. It takes the state represented as a string, and the value for comparison. It returns true is the value passed into the function is different from the value stored in the dictionary...</td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.state.StateBase.html#_state" class="internal-link" title="fl_controller_framework.state.StateBase._state">_state</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+            
+            <p class="inheritedFrom">
+              Inherited from <code><a href="fl_controller_framework.event.EventObject.html" class="internal-link" title="fl_controller_framework.event.EventObject">EventObject</a></code> (via <code><a href="fl_controller_framework.component.Component.html" class="internal-link" title="fl_controller_framework.component.Component">Component</a></code>, <code><a href="fl_controller_framework.state.StateBase.html" class="internal-link" title="fl_controller_framework.state.StateBase">StateBase</a></code>):
+            </p>
+            <table class="children sortable" id="id11">
+  
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.event.EventObject.html#notify_listeners" class="internal-link" title="fl_controller_framework.event.EventObject.notify_listeners">notify<wbr></wbr>_listeners</a></code></td>
+    <td>This function is called whenever a new event(event_id) is received. All functions registered by subscribe are called by the specified event_id.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.event.EventObject.html#unsubscribe" class="internal-link" title="fl_controller_framework.event.EventObject.unsubscribe">unsubscribe</a></code></td>
+    <td>Unsubscribe removed the supplied function from the list of observers by event_id.</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.event.EventObject.html#observers" class="internal-link" title="fl_controller_framework.event.EventObject.observers">observers</a></code></td>
+    <td>dictionary instance variable that houses the registry of observer functions.  They key for this dictionary is a str of the event_id. Events are referenced by this key and the list of observers are called by it.</td>
+  </tr>
+</table>
+            
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, play_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, loop_recording: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, stop_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, record_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, overdub_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, seek_forward_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, seek_back_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, locate_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, tap_tempo_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, undo_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, shift_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, undo_shift_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, metronome_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, song_mode_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, quantize_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, beat_color_map: <code><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="intersphinx-link">dict</a>[<wbr></wbr><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a>, <wbr></wbr><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a>]</code> = {<wbr></wbr>0: <span class="rst-variable-quote">'</span><span class="rst-variable-string">OFF</span><span class="rst-variable-quote">'</span>, <wbr></wbr>1: <span class="rst-variable-quote">'</span><span class="rst-variable-string">BRIGHT</span><span class="rst-variable-quote">'</span>, <wbr></wbr>2: <span class="rst-variable-quote">'</span><span class="rst-variable-string">BRIGHT</span><span class="rst-variable-quote">'</span>}, *a, **k)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L6">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#__init__" title="fl_controller_framework.components.transport.TransportComponent.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.component.Component.html#__init__" class="internal-link">fl_controller_framework.component.Component.__init__</a></code></div>
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent.change_song_position">
+    
+  </a>
+  <a name="change_song_position">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">change_song_position</span><span class="function-signature">(self, direction: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code>)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L49">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#change_song_position" title="fl_controller_framework.components.transport.TransportComponent.change_song_position">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent.on_isPlaying">
+    
+  </a>
+  <a name="on_isPlaying">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.component.Component.html#listens" class="internal-link" title="fl_controller_framework.component.Component.listens">Component.listens</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">transport.isPlaying</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">on_isPlaying</span><span class="function-signature">(self, isPlaying)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L173">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#on_isPlaying" title="fl_controller_framework.components.transport.TransportComponent.on_isPlaying">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent.beat_color_map">
+    
+  </a>
+  <a name="beat_color_map">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">beat_color_map</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L46">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#beat_color_map" title="fl_controller_framework.components.transport.TransportComponent.beat_color_map">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">This is a dictionary of skin color for each beat that FL Studio sends. When playing, FL Studio sends beats as integers, 0, 1, 2</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent.locate_button">
+    
+  </a>
+  <a name="locate_button">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">locate_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L37">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#locate_button" title="fl_controller_framework.components.transport.TransportComponent.locate_button">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent.loop_recording">
+    
+  </a>
+  <a name="loop_recording">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">loop_recording</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L31">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#loop_recording" title="fl_controller_framework.components.transport.TransportComponent.loop_recording">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent.metronome_button">
+    
+  </a>
+  <a name="metronome_button">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">metronome_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L42">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#metronome_button" title="fl_controller_framework.components.transport.TransportComponent.metronome_button">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent.overdub_button">
+    
+  </a>
+  <a name="overdub_button">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">overdub_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L34">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#overdub_button" title="fl_controller_framework.components.transport.TransportComponent.overdub_button">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent.play_button">
+    
+  </a>
+  <a name="play_button">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">play_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L30">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#play_button" title="fl_controller_framework.components.transport.TransportComponent.play_button">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent.quantize_button">
+    
+  </a>
+  <a name="quantize_button">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">quantize_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L44">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#quantize_button" title="fl_controller_framework.components.transport.TransportComponent.quantize_button">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent.record_button">
+    
+  </a>
+  <a name="record_button">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">record_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L33">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#record_button" title="fl_controller_framework.components.transport.TransportComponent.record_button">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent.seek_back_button">
+    
+  </a>
+  <a name="seek_back_button">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">seek_back_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L36">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#seek_back_button" title="fl_controller_framework.components.transport.TransportComponent.seek_back_button">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent.seek_forward_button">
+    
+  </a>
+  <a name="seek_forward_button">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">seek_forward_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L35">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#seek_forward_button" title="fl_controller_framework.components.transport.TransportComponent.seek_forward_button">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent.shift_button">
+    
+  </a>
+  <a name="shift_button">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">shift_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L40">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#shift_button" title="fl_controller_framework.components.transport.TransportComponent.shift_button">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent.song_mode_button">
+    
+  </a>
+  <a name="song_mode_button">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">song_mode_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L43">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#song_mode_button" title="fl_controller_framework.components.transport.TransportComponent.song_mode_button">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent.stop_button">
+    
+  </a>
+  <a name="stop_button">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">stop_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L32">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#stop_button" title="fl_controller_framework.components.transport.TransportComponent.stop_button">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent.tap_tempo_button">
+    
+  </a>
+  <a name="tap_tempo_button">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">tap_tempo_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L38">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#tap_tempo_button" title="fl_controller_framework.components.transport.TransportComponent.tap_tempo_button">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent.undo_button">
+    
+  </a>
+  <a name="undo_button">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">undo_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L39">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#undo_button" title="fl_controller_framework.components.transport.TransportComponent.undo_button">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent.undo_shift_button">
+    
+  </a>
+  <a name="undo_shift_button">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">undo_shift_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L41">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#undo_shift_button" title="fl_controller_framework.components.transport.TransportComponent.undo_shift_button">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent._on_beat">
+    
+  </a>
+  <a name="_on_beat">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.component.Component.html#listens" class="internal-link" title="fl_controller_framework.component.Component.listens">Component.listens</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">beat</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_beat</span><span class="function-signature">(self, beat)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L119">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_beat" title="fl_controller_framework.components.transport.TransportComponent._on_beat">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent._on_isLoopRecEnabled">
+    
+  </a>
+  <a name="_on_isLoopRecEnabled">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.component.Component.html#listens" class="internal-link" title="fl_controller_framework.component.Component.listens">Component.listens</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">ui.isLoopRecEnabled</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_isLoopRecEnabled</span><span class="function-signature">(self, isLoopRecEnabled)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L63">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_isLoopRecEnabled" title="fl_controller_framework.components.transport.TransportComponent._on_isLoopRecEnabled">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent._on_isRecording">
+    
+  </a>
+  <a name="_on_isRecording">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.component.Component.html#listens" class="internal-link" title="fl_controller_framework.component.Component.listens">Component.listens</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">transport.isRecording</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_isRecording</span><span class="function-signature">(self, isRecording)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L166">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_isRecording" title="fl_controller_framework.components.transport.TransportComponent._on_isRecording">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent._on_locate_button_pressed">
+    
+  </a>
+  <a name="_on_locate_button_pressed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">locate_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_locate_button_pressed</span><span class="function-signature">(self, pressed)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L123">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_locate_button_pressed" title="fl_controller_framework.components.transport.TransportComponent._on_locate_button_pressed">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent._on_loop_mode">
+    
+  </a>
+  <a name="_on_loop_mode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.component.Component.html#listens" class="internal-link" title="fl_controller_framework.component.Component.listens">Component.listens</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">transport.getLoopMode</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_loop_mode</span><span class="function-signature">(self, loop_mode)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L75">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_loop_mode" title="fl_controller_framework.components.transport.TransportComponent._on_loop_mode">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent._on_loop_recording_toggled">
+    
+  </a>
+  <a name="_on_loop_recording_toggled">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">loop_recording</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">toggled</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_loop_recording_toggled</span><span class="function-signature">(self, _)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L67">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_loop_recording_toggled" title="fl_controller_framework.components.transport.TransportComponent._on_loop_recording_toggled">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent._on_metronome_button_toggled">
+    
+  </a>
+  <a name="_on_metronome_button_toggled">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">metronome_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">toggled</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_metronome_button_toggled</span><span class="function-signature">(self, _)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L81">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_metronome_button_toggled" title="fl_controller_framework.components.transport.TransportComponent._on_metronome_button_toggled">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent._on_overdub_button_pressed">
+    
+  </a>
+  <a name="_on_overdub_button_pressed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">overdub_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_overdub_button_pressed</span><span class="function-signature">(self, pressed)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L147">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_overdub_button_pressed" title="fl_controller_framework.components.transport.TransportComponent._on_overdub_button_pressed">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent._on_play_pressed">
+    
+  </a>
+  <a name="_on_play_pressed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">play_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_play_pressed</span><span class="function-signature">(self, pressed)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L152">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_play_pressed" title="fl_controller_framework.components.transport.TransportComponent._on_play_pressed">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent._on_quantize_button_pressed">
+    
+  </a>
+  <a name="_on_quantize_button_pressed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">quantize_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_quantize_button_pressed</span><span class="function-signature">(self, pressed)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L55">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_quantize_button_pressed" title="fl_controller_framework.components.transport.TransportComponent._on_quantize_button_pressed">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent._on_record_button_pressed">
+    
+  </a>
+  <a name="_on_record_button_pressed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">record_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_record_button_pressed</span><span class="function-signature">(self, pressed)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L161">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_record_button_pressed" title="fl_controller_framework.components.transport.TransportComponent._on_record_button_pressed">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent._on_seek_back_button_pressed">
+    
+  </a>
+  <a name="_on_seek_back_button_pressed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">seek_back_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_seek_back_button_pressed</span><span class="function-signature">(self, pressed)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L139">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_seek_back_button_pressed" title="fl_controller_framework.components.transport.TransportComponent._on_seek_back_button_pressed">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent._on_seek_forward_button_pressed">
+    
+  </a>
+  <a name="_on_seek_forward_button_pressed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">seek_forward_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_seek_forward_button_pressed</span><span class="function-signature">(self, pressed)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L131">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_seek_forward_button_pressed" title="fl_controller_framework.components.transport.TransportComponent._on_seek_forward_button_pressed">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent._on_shift_button_pressed">
+    
+  </a>
+  <a name="_on_shift_button_pressed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">shift_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_shift_button_pressed</span><span class="function-signature">(self, pressed: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code>)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L92">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_shift_button_pressed" title="fl_controller_framework.components.transport.TransportComponent._on_shift_button_pressed">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent._on_song_mode_button_toggled">
+    
+  </a>
+  <a name="_on_song_mode_button_toggled">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">song_mode_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">toggled</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_song_mode_button_toggled</span><span class="function-signature">(self, _)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L71">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_song_mode_button_toggled" title="fl_controller_framework.components.transport.TransportComponent._on_song_mode_button_toggled">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent._on_stop_pressed">
+    
+  </a>
+  <a name="_on_stop_pressed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">stop_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_stop_pressed</span><span class="function-signature">(self, _)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L157">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_stop_pressed" title="fl_controller_framework.components.transport.TransportComponent._on_stop_pressed">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent._on_tap_tempo_button_pressed">
+    
+  </a>
+  <a name="_on_tap_tempo_button_pressed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">tap_tempo_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_tap_tempo_button_pressed</span><span class="function-signature">(self, pressed)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L111">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_tap_tempo_button_pressed" title="fl_controller_framework.components.transport.TransportComponent._on_tap_tempo_button_pressed">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent._on_undo_button_pressed">
+    
+  </a>
+  <a name="_on_undo_button_pressed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">undo_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_undo_button_pressed</span><span class="function-signature">(self, pressed)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L103">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_undo_button_pressed" title="fl_controller_framework.components.transport.TransportComponent._on_undo_button_pressed">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent._on_undo_shift_button_pressed">
+    
+  </a>
+  <a name="_on_undo_shift_button_pressed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">undo_shift_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_undo_shift_button_pressed</span><span class="function-signature">(self, pressed)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L99">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_undo_shift_button_pressed" title="fl_controller_framework.components.transport.TransportComponent._on_undo_shift_button_pressed">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.transport.TransportComponent._set_metronome_button">
+    
+  </a>
+  <a name="_set_metronome_button">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.component.Component.html#listens" class="internal-link" title="fl_controller_framework.component.Component.listens">Component.listens</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">ui.isMetronomeEnabled</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_set_metronome_button</span><span class="function-signature">(self, metronome_enabled)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/components/transport.py#L85">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_set_metronome_button" title="fl_controller_framework.components.transport.TransportComponent._set_metronome_button">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-07-26 02:44:22.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>fl_controller_framework.util.scales.Scales</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a> <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="fl_controller_framework.util.scales.Scales.html" class="internal-link" title="This class"><wbr></wbr>Scales</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#asList" class="internal-link" title="fl_controller_framework.util.scales.Scales.asList">as<wbr></wbr>List</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#getMidiNote" class="internal-link" title="fl_controller_framework.util.scales.Scales.getMidiNote">get<wbr></wbr>Midi<wbr></wbr>Note</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#getNoteIndexByNameFlat" class="internal-link" title="fl_controller_framework.util.scales.Scales.getNoteIndexByNameFlat">get<wbr></wbr>Note<wbr></wbr>Index<wbr></wbr>By<wbr></wbr>Name<wbr></wbr>Flat</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#getNoteIndexByNameSharp" class="internal-link" title="fl_controller_framework.util.scales.Scales.getNoteIndexByNameSharp">get<wbr></wbr>Note<wbr></wbr>Index<wbr></wbr>By<wbr></wbr>Name<wbr></wbr>Sharp</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#arabic" class="internal-link" title="fl_controller_framework.util.scales.Scales.arabic">arabic</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#chromatic" class="internal-link" title="fl_controller_framework.util.scales.Scales.chromatic">chromatic</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#harmonic" class="internal-link" title="fl_controller_framework.util.scales.Scales.harmonic">harmonic</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#major" class="internal-link" title="fl_controller_framework.util.scales.Scales.major">major</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#melodic" class="internal-link" title="fl_controller_framework.util.scales.Scales.melodic">melodic</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#midi_octaves_length" class="internal-link" title="fl_controller_framework.util.scales.Scales.midi_octaves_length">midi<wbr></wbr>_octaves<wbr></wbr>_length</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#minor" class="internal-link" title="fl_controller_framework.util.scales.Scales.minor">minor</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#notes_flat" class="internal-link" title="fl_controller_framework.util.scales.Scales.notes_flat">notes<wbr></wbr>_flat</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#notes_sharp" class="internal-link" title="fl_controller_framework.util.scales.Scales.notes_sharp">notes<wbr></wbr>_sharp</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#pentatonic" class="internal-link" title="fl_controller_framework.util.scales.Scales.pentatonic">pentatonic</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="fl_controller_framework.util.scales.html" class="internal-link" title="The parent of this class">scales</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.util.scales.Scales.html" class="internal-link" title="fl_controller_framework.util.scales.Scales"><wbr></wbr>Scales</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">fl_controller_framework</a></code><wbr></wbr>.<code><a href="fl_controller_framework.util.html" class="internal-link" title="fl_controller_framework.util">util</a></code><wbr></wbr>.<code><a href="fl_controller_framework.util.scales.html" class="internal-link" title="fl_controller_framework.util.scales">scales</a></code><wbr></wbr>.<code><a href="fl_controller_framework.util.scales.Scales.html" class="internal-link" title="fl_controller_framework.util.scales.Scales">Scales</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">Scales</span>: <a href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/util/scales.py#L2" class="sourceLink">(source)</a></code></p>
+          <p><a href="classIndex.html#fl_controller_framework.util.scales.Scales">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="undocumented">Undocumented</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id114">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#asList" class="internal-link" title="fl_controller_framework.util.scales.Scales.asList">as<wbr></wbr>List</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#getMidiNote" class="internal-link" title="fl_controller_framework.util.scales.Scales.getMidiNote">get<wbr></wbr>Midi<wbr></wbr>Note</a></code></td>
+    <td>Returns the midi_note: int, given an octave: int [0-10] and scale_degree: int [0-11]</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#getNoteIndexByNameFlat" class="internal-link" title="fl_controller_framework.util.scales.Scales.getNoteIndexByNameFlat">get<wbr></wbr>Note<wbr></wbr>Index<wbr></wbr>By<wbr></wbr>Name<wbr></wbr>Flat</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#getNoteIndexByNameSharp" class="internal-link" title="fl_controller_framework.util.scales.Scales.getNoteIndexByNameSharp">get<wbr></wbr>Note<wbr></wbr>Index<wbr></wbr>By<wbr></wbr>Name<wbr></wbr>Sharp</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><code><a href="#arabic" class="internal-link" title="fl_controller_framework.util.scales.Scales.arabic">arabic</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><code><a href="#chromatic" class="internal-link" title="fl_controller_framework.util.scales.Scales.chromatic">chromatic</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><code><a href="#harmonic" class="internal-link" title="fl_controller_framework.util.scales.Scales.harmonic">harmonic</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><code><a href="#major" class="internal-link" title="fl_controller_framework.util.scales.Scales.major">major</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><code><a href="#melodic" class="internal-link" title="fl_controller_framework.util.scales.Scales.melodic">melodic</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><code><a href="#midi_octaves_length" class="internal-link" title="fl_controller_framework.util.scales.Scales.midi_octaves_length">midi<wbr></wbr>_octaves<wbr></wbr>_length</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><code><a href="#minor" class="internal-link" title="fl_controller_framework.util.scales.Scales.minor">minor</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><code><a href="#notes_flat" class="internal-link" title="fl_controller_framework.util.scales.Scales.notes_flat">notes<wbr></wbr>_flat</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><code><a href="#notes_sharp" class="internal-link" title="fl_controller_framework.util.scales.Scales.notes_sharp">notes<wbr></wbr>_sharp</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><code><a href="#pentatonic" class="internal-link" title="fl_controller_framework.util.scales.Scales.pentatonic">pentatonic</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.util.scales.Scales.asList">
+    
+  </a>
+  <a name="asList">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">asList</span><span class="function-signature">() -&gt; <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>]</code></span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/util/scales.py#L57">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#asList" title="fl_controller_framework.util.scales.Scales.asList">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.util.scales.Scales.getMidiNote">
+    
+  </a>
+  <a name="getMidiNote">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">getMidiNote</span><span class="function-signature">(octave_index: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>, scale_degree: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>) -&gt; <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code></span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/util/scales.py#L42">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#getMidiNote" title="fl_controller_framework.util.scales.Scales.getMidiNote">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Returns the midi_note: int, given an octave: int [0-10] and scale_degree: int [0-11]</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.util.scales.Scales.getNoteIndexByNameFlat">
+    
+  </a>
+  <a name="getNoteIndexByNameFlat">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">getNoteIndexByNameFlat</span><span class="function-signature">(key_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>) -&gt; <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code></span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/util/scales.py#L54">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#getNoteIndexByNameFlat" title="fl_controller_framework.util.scales.Scales.getNoteIndexByNameFlat">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.util.scales.Scales.getNoteIndexByNameSharp">
+    
+  </a>
+  <a name="getNoteIndexByNameSharp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">getNoteIndexByNameSharp</span><span class="function-signature">(key_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>) -&gt; <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code></span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/util/scales.py#L51">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#getNoteIndexByNameSharp" title="fl_controller_framework.util.scales.Scales.getNoteIndexByNameSharp">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  
+  <a name="fl_controller_framework.util.scales.Scales.arabic">
+    
+  </a>
+  <a name="arabic">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">arabic</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a>]</code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/util/scales.py#L8">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#arabic" title="fl_controller_framework.util.scales.Scales.arabic">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseclassvariable">
+  
+  
+  <a name="fl_controller_framework.util.scales.Scales.chromatic">
+    
+  </a>
+  <a name="chromatic">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">chromatic</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a>]</code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/util/scales.py#L3">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#chromatic" title="fl_controller_framework.util.scales.Scales.chromatic">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseclassvariable">
+  
+  
+  <a name="fl_controller_framework.util.scales.Scales.harmonic">
+    
+  </a>
+  <a name="harmonic">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">harmonic</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a>]</code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/util/scales.py#L7">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#harmonic" title="fl_controller_framework.util.scales.Scales.harmonic">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseclassvariable">
+  
+  
+  <a name="fl_controller_framework.util.scales.Scales.major">
+    
+  </a>
+  <a name="major">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">major</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a>]</code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/util/scales.py#L4">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#major" title="fl_controller_framework.util.scales.Scales.major">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseclassvariable">
+  
+  
+  <a name="fl_controller_framework.util.scales.Scales.melodic">
+    
+  </a>
+  <a name="melodic">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">melodic</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a>]</code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/util/scales.py#L6">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#melodic" title="fl_controller_framework.util.scales.Scales.melodic">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseclassvariable">
+  
+  
+  <a name="fl_controller_framework.util.scales.Scales.midi_octaves_length">
+    
+  </a>
+  <a name="midi_octaves_length">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">midi_octaves_length</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/util/scales.py#L40">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#midi_octaves_length" title="fl_controller_framework.util.scales.Scales.midi_octaves_length">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseclassvariable">
+  
+  
+  <a name="fl_controller_framework.util.scales.Scales.minor">
+    
+  </a>
+  <a name="minor">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">minor</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a>]</code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/util/scales.py#L5">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#minor" title="fl_controller_framework.util.scales.Scales.minor">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseclassvariable">
+  
+  
+  <a name="fl_controller_framework.util.scales.Scales.notes_flat">
+    
+  </a>
+  <a name="notes_flat">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">notes_flat</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a>]</code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/util/scales.py#L26">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#notes_flat" title="fl_controller_framework.util.scales.Scales.notes_flat">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseclassvariable">
+  
+  
+  <a name="fl_controller_framework.util.scales.Scales.notes_sharp">
+    
+  </a>
+  <a name="notes_sharp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">notes_sharp</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a>]</code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/util/scales.py#L11">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#notes_sharp" title="fl_controller_framework.util.scales.Scales.notes_sharp">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseclassvariable">
+  
+  
+  <a name="fl_controller_framework.util.scales.Scales.pentatonic">
+    
+  </a>
+  <a name="pentatonic">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">pentatonic</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a>]</code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5bc5c67f4605126fae9d768c5ee4912b225861b2/util/scales.py#L9">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#pentatonic" title="fl_controller_framework.util.scales.Scales.pentatonic">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-07-26 02:44:22.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>
