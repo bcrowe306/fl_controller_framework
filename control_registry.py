@@ -44,7 +44,6 @@ class ControlRegistry(StateBase):
     def HandleMidiMsg(self, event: flMidiMsg):
         id_tuple = (event.midiChan, event.data1, event.status)
         controls: list = self.map.get(id_tuple)
-
         # Get the control on the top of the registry stack for this event_id(channel, identifier)
         # Notify the listeners in the event registry and execute feedback, translation and playable.
         if controls and len(controls) > 0:

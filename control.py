@@ -1,4 +1,3 @@
-
 from .control_registry import ControlRegistry
 from .util.midi import MIDI_STATUS
 from .skin import SkinColor
@@ -78,21 +77,28 @@ class Control(ControlBase):
         print('original on_value')
         # self.notify_listeners('value', event)
 
+    def _initialize(self):
+        """Initializes the control to its default color"""
+        self.set_light(self.default_color)
+
     def activate(self):
         """
         activate() is called by the component when the component is activating. 
         It registers the control with the Global Control Registry, and subscribes to its own "value" events, that is, when a midiMsg comes from this control.
         """
-        super().activate()
-        self.set_light(self.default_color)
+
+        self._initialize()
+        self.event_object.subscribe("{}.value".format(self.name), self._on_value)
+        self.registry.register_control(self)
 
     def deactivate(self):
         """
         deactivate() is called by the component when the component is deactivating.
         It unregisters the control from the Global Control Registry and unsubscribes from its own "value" events.
         """
-        super().deactivate()
-        self.set_light(self.blackout_color)
+        self.reset()
+        self.event_object.unsubscribe("{}.value".format(self.name), self._on_value)
+        self.registry.unregister_control(self)
 
     def set_light(self, value, *a, **k):
         """
@@ -105,3 +111,7 @@ class Control(ControlBase):
                 color.draw(self, *a, **k)
         except AttributeError:
             print(f'Skin Color: {self._skin}.{value} Not found')
+
+    def reset(self):
+        """Resets the control to its default color"""
+        self.set_light(self.default_color)
