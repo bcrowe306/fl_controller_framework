@@ -13,6 +13,8 @@ __pdoc__ = {
 }
 import playlist, channels, transport, mixer, patterns, arrangement, ui, plugins, general, midi, device
 from dataclasses import dataclass
+from .util.colors import ColorToRGB, BGRIntToRGB
+
 class _fl:
     """Class that hold a reference too all FL Studio modules."""
     playlist = playlist
@@ -65,7 +67,7 @@ class FLChannel:
     def get_selected(self):
         self.index = channels.selectedChannel()
         self.name = channels.getChannelName(self.index)
-        self.color = channels.getChannelColor(self.index)
+        self.color = BGRIntToRGB(channels.getChannelColor(self.index))
         self.volume = channels.getChannelVolume(self.index)
         self.pan = channels.getChannelPan(self.index)
         self.mute = channels.isChannelMuted(self.index)
@@ -74,7 +76,7 @@ class FLChannel:
     def update(self, index):
         self.index = index
         self.name = channels.getChannelName(self.index)
-        self.color = channels.getChannelColor(self.index)
+        self.color = BGRIntToRGB(channels.getChannelColor(self.index))
         self.volume = channels.getChannelVolume(self.index)
         self.pan = channels.getChannelPan(self.index)
         self.mute = channels.isChannelMuted(self.index)

@@ -37,7 +37,7 @@ def BGRIntToRGB(color: int) -> tuple[int, int, int]:
     blue: int = color >> 16
     green: int = (color & 0x00FF00) >> 8
     red: int = color & 0x0000FF
-    return red, green, blue
+    return abs(red), abs(green), abs(blue)
 
 def RGBToColor(R,G,B):
     return (R << 16) | (G << 8) | B
@@ -72,7 +72,7 @@ def hsv_to_rgb(h, s, v):
     """
     if s == 0.0:
         return v, v, v
-    i = int(h*6.0)  # XXX assume int() truncates!
+    i = int(h*6.0)  # assume int() truncates!
     f = (h*6.0) - i
     p = v*(1.0 - s)
     q = v*(1.0 - s*f)
