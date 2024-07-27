@@ -114,7 +114,6 @@ class ButtonControl(Control):
         """
         Handles the idle event of the button control.
         """
-        pass
         if self._pressed:
           self.hold_counter += 1
           if self.hold_counter > self.hold_time:
