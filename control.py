@@ -32,23 +32,27 @@ class ControlBase(EventObject, StateBase):
         """Alias convenience method for self.event_object.notify_listeners. Calling this method automatically prefixed the event name with the name of the control."""
         self.event_object.notify_listeners(
             '{}.{}'.format(self.name, event_name), *a, **k)
-            
+
+    def broadcast(self, event_name: str, *a, **k):
+        """Alias convenience method for self.event_object.notify_listeners. Calling this method send a notification without prefixing the controller's name to the front."""
+        self.event_object.notify_listeners(event_name, * a, **k)
+
     def activate(self):
         """Override Method. Inheriting classes should override this method. This method is called by the component it is attached to when the component activates."""
         pass
-    
+
     def deactivate(self):
         """Override Method. Inheriting classes should override this method. This method is called by the component it is attached to when the component activates."""
         pass
-    
+
     def _on_value(self, event):
         """Override Method: Inheriting classes should override this method. This is the function that is bound to value events sent by the control."""
         pass
-    
+
     def reset(self):
         """Override Method: Inheriting classes should override this method.. This resets the control to default state."""
         pass
-    
+
     def blackout(self):
         """Override Method: Inheriting classes should override this method.. This turns the the control to blackout state."""
         pass

@@ -55,7 +55,8 @@ class Component(StateBase, EventObject):
                 # Get the control that was passed into the Component instance, and subscribe to it's events
                 if hasattr(self, instance_control_name) and isinstance(getattr(self, func.control_name), ControlBase):
                     control: ControlBase = getattr(self, func.control_name)
-                    self.global_event_object.subscribe('{}.{}'.format(control.name, control_event), func)
+                    if control is not None:
+                        self.global_event_object.subscribe('{}.{}'.format(control.name, control_event), func)
 
     def _control_unsubscribe(self):
         """Finds each function with the Decorator @Component.subscribe(control_name: str, event_id: str). Once found it unsubscribes the function to the control event specified in the decorator.
@@ -69,7 +70,8 @@ class Component(StateBase, EventObject):
                 # Get the control that was passed into the Component instance, and unsubscribe to it's events
                 if hasattr(self, instance_control_name) and isinstance(getattr(self, func.control_name), ControlBase):
                     control: ControlBase = getattr(self, func.control_name)
-                    self.global_event_object.unsubscribe('{}.{}'.format(control.name, control_event), func)
+                    if control is not None:
+                        self.global_event_object.unsubscribe('{}.{}'.format(control.name, control_event), func)
 
     def _get_observers(self):
         """Get all functions on this Component instance that are decorated with @Component.listens(). """
@@ -101,8 +103,10 @@ class Component(StateBase, EventObject):
             # Activate each control instance of this component
             self._control_subscribe()
             controls = self._get_controls()
-            for control in controls:
-                controls[control].activate()
+            for control_key in controls:
+                control: ControlBase = controls[control_key]
+                if control is not None:
+                    control.activate()
 
             # Bind listener functions to event_path in main event loop
             observers = self._get_observers()
@@ -116,8 +120,10 @@ class Component(StateBase, EventObject):
             # Deactivate Controls
             self._control_unsubscribe()
             controls: list[Control] = self._get_controls()
-            for control in controls:
-                controls[control].deactivate()
+            for control_key in controls:
+                control: ControlBase = controls[control_key]
+                if control is not None:
+                    control.deactivate()
 
             # Unbind listener functions from event_path
             observers = self._get_observers()
