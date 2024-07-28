@@ -180,6 +180,16 @@
         
 
         
+            <div class="itemName"><code><a href="fl_controller_framework.control.ControlBase.html#broadcast" class="internal-link" title="fl_controller_framework.control.ControlBase.broadcast">broadcast</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="fl_controller_framework.control.ControlBase.html#notify" class="internal-link" title="fl_controller_framework.control.ControlBase.notify">notify</a></code>
             </div>
         
@@ -546,7 +556,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">Control</span>(<a href="fl_controller_framework.control.ControlBase.html" class="internal-link" title="fl_controller_framework.control.ControlBase">ControlBase</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/control.py#L57" class="sourceLink">(source)</a></code></p><p>Known subclasses: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link">fl_controller_framework.controls.button.ButtonControl</a></code>, <code><a href="fl_controller_framework.controls.encoder.EncoderControl.html" class="internal-link">fl_controller_framework.controls.encoder.EncoderControl</a></code>, <code><a href="fl_controller_framework.controls.fader.FaderControl.html" class="internal-link">fl_controller_framework.controls.fader.FaderControl</a></code>, <code><a href="fl_controller_framework.controls.jog_control.JogControl.html" class="internal-link">fl_controller_framework.controls.jog_control.JogControl</a></code>, <code><a href="fl_controller_framework.controls.knob.KnobControl.html" class="internal-link">fl_controller_framework.controls.knob.KnobControl</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.control.Control.__init__">Control(name, channel, identifier, playable, ...)</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">Control</span>(<a href="fl_controller_framework.control.ControlBase.html" class="internal-link" title="fl_controller_framework.control.ControlBase">ControlBase</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/control.py#L61" class="sourceLink">(source)</a></code></p><p>Known subclasses: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link">fl_controller_framework.controls.button.ButtonControl</a></code>, <code><a href="fl_controller_framework.controls.encoder.EncoderControl.html" class="internal-link">fl_controller_framework.controls.encoder.EncoderControl</a></code>, <code><a href="fl_controller_framework.controls.fader.FaderControl.html" class="internal-link">fl_controller_framework.controls.fader.FaderControl</a></code>, <code><a href="fl_controller_framework.controls.jog_control.JogControl.html" class="internal-link">fl_controller_framework.controls.jog_control.JogControl</a></code>, <code><a href="fl_controller_framework.controls.knob.KnobControl.html" class="internal-link">fl_controller_framework.controls.knob.KnobControl</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.control.Control.__init__">Control(name, channel, identifier, playable, ...)</a></code></p>
           <p><a href="classIndex.html#fl_controller_framework.control.Control">View In Hierarchy</a></p>
         </div>
 
@@ -632,6 +642,11 @@
     <td>Method</td>
     <td><code><a href="fl_controller_framework.control.ControlBase.html#blackout" class="internal-link" title="fl_controller_framework.control.ControlBase.blackout">blackout</a></code></td>
     <td>Override Method: Inheriting classes should override this method.. This turns the the control to blackout state.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.control.ControlBase.html#broadcast" class="internal-link" title="fl_controller_framework.control.ControlBase.broadcast">broadcast</a></code></td>
+    <td>Alias convenience method for self.event_object.notify_listeners. Calling this method send a notification without prefixing the controller's name to the front.</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
@@ -751,7 +766,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, name, channel, identifier, playable=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, status=<a href="fl_controller_framework.util.midi.MIDI_STATUS.html#NOTE_ON_STATUS" class="internal-link" title="fl_controller_framework.util.midi.MIDI_STATUS.NOTE_ON_STATUS">MIDI_STATUS.NOTE_ON_STATUS</a>, feedback=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, feedback_process=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, default_color=<span class="rst-variable-quote">'</span><span class="rst-variable-string">Default</span><span class="rst-variable-quote">'</span>, blackout_color=<span class="rst-variable-quote">'</span><span class="rst-variable-string">Off</span><span class="rst-variable-quote">'</span>, skin=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/control.py#L59">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/control.py#L63">
       
       (source)
     </a>
@@ -778,7 +793,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">activate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/control.py#L84">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/control.py#L88">
       
       (source)
     </a>
@@ -806,7 +821,7 @@ It registers the control with the Global Control Registry, and subscribes to its
     
     
     <span class="py-keyword">def</span> <span class="py-defname">deactivate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/control.py#L94">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/control.py#L98">
       
       (source)
     </a>
@@ -834,7 +849,7 @@ It unregisters the control from the Global Control Registry and unsubscribes fro
     
     
     <span class="py-keyword">def</span> <span class="py-defname">reset</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/control.py#L115">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/control.py#L119">
       
       (source)
     </a>
@@ -861,7 +876,7 @@ It unregisters the control from the Global Control Registry and unsubscribes fro
     
     
     <span class="py-keyword">def</span> <span class="py-defname">set_light</span><span class="function-signature">(self, value, *a, **k)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/control.py#L103">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/control.py#L107">
       
       (source)
     </a>
@@ -888,7 +903,7 @@ A skin is a class with color members. Each color member has a draw method. The d
   <div class="functionHeader">
     
     <span class="py-defname">blackout_color</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/control.py#L69">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/control.py#L73">
       
       (source)
     </a>
@@ -915,7 +930,7 @@ A skin is a class with color members. Each color member has a draw method. The d
   <div class="functionHeader">
     
     <span class="py-defname">default_color</span>: <code><a href="fl_controller_framework.skin.SkinColor.html" class="internal-link" title="fl_controller_framework.skin.SkinColor">SkinColor</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/control.py#L67">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/control.py#L71">
       
       (source)
     </a>
@@ -942,7 +957,7 @@ A skin is a class with color members. Each color member has a draw method. The d
   <div class="functionHeader">
     
     <span class="py-defname">feedback</span>: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/control.py#L63">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/control.py#L67">
       
       (source)
     </a>
@@ -969,7 +984,7 @@ A skin is a class with color members. Each color member has a draw method. The d
   <div class="functionHeader">
     
     <span class="py-defname">feedback_process</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/control.py#L65">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/control.py#L69">
       
       (source)
     </a>
@@ -997,7 +1012,7 @@ A skin is a class with color members. Each color member has a draw method. The d
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_initialize</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/control.py#L80">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/control.py#L84">
       
       (source)
     </a>
@@ -1024,7 +1039,7 @@ A skin is a class with color members. Each color member has a draw method. The d
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_on_value</span><span class="function-signature">(self, event)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/control.py#L72">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/control.py#L76">
       
       (source)
     </a>
@@ -1052,7 +1067,7 @@ This is useful for emitting your own custom events for a control, or reacting to
   <div class="functionHeader">
     
     <span class="py-defname">_skin</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/control.py#L61">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/control.py#L65">
       
       (source)
     </a>
@@ -1080,7 +1095,7 @@ This is useful for emitting your own custom events for a control, or reacting to
     <div class="container">
       <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
     generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-      24.3.3 at 2024-07-27 04:08:03.
+      24.3.3 at 2024-07-28 05:21:27.
     </div>
     
     <script src="ajax.js" type="text/javascript"></script>

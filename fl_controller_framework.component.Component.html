@@ -446,7 +446,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">Component</span>(<a href="fl_controller_framework.state.StateBase.html" class="internal-link" title="fl_controller_framework.state.StateBase">StateBase</a>, <a href="fl_controller_framework.event.EventObject.html" class="internal-link" title="fl_controller_framework.event.EventObject">EventObject</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/component.py#L6" class="sourceLink">(source)</a></code></p><p>Known subclasses: <code><a href="fl_controller_framework.components.transport.TransportComponent.html" class="internal-link">fl_controller_framework.components.transport.TransportComponent</a></code>, <code><a href="fl_controller_framework.control_surface.ControlSurface.html" class="internal-link">fl_controller_framework.control_surface.ControlSurface</a></code>, <code><a href="fl_controller_framework.modes.ModesComponent.html" class="internal-link">fl_controller_framework.modes.ModesComponent</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.component.Component.__init__">Component(name, auto_active, *a, **k)</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">Component</span>(<a href="fl_controller_framework.state.StateBase.html" class="internal-link" title="fl_controller_framework.state.StateBase">StateBase</a>, <a href="fl_controller_framework.event.EventObject.html" class="internal-link" title="fl_controller_framework.event.EventObject">EventObject</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/component.py#L6" class="sourceLink">(source)</a></code></p><p>Known subclasses: <code><a href="fl_controller_framework.components.transport.TransportComponent.html" class="internal-link">fl_controller_framework.components.transport.TransportComponent</a></code>, <code><a href="fl_controller_framework.control_surface.ControlSurface.html" class="internal-link">fl_controller_framework.control_surface.ControlSurface</a></code>, <code><a href="fl_controller_framework.modes.ModesComponent.html" class="internal-link">fl_controller_framework.modes.ModesComponent</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.component.Component.__init__">Component(name, auto_active, *a, **k)</a></code></p>
           <p><a href="classIndex.html#fl_controller_framework.component.Component">View In Hierarchy</a></p>
         </div>
 
@@ -600,7 +600,7 @@ When inheriting from this class, create as many controls as necessary as instanc
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, auto_active: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code> = <a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>, *a, **k)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/component.py#L30">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/component.py#L30">
       
       (source)
     </a>
@@ -627,7 +627,7 @@ When inheriting from this class, create as many controls as necessary as instanc
     
     
     <span class="py-keyword">def</span> <span class="py-defname">activate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/component.py#L98">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/component.py#L100">
       
       (source)
     </a>
@@ -654,7 +654,7 @@ When inheriting from this class, create as many controls as necessary as instanc
     
     
     <span class="py-keyword">def</span> <span class="py-defname">deactivate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/component.py#L113">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/component.py#L117">
       
       (source)
     </a>
@@ -681,7 +681,7 @@ When inheriting from this class, create as many controls as necessary as instanc
     
     
     <span class="py-keyword">def</span> <span class="py-defname">listens</span><span class="function-signature">(event_path: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/component.py#L12">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/component.py#L12">
       
       (source)
     </a>
@@ -709,7 +709,7 @@ Example: Component.listens("channels.selectedChannel"). This decorator will call
     
     
     <span class="py-keyword">def</span> <span class="py-defname">notify</span><span class="function-signature">(self, event_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, *a, **k)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/component.py#L41">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/component.py#L41">
       
       (source)
     </a>
@@ -736,7 +736,7 @@ Example: Component.listens("channels.selectedChannel"). This decorator will call
     
     
     <span class="py-keyword">def</span> <span class="py-defname">subscribe</span><span class="function-signature">(control_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, event: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/component.py#L21">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/component.py#L21">
       
       (source)
     </a>
@@ -763,7 +763,7 @@ This is how you listen to and react to event generated by controls. Example: Com
   <div class="functionHeader">
     
     <span class="py-defname">auto_active</span>: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/component.py#L36">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/component.py#L36">
       
       (source)
     </a>
@@ -790,7 +790,7 @@ This is how you listen to and react to event generated by controls. Example: Com
   <div class="functionHeader">
     
     <span class="py-defname">fl</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/component.py#L38">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/component.py#L38">
       
       (source)
     </a>
@@ -817,7 +817,7 @@ This is how you listen to and react to event generated by controls. Example: Com
   <div class="functionHeader">
     
     <span class="py-defname">global_event_object</span>: <code><a href="fl_controller_framework.event.GlobalEventObject.html" class="internal-link" title="fl_controller_framework.event.GlobalEventObject">GlobalEventObject</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/component.py#L34">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/component.py#L34">
       
       (source)
     </a>
@@ -844,7 +844,7 @@ This is how you listen to and react to event generated by controls. Example: Com
   <div class="functionHeader">
     
     <span class="py-defname">name</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/component.py#L32">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/component.py#L32">
       
       (source)
     </a>
@@ -872,7 +872,7 @@ This is how you listen to and react to event generated by controls. Example: Com
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_control_subscribe</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/component.py#L46">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/component.py#L46">
       
       (source)
     </a>
@@ -900,7 +900,7 @@ It does this with the global event object. This is called at Component activatio
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_control_unsubscribe</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/component.py#L60">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/component.py#L61">
       
       (source)
     </a>
@@ -928,7 +928,7 @@ It does on the global event object. This is called at deactivation with Componen
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_get_controls</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/component.py#L89">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/component.py#L91">
       
       (source)
     </a>
@@ -955,7 +955,7 @@ It does on the global event object. This is called at deactivation with Componen
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_get_observers</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/39bb9a99a39adc1fdfa6e174f64e19aaaa377a60/component.py#L74">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/5693403e54178061a3642a178924821d0b82ed13/component.py#L76">
       
       (source)
     </a>
@@ -982,7 +982,7 @@ It does on the global event object. This is called at deactivation with Componen
     <div class="container">
       <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
     generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-      24.3.3 at 2024-07-27 04:08:03.
+      24.3.3 at 2024-07-28 05:21:27.
     </div>
     
     <script src="ajax.js" type="text/javascript"></script>
