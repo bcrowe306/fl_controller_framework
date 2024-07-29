@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>fl_controller_framework.controls.control.Control</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="readthedocstheme.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a> <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+    
+        <!-- Side navigation -->
+      <div class="sidebarcontainer">
+        <nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="fl_controller_framework.controls.control.Control.html" class="internal-link" title="This class"><wbr></wbr>Control</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="fl_controller_framework.controls.control.Control.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#activate" class="internal-link" title="fl_controller_framework.controls.control.Control.activate">activate</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#deactivate" class="internal-link" title="fl_controller_framework.controls.control.Control.deactivate">deactivate</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#reset" class="internal-link" title="fl_controller_framework.controls.control.Control.reset">reset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set_light" class="internal-link" title="fl_controller_framework.controls.control.Control.set_light">set<wbr></wbr>_light</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_initialize" class="internal-link" title="fl_controller_framework.controls.control.Control._initialize">_initialize</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_value" class="internal-link" title="fl_controller_framework.controls.control.Control._on_value">_on<wbr></wbr>_value</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.controls.control.ControlBase.html#blackout" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.blackout">blackout</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.controls.control.ControlBase.html#broadcast" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.broadcast">broadcast</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.controls.control.ControlBase.html#notify" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.notify">notify</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#blackout_color" class="internal-link" title="fl_controller_framework.controls.control.Control.blackout_color">blackout<wbr></wbr>_color</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#default_color" class="internal-link" title="fl_controller_framework.controls.control.Control.default_color">default<wbr></wbr>_color</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#feedback" class="internal-link" title="fl_controller_framework.controls.control.Control.feedback">feedback</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#feedback_process" class="internal-link" title="fl_controller_framework.controls.control.Control.feedback_process">feedback<wbr></wbr>_process</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_skin" class="internal-link" title="fl_controller_framework.controls.control.Control._skin">_skin</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.controls.control.ControlBase.html#channel" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.channel">channel</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.controls.control.ControlBase.html#device" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.device">device</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.controls.control.ControlBase.html#event_object" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.event_object">event<wbr></wbr>_object</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.controls.control.ControlBase.html#identifier" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.identifier">identifier</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.controls.control.ControlBase.html#name" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.name">name</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.controls.control.ControlBase.html#playable" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.playable">playable</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.controls.control.ControlBase.html#registry" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.registry">registry</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.controls.control.ControlBase.html#status" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.status">status</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="fl_controller_framework.controls.control.html" class="internal-link" title="The parent of this class">control</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.controls.control.Control.html" class="internal-link" title="fl_controller_framework.controls.control.Control"><wbr></wbr>Control</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.controls.control.ControlBase.html" class="internal-link" title="fl_controller_framework.controls.control.ControlBase"><wbr></wbr>Control<wbr></wbr>Base</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        <!-- No sidebar toggle for read the docs theme, the sidebar is always
+          visible when the screen is width enough.
+        -->
+      </div>
+
+    </nav>
+    
+    <div class="container-fluid">
+
+      <div id="main" class="">
+        
+
+        
+
+        <div id="search-results-container" style="display: none;">
+        
+          <div id="search-buttons">
+            <span class="label label-default" id="search-docstrings-button">
+            <label class="checkbox-inline">
+              <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+                search in docstrings
+              </input>
+            </label>
+            </span>
+            
+          </div>
+          
+          <noscript>
+              <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+          </noscript>
+  
+          <div class="hint" id="search-help-box">
+            <p class="rst-last">
+        
+              Search bar offers the following options:
+              <ul>   
+                  <li>
+                    <strong>Term presence.</strong> The below example searches for documents that 
+                      must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                  </li> 
+  
+                  <li>
+                    <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                  </li> 
+  
+                  <li>
+                    <strong>Search in specific fields.</strong> The following search matches all objects 
+                    in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+  
+                    <p>
+                      Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                      Last two fields are only applicable if "search in docstrings" is enabled.
+                    </p>
+                  </li>
+  
+                  <li>
+                    <strong>Fuzzy matches.</strong> The following search matches all documents 
+                    that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                  </li>
+              </ul>
+  
+            </p>
+          </div>
+  
+          <div id="search-status"> </div>
+  
+          <div class="warning" id="search-warn-box" style="display: none;">
+            <p class="rst-last"><span id="search-warn"></span></p>
+          </div>
+  
+          <table id="search-results">
+            <!-- Filled dynamically by JS -->
+          </table>
+          
+          <div style="margin-top: 8px;">
+            <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+          </div>
+        </div>
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">fl_controller_framework</a></code><wbr></wbr>.<code><a href="fl_controller_framework.controls.html" class="internal-link" title="fl_controller_framework.controls">controls</a></code><wbr></wbr>.<code><a href="fl_controller_framework.controls.control.html" class="internal-link" title="fl_controller_framework.controls.control">control</a></code><wbr></wbr>.<code><a href="fl_controller_framework.controls.control.Control.html" class="internal-link" title="fl_controller_framework.controls.control.Control">Control</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">Control</span>(<a href="fl_controller_framework.controls.control.ControlBase.html" class="internal-link" title="fl_controller_framework.controls.control.ControlBase">ControlBase</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/817221d4ffe1c9893e0dcbbcbe70dfb23617a019/controls/control.py#L61" class="sourceLink">(source)</a></code></p><p>Known subclasses: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link">fl_controller_framework.controls.button.ButtonControl</a></code>, <code><a href="fl_controller_framework.controls.encoder.EncoderControl.html" class="internal-link">fl_controller_framework.controls.encoder.EncoderControl</a></code>, <code><a href="fl_controller_framework.controls.fader.FaderControl.html" class="internal-link">fl_controller_framework.controls.fader.FaderControl</a></code>, <code><a href="fl_controller_framework.controls.jog_control.JogControl.html" class="internal-link">fl_controller_framework.controls.jog_control.JogControl</a></code>, <code><a href="fl_controller_framework.controls.knob.KnobControl.html" class="internal-link">fl_controller_framework.controls.knob.KnobControl</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.controls.control.Control.__init__">Control(name, channel, identifier, playable, ...)</a></code></p>
+          <p><a href="classIndex.html#fl_controller_framework.controls.control.Control">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="pre">This is the actual control Class. Inherit from this class when building your own controls if necessary. This is also the class from which the included controls are derived.</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id28">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="fl_controller_framework.controls.control.Control.__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#activate" class="internal-link" title="fl_controller_framework.controls.control.Control.activate">activate</a></code></td>
+    <td>activate() is called by the component when the component is activating.  It registers the control with the Global Control Registry, and subscribes to its own "value" events, that is, when a midiMsg comes from this control.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#deactivate" class="internal-link" title="fl_controller_framework.controls.control.Control.deactivate">deactivate</a></code></td>
+    <td>deactivate() is called by the component when the component is deactivating. It unregisters the control from the Global Control Registry and unsubscribes from its own "value" events.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#reset" class="internal-link" title="fl_controller_framework.controls.control.Control.reset">reset</a></code></td>
+    <td>Resets the control to its default color</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_light" class="internal-link" title="fl_controller_framework.controls.control.Control.set_light">set<wbr></wbr>_light</a></code></td>
+    <td>Method to send a color to the control by "value". A skin must be provided to the control for set_light to function. A skin is a class with color members. Each color member has a draw method. The draw method contains the code to send color messages to the MIDI device.</td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#blackout_color" class="internal-link" title="fl_controller_framework.controls.control.Control.blackout_color">blackout<wbr></wbr>_color</a></code></td>
+    <td>This is the blackout color for the control. Can be called to blackout the control.</td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#default_color" class="internal-link" title="fl_controller_framework.controls.control.Control.default_color">default<wbr></wbr>_color</a></code></td>
+    <td>This is the default color for the control. When it is activated, it will be set to this color if skin and default_color are provided.</td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#feedback" class="internal-link" title="fl_controller_framework.controls.control.Control.feedback">feedback</a></code></td>
+    <td>The attribute defines whether or not the control should send feedback to itself. This is useful for lighting pad, or LEDs back to controller.</td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#feedback_process" class="internal-link" title="fl_controller_framework.controls.control.Control.feedback_process">feedback<wbr></wbr>_process</a></code></td>
+    <td>This is a function that processes the feedback before it is sent back.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_initialize" class="internal-link" title="fl_controller_framework.controls.control.Control._initialize">_initialize</a></code></td>
+    <td>Initializes the control to its default color</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_value" class="internal-link" title="fl_controller_framework.controls.control.Control._on_value">_on<wbr></wbr>_value</a></code></td>
+    <td>This function is called whenever a value from the control is sent. Example. If you move a knob on a CC#37, the values for that control change are sent as event arguments to this function. This is useful for emitting your own custom events for a control, or reacting to the raw data sent by the control.</td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_skin" class="internal-link" title="fl_controller_framework.controls.control.Control._skin">_skin</a></code></td>
+    <td>Skin for this controller. A skin holds attributes on how to draw a particular "color" to the device. By color, I mean what midi message to send to the device to achieve the desired look, ie... LEDs, RGB leds, etc ...</td>
+  </tr>
+</table>
+          
+            <p class="inheritedFrom">
+              Inherited from <code><a href="fl_controller_framework.controls.control.ControlBase.html" class="internal-link" title="fl_controller_framework.controls.control.ControlBase">ControlBase</a></code>:
+            </p>
+            <table class="children sortable" id="id29">
+  
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.controls.control.ControlBase.html#blackout" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.blackout">blackout</a></code></td>
+    <td>Override Method: Inheriting classes should override this method.. This turns the the control to blackout state.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.controls.control.ControlBase.html#broadcast" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.broadcast">broadcast</a></code></td>
+    <td>Alias convenience method for self.event_object.notify_listeners. Calling this method send a notification without prefixing the controller's name to the front.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.controls.control.ControlBase.html#notify" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.notify">notify</a></code></td>
+    <td>Alias convenience method for self.event_object.notify_listeners. Calling this method automatically prefixed the event name with the name of the control.</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.controls.control.ControlBase.html#channel" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.channel">channel</a></code></td>
+    <td>Midi Channel the control is registered to. 0-15</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.controls.control.ControlBase.html#device" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.device">device</a></code></td>
+    <td>This is the FL Studio device module. It allows you to send midi messages directly from the control.</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.controls.control.ControlBase.html#event_object" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.event_object">event<wbr></wbr>_object</a></code></td>
+    <td>Global Event Object</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.controls.control.ControlBase.html#identifier" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.identifier">identifier</a></code></td>
+    <td>Midi Data1 of the Midi message. This is the note/CC the control transmits on.  Valid input = 0-127.  Example: identifier=0, "This would note C0" </td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.controls.control.ControlBase.html#name" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.name">name</a></code></td>
+    <td>Name of the control. Must be unique. The name of the control is used to identify and subscribe to events generated by the control.</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.controls.control.ControlBase.html#playable" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.playable">playable</a></code></td>
+    <td>Is this control playable. This will determine if the values sent by this control are forwarded into FL Studio for playing devices.</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.controls.control.ControlBase.html#registry" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.registry">registry</a></code></td>
+    <td>Global Control Registry</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.controls.control.ControlBase.html#status" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.status">status</a></code></td>
+    <td>This is the status byte of the midi msg. The default is a midi note state. Do not include the full status byte with the channel bits.</td>
+  </tr>
+</table>
+            
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.controls.control.Control.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, name, channel, identifier, playable=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, status=<a href="fl_controller_framework.util.midi.MIDI_STATUS.html#NOTE_ON_STATUS" class="internal-link" title="fl_controller_framework.util.midi.MIDI_STATUS.NOTE_ON_STATUS">MIDI_STATUS.NOTE_ON_STATUS</a>, feedback=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, feedback_process=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, default_color=<span class="rst-variable-quote">'</span><span class="rst-variable-string">Default</span><span class="rst-variable-quote">'</span>, blackout_color=<span class="rst-variable-quote">'</span><span class="rst-variable-string">Off</span><span class="rst-variable-quote">'</span>, skin=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/817221d4ffe1c9893e0dcbbcbe70dfb23617a019/controls/control.py#L63">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#__init__" title="fl_controller_framework.controls.control.Control.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.controls.control.ControlBase.html#__init__" class="internal-link">fl_controller_framework.controls.control.ControlBase.__init__</a></code></div><div class="interfaceinfo">overridden in <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link">fl_controller_framework.controls.button.ButtonControl</a></code>, <code><a href="fl_controller_framework.controls.encoder.EncoderControl.html" class="internal-link">fl_controller_framework.controls.encoder.EncoderControl</a></code>, <code><a href="fl_controller_framework.controls.fader.FaderControl.html" class="internal-link">fl_controller_framework.controls.fader.FaderControl</a></code>, <code><a href="fl_controller_framework.controls.jog_control.JogControl.html" class="internal-link">fl_controller_framework.controls.jog_control.JogControl</a></code>, <code><a href="fl_controller_framework.controls.knob.KnobControl.html" class="internal-link">fl_controller_framework.controls.knob.KnobControl</a></code></div>
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.controls.control.Control.activate">
+    
+  </a>
+  <a name="activate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">activate</span><span class="function-signature">(self)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/817221d4ffe1c9893e0dcbbcbe70dfb23617a019/controls/control.py#L88">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#activate" title="fl_controller_framework.controls.control.Control.activate">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.controls.control.ControlBase.html#activate" class="internal-link">fl_controller_framework.controls.control.ControlBase.activate</a></code></div><div class="interfaceinfo">overridden in <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link">fl_controller_framework.controls.button.ButtonControl</a></code></div>
+    <div><p class="pre">activate() is called by the component when the component is activating. 
+It registers the control with the Global Control Registry, and subscribes to its own "value" events, that is, when a midiMsg comes from this control.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.controls.control.Control.deactivate">
+    
+  </a>
+  <a name="deactivate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">deactivate</span><span class="function-signature">(self)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/817221d4ffe1c9893e0dcbbcbe70dfb23617a019/controls/control.py#L98">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#deactivate" title="fl_controller_framework.controls.control.Control.deactivate">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.controls.control.ControlBase.html#deactivate" class="internal-link">fl_controller_framework.controls.control.ControlBase.deactivate</a></code></div>
+    <div><p class="pre">deactivate() is called by the component when the component is deactivating.
+It unregisters the control from the Global Control Registry and unsubscribes from its own "value" events.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.controls.control.Control.reset">
+    
+  </a>
+  <a name="reset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">reset</span><span class="function-signature">(self)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/817221d4ffe1c9893e0dcbbcbe70dfb23617a019/controls/control.py#L119">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#reset" title="fl_controller_framework.controls.control.Control.reset">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.controls.control.ControlBase.html#reset" class="internal-link">fl_controller_framework.controls.control.ControlBase.reset</a></code></div>
+    <div><p class="pre">Resets the control to its default color</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.controls.control.Control.set_light">
+    
+  </a>
+  <a name="set_light">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_light</span><span class="function-signature">(self, value, *a, **k)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/817221d4ffe1c9893e0dcbbcbe70dfb23617a019/controls/control.py#L107">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#set_light" title="fl_controller_framework.controls.control.Control.set_light">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Method to send a color to the control by "value". A skin must be provided to the control for set_light to function.
+A skin is a class with color members. Each color member has a draw method. The draw method contains the code to send color messages to the MIDI device.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.controls.control.Control.blackout_color">
+    
+  </a>
+  <a name="blackout_color">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">blackout_color</span> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/817221d4ffe1c9893e0dcbbcbe70dfb23617a019/controls/control.py#L73">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#blackout_color" title="fl_controller_framework.controls.control.Control.blackout_color">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">This is the blackout color for the control. Can be called to blackout the control.</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.controls.control.Control.default_color">
+    
+  </a>
+  <a name="default_color">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">default_color</span>: <code>SkinColor</code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/817221d4ffe1c9893e0dcbbcbe70dfb23617a019/controls/control.py#L71">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#default_color" title="fl_controller_framework.controls.control.Control.default_color">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">This is the default color for the control. When it is activated, it will be set to this color if skin and default_color are provided.</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.controls.control.Control.feedback">
+    
+  </a>
+  <a name="feedback">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">feedback</span>: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/817221d4ffe1c9893e0dcbbcbe70dfb23617a019/controls/control.py#L67">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#feedback" title="fl_controller_framework.controls.control.Control.feedback">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">The attribute defines whether or not the control should send feedback to itself. This is useful for lighting pad, or LEDs back to controller.</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.controls.control.Control.feedback_process">
+    
+  </a>
+  <a name="feedback_process">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">feedback_process</span> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/817221d4ffe1c9893e0dcbbcbe70dfb23617a019/controls/control.py#L69">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#feedback_process" title="fl_controller_framework.controls.control.Control.feedback_process">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">This is a function that processes the feedback before it is sent back.</p></div>
+    
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.controls.control.Control._initialize">
+    
+  </a>
+  <a name="_initialize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_initialize</span><span class="function-signature">(self)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/817221d4ffe1c9893e0dcbbcbe70dfb23617a019/controls/control.py#L84">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_initialize" title="fl_controller_framework.controls.control.Control._initialize">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Initializes the control to its default color</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.controls.control.Control._on_value">
+    
+  </a>
+  <a name="_on_value">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_on_value</span><span class="function-signature">(self, event)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/817221d4ffe1c9893e0dcbbcbe70dfb23617a019/controls/control.py#L76">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_value" title="fl_controller_framework.controls.control.Control._on_value">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.controls.control.ControlBase.html#_on_value" class="internal-link">fl_controller_framework.controls.control.ControlBase._on_value</a></code></div><div class="interfaceinfo">overridden in <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link">fl_controller_framework.controls.button.ButtonControl</a></code>, <code><a href="fl_controller_framework.controls.encoder.EncoderControl.html" class="internal-link">fl_controller_framework.controls.encoder.EncoderControl</a></code>, <code><a href="fl_controller_framework.controls.fader.FaderControl.html" class="internal-link">fl_controller_framework.controls.fader.FaderControl</a></code>, <code><a href="fl_controller_framework.controls.jog_control.JogControl.html" class="internal-link">fl_controller_framework.controls.jog_control.JogControl</a></code>, <code><a href="fl_controller_framework.controls.knob.KnobControl.html" class="internal-link">fl_controller_framework.controls.knob.KnobControl</a></code></div>
+    <div><p class="pre">This function is called whenever a value from the control is sent.
+Example. If you move a knob on a CC#37, the values for that control change are sent as event arguments to this function.
+This is useful for emitting your own custom events for a control, or reacting to the raw data sent by the control.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="fl_controller_framework.controls.control.Control._skin">
+    
+  </a>
+  <a name="_skin">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_skin</span> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/817221d4ffe1c9893e0dcbbcbe70dfb23617a019/controls/control.py#L65">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_skin" title="fl_controller_framework.controls.control.Control._skin">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">Skin for this controller. A skin holds attributes on how to draw a particular "color" to the device. By color, I mean what midi message to send to the device to achieve the desired look, ie... LEDs, RGB leds, etc </p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+    <hr />
+    
+    
+    <div class="container">
+      <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
+    generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+      24.3.3 at 2024-07-29 04:20:16.
+    </div>
+    
+    <script src="ajax.js" type="text/javascript"></script>
+    <script src="searchlib.js" type="text/javascript"></script>
+    <script src="search.js" type="text/javascript"></script>
+  
+  </footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>
