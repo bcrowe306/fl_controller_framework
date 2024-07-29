@@ -7,7 +7,15 @@ class Scales:
     harmonic: list[int] = [0, 2, 3, 5, 7, 8, 11]
     arabic: list[int] = [0, 2, 4, 5, 6, 8, 10]
     pentatonic: list[int] = [0, 2, 4, 7, 9]
-
+    scale_strings: list[str] =  [
+            "chromatic",
+            "major",
+            "minor",
+            "melodic",
+            "harmonic",
+            "arabic",
+            "pentatonic"
+        ]
     notes_sharp: list[str] = [
         "C",
         "C#",
@@ -64,3 +72,17 @@ class Scales:
             Scales.arabic,
             Scales.pentatonic
         ]
+    
+    def getFromIndex(index: int) -> str:
+        """
+        Retrieves the scale string from the given index.
+
+        Parameters:
+        index (int): The index of the scale string to retrieve.
+
+        Returns:
+        str: The scale string at the given index.
+        """
+        return Scales.scale_strings[index]
+        
+    
