@@ -1,9 +1,9 @@
-from .event import GlobalEventObject, EventObject
-from .component import Component
-from .control_registry import ControlRegistry
-from .control import ControlBase
-from .state import UIState
-from .fl_class import _fl
+from .core.event import GlobalEventObject, EventObject
+from .components.component import Component
+from .core.control_registry import ControlRegistry
+from .controls.control import ControlBase
+from .core.state import UIState
+from .api.fl_class import _fl
 
 class ControlSurface(Component):
     def __init__(self, name: str,  meters: bool = False, *a, **k):

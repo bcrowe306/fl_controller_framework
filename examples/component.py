@@ -1,4 +1,4 @@
-from ..component import Component
+from ..components.component import Component
 
 class NewComponent(Component):
     def __init__(self, name: str, auto_active: bool = True, *a, **k):

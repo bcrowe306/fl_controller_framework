@@ -1,8 +1,8 @@
-from .control_registry import ControlRegistry
-from .util.midi import MIDI_STATUS
-from .skin import SkinColor
-from .event import EventObject, GlobalEventObject
-from .state import StateBase
+from ..core.control_registry import ControlRegistry
+from ..util.midi import MIDI_STATUS
+from ..core.skin import SkinColor
+from ..core.event import EventObject, GlobalEventObject
+from ..core.state import StateBase
 import device
 
 class ControlBase(EventObject, StateBase):

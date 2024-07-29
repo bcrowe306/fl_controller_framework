@@ -1,4 +1,4 @@
-from fl_controller_framework.component import Component
+from fl_controller_framework.components.component import Component
 from fl_controller_framework.controls.button import ButtonControl
 
 class TransportComponent(Component):

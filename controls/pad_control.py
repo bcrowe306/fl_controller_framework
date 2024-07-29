@@ -1,7 +1,7 @@
 from ..util.midi import MIDI_STATUS
-from ..event import GlobalEventObject
-from ..control_registry import ControlRegistry
-from ..control import ControlBase
+from ..core.event import GlobalEventObject
+from ..core.control_registry import ControlRegistry
+from .control import ControlBase
 
 class cc(ControlBase):
     def __init__(self, name: str, channel: int, identifier: int, status=MIDI_STATUS.NOTE_ON_STATUS, playable=False, *a, **k):

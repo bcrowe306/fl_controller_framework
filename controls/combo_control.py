@@ -1,5 +1,5 @@
-from ..control import ControlBase, Control
-from ..fl_class import flMidiMsg
+from .control import ControlBase, Control
+from ..api.fl_class import flMidiMsg
 from ..util.midi import MIDI_STATUS
 from .button import ButtonControl
 from .jog_control import JogControl

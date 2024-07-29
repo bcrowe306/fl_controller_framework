@@ -1,8 +1,8 @@
 from .event import GlobalEventObject
-from .util.midi import MIDI_STATUS
+from ..util.midi import MIDI_STATUS
 from .state import StateBase
-from .util.functions import contains, get_index
-from .fl_class import flMidiMsg
+from ..util.functions import contains, get_index
+from ..api.fl_class import flMidiMsg
 
 class ControlRegistry(StateBase):
     def __new__(cls, *args, **kwargs):

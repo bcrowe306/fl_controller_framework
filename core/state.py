@@ -2,8 +2,8 @@ __pdoc__ = {
     "_fl": False,
 }
 from .event import EventObject
-from .util.functions import safe_getattr
-from .fl_class import _fl
+from ..util.functions import safe_getattr
+from ..api.fl_class import _fl
 
 class StateBase():
     """This is a base class the implements a basic state pattern. It has one method that checks the change of state, using a instance dictionary."""

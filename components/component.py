@@ -1,7 +1,7 @@
-from .control import Control, ControlBase
-from .event import GlobalEventObject, EventObject
-from .state import StateBase
-from .fl_class import _fl
+from ..controls.control import Control, ControlBase
+from ..core.event import GlobalEventObject, EventObject
+from ..core.state import StateBase
+from ..api.fl_class import _fl
 
 class Component(StateBase, EventObject):
     """A base class that is used to group controls together to provide functionality. For example, you would create a TransportComponent by inheriting from this class.

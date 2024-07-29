@@ -1,7 +1,7 @@
-from .control import Control
+from ..controls.control import Control
 from .component import Component
-from .event import EventObject
-from .state import StateBase
+from ..core.event import EventObject
+from ..core.state import StateBase
 
 class Mode(EventObject, StateBase):
     """This class represents a Mode and is used to give your controller varying functionality with the same controls. Modes can have multiple components attached to them and controls that active the mode."""
