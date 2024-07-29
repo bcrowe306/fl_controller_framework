@@ -1,7 +1,6 @@
-from .core.event import GlobalEventObject, EventObject
+from .core.event import GlobalEventObject
 from .components.component import Component
 from .core.control_registry import ControlRegistry
-from .controls.control import ControlBase
 from .core.state import UIState
 from .api.fl_class import _fl
 
