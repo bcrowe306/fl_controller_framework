@@ -53,3 +53,7 @@ class flMidiMsg:
     midiChanEx:int
     pmeFlags:int
 
+    @staticmethod
+    def isNoteOn(msg: 'flMidiMsg') -> bool:
+        """Check if the midi message is a note on message"""
+        return msg.status & 0xf0 == 144 and msg.data2 > 0
