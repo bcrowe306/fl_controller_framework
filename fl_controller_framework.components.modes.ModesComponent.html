@@ -299,6 +299,36 @@
         
 
         
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">subscribe</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#add_control_subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.add_control_subscribe">add<wbr></wbr>_control<wbr></wbr>_subscribe</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#listens_event" class="internal-link" title="fl_controller_framework.components.component.Component.listens_event">listens<wbr></wbr>_event</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#notify" class="internal-link" title="fl_controller_framework.components.component.Component.notify">notify</a></code>
             </div>
         
@@ -309,7 +339,7 @@
         
 
         
-            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">subscribe</a></code>
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#subscribe_control" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe_control">subscribe<wbr></wbr>_control</a></code>
             </div>
         
 
@@ -610,7 +640,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">ModesComponent</span>(<a href="fl_controller_framework.components.component.Component.html" class="internal-link" title="fl_controller_framework.components.component.Component">Component</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/modes.py#L32" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.components.modes.ModesComponent.__init__">ModesComponent(name, cycle_control, default_mode, *a, **k)</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">ModesComponent</span>(<a href="fl_controller_framework.components.component.Component.html" class="internal-link" title="fl_controller_framework.components.component.Component">Component</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/modes.py#L32" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.components.modes.ModesComponent.__init__">ModesComponent(name, cycle_control, default_mode, *a, **k)</a></code></p>
           <p><a href="classIndex.html#fl_controller_framework.components.modes.ModesComponent">View In Hierarchy</a></p>
         </div>
 
@@ -619,7 +649,7 @@
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id22">
+          <table class="children sortable" id="id29">
   
   
   <tr class="method">
@@ -723,14 +753,29 @@
             <p class="inheritedFrom">
               Inherited from <code><a href="fl_controller_framework.components.component.Component.html" class="internal-link" title="fl_controller_framework.components.component.Component">Component</a></code>:
             </p>
-            <table class="children sortable" id="id23">
+            <table class="children sortable" id="id30">
   
   
-  <tr class="basemethod">
+  <tr class="basestaticmethod">
     
-    <td>Method</td>
+    <td>Static Method</td>
     <td><code><a href="fl_controller_framework.components.component.Component.html#listens" class="internal-link" title="fl_controller_framework.components.component.Component.listens">listens</a></code></td>
     <td>A static method the is used to listen to FL studio event and react to them by the function they are decorating. Upon component activation, each function that is decorated with Component.listens() will be registered in the global event object...</td>
+  </tr><tr class="basestaticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">subscribe</a></code></td>
+    <td>A static method that is used to subscribe functions to a Control on the Component instance. Upon component activation, each function that is decorated with Component.subscribe will be subscribed using the global event object...</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#add_control_subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.add_control_subscribe">add<wbr></wbr>_control<wbr></wbr>_subscribe</a></code></td>
+    <td>Add a control and subscribe to a control event in one method call. This is useful if you want to add controls and functionality to a Component outside of the Component class. This function will attach the control to the component object if it is not already attached, and subscribe to the event...</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#listens_event" class="internal-link" title="fl_controller_framework.components.component.Component.listens_event">listens<wbr></wbr>_event</a></code></td>
+    <td>Listen to an event. This is useful if you want to listen to an event outside of the Component class. This method will attach the function to the component object if it is not already attached using the "on_event_path" pattern...</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
@@ -739,8 +784,8 @@
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">subscribe</a></code></td>
-    <td>A static method that is used to subscribe functions to a Control on the Component instance. Upon component activation, each function that is decorated with Component.subscribe will be subscribed using the global event object...</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#subscribe_control" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe_control">subscribe<wbr></wbr>_control</a></code></td>
+    <td>Subscribe to a control event. This is useful if you want to subscribe to a control event outside of the Component class. This method will attach the function to the component object if it is not already attached using the "on_control_name_event_name" pattern...</td>
   </tr><tr class="baseinstancevariable">
     
     <td>Instance Variable</td>
@@ -782,7 +827,7 @@
             <p class="inheritedFrom">
               Inherited from <code><a href="fl_controller_framework.core.state.StateBase.html" class="internal-link" title="fl_controller_framework.core.state.StateBase">StateBase</a></code> (via <code><a href="fl_controller_framework.components.component.Component.html" class="internal-link" title="fl_controller_framework.components.component.Component">Component</a></code>):
             </p>
-            <table class="children sortable" id="id24">
+            <table class="children sortable" id="id31">
   
   
   <tr class="basemethod">
@@ -806,7 +851,7 @@
             <p class="inheritedFrom">
               Inherited from <code><a href="fl_controller_framework.core.event.EventObject.html" class="internal-link" title="fl_controller_framework.core.event.EventObject">EventObject</a></code> (via <code><a href="fl_controller_framework.components.component.Component.html" class="internal-link" title="fl_controller_framework.components.component.Component">Component</a></code>, <code><a href="fl_controller_framework.core.state.StateBase.html" class="internal-link" title="fl_controller_framework.core.state.StateBase">StateBase</a></code>):
             </p>
-            <table class="children sortable" id="id25">
+            <table class="children sortable" id="id32">
   
   
   <tr class="basemethod">
@@ -845,7 +890,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, cycle_control: <code><a href="fl_controller_framework.controls.control.Control.html" class="internal-link" title="fl_controller_framework.controls.control.Control">Control</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, default_mode: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, *a, **k)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/modes.py#L34">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/modes.py#L34">
       
       (source)
     </a>
@@ -872,7 +917,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">activate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/modes.py#L106">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/modes.py#L106">
       
       (source)
     </a>
@@ -899,7 +944,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">add_control</span><span class="function-signature">(self, mode_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, control: <code><a href="fl_controller_framework.controls.control.Control.html" class="internal-link" title="fl_controller_framework.controls.control.Control">Control</a></code>, event_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> = <span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/modes.py#L65">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/modes.py#L65">
       
       (source)
     </a>
@@ -926,7 +971,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">add_mode</span><span class="function-signature">(self, mode: <code><a href="fl_controller_framework.components.modes.Mode.html" class="internal-link" title="fl_controller_framework.components.modes.Mode">Mode</a></code>, behavior: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> = <span class="rst-variable-quote">'</span><span class="rst-variable-string">default</span><span class="rst-variable-quote">'</span>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/modes.py#L61">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/modes.py#L61">
       
       (source)
     </a>
@@ -953,7 +998,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">deactivate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/modes.py#L120">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/modes.py#L120">
       
       (source)
     </a>
@@ -980,7 +1025,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">set_active_mode</span><span class="function-signature">(self, mode_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/modes.py#L75">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/modes.py#L75">
       
       (source)
     </a>
@@ -1006,7 +1051,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">cycle_control</span>: <code><a href="fl_controller_framework.controls.control.Control.html" class="internal-link" title="fl_controller_framework.controls.control.Control">Control</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/modes.py#L39">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/modes.py#L39">
       
       (source)
     </a>
@@ -1033,7 +1078,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">default_mode</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/modes.py#L42">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/modes.py#L42">
       
       (source)
     </a>
@@ -1060,7 +1105,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">modes</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="intersphinx-link">dict</a>[<wbr></wbr><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a>, <wbr></wbr><a href="fl_controller_framework.components.modes.Mode.html" class="internal-link" title="fl_controller_framework.components.modes.Mode">Mode</a>]</code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/modes.py#L45">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/modes.py#L45">
       
       (source)
     </a>
@@ -1087,7 +1132,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">name</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/modes.py#L36">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/modes.py#L36">
       
       (source)
     </a>
@@ -1115,7 +1160,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__activate_mode</span><span class="function-signature">(self, mode_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/modes.py#L88">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/modes.py#L88">
       
       (source)
     </a>
@@ -1142,7 +1187,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__deactivate_current_mode</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/modes.py#L95">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/modes.py#L95">
       
       (source)
     </a>
@@ -1169,7 +1214,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_generate_mode_name</span><span class="function-signature">(self, mode_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/modes.py#L101">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/modes.py#L101">
       
       (source)
     </a>
@@ -1196,7 +1241,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_get_components</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/modes.py#L52">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/modes.py#L52">
       
       (source)
     </a>
@@ -1223,7 +1268,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_get_ctrl_from_mode_name</span><span class="function-signature">(self, mode_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>) -&gt; <code><a href="fl_controller_framework.controls.control.Control.html" class="internal-link" title="fl_controller_framework.controls.control.Control">Control</a></code></span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/modes.py#L70">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/modes.py#L70">
       
       (source)
     </a>
@@ -1250,7 +1295,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_on_control_event</span><span class="function-signature">(self, mode_name)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/modes.py#L117">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/modes.py#L117">
       
       (source)
     </a>
@@ -1276,7 +1321,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">_active_mode</span>: <code><a href="fl_controller_framework.components.modes.Mode.html" class="internal-link" title="fl_controller_framework.components.modes.Mode">Mode</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/modes.py#L49">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/modes.py#L49">
       
       (source)
     </a>
@@ -1303,7 +1348,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">_controls</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/modes.py#L48">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/modes.py#L48">
       
       (source)
     </a>
@@ -1330,7 +1375,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">_previous_mode</span>: <code><a href="fl_controller_framework.components.modes.Mode.html" class="internal-link" title="fl_controller_framework.components.modes.Mode">Mode</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/modes.py#L50">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/modes.py#L50">
       
       (source)
     </a>
@@ -1357,7 +1402,7 @@
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.3.3 at 2024-07-29 05:36:58.
+    24.3.3 at 2024-07-29 15:21:49.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

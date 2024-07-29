@@ -379,6 +379,36 @@
         
 
         
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">subscribe</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#add_control_subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.add_control_subscribe">add<wbr></wbr>_control<wbr></wbr>_subscribe</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#listens_event" class="internal-link" title="fl_controller_framework.components.component.Component.listens_event">listens<wbr></wbr>_event</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#notify" class="internal-link" title="fl_controller_framework.components.component.Component.notify">notify</a></code>
             </div>
         
@@ -389,7 +419,7 @@
         
 
         
-            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">subscribe</a></code>
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#subscribe_control" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe_control">subscribe<wbr></wbr>_control</a></code>
             </div>
         
 
@@ -650,7 +680,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">ControlSurface</span>(<a href="fl_controller_framework.components.component.Component.html" class="internal-link" title="fl_controller_framework.components.component.Component">Component</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L7" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.control_surface.ControlSurface.__init__">ControlSurface(name, meters, *a, **k)</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">ControlSurface</span>(<a href="fl_controller_framework.components.component.Component.html" class="internal-link" title="fl_controller_framework.components.component.Component">Component</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L7" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.control_surface.ControlSurface.__init__">ControlSurface(name, meters, *a, **k)</a></code></p>
           <p><a href="classIndex.html#fl_controller_framework.control_surface.ControlSurface">View In Hierarchy</a></p>
         </div>
 
@@ -659,7 +689,7 @@
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id32">
+          <table class="children sortable" id="id39">
   
   
   <tr class="method">
@@ -793,14 +823,29 @@
             <p class="inheritedFrom">
               Inherited from <code><a href="fl_controller_framework.components.component.Component.html" class="internal-link" title="fl_controller_framework.components.component.Component">Component</a></code>:
             </p>
-            <table class="children sortable" id="id33">
+            <table class="children sortable" id="id40">
   
   
-  <tr class="basemethod">
+  <tr class="basestaticmethod">
     
-    <td>Method</td>
+    <td>Static Method</td>
     <td><code><a href="fl_controller_framework.components.component.Component.html#listens" class="internal-link" title="fl_controller_framework.components.component.Component.listens">listens</a></code></td>
     <td>A static method the is used to listen to FL studio event and react to them by the function they are decorating. Upon component activation, each function that is decorated with Component.listens() will be registered in the global event object...</td>
+  </tr><tr class="basestaticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">subscribe</a></code></td>
+    <td>A static method that is used to subscribe functions to a Control on the Component instance. Upon component activation, each function that is decorated with Component.subscribe will be subscribed using the global event object...</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#add_control_subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.add_control_subscribe">add<wbr></wbr>_control<wbr></wbr>_subscribe</a></code></td>
+    <td>Add a control and subscribe to a control event in one method call. This is useful if you want to add controls and functionality to a Component outside of the Component class. This function will attach the control to the component object if it is not already attached, and subscribe to the event...</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#listens_event" class="internal-link" title="fl_controller_framework.components.component.Component.listens_event">listens<wbr></wbr>_event</a></code></td>
+    <td>Listen to an event. This is useful if you want to listen to an event outside of the Component class. This method will attach the function to the component object if it is not already attached using the "on_event_path" pattern...</td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
@@ -809,8 +854,8 @@
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">subscribe</a></code></td>
-    <td>A static method that is used to subscribe functions to a Control on the Component instance. Upon component activation, each function that is decorated with Component.subscribe will be subscribed using the global event object...</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#subscribe_control" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe_control">subscribe<wbr></wbr>_control</a></code></td>
+    <td>Subscribe to a control event. This is useful if you want to subscribe to a control event outside of the Component class. This method will attach the function to the component object if it is not already attached using the "on_control_name_event_name" pattern...</td>
   </tr><tr class="baseinstancevariable">
     
     <td>Instance Variable</td>
@@ -847,7 +892,7 @@
             <p class="inheritedFrom">
               Inherited from <code><a href="fl_controller_framework.core.state.StateBase.html" class="internal-link" title="fl_controller_framework.core.state.StateBase">StateBase</a></code> (via <code><a href="fl_controller_framework.components.component.Component.html" class="internal-link" title="fl_controller_framework.components.component.Component">Component</a></code>):
             </p>
-            <table class="children sortable" id="id34">
+            <table class="children sortable" id="id41">
   
   
   <tr class="basemethod">
@@ -871,7 +916,7 @@
             <p class="inheritedFrom">
               Inherited from <code><a href="fl_controller_framework.core.event.EventObject.html" class="internal-link" title="fl_controller_framework.core.event.EventObject">EventObject</a></code> (via <code><a href="fl_controller_framework.components.component.Component.html" class="internal-link" title="fl_controller_framework.components.component.Component">Component</a></code>, <code><a href="fl_controller_framework.core.state.StateBase.html" class="internal-link" title="fl_controller_framework.core.state.StateBase">StateBase</a></code>):
             </p>
-            <table class="children sortable" id="id35">
+            <table class="children sortable" id="id42">
   
   
   <tr class="basemethod">
@@ -910,7 +955,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, meters: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code> = <a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, *a, **k)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L8">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L8">
       
       (source)
     </a>
@@ -937,7 +982,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">activate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L100">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L100">
       
       (source)
     </a>
@@ -964,7 +1009,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">deactivate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L108">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L108">
       
       (source)
     </a>
@@ -991,7 +1036,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">OnDeInit</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L29">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L29">
       
       (source)
     </a>
@@ -1018,7 +1063,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">OnDirtyChannel</span><span class="function-signature">(self, index: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>, flag: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L80">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L80">
       
       (source)
     </a>
@@ -1045,7 +1090,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">OnDirtyMixerTrack</span><span class="function-signature">(self, index: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L77">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L77">
       
       (source)
     </a>
@@ -1072,7 +1117,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">OnDisplayZone</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L71">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L71">
       
       (source)
     </a>
@@ -1099,7 +1144,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">OnDoFullRefresh</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L68">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L68">
       
       (source)
     </a>
@@ -1126,7 +1171,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">OnFirstConnect</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L83">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L83">
       
       (source)
     </a>
@@ -1153,7 +1198,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">OnIdle</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L22">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L22">
       
       (source)
     </a>
@@ -1180,7 +1225,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">OnInit</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L16">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L16">
       
       (source)
     </a>
@@ -1207,7 +1252,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">OnMidiMsg</span><span class="function-signature">(self, event)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L19">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L19">
       
       (source)
     </a>
@@ -1234,7 +1279,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">OnProjectLoad</span><span class="function-signature">(self, status: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L65">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L65">
       
       (source)
     </a>
@@ -1261,7 +1306,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">OnRefresh</span><span class="function-signature">(self, event)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L32">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L32">
       
       (source)
     </a>
@@ -1288,7 +1333,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">OnSendTempMsg</span><span class="function-signature">(self, message: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, duration: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L89">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L89">
       
       (source)
     </a>
@@ -1315,7 +1360,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">OnUpdateBeatIndicator</span><span class="function-signature">(self, event)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L25">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L25">
       
       (source)
     </a>
@@ -1342,7 +1387,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">OnUpdateLiveMode</span><span class="function-signature">(self, lastTrack: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L74">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L74">
       
       (source)
     </a>
@@ -1369,7 +1414,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">OnUpdateMeters</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L62">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L62">
       
       (source)
     </a>
@@ -1396,7 +1441,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">OnWaitingForInput</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L86">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L86">
       
       (source)
     </a>
@@ -1422,7 +1467,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">control_registry</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L13">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L13">
       
       (source)
     </a>
@@ -1449,7 +1494,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">fl</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L11">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L11">
       
       (source)
     </a>
@@ -1476,7 +1521,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">global_event_object</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L12">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L12">
       
       (source)
     </a>
@@ -1503,7 +1548,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">meters</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L10">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L10">
       
       (source)
     </a>
@@ -1530,7 +1575,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">ui_state</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L14">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L14">
       
       (source)
     </a>
@@ -1558,7 +1603,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_get_components</span><span class="function-signature">(self) -&gt; <code><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="intersphinx-link">dict</a>[<wbr></wbr><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a>, <wbr></wbr><a href="fl_controller_framework.components.component.Component.html" class="internal-link" title="fl_controller_framework.components.component.Component">Component</a>]</code></span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/control_surface.py#L92">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/control_surface.py#L92">
       
       (source)
     </a>
@@ -1584,7 +1629,7 @@
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.3.3 at 2024-07-29 05:36:58.
+    24.3.3 at 2024-07-29 15:21:49.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

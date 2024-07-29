@@ -163,6 +163,26 @@
         
 
         
+            <div class="itemName"><code><a href="#listens" class="internal-link" title="fl_controller_framework.components.component.Component.listens">listens</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">subscribe</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="#__init__" class="internal-link" title="fl_controller_framework.components.component.Component.__init__">__init__</a></code>
             </div>
         
@@ -183,6 +203,16 @@
         
 
         
+            <div class="itemName"><code><a href="#add_control_subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.add_control_subscribe">add<wbr></wbr>_control<wbr></wbr>_subscribe</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="#deactivate" class="internal-link" title="fl_controller_framework.components.component.Component.deactivate">deactivate</a></code>
             </div>
         
@@ -193,7 +223,7 @@
         
 
         
-            <div class="itemName"><code><a href="#listens" class="internal-link" title="fl_controller_framework.components.component.Component.listens">listens</a></code>
+            <div class="itemName"><code><a href="#listens_event" class="internal-link" title="fl_controller_framework.components.component.Component.listens_event">listens<wbr></wbr>_event</a></code>
             </div>
         
 
@@ -213,7 +243,7 @@
         
 
         
-            <div class="itemName"><code><a href="#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">subscribe</a></code>
+            <div class="itemName"><code><a href="#subscribe_control" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe_control">subscribe<wbr></wbr>_control</a></code>
             </div>
         
 
@@ -450,7 +480,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">Component</span>(<a href="fl_controller_framework.core.state.StateBase.html" class="internal-link" title="fl_controller_framework.core.state.StateBase">StateBase</a>, <a href="fl_controller_framework.core.event.EventObject.html" class="internal-link" title="fl_controller_framework.core.event.EventObject">EventObject</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/component.py#L6" class="sourceLink">(source)</a></code></p><p>Known subclasses: <code><a href="fl_controller_framework.components.modes.ModesComponent.html" class="internal-link">fl_controller_framework.components.modes.ModesComponent</a></code>, <code><a href="fl_controller_framework.components.transport.TransportComponent.html" class="internal-link">fl_controller_framework.components.transport.TransportComponent</a></code>, <code><a href="fl_controller_framework.control_surface.ControlSurface.html" class="internal-link">fl_controller_framework.control_surface.ControlSurface</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.components.component.Component.__init__">Component(name, auto_active, *a, **k)</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">Component</span>(<a href="fl_controller_framework.core.state.StateBase.html" class="internal-link" title="fl_controller_framework.core.state.StateBase">StateBase</a>, <a href="fl_controller_framework.core.event.EventObject.html" class="internal-link" title="fl_controller_framework.core.event.EventObject">EventObject</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/component.py#L6" class="sourceLink">(source)</a></code></p><p>Known subclasses: <code><a href="fl_controller_framework.components.browser.BrowserNavigationComponent.html" class="internal-link">fl_controller_framework.components.browser.BrowserNavigationComponent</a></code>, <code><a href="fl_controller_framework.components.modes.ModesComponent.html" class="internal-link">fl_controller_framework.components.modes.ModesComponent</a></code>, <code><a href="fl_controller_framework.components.transport.TransportComponent.html" class="internal-link">fl_controller_framework.components.transport.TransportComponent</a></code>, <code><a href="fl_controller_framework.control_surface.ControlSurface.html" class="internal-link">fl_controller_framework.control_surface.ControlSurface</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.components.component.Component.__init__">Component(name, auto_active, *a, **k)</a></code></p>
           <p><a href="classIndex.html#fl_controller_framework.components.component.Component">View In Hierarchy</a></p>
         </div>
 
@@ -462,10 +492,20 @@ When inheriting from this class, create as many controls as necessary as instanc
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id15">
+          <table class="children sortable" id="id22">
   
   
-  <tr class="method">
+  <tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#listens" class="internal-link" title="fl_controller_framework.components.component.Component.listens">listens</a></code></td>
+    <td>A static method the is used to listen to FL studio event and react to them by the function they are decorating. Upon component activation, each function that is decorated with Component.listens() will be registered in the global event object...</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">subscribe</a></code></td>
+    <td>A static method that is used to subscribe functions to a Control on the Component instance. Upon component activation, each function that is decorated with Component.subscribe will be subscribed using the global event object...</td>
+  </tr><tr class="method">
     
     <td>Method</td>
     <td><code><a href="#__init__" class="internal-link" title="fl_controller_framework.components.component.Component.__init__">__init__</a></code></td>
@@ -478,13 +518,18 @@ When inheriting from this class, create as many controls as necessary as instanc
   </tr><tr class="method">
     
     <td>Method</td>
+    <td><code><a href="#add_control_subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.add_control_subscribe">add<wbr></wbr>_control<wbr></wbr>_subscribe</a></code></td>
+    <td>Add a control and subscribe to a control event in one method call. This is useful if you want to add controls and functionality to a Component outside of the Component class. This function will attach the control to the component object if it is not already attached, and subscribe to the event...</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
     <td><code><a href="#deactivate" class="internal-link" title="fl_controller_framework.components.component.Component.deactivate">deactivate</a></code></td>
     <td>Deactivate this Component and all its controls. This method also unsubscribes to all control events listed in the Component.subscribe(decorator, and unregister all functions decorated with Component.listens()) ...</td>
   </tr><tr class="method">
     
     <td>Method</td>
-    <td><code><a href="#listens" class="internal-link" title="fl_controller_framework.components.component.Component.listens">listens</a></code></td>
-    <td>A static method the is used to listen to FL studio event and react to them by the function they are decorating. Upon component activation, each function that is decorated with Component.listens() will be registered in the global event object...</td>
+    <td><code><a href="#listens_event" class="internal-link" title="fl_controller_framework.components.component.Component.listens_event">listens<wbr></wbr>_event</a></code></td>
+    <td>Listen to an event. This is useful if you want to listen to an event outside of the Component class. This method will attach the function to the component object if it is not already attached using the "on_event_path" pattern...</td>
   </tr><tr class="method">
     
     <td>Method</td>
@@ -493,8 +538,8 @@ When inheriting from this class, create as many controls as necessary as instanc
   </tr><tr class="method">
     
     <td>Method</td>
-    <td><code><a href="#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">subscribe</a></code></td>
-    <td>A static method that is used to subscribe functions to a Control on the Component instance. Upon component activation, each function that is decorated with Component.subscribe will be subscribed using the global event object...</td>
+    <td><code><a href="#subscribe_control" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe_control">subscribe<wbr></wbr>_control</a></code></td>
+    <td>Subscribe to a control event. This is useful if you want to subscribe to a control event outside of the Component class. This method will attach the function to the component object if it is not already attached using the "on_control_name_event_name" pattern...</td>
   </tr><tr class="instancevariable">
     
     <td>Instance Variable</td>
@@ -541,7 +586,7 @@ When inheriting from this class, create as many controls as necessary as instanc
             <p class="inheritedFrom">
               Inherited from <code><a href="fl_controller_framework.core.state.StateBase.html" class="internal-link" title="fl_controller_framework.core.state.StateBase">StateBase</a></code>:
             </p>
-            <table class="children sortable" id="id16">
+            <table class="children sortable" id="id23">
   
   
   <tr class="basemethod">
@@ -565,7 +610,7 @@ When inheriting from this class, create as many controls as necessary as instanc
             <p class="inheritedFrom">
               Inherited from <code><a href="fl_controller_framework.core.event.EventObject.html" class="internal-link" title="fl_controller_framework.core.event.EventObject">EventObject</a></code> (via <code><a href="fl_controller_framework.core.state.StateBase.html" class="internal-link" title="fl_controller_framework.core.state.StateBase">StateBase</a></code>):
             </p>
-            <table class="children sortable" id="id17">
+            <table class="children sortable" id="id24">
   
   
   <tr class="basemethod">
@@ -591,7 +636,63 @@ When inheriting from this class, create as many controls as necessary as instanc
         </div>
 
         <div id="childList">
-          <div class="basemethod">
+          <div class="basestaticmethod">
+  
+  
+  <a name="fl_controller_framework.components.component.Component.listens">
+    
+  </a>
+  <a name="listens">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="https://docs.python.org/3/library/functions.html#staticmethod" class="intersphinx-link">staticmethod</a><br />
+    <span class="py-keyword">def</span> <span class="py-defname">listens</span><span class="function-signature">(event_path: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/component.py#L12">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#listens" title="fl_controller_framework.components.component.Component.listens">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">A static method the is used to listen to FL studio event and react to them by the function they are decorating. Upon component activation, each function that is decorated with Component.listens() will be registered in the global event object.
+Example: Component.listens("channels.selectedChannel"). This decorator will call the decorated function each time channels.selectedChannel is changed.</p></div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="fl_controller_framework.components.component.Component.subscribe">
+    
+  </a>
+  <a name="subscribe">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="https://docs.python.org/3/library/functions.html#staticmethod" class="intersphinx-link">staticmethod</a><br />
+    <span class="py-keyword">def</span> <span class="py-defname">subscribe</span><span class="function-signature">(control_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, event: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/component.py#L22">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#subscribe" title="fl_controller_framework.components.component.Component.subscribe">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.core.event.EventObject.html#subscribe" class="internal-link">fl_controller_framework.core.event.EventObject.subscribe</a></code></div>
+    <div><p class="pre">A static method that is used to subscribe functions to a Control on the Component instance. Upon component activation, each function that is decorated with Component.subscribe will be subscribed using the global event object.
+This is how you listen to and react to event generated by controls. Example: Component.subscribe("play_button", "pressed" )</p></div>
+  </div>
+</div><div class="basemethod">
   
   
   <a name="fl_controller_framework.components.component.Component.__init__">
@@ -604,7 +705,7 @@ When inheriting from this class, create as many controls as necessary as instanc
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, auto_active: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code> = <a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>, *a, **k)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/component.py#L30">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/component.py#L32">
       
       (source)
     </a>
@@ -615,7 +716,7 @@ When inheriting from this class, create as many controls as necessary as instanc
     </a>
   </div>
   <div class="docstring functionBody">
-    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.core.state.StateBase.html#__init__" class="internal-link">fl_controller_framework.core.state.StateBase.__init__</a></code></div><div class="interfaceinfo">overridden in <code><a href="fl_controller_framework.components.modes.ModesComponent.html" class="internal-link">fl_controller_framework.components.modes.ModesComponent</a></code>, <code><a href="fl_controller_framework.components.transport.TransportComponent.html" class="internal-link">fl_controller_framework.components.transport.TransportComponent</a></code>, <code><a href="fl_controller_framework.control_surface.ControlSurface.html" class="internal-link">fl_controller_framework.control_surface.ControlSurface</a></code></div>
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.core.state.StateBase.html#__init__" class="internal-link">fl_controller_framework.core.state.StateBase.__init__</a></code></div><div class="interfaceinfo">overridden in <code><a href="fl_controller_framework.components.browser.BrowserNavigationComponent.html" class="internal-link">fl_controller_framework.components.browser.BrowserNavigationComponent</a></code>, <code><a href="fl_controller_framework.components.modes.ModesComponent.html" class="internal-link">fl_controller_framework.components.modes.ModesComponent</a></code>, <code><a href="fl_controller_framework.components.transport.TransportComponent.html" class="internal-link">fl_controller_framework.components.transport.TransportComponent</a></code>, <code><a href="fl_controller_framework.control_surface.ControlSurface.html" class="internal-link">fl_controller_framework.control_surface.ControlSurface</a></code></div>
     <div><p class="undocumented">Undocumented</p></div>
   </div>
 </div><div class="basemethod">
@@ -631,7 +732,7 @@ When inheriting from this class, create as many controls as necessary as instanc
     
     
     <span class="py-keyword">def</span> <span class="py-defname">activate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/component.py#L100">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/component.py#L138">
       
       (source)
     </a>
@@ -642,8 +743,39 @@ When inheriting from this class, create as many controls as necessary as instanc
     </a>
   </div>
   <div class="docstring functionBody">
-    <div class="interfaceinfo">overridden in <code><a href="fl_controller_framework.components.modes.ModesComponent.html" class="internal-link">fl_controller_framework.components.modes.ModesComponent</a></code>, <code><a href="fl_controller_framework.control_surface.ControlSurface.html" class="internal-link">fl_controller_framework.control_surface.ControlSurface</a></code></div>
+    <div class="interfaceinfo">overridden in <code><a href="fl_controller_framework.components.browser.BrowserNavigationComponent.html" class="internal-link">fl_controller_framework.components.browser.BrowserNavigationComponent</a></code>, <code><a href="fl_controller_framework.components.modes.ModesComponent.html" class="internal-link">fl_controller_framework.components.modes.ModesComponent</a></code>, <code><a href="fl_controller_framework.control_surface.ControlSurface.html" class="internal-link">fl_controller_framework.control_surface.ControlSurface</a></code></div>
     <div><p class="pre">Activate this Component and all its controls. This method also subscribes to all control events listed in the Component.subscribe(decorator, and register all functions decorated with Component.listens()) </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.components.component.Component.add_control_subscribe">
+    
+  </a>
+  <a name="add_control_subscribe">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">add_control_subscribe</span><span class="function-signature">(self, control_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, control: <code><a href="fl_controller_framework.controls.control.ControlBase.html" class="internal-link" title="fl_controller_framework.controls.control.ControlBase">ControlBase</a></code>, control_event: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, func)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/component.py#L102">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#add_control_subscribe" title="fl_controller_framework.components.component.Component.add_control_subscribe">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Add a control and subscribe to a control event in one method call. This is useful if you want to add controls and functionality to a Component outside of the Component class.
+This function will attach the control to the component object if it is not already attached, and subscribe to the event.
+It will also attach the function to the component object if it is not already attached. 
+If a lambda function is passed, the __name__ attribute will be set to "on_control_name_event_name" pattern. Otherwise, the function name will be used.
+This means, if you call this method multiple times with the same control_name and control_event, and passing a lambda as the func arg, the function will be overwritten.</p></div>
   </div>
 </div><div class="basemethod">
   
@@ -658,7 +790,7 @@ When inheriting from this class, create as many controls as necessary as instanc
     
     
     <span class="py-keyword">def</span> <span class="py-defname">deactivate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/component.py#L117">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/component.py#L155">
       
       (source)
     </a>
@@ -675,21 +807,21 @@ When inheriting from this class, create as many controls as necessary as instanc
 </div><div class="basemethod">
   
   
-  <a name="fl_controller_framework.components.component.Component.listens">
+  <a name="fl_controller_framework.components.component.Component.listens_event">
     
   </a>
-  <a name="listens">
+  <a name="listens_event">
     
   </a>
   <div class="functionHeader">
     
     
-    <span class="py-keyword">def</span> <span class="py-defname">listens</span><span class="function-signature">(event_path: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/component.py#L12">
+    <span class="py-keyword">def</span> <span class="py-defname">listens_event</span><span class="function-signature">(self, event_path: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, func)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/component.py#L128">
       
       (source)
     </a>
-    <a class="headerLink" href="#listens" title="fl_controller_framework.components.component.Component.listens">
+    <a class="headerLink" href="#listens_event" title="fl_controller_framework.components.component.Component.listens_event">
       
       
       ¶
@@ -697,8 +829,10 @@ When inheriting from this class, create as many controls as necessary as instanc
   </div>
   <div class="docstring functionBody">
     
-    <div><p class="pre">A static method the is used to listen to FL studio event and react to them by the function they are decorating. Upon component activation, each function that is decorated with Component.listens() will be registered in the global event object.
-Example: Component.listens("channels.selectedChannel"). This decorator will call the decorated function each time channels.selectedChannel is changed.</p></div>
+    <div><p class="pre">Listen to an event. This is useful if you want to listen to an event outside of the Component class.
+This method will attach the function to the component object if it is not already attached using the "on_event_path" pattern.
+If a lambda function is passed, the __name__ attribute will be set to "on_event_path" pattern. Otherwise, the function name will be used.
+This means, if you call this method multiple times with the same event_path, and passing a lambda as the func arg, the function will be overwritten.</p></div>
   </div>
 </div><div class="basemethod">
   
@@ -713,7 +847,7 @@ Example: Component.listens("channels.selectedChannel"). This decorator will call
     
     
     <span class="py-keyword">def</span> <span class="py-defname">notify</span><span class="function-signature">(self, event_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, *a, **k)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/component.py#L41">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/component.py#L43">
       
       (source)
     </a>
@@ -730,30 +864,32 @@ Example: Component.listens("channels.selectedChannel"). This decorator will call
 </div><div class="basemethod">
   
   
-  <a name="fl_controller_framework.components.component.Component.subscribe">
+  <a name="fl_controller_framework.components.component.Component.subscribe_control">
     
   </a>
-  <a name="subscribe">
+  <a name="subscribe_control">
     
   </a>
   <div class="functionHeader">
     
     
-    <span class="py-keyword">def</span> <span class="py-defname">subscribe</span><span class="function-signature">(control_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, event: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/component.py#L21">
+    <span class="py-keyword">def</span> <span class="py-defname">subscribe_control</span><span class="function-signature">(self, control_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, control_event: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, func)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/component.py#L116">
       
       (source)
     </a>
-    <a class="headerLink" href="#subscribe" title="fl_controller_framework.components.component.Component.subscribe">
+    <a class="headerLink" href="#subscribe_control" title="fl_controller_framework.components.component.Component.subscribe_control">
       
       
       ¶
     </a>
   </div>
   <div class="docstring functionBody">
-    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.core.event.EventObject.html#subscribe" class="internal-link">fl_controller_framework.core.event.EventObject.subscribe</a></code></div>
-    <div><p class="pre">A static method that is used to subscribe functions to a Control on the Component instance. Upon component activation, each function that is decorated with Component.subscribe will be subscribed using the global event object.
-This is how you listen to and react to event generated by controls. Example: Component.subscribe("play_button", "pressed" )</p></div>
+    
+    <div><p class="pre">Subscribe to a control event. This is useful if you want to subscribe to a control event outside of the Component class.
+This method will attach the function to the component object if it is not already attached using the "on_control_name_event_name" pattern.
+If a lambda function is passed, the __name__ attribute will be set to "on_control_name_event_name" pattern. Otherwise, the function name will be used.
+This means, if you call this method multiple times with the same control_name and control_event, and passing a lambda as the func arg, the function will be overwritten.</p></div>
   </div>
 </div><div class="baseinstancevariable">
   
@@ -767,7 +903,7 @@ This is how you listen to and react to event generated by controls. Example: Com
   <div class="functionHeader">
     
     <span class="py-defname">auto_active</span>: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/component.py#L36">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/component.py#L38">
       
       (source)
     </a>
@@ -794,7 +930,7 @@ This is how you listen to and react to event generated by controls. Example: Com
   <div class="functionHeader">
     
     <span class="py-defname">fl</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/component.py#L38">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/component.py#L40">
       
       (source)
     </a>
@@ -821,7 +957,7 @@ This is how you listen to and react to event generated by controls. Example: Com
   <div class="functionHeader">
     
     <span class="py-defname">global_event_object</span>: <code><a href="fl_controller_framework.core.event.GlobalEventObject.html" class="internal-link" title="fl_controller_framework.core.event.GlobalEventObject">GlobalEventObject</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/component.py#L34">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/component.py#L36">
       
       (source)
     </a>
@@ -848,7 +984,7 @@ This is how you listen to and react to event generated by controls. Example: Com
   <div class="functionHeader">
     
     <span class="py-defname">name</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/component.py#L32">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/component.py#L34">
       
       (source)
     </a>
@@ -876,7 +1012,7 @@ This is how you listen to and react to event generated by controls. Example: Com
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_control_subscribe</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/component.py#L46">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/component.py#L48">
       
       (source)
     </a>
@@ -904,7 +1040,7 @@ It does this with the global event object. This is called at Component activatio
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_control_unsubscribe</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/component.py#L61">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/component.py#L63">
       
       (source)
     </a>
@@ -932,7 +1068,7 @@ It does on the global event object. This is called at deactivation with Componen
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_get_controls</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/component.py#L91">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/component.py#L93">
       
       (source)
     </a>
@@ -959,7 +1095,7 @@ It does on the global event object. This is called at deactivation with Componen
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_get_observers</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/components/component.py#L76">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/component.py#L78">
       
       (source)
     </a>
@@ -985,7 +1121,7 @@ It does on the global event object. This is called at deactivation with Componen
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.3.3 at 2024-07-29 05:36:58.
+    24.3.3 at 2024-07-29 15:21:49.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

@@ -173,6 +173,16 @@
         
 
         
+            <div class="itemName"><code><a href="#getFromIndex" class="internal-link" title="fl_controller_framework.util.scales.Scales.getFromIndex">get<wbr></wbr>From<wbr></wbr>Index</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="#getMidiNote" class="internal-link" title="fl_controller_framework.util.scales.Scales.getMidiNote">get<wbr></wbr>Midi<wbr></wbr>Note</a></code>
             </div>
         
@@ -306,6 +316,16 @@
             </div>
         
 
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#scale_strings" class="internal-link" title="fl_controller_framework.util.scales.Scales.scale_strings">scale<wbr></wbr>_strings</a></code>
+            </div>
+        
+
     </li>
 </ul> 
 
@@ -384,7 +404,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">Scales</span>: <a href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/util/scales.py#L2" class="sourceLink">(source)</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">Scales</span>: <a href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/util/scales.py#L2" class="sourceLink">(source)</a></code></p>
           <p><a href="classIndex.html#fl_controller_framework.util.scales.Scales">View In Hierarchy</a></p>
         </div>
 
@@ -393,7 +413,7 @@
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id128">
+          <table class="children sortable" id="id135">
   
   
   <tr class="method">
@@ -401,6 +421,11 @@
     <td>Method</td>
     <td><code><a href="#asList" class="internal-link" title="fl_controller_framework.util.scales.Scales.asList">as<wbr></wbr>List</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#getFromIndex" class="internal-link" title="fl_controller_framework.util.scales.Scales.getFromIndex">get<wbr></wbr>From<wbr></wbr>Index</a></code></td>
+    <td>Retrieves the scale string from the given index.</td>
   </tr><tr class="method">
     
     <td>Method</td>
@@ -466,6 +491,11 @@
     <td>Class Variable</td>
     <td><code><a href="#pentatonic" class="internal-link" title="fl_controller_framework.util.scales.Scales.pentatonic">pentatonic</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><code><a href="#scale_strings" class="internal-link" title="fl_controller_framework.util.scales.Scales.scale_strings">scale<wbr></wbr>_strings</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
   </tr>
 </table>
           
@@ -487,7 +517,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">asList</span><span class="function-signature">() -&gt; <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>]</code></span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/util/scales.py#L57">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/util/scales.py#L65">
       
       (source)
     </a>
@@ -504,6 +534,39 @@
 </div><div class="basemethod">
   
   
+  <a name="fl_controller_framework.util.scales.Scales.getFromIndex">
+    
+  </a>
+  <a name="getFromIndex">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">getFromIndex</span><span class="function-signature">(index: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>) -&gt; <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code></span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/util/scales.py#L76">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#getFromIndex" title="fl_controller_framework.util.scales.Scales.getFromIndex">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Retrieves the scale string from the given index.
+
+Parameters:
+index (int): The index of the scale string to retrieve.
+
+Returns:
+str: The scale string at the given index.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
   <a name="fl_controller_framework.util.scales.Scales.getMidiNote">
     
   </a>
@@ -514,7 +577,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">getMidiNote</span><span class="function-signature">(octave_index: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>, scale_degree: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>) -&gt; <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code></span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/util/scales.py#L42">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/util/scales.py#L50">
       
       (source)
     </a>
@@ -541,7 +604,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">getNoteIndexByNameFlat</span><span class="function-signature">(key_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>) -&gt; <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code></span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/util/scales.py#L54">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/util/scales.py#L62">
       
       (source)
     </a>
@@ -568,7 +631,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">getNoteIndexByNameSharp</span><span class="function-signature">(key_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>) -&gt; <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code></span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/util/scales.py#L51">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/util/scales.py#L59">
       
       (source)
     </a>
@@ -594,7 +657,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">arabic</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a>]</code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/util/scales.py#L8">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/util/scales.py#L8">
       
       (source)
     </a>
@@ -621,7 +684,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">chromatic</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a>]</code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/util/scales.py#L3">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/util/scales.py#L3">
       
       (source)
     </a>
@@ -648,7 +711,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">harmonic</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a>]</code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/util/scales.py#L7">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/util/scales.py#L7">
       
       (source)
     </a>
@@ -675,7 +738,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">major</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a>]</code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/util/scales.py#L4">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/util/scales.py#L4">
       
       (source)
     </a>
@@ -702,7 +765,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">melodic</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a>]</code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/util/scales.py#L6">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/util/scales.py#L6">
       
       (source)
     </a>
@@ -729,7 +792,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">midi_octaves_length</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/util/scales.py#L40">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/util/scales.py#L48">
       
       (source)
     </a>
@@ -756,7 +819,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">minor</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a>]</code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/util/scales.py#L5">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/util/scales.py#L5">
       
       (source)
     </a>
@@ -783,7 +846,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">notes_flat</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a>]</code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/util/scales.py#L26">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/util/scales.py#L34">
       
       (source)
     </a>
@@ -810,7 +873,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">notes_sharp</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a>]</code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/util/scales.py#L11">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/util/scales.py#L19">
       
       (source)
     </a>
@@ -837,11 +900,38 @@
   <div class="functionHeader">
     
     <span class="py-defname">pentatonic</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a>]</code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/ad28ff0f62c8a0f2f0e1aa2268362c8692568f05/util/scales.py#L9">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/util/scales.py#L9">
       
       (source)
     </a>
     <a class="headerLink" href="#pentatonic" title="fl_controller_framework.util.scales.Scales.pentatonic">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseclassvariable">
+  
+  
+  <a name="fl_controller_framework.util.scales.Scales.scale_strings">
+    
+  </a>
+  <a name="scale_strings">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">scale_strings</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a>]</code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/util/scales.py#L10">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#scale_strings" title="fl_controller_framework.util.scales.Scales.scale_strings">
       
       
       ¶
@@ -864,7 +954,7 @@
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.3.3 at 2024-07-29 05:36:58.
+    24.3.3 at 2024-07-29 15:21:49.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

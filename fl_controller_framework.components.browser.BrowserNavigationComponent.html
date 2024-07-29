@@ -1,0 +1,1649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>fl_controller_framework.components.browser.BrowserNavigationComponent</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a> <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="fl_controller_framework.components.browser.BrowserNavigationComponent.html" class="internal-link" title="This class"><wbr></wbr>Browser<wbr></wbr>Navigation<wbr></wbr>Component</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#activate" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent.activate">activate</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#show_modal" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent.show_modal">show<wbr></wbr>_modal</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_back_button_pressed" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_back_button_pressed">_on<wbr></wbr>_back<wbr></wbr>_button<wbr></wbr>_pressed</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_back_button_toggled" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_back_button_toggled">_on<wbr></wbr>_back<wbr></wbr>_button<wbr></wbr>_toggled</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_escape_control_toggled" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_escape_control_toggled">_on<wbr></wbr>_escape<wbr></wbr>_control<wbr></wbr>_toggled</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_jog_browser_node_control_dec" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_jog_browser_node_control_dec">_on<wbr></wbr>_jog<wbr></wbr>_browser<wbr></wbr>_node<wbr></wbr>_control<wbr></wbr>_dec</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_jog_browser_node_control_inc" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_jog_browser_node_control_inc">_on<wbr></wbr>_jog<wbr></wbr>_browser<wbr></wbr>_node<wbr></wbr>_control<wbr></wbr>_inc</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_jog_tabs_toggled" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_jog_tabs_toggled">_on<wbr></wbr>_jog<wbr></wbr>_tabs<wbr></wbr>_toggled</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_next_tab_control_pressed" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_next_tab_control_pressed">_on<wbr></wbr>_next<wbr></wbr>_tab<wbr></wbr>_control<wbr></wbr>_pressed</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_next_tab_control_toggled" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_next_tab_control_toggled">_on<wbr></wbr>_next<wbr></wbr>_tab<wbr></wbr>_control<wbr></wbr>_toggled</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_preview_node_control_pressed" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_preview_node_control_pressed">_on<wbr></wbr>_preview<wbr></wbr>_node<wbr></wbr>_control<wbr></wbr>_pressed</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_preview_node_control_toggled" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_preview_node_control_toggled">_on<wbr></wbr>_preview<wbr></wbr>_node<wbr></wbr>_control<wbr></wbr>_toggled</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_previous_tab_control_pressed" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_previous_tab_control_pressed">_on<wbr></wbr>_previous<wbr></wbr>_tab<wbr></wbr>_control<wbr></wbr>_pressed</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_previous_tab_control_toggled" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_previous_tab_control_toggled">_on<wbr></wbr>_previous<wbr></wbr>_tab<wbr></wbr>_control<wbr></wbr>_toggled</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_on_select_node_control_toggled" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_select_node_control_toggled">_on<wbr></wbr>_select<wbr></wbr>_node<wbr></wbr>_control<wbr></wbr>_toggled</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#listens" class="internal-link" title="fl_controller_framework.components.component.Component.listens">listens</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">subscribe</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#add_control_subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.add_control_subscribe">add<wbr></wbr>_control<wbr></wbr>_subscribe</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#deactivate" class="internal-link" title="fl_controller_framework.components.component.Component.deactivate">deactivate</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#listens_event" class="internal-link" title="fl_controller_framework.components.component.Component.listens_event">listens<wbr></wbr>_event</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#notify" class="internal-link" title="fl_controller_framework.components.component.Component.notify">notify</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#subscribe_control" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe_control">subscribe<wbr></wbr>_control</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.core.event.EventObject.html#notify_listeners" class="internal-link" title="fl_controller_framework.core.event.EventObject.notify_listeners">notify<wbr></wbr>_listeners</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.core.event.EventObject.html#unsubscribe" class="internal-link" title="fl_controller_framework.core.event.EventObject.unsubscribe">unsubscribe</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.core.state.StateBase.html#getValue" class="internal-link" title="fl_controller_framework.core.state.StateBase.getValue">get<wbr></wbr>Value</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.core.state.StateBase.html#isChanged" class="internal-link" title="fl_controller_framework.core.state.StateBase.isChanged">is<wbr></wbr>Changed</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#_control_subscribe" class="internal-link" title="fl_controller_framework.components.component.Component._control_subscribe">_control<wbr></wbr>_subscribe</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#_control_unsubscribe" class="internal-link" title="fl_controller_framework.components.component.Component._control_unsubscribe">_control<wbr></wbr>_unsubscribe</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#_get_controls" class="internal-link" title="fl_controller_framework.components.component.Component._get_controls">_get<wbr></wbr>_controls</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#_get_observers" class="internal-link" title="fl_controller_framework.components.component.Component._get_observers">_get<wbr></wbr>_observers</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#back_button" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent.back_button">back<wbr></wbr>_button</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#escape_control" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent.escape_control">escape<wbr></wbr>_control</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#jog_browser_node_control" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent.jog_browser_node_control">jog<wbr></wbr>_browser<wbr></wbr>_node<wbr></wbr>_control</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#jog_tabs" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent.jog_tabs">jog<wbr></wbr>_tabs</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#next_tab_control" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent.next_tab_control">next<wbr></wbr>_tab<wbr></wbr>_control</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#preview_node_control" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent.preview_node_control">preview<wbr></wbr>_node<wbr></wbr>_control</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#previous_tab_control" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent.previous_tab_control">previous<wbr></wbr>_tab<wbr></wbr>_control</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#select_node_control" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent.select_node_control">select<wbr></wbr>_node<wbr></wbr>_control</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#auto_active" class="internal-link" title="fl_controller_framework.components.component.Component.auto_active">auto<wbr></wbr>_active</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#fl" class="internal-link" title="fl_controller_framework.components.component.Component.fl">fl</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#global_event_object" class="internal-link" title="fl_controller_framework.components.component.Component.global_event_object">global<wbr></wbr>_event<wbr></wbr>_object</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#name" class="internal-link" title="fl_controller_framework.components.component.Component.name">name</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.core.event.EventObject.html#observers" class="internal-link" title="fl_controller_framework.core.event.EventObject.observers">observers</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.core.state.StateBase.html#_state" class="internal-link" title="fl_controller_framework.core.state.StateBase._state">_state</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="fl_controller_framework.components.browser.html" class="internal-link" title="The parent of this class">browser</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.components.browser.BrowserNavigationComponent.html" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent"><wbr></wbr>Browser<wbr></wbr>Navigation<wbr></wbr>Component</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">fl_controller_framework</a></code><wbr></wbr>.<code><a href="fl_controller_framework.components.html" class="internal-link" title="fl_controller_framework.components">components</a></code><wbr></wbr>.<code><a href="fl_controller_framework.components.browser.html" class="internal-link" title="fl_controller_framework.components.browser">browser</a></code><wbr></wbr>.<code><a href="fl_controller_framework.components.browser.BrowserNavigationComponent.html" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent">BrowserNavigationComponent</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">BrowserNavigationComponent</span>(<a href="fl_controller_framework.components.component.Component.html" class="internal-link" title="fl_controller_framework.components.component.Component">Component</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L7" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent.__init__">BrowserNavigationComponent(name)</a></code></p>
+          <p><a href="classIndex.html#fl_controller_framework.components.browser.BrowserNavigationComponent">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="undocumented">Undocumented</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id17">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent.__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#activate" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent.activate">activate</a></code></td>
+    <td>Activate this Component and all its controls. This method also subscribes to all control events listed in the Component.subscribe(decorator, and register all functions decorated with Component.listens()) ...</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#show_modal" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent.show_modal">show<wbr></wbr>_modal</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#back_button" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent.back_button">back<wbr></wbr>_button</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#escape_control" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent.escape_control">escape<wbr></wbr>_control</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#jog_browser_node_control" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent.jog_browser_node_control">jog<wbr></wbr>_browser<wbr></wbr>_node<wbr></wbr>_control</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#jog_tabs" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent.jog_tabs">jog<wbr></wbr>_tabs</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#next_tab_control" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent.next_tab_control">next<wbr></wbr>_tab<wbr></wbr>_control</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#preview_node_control" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent.preview_node_control">preview<wbr></wbr>_node<wbr></wbr>_control</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#previous_tab_control" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent.previous_tab_control">previous<wbr></wbr>_tab<wbr></wbr>_control</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#select_node_control" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent.select_node_control">select<wbr></wbr>_node<wbr></wbr>_control</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_back_button_pressed" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_back_button_pressed">_on<wbr></wbr>_back<wbr></wbr>_button<wbr></wbr>_pressed</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_back_button_toggled" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_back_button_toggled">_on<wbr></wbr>_back<wbr></wbr>_button<wbr></wbr>_toggled</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_escape_control_toggled" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_escape_control_toggled">_on<wbr></wbr>_escape<wbr></wbr>_control<wbr></wbr>_toggled</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_jog_browser_node_control_dec" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_jog_browser_node_control_dec">_on<wbr></wbr>_jog<wbr></wbr>_browser<wbr></wbr>_node<wbr></wbr>_control<wbr></wbr>_dec</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_jog_browser_node_control_inc" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_jog_browser_node_control_inc">_on<wbr></wbr>_jog<wbr></wbr>_browser<wbr></wbr>_node<wbr></wbr>_control<wbr></wbr>_inc</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_jog_tabs_toggled" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_jog_tabs_toggled">_on<wbr></wbr>_jog<wbr></wbr>_tabs<wbr></wbr>_toggled</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_next_tab_control_pressed" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_next_tab_control_pressed">_on<wbr></wbr>_next<wbr></wbr>_tab<wbr></wbr>_control<wbr></wbr>_pressed</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_next_tab_control_toggled" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_next_tab_control_toggled">_on<wbr></wbr>_next<wbr></wbr>_tab<wbr></wbr>_control<wbr></wbr>_toggled</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_preview_node_control_pressed" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_preview_node_control_pressed">_on<wbr></wbr>_preview<wbr></wbr>_node<wbr></wbr>_control<wbr></wbr>_pressed</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_preview_node_control_toggled" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_preview_node_control_toggled">_on<wbr></wbr>_preview<wbr></wbr>_node<wbr></wbr>_control<wbr></wbr>_toggled</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_previous_tab_control_pressed" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_previous_tab_control_pressed">_on<wbr></wbr>_previous<wbr></wbr>_tab<wbr></wbr>_control<wbr></wbr>_pressed</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_previous_tab_control_toggled" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_previous_tab_control_toggled">_on<wbr></wbr>_previous<wbr></wbr>_tab<wbr></wbr>_control<wbr></wbr>_toggled</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_on_select_node_control_toggled" class="internal-link" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_select_node_control_toggled">_on<wbr></wbr>_select<wbr></wbr>_node<wbr></wbr>_control<wbr></wbr>_toggled</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+            <p class="inheritedFrom">
+              Inherited from <code><a href="fl_controller_framework.components.component.Component.html" class="internal-link" title="fl_controller_framework.components.component.Component">Component</a></code>:
+            </p>
+            <table class="children sortable" id="id18">
+  
+  
+  <tr class="basestaticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#listens" class="internal-link" title="fl_controller_framework.components.component.Component.listens">listens</a></code></td>
+    <td>A static method the is used to listen to FL studio event and react to them by the function they are decorating. Upon component activation, each function that is decorated with Component.listens() will be registered in the global event object...</td>
+  </tr><tr class="basestaticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">subscribe</a></code></td>
+    <td>A static method that is used to subscribe functions to a Control on the Component instance. Upon component activation, each function that is decorated with Component.subscribe will be subscribed using the global event object...</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#add_control_subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.add_control_subscribe">add<wbr></wbr>_control<wbr></wbr>_subscribe</a></code></td>
+    <td>Add a control and subscribe to a control event in one method call. This is useful if you want to add controls and functionality to a Component outside of the Component class. This function will attach the control to the component object if it is not already attached, and subscribe to the event...</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#deactivate" class="internal-link" title="fl_controller_framework.components.component.Component.deactivate">deactivate</a></code></td>
+    <td>Deactivate this Component and all its controls. This method also unsubscribes to all control events listed in the Component.subscribe(decorator, and unregister all functions decorated with Component.listens()) ...</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#listens_event" class="internal-link" title="fl_controller_framework.components.component.Component.listens_event">listens<wbr></wbr>_event</a></code></td>
+    <td>Listen to an event. This is useful if you want to listen to an event outside of the Component class. This method will attach the function to the component object if it is not already attached using the "on_event_path" pattern...</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#notify" class="internal-link" title="fl_controller_framework.components.component.Component.notify">notify</a></code></td>
+    <td>Helper method to publish event sourced form this component. The event_id is component_name.event. This is useful for communication between components if you need.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#subscribe_control" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe_control">subscribe<wbr></wbr>_control</a></code></td>
+    <td>Subscribe to a control event. This is useful if you want to subscribe to a control event outside of the Component class. This method will attach the function to the component object if it is not already attached using the "on_control_name_event_name" pattern...</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#auto_active" class="internal-link" title="fl_controller_framework.components.component.Component.auto_active">auto<wbr></wbr>_active</a></code></td>
+    <td>Whether or not to automatically activate this component upon declaration</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#fl" class="internal-link" title="fl_controller_framework.components.component.Component.fl">fl</a></code></td>
+    <td>FL Studio modules object: This object hold a reference to all Fl Studio modules and functions.</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#global_event_object" class="internal-link" title="fl_controller_framework.components.component.Component.global_event_object">global<wbr></wbr>_event<wbr></wbr>_object</a></code></td>
+    <td>A reference to the global event registry</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#name" class="internal-link" title="fl_controller_framework.components.component.Component.name">name</a></code></td>
+    <td>Component Name: Must be unique. The name is used when publishing events from this component.</td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#_control_subscribe" class="internal-link" title="fl_controller_framework.components.component.Component._control_subscribe">_control<wbr></wbr>_subscribe</a></code></td>
+    <td>Finds each function with the Decorator @Component.subscribe(control_name: str, event_id: str). Once found it binds the function to the control event specified in the decorator. It does this with the global event object...</td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#_control_unsubscribe" class="internal-link" title="fl_controller_framework.components.component.Component._control_unsubscribe">_control<wbr></wbr>_unsubscribe</a></code></td>
+    <td>Finds each function with the Decorator @Component.subscribe(control_name: str, event_id: str). Once found it unsubscribes the function to the control event specified in the decorator. It does on the global event object...</td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#_get_controls" class="internal-link" title="fl_controller_framework.components.component.Component._get_controls">_get<wbr></wbr>_controls</a></code></td>
+    <td>Gets all controls on this Component instance</td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#_get_observers" class="internal-link" title="fl_controller_framework.components.component.Component._get_observers">_get<wbr></wbr>_observers</a></code></td>
+    <td>Get all functions on this Component instance that are decorated with @Component.listens(). </td>
+  </tr>
+</table>
+            
+            <p class="inheritedFrom">
+              Inherited from <code><a href="fl_controller_framework.core.state.StateBase.html" class="internal-link" title="fl_controller_framework.core.state.StateBase">StateBase</a></code> (via <code><a href="fl_controller_framework.components.component.Component.html" class="internal-link" title="fl_controller_framework.components.component.Component">Component</a></code>):
+            </p>
+            <table class="children sortable" id="id19">
+  
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.core.state.StateBase.html#getValue" class="internal-link" title="fl_controller_framework.core.state.StateBase.getValue">get<wbr></wbr>Value</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.core.state.StateBase.html#isChanged" class="internal-link" title="fl_controller_framework.core.state.StateBase.isChanged">is<wbr></wbr>Changed</a></code></td>
+    <td>This is the method that checks for state changes. It takes the state represented as a string, and the value for comparison. It returns true is the value passed into the function is different from the value stored in the dictionary...</td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.core.state.StateBase.html#_state" class="internal-link" title="fl_controller_framework.core.state.StateBase._state">_state</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+            
+            <p class="inheritedFrom">
+              Inherited from <code><a href="fl_controller_framework.core.event.EventObject.html" class="internal-link" title="fl_controller_framework.core.event.EventObject">EventObject</a></code> (via <code><a href="fl_controller_framework.components.component.Component.html" class="internal-link" title="fl_controller_framework.components.component.Component">Component</a></code>, <code><a href="fl_controller_framework.core.state.StateBase.html" class="internal-link" title="fl_controller_framework.core.state.StateBase">StateBase</a></code>):
+            </p>
+            <table class="children sortable" id="id20">
+  
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.core.event.EventObject.html#notify_listeners" class="internal-link" title="fl_controller_framework.core.event.EventObject.notify_listeners">notify<wbr></wbr>_listeners</a></code></td>
+    <td>This function is called whenever a new event(event_id) is received. All functions registered by subscribe are called by the specified event_id.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.core.event.EventObject.html#unsubscribe" class="internal-link" title="fl_controller_framework.core.event.EventObject.unsubscribe">unsubscribe</a></code></td>
+    <td>Unsubscribe removed the supplied function from the list of observers by event_id.</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.core.event.EventObject.html#observers" class="internal-link" title="fl_controller_framework.core.event.EventObject.observers">observers</a></code></td>
+    <td>dictionary instance variable that houses the registry of observer functions.  They key for this dictionary is a str of the event_id. Events are referenced by this key and the list of observers are called by it.</td>
+  </tr>
+</table>
+            
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> = <span class="rst-variable-quote">'</span><span class="rst-variable-string">BrowserNavigationComponent</span><span class="rst-variable-quote">'</span>)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L8">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#__init__" title="fl_controller_framework.components.browser.BrowserNavigationComponent.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.components.component.Component.html#__init__" class="internal-link">fl_controller_framework.components.component.Component.__init__</a></code></div>
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent.activate">
+    
+  </a>
+  <a name="activate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">activate</span><span class="function-signature">(self)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L95">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#activate" title="fl_controller_framework.components.browser.BrowserNavigationComponent.activate">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.components.component.Component.html#activate" class="internal-link">fl_controller_framework.components.component.Component.activate</a></code></div>
+    <div><p class="pre">Activate this Component and all its controls. This method also subscribes to all control events listed in the Component.subscribe(decorator, and register all functions decorated with Component.listens()) </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent.show_modal">
+    
+  </a>
+  <a name="show_modal">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">show_modal</span><span class="function-signature">(self, title: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, message: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L99">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#show_modal" title="fl_controller_framework.components.browser.BrowserNavigationComponent.show_modal">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent.back_button">
+    
+  </a>
+  <a name="back_button">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">back_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L12">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#back_button" title="fl_controller_framework.components.browser.BrowserNavigationComponent.back_button">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent.escape_control">
+    
+  </a>
+  <a name="escape_control">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">escape_control</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L15">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#escape_control" title="fl_controller_framework.components.browser.BrowserNavigationComponent.escape_control">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent.jog_browser_node_control">
+    
+  </a>
+  <a name="jog_browser_node_control">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">jog_browser_node_control</span>: <code><a href="fl_controller_framework.controls.jog_control.JogControl.html" class="internal-link" title="fl_controller_framework.controls.jog_control.JogControl">JogControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L10">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#jog_browser_node_control" title="fl_controller_framework.components.browser.BrowserNavigationComponent.jog_browser_node_control">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent.jog_tabs">
+    
+  </a>
+  <a name="jog_tabs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">jog_tabs</span>: <code><a href="fl_controller_framework.controls.jog_control.JogControl.html" class="internal-link" title="fl_controller_framework.controls.jog_control.JogControl">JogControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L17">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#jog_tabs" title="fl_controller_framework.components.browser.BrowserNavigationComponent.jog_tabs">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent.next_tab_control">
+    
+  </a>
+  <a name="next_tab_control">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">next_tab_control</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L14">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#next_tab_control" title="fl_controller_framework.components.browser.BrowserNavigationComponent.next_tab_control">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent.preview_node_control">
+    
+  </a>
+  <a name="preview_node_control">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">preview_node_control</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L16">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#preview_node_control" title="fl_controller_framework.components.browser.BrowserNavigationComponent.preview_node_control">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent.previous_tab_control">
+    
+  </a>
+  <a name="previous_tab_control">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">previous_tab_control</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L13">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#previous_tab_control" title="fl_controller_framework.components.browser.BrowserNavigationComponent.previous_tab_control">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent.select_node_control">
+    
+  </a>
+  <a name="select_node_control">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">select_node_control</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L11">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#select_node_control" title="fl_controller_framework.components.browser.BrowserNavigationComponent.select_node_control">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent._on_back_button_pressed">
+    
+  </a>
+  <a name="_on_back_button_pressed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">back_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><a href="fl_controller_framework.controls.button.ButtonControl.Events.html#PRESSED" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.Events.PRESSED">ButtonControl.Events.PRESSED</a>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_back_button_pressed</span><span class="function-signature">(self, pressed)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L19">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_back_button_pressed" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_back_button_pressed">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent._on_back_button_toggled">
+    
+  </a>
+  <a name="_on_back_button_toggled">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">back_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><a href="fl_controller_framework.controls.button.ButtonControl.Events.html#TOGGLED" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.Events.TOGGLED">ButtonControl.Events.TOGGLED</a>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_back_button_toggled</span><span class="function-signature">(self, _)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L27">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_back_button_toggled" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_back_button_toggled">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent._on_escape_control_toggled">
+    
+  </a>
+  <a name="_on_escape_control_toggled">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">escape_control</span><span class="rst-variable-quote">'</span>, <wbr></wbr><a href="fl_controller_framework.controls.button.ButtonControl.Events.html#TOGGLED" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.Events.TOGGLED">ButtonControl.Events.TOGGLED</a>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_escape_control_toggled</span><span class="function-signature">(self, _)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L77">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_escape_control_toggled" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_escape_control_toggled">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent._on_jog_browser_node_control_dec">
+    
+  </a>
+  <a name="_on_jog_browser_node_control_dec">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">jog_browser_node_control</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">dec</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_jog_browser_node_control_dec</span><span class="function-signature">(self, _)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L90">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_jog_browser_node_control_dec" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_jog_browser_node_control_dec">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent._on_jog_browser_node_control_inc">
+    
+  </a>
+  <a name="_on_jog_browser_node_control_inc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">jog_browser_node_control</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">inc</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_jog_browser_node_control_inc</span><span class="function-signature">(self, _)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L85">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_jog_browser_node_control_inc" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_jog_browser_node_control_inc">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent._on_jog_tabs_toggled">
+    
+  </a>
+  <a name="_on_jog_tabs_toggled">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">jog_tabs</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">dec</span><span class="rst-variable-quote">'</span>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_jog_tabs_toggled</span><span class="function-signature">(self, _)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L61">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_jog_tabs_toggled" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_jog_tabs_toggled">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent._on_next_tab_control_pressed">
+    
+  </a>
+  <a name="_on_next_tab_control_pressed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">next_tab_control</span><span class="rst-variable-quote">'</span>, <wbr></wbr><a href="fl_controller_framework.controls.button.ButtonControl.Events.html#PRESSED" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.Events.PRESSED">ButtonControl.Events.PRESSED</a>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_next_tab_control_pressed</span><span class="function-signature">(self, pressed)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L31">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_next_tab_control_pressed" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_next_tab_control_pressed">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent._on_next_tab_control_toggled">
+    
+  </a>
+  <a name="_on_next_tab_control_toggled">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">next_tab_control</span><span class="rst-variable-quote">'</span>, <wbr></wbr><a href="fl_controller_framework.controls.button.ButtonControl.Events.html#TOGGLED" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.Events.TOGGLED">ButtonControl.Events.TOGGLED</a>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_next_tab_control_toggled</span><span class="function-signature">(self, _)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L39">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_next_tab_control_toggled" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_next_tab_control_toggled">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent._on_preview_node_control_pressed">
+    
+  </a>
+  <a name="_on_preview_node_control_pressed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">preview_node_control</span><span class="rst-variable-quote">'</span>, <wbr></wbr><a href="fl_controller_framework.controls.button.ButtonControl.Events.html#PRESSED" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.Events.PRESSED">ButtonControl.Events.PRESSED</a>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_preview_node_control_pressed</span><span class="function-signature">(self, isPressed: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code>)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L70">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_preview_node_control_pressed" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_preview_node_control_pressed">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent._on_preview_node_control_toggled">
+    
+  </a>
+  <a name="_on_preview_node_control_toggled">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">preview_node_control</span><span class="rst-variable-quote">'</span>, <wbr></wbr><a href="fl_controller_framework.controls.button.ButtonControl.Events.html#TOGGLED" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.Events.TOGGLED">ButtonControl.Events.TOGGLED</a>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_preview_node_control_toggled</span><span class="function-signature">(self, _)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L65">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_preview_node_control_toggled" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_preview_node_control_toggled">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent._on_previous_tab_control_pressed">
+    
+  </a>
+  <a name="_on_previous_tab_control_pressed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">previous_tab_control</span><span class="rst-variable-quote">'</span>, <wbr></wbr><a href="fl_controller_framework.controls.button.ButtonControl.Events.html#PRESSED" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.Events.PRESSED">ButtonControl.Events.PRESSED</a>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_previous_tab_control_pressed</span><span class="function-signature">(self, pressed)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L44">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_previous_tab_control_pressed" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_previous_tab_control_pressed">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent._on_previous_tab_control_toggled">
+    
+  </a>
+  <a name="_on_previous_tab_control_toggled">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">previous_tab_control</span><span class="rst-variable-quote">'</span>, <wbr></wbr><a href="fl_controller_framework.controls.button.ButtonControl.Events.html#TOGGLED" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.Events.TOGGLED">ButtonControl.Events.TOGGLED</a>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_previous_tab_control_toggled</span><span class="function-signature">(self, _)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L52">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_previous_tab_control_toggled" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_previous_tab_control_toggled">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="fl_controller_framework.components.browser.BrowserNavigationComponent._on_select_node_control_toggled">
+    
+  </a>
+  <a name="_on_select_node_control_toggled">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">select_node_control</span><span class="rst-variable-quote">'</span>, <wbr></wbr><a href="fl_controller_framework.controls.button.ButtonControl.Events.html#TOGGLED" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.Events.TOGGLED">ButtonControl.Events.TOGGLED</a>)<br />
+    <span class="py-keyword">def</span> <span class="py-defname">_on_select_node_control_toggled</span><span class="function-signature">(self, _)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/abdae1a42939568d7e65635052d17f87d18f1a50/components/browser.py#L81">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_on_select_node_control_toggled" title="fl_controller_framework.components.browser.BrowserNavigationComponent._on_select_node_control_toggled">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-07-29 15:21:49.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>
