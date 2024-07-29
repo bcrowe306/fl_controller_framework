@@ -4,9 +4,24 @@ from fl_controller_framework.controls.button import ButtonControl
 from fl_controller_framework.controls.jog_control import JogControl
 
 
-class BrowserNavigationComponent(Component):
-    def __init__(self, name: str = "BrowserNavigationComponent"):
-        super(BrowserNavigationComponent, self).__init__(name=name)
+class BrowserComponent(Component):
+    """
+    Represents a browser component in the FL Studio controller framework.
+
+    This component provides functionality for navigating and interacting with the FL Studio browser.
+
+    Attributes:
+        jog_browser_node_control (JogControl): The jog control for navigating browser nodes.
+        select_node_control (ButtonControl): The button control for selecting a browser node.
+        back_button (ButtonControl): The button control for navigating back in the browser.
+        previous_tab_control (ButtonControl): The button control for navigating to the previous browser tab.
+        next_tab_control (ButtonControl): The button control for navigating to the next browser tab.
+        escape_control (ButtonControl): The button control for escaping from the current browser view.
+        preview_node_control (ButtonControl): The button control for previewing a browser node.
+        jog_tabs (JogControl): The jog control for navigating browser tabs.
+    """
+    def __init__(self, name: str = "BrowserComponent"):
+        super(BrowserComponent, self).__init__(name=name)
         self.jog_browser_node_control: JogControl = None
         self.select_node_control: ButtonControl = None
         self.back_button: ButtonControl = None
@@ -95,6 +110,3 @@ class BrowserNavigationComponent(Component):
     def activate(self):
         FLBrowser.focus()
         return super().activate()
-
-    def show_modal(self, title: str, message: str):
-        self.global_event_object.notify_listeners("screen_modal", title, message)
