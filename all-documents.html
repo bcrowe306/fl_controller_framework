@@ -11,8 +11,8 @@
     </meta>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="apidocs.css" />
-    <link rel="stylesheet" type="text/css" href="readthedocstheme.css" />
     <link rel="stylesheet" type="text/css" href="extra.css" />
 </head>
   <body>
@@ -55,7 +55,73 @@
 
       </div>
 
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
     </div>
+
 
   </div>
 
@@ -73,7 +139,7 @@
             <div class="type">Package</div>
             <div class="kind">Package</div>
             <div class="privacy">PUBLIC</div>
-            <div class="summary"><span class="undocumented">No package docstring; 0/1 module, 1/4 package documented</span></div>
+            <div class="summary"><span class="undocumented">No package docstring; 0/1 module, 5/5 packages documented</span></div>
           </li><li id="fl_controller_framework.api">
             
             <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.api</div>
@@ -121,7 +187,7 @@
             <div class="type">Package</div>
             <div class="kind">Package</div>
             <div class="privacy">PUBLIC</div>
-            <div class="summary"><span class="undocumented">Undocumented</span></div>
+            <div class="summary">This module contains the components of the FL Controller Framework.</div>
           </li><li id="fl_controller_framework.components.component">
             
             <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.components<wbr></wbr>.component</div>
@@ -161,7 +227,7 @@
             <div class="type">Package</div>
             <div class="kind">Package</div>
             <div class="privacy">PUBLIC</div>
-            <div class="summary"><span class="undocumented">No package docstring; 1/8 module documented</span></div>
+            <div class="summary">This module contains the controls of the FL Controller Framework.</div>
           </li><li id="fl_controller_framework.controls.button">
             
             <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.controls<wbr></wbr>.button</div>
@@ -226,6 +292,46 @@
             <div class="kind">Module</div>
             <div class="privacy">PUBLIC</div>
             <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core</div>
+            <div class="url">fl_controller_framework.core.html</div>
+            <div class="type">Package</div>
+            <div class="kind">Package</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">This Module contains the core classes and functions for the FL Controller Framework.</div>
+          </li><li id="fl_controller_framework.core.control_registry">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.control<wbr></wbr>_registry</div>
+            <div class="url">fl_controller_framework.core.control_registry.html</div>
+            <div class="type">Module</div>
+            <div class="kind">Module</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event</div>
+            <div class="url">fl_controller_framework.core.event.html</div>
+            <div class="type">Module</div>
+            <div class="kind">Module</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">event.py: This module contains the essential event/observer building blocks from the rest of the ..  Essentially, this whole framework is a bidirectional observer pattern with builtin state. Most classes in this framework inherit from EventObject class.</div>
+          </li><li id="fl_controller_framework.core.skin">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.skin</div>
+            <div class="url">fl_controller_framework.core.skin.html</div>
+            <div class="type">Module</div>
+            <div class="kind">Module</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">No module docstring; 1/1 class documented</span></div>
+          </li><li id="fl_controller_framework.core.state">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.state</div>
+            <div class="url">fl_controller_framework.core.state.html</div>
+            <div class="type">Module</div>
+            <div class="kind">Module</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">No module docstring; 0/1 variable, 2/3 classes documented</span></div>
           </li><li id="fl_controller_framework.util">
             
             <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.util</div>
@@ -233,7 +339,7 @@
             <div class="type">Package</div>
             <div class="kind">Package</div>
             <div class="privacy">PUBLIC</div>
-            <div class="summary"><span class="undocumented">Undocumented</span></div>
+            <div class="summary">This module contains the utility functions for the FL Controller Framework.</div>
           </li><li id="fl_controller_framework.util.colors">
             
             <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.util<wbr></wbr>.colors</div>
@@ -1082,6 +1188,1134 @@
             <div class="kind">Method</div>
             <div class="privacy">PUBLIC</div>
             <div class="summary">Performs a cycle operation on a specific channel.</div>
+          </li><li id="fl_controller_framework.core.event.EventObject">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>Event<wbr></wbr>Object</div>
+            <div class="url">fl_controller_framework.core.event.EventObject.html</div>
+            <div class="type">Class</div>
+            <div class="kind">Class</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">This object is a base class that implements the basic observer patter. </div>
+          </li><li id="fl_controller_framework.core.event.EventObject.__init__">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>Event<wbr></wbr>Object<wbr></wbr>.__init__</div>
+            <div class="url">fl_controller_framework.core.event.EventObject.html#__init__</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.EventObject.observers">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>Event<wbr></wbr>Object<wbr></wbr>.observers</div>
+            <div class="url">fl_controller_framework.core.event.EventObject.html#observers</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Instance Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">dictionary instance variable that houses the registry of observer functions.  They key for this dictionary is a str of the event_id. Events are referenced by this key and the list of observers are called by it.</div>
+          </li><li id="fl_controller_framework.core.event.EventObject.subscribe">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>Event<wbr></wbr>Object<wbr></wbr>.subscribe</div>
+            <div class="url">fl_controller_framework.core.event.EventObject.html#subscribe</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Subscribe to an event by event_id. This function add the supplied observer func to the list identified by event_id.</div>
+          </li><li id="fl_controller_framework.core.event.EventObject.unsubscribe">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>Event<wbr></wbr>Object<wbr></wbr>.unsubscribe</div>
+            <div class="url">fl_controller_framework.core.event.EventObject.html#unsubscribe</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Unsubscribe removed the supplied function from the list of observers by event_id.</div>
+          </li><li id="fl_controller_framework.core.event.EventObject.notify_listeners">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>Event<wbr></wbr>Object<wbr></wbr>.notify<wbr></wbr>_listeners</div>
+            <div class="url">fl_controller_framework.core.event.EventObject.html#notify_listeners</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">This function is called whenever a new event(event_id) is received. All functions registered by subscribe are called by the specified event_id.</div>
+          </li><li id="fl_controller_framework.core.event.GlobalEventObject">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>Global<wbr></wbr>Event<wbr></wbr>Object</div>
+            <div class="url">fl_controller_framework.core.event.GlobalEventObject.html</div>
+            <div class="type">Class</div>
+            <div class="kind">Class</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">This is a global event registry. This class inherits from EventObject and is used to receive the events from FL Studio.  It is a singleton object, and is attached to Component, and Control classes as instance variables...</div>
+          </li><li id="fl_controller_framework.core.event.GlobalEventObject.__new__">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>Global<wbr></wbr>Event<wbr></wbr>Object<wbr></wbr>.__new__</div>
+            <div class="url">fl_controller_framework.core.event.GlobalEventObject.html#__new__</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.GlobalEventObject.__init__">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>Global<wbr></wbr>Event<wbr></wbr>Object<wbr></wbr>.__init__</div>
+            <div class="url">fl_controller_framework.core.event.GlobalEventObject.html#__init__</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html</div>
+            <div class="type">Class</div>
+            <div class="kind">Class</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">No class docstring; 32/32 class variables, 0/3 class documented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.HW_Dirty_Mixer_Sel">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>HW_<wbr></wbr>Dirty_<wbr></wbr>Mixer_<wbr></wbr>Sel</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#HW_Dirty_Mixer_Sel</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">mixer selection changed</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.HW_Dirty_Mixer_Display">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>HW_<wbr></wbr>Dirty_<wbr></wbr>Mixer_<wbr></wbr>Display</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#HW_Dirty_Mixer_Display</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">mixer display changed</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.HW_Dirty_Mixer_Controls">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>HW_<wbr></wbr>Dirty_<wbr></wbr>Mixer_<wbr></wbr>Controls</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#HW_Dirty_Mixer_Controls</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">mixer controls changed</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.HW_Dirty_RemoteLinks">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>HW_<wbr></wbr>Dirty_<wbr></wbr>Remote<wbr></wbr>Links</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#HW_Dirty_RemoteLinks</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">remote links (linked controls) has been added/removed</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.HW_Dirty_FocusedWindow">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>HW_<wbr></wbr>Dirty_<wbr></wbr>Focused<wbr></wbr>Window</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#HW_Dirty_FocusedWindow</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">channel selection changed</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.HW_Dirty_Performance">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>HW_<wbr></wbr>Dirty_<wbr></wbr>Performance</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#HW_Dirty_Performance</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">performance layout changed</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.HW_Dirty_LEDs">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>HW_<wbr></wbr>Dirty_<wbr></wbr>LEDs</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#HW_Dirty_LEDs</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">various changes in FL which require update of controller leds update status leds (play/stop/record/active window/.....) on this flag</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.HW_Dirty_RemoteLinkValues">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>HW_<wbr></wbr>Dirty_<wbr></wbr>Remote<wbr></wbr>Link<wbr></wbr>Values</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#HW_Dirty_RemoteLinkValues</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">remote link (linked controls) value is changed</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.HW_Dirty_Patterns">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>HW_<wbr></wbr>Dirty_<wbr></wbr>Patterns</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#HW_Dirty_Patterns</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">pattern changes</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.HW_Dirty_Tracks">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>HW_<wbr></wbr>Dirty_<wbr></wbr>Tracks</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#HW_Dirty_Tracks</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">track changes</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.HW_Dirty_ControlValues">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>HW_<wbr></wbr>Dirty_<wbr></wbr>Control<wbr></wbr>Values</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#HW_Dirty_ControlValues</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">plugin control value changes</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.HW_Dirty_Colors">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>HW_<wbr></wbr>Dirty_<wbr></wbr>Colors</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#HW_Dirty_Colors</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">plugin colors changes</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.HW_Dirty_Names">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>HW_<wbr></wbr>Dirty_<wbr></wbr>Names</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#HW_Dirty_Names</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">plugin names changes</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.HW_Dirty_ChannelRackGroup">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>HW_<wbr></wbr>Dirty_<wbr></wbr>Channel<wbr></wbr>Rack<wbr></wbr>Group</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#HW_Dirty_ChannelRackGroup</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Channel rack group changes</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.HW_ChannelEvent">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>HW_<wbr></wbr>Channel<wbr></wbr>Event</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#HW_ChannelEvent</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">channel changes</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.OnInit">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>On<wbr></wbr>Init</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#OnInit</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Called when the script has been started.</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.OnMidiMsg">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>On<wbr></wbr>Midi<wbr></wbr>Msg</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#OnMidiMsg</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Called for all MIDI messages that were not handled by OnMidiIn.</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.OnMidiOutMsg">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>On<wbr></wbr>Midi<wbr></wbr>Out<wbr></wbr>Msg</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#OnMidiOutMsg</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Called for short MIDI out messages sent from MIDI Out plugin - (event properties are limited to: handled, status, data1, data2, port, midiId, midiChan, midiChanEx)</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.OnRefresh">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>On<wbr></wbr>Refresh</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#OnRefresh</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Called when something changed that the script might want to respond to.</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.OnIdle">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>On<wbr></wbr>Idle</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#OnIdle</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Called from time to time. Can be used to do some small tasks, mostly UI related. For example: update activity meters.</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.OnUpdateMeters">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>On<wbr></wbr>Update<wbr></wbr>Meters</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#OnUpdateMeters</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Called when peak meters needs to be updated call device.setHasMeters() in onInit to use this event!</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.OnDeInit">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>On<wbr></wbr>De<wbr></wbr>Init</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#OnDeInit</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Called before the script will be stopped.</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.OnUpdateBeatIndicator">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>On<wbr></wbr>Update<wbr></wbr>Beat<wbr></wbr>Indicator</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#OnUpdateBeatIndicator</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Called when the beat indicator has changes - "value" can be off = 0, bar = 1 (on), beat = 2 (on)</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.OnProjectLoad">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>On<wbr></wbr>Project<wbr></wbr>Load</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#OnProjectLoad</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Called when project is loaded</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.OnDoFullRefresh">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>On<wbr></wbr>Do<wbr></wbr>Full<wbr></wbr>Refresh</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#OnDoFullRefresh</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Same as OnRefresh, but everything should be updated.</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.OnDisplayZone">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>On<wbr></wbr>Display<wbr></wbr>Zone</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#OnDisplayZone</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Called when playlist zone changed</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.OnUpdateLiveMode">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>On<wbr></wbr>Update<wbr></wbr>Live<wbr></wbr>Mode</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#OnUpdateLiveMode</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Called when something about performance mode has changed.</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.OnDirtyMixerTrack">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>On<wbr></wbr>Dirty<wbr></wbr>Mixer<wbr></wbr>Track</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#OnDirtyMixerTrack</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Called on mixer track(s) change, 'index' indicates track index of track that changed or -1 when all tracks changed collect info about 'dirty' tracks here but do not handle track(s) refresh, wait for OnRefresh event with HW_Dirty_Mixer_Controls flag...</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.OnDirtyChannel">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>On<wbr></wbr>Dirty<wbr></wbr>Channel</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#OnDirtyChannel</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">        Called on channel rack channel(s) change, 'index' indicates channel that changed or -1 when all channels changed collect info about 'dirty' channels here but do not handle channels(s) refresh, wait for OnRefresh event with HW_ChannelEvent flag     ...</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.OnFirstConnect">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>On<wbr></wbr>First<wbr></wbr>Connect</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#OnFirstConnect</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Called when device is connected for the first time (ever)</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.OnWaitingForInput">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>On<wbr></wbr>Waiting<wbr></wbr>For<wbr></wbr>Input</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#OnWaitingForInput</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Called when peak meters needs to be updated call device.setHasMeters() in onInit to use this event!</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.OnSendTempMsg">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.<wbr></wbr>On<wbr></wbr>Send<wbr></wbr>Temp<wbr></wbr>Msg</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.html#OnSendTempMsg</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Called when hint message (to be displayed on controller display) is sent to the controller duration of message is in ms</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.channels">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.channels</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.channels.html</div>
+            <div class="type">Class</div>
+            <div class="kind">Class</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">No class docstring; 20/20 class variables documented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.channels.selectedChannel">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.channels<wbr></wbr>.selected<wbr></wbr>Channel</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.channels.html#selectedChannel</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns 'index' (respecting groups) of the first selected channel When there is no selection, function will return 0 (or -1 if canBeNone is 1) Use optional 'offset' parameter to find other selected channels Set optional 'indexGlobal' to 1 to return global channel index instead of index respecting groups...</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.channels.getChannelName">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.channels<wbr></wbr>.get<wbr></wbr>Channel<wbr></wbr>Name</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.channels.html#getChannelName</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns the name of the channel at "index".</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.channels.getChannelColor">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.channels<wbr></wbr>.get<wbr></wbr>Channel<wbr></wbr>Color</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.channels.html#getChannelColor</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns the color of the channel at "index". </div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.channels.isChannelMuted">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.channels<wbr></wbr>.is<wbr></wbr>Channel<wbr></wbr>Muted</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.channels.html#isChannelMuted</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">int     Returns True if the channel at "index" is muted.</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.channels.getChannelVolume">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.channels<wbr></wbr>.get<wbr></wbr>Channel<wbr></wbr>Volume</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.channels.html#getChannelVolume</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns the normalized volume (between 0 and 1.0) of the channel at "index" - set optional useDb to 1 to get volume in dB</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.channels.getChannelPan">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.channels<wbr></wbr>.get<wbr></wbr>Channel<wbr></wbr>Pan</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.channels.html#getChannelPan</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns the pan value for the channel at "index", as a value between -1.0 and +1.0.</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.channels.getChannelPitch">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.channels<wbr></wbr>.get<wbr></wbr>Channel<wbr></wbr>Pitch</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.channels.html#getChannelPitch</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns the pitch value for the channel at "index", as a value between -1.0 and +1.0 - use optional mode parameter to return pitch in semitones (mode = 1) or to return pitch range (mode = 2)</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.channels.getChannelType">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.channels<wbr></wbr>.get<wbr></wbr>Channel<wbr></wbr>Type</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.channels.html#getChannelType</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns the type of channel, can be one of the following values</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.channels.isChannelSelected">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.channels<wbr></wbr>.is<wbr></wbr>Channel<wbr></wbr>Selected</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.channels.html#isChannelSelected</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns True if the channel at "index" is selected.</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.channels.getChannelIndex">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.channels<wbr></wbr>.get<wbr></wbr>Channel<wbr></wbr>Index</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.channels.html#getChannelIndex</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns 'indexGlobal' for channel at "index" (respecting the groups).</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.channels.getTargetFxTrack">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.channels<wbr></wbr>.get<wbr></wbr>Target<wbr></wbr>Fx<wbr></wbr>Track</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.channels.html#getTargetFxTrack</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns target FX track for channel at "index".</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.channels.isHighLighted">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.channels<wbr></wbr>.is<wbr></wbr>High<wbr></wbr>Lighted</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.channels.html#isHighLighted</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns True when red highlight rectangle is active in channel rack.</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.channels.getRecEventId">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.channels<wbr></wbr>.get<wbr></wbr>Rec<wbr></wbr>Event<wbr></wbr>Id</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.channels.html#getRecEventId</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns eventID for channel at "index". Use this eventID in processRECEvent. Example (to get eventId for volume of first channel):</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.channels.isGridBitAssigned">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.channels<wbr></wbr>.is<wbr></wbr>Grid<wbr></wbr>Bit<wbr></wbr>Assigned</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.channels.html#isGridBitAssigned</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns 1 when grid bit for channel at "index" is assigned.</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.channels.getGridBit">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.channels<wbr></wbr>.get<wbr></wbr>Grid<wbr></wbr>Bit</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.channels.html#getGridBit</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns grid bit at "position" for channel at "index".</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.channels.getStepParam">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.channels<wbr></wbr>.get<wbr></wbr>Step<wbr></wbr>Param</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.channels.html#getStepParam</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Get step parameter for step at "step" </div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.channels.getCurrentStepParam">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.channels<wbr></wbr>.get<wbr></wbr>Current<wbr></wbr>Step<wbr></wbr>Param</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.channels.html#getCurrentStepParam</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Get current step parameter for channel at "index" and for step at "step".</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.channels.getGridBitWithLoop">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.channels<wbr></wbr>.get<wbr></wbr>Grid<wbr></wbr>Bit<wbr></wbr>With<wbr></wbr>Loop</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.channels.html#getGridBitWithLoop</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Get grid bit with loop for channel at index.</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.channels.isGraphEditorVisible">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.channels<wbr></wbr>.is<wbr></wbr>Graph<wbr></wbr>Editor<wbr></wbr>Visible</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.channels.html#isGraphEditorVisible</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns whether the graph editor is currently visible.</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.channels.getActivityLevel">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.channels<wbr></wbr>.get<wbr></wbr>Activity<wbr></wbr>Level</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.channels.html#getActivityLevel</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns activity level for channel at "index".</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html</div>
+            <div class="type">Class</div>
+            <div class="kind">Class</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.trackNumber">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.track<wbr></wbr>Number</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#trackNumber</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getTrackInfo">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Track<wbr></wbr>Info</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getTrackInfo</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.trackCount">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.track<wbr></wbr>Count</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#trackCount</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getTrackName">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Track<wbr></wbr>Name</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getTrackName</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getTrackColor">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Track<wbr></wbr>Color</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getTrackColor</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getSlotColor">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Slot<wbr></wbr>Color</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getSlotColor</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.isTrackArmed">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.is<wbr></wbr>Track<wbr></wbr>Armed</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#isTrackArmed</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.isTrackSolo">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.is<wbr></wbr>Track<wbr></wbr>Solo</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#isTrackSolo</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.isTrackEnabled">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.is<wbr></wbr>Track<wbr></wbr>Enabled</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#isTrackEnabled</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.isTrackAutomationEnabled">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.is<wbr></wbr>Track<wbr></wbr>Automation<wbr></wbr>Enabled</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#isTrackAutomationEnabled</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.isTrackMuted">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.is<wbr></wbr>Track<wbr></wbr>Muted</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#isTrackMuted</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.isTrackMuteLock">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.is<wbr></wbr>Track<wbr></wbr>Mute<wbr></wbr>Lock</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#isTrackMuteLock</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getTrackPluginId">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Track<wbr></wbr>Plugin<wbr></wbr>Id</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getTrackPluginId</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getTrackVolume">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Track<wbr></wbr>Volume</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getTrackVolume</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getTrackPan">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Track<wbr></wbr>Pan</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getTrackPan</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getTrackStereoSep">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Track<wbr></wbr>Stereo<wbr></wbr>Sep</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getTrackStereoSep</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.isTrackSelected">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.is<wbr></wbr>Track<wbr></wbr>Selected</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#isTrackSelected</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getRouteToLevel">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Route<wbr></wbr>To<wbr></wbr>Level</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getRouteToLevel</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getRouteSendActive">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Route<wbr></wbr>Send<wbr></wbr>Active</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getRouteSendActive</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getEventValue">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Event<wbr></wbr>Value</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getEventValue</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getEventIDName">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Event<wbr></wbr>IDName</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getEventIDName</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getEventIDValueString">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Event<wbr></wbr>IDValue<wbr></wbr>String</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getEventIDValueString</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getAutoSmoothEventValue">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Auto<wbr></wbr>Smooth<wbr></wbr>Event<wbr></wbr>Value</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getAutoSmoothEventValue</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getTrackPeaks">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Track<wbr></wbr>Peaks</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getTrackPeaks</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getTrackRecordingFileName">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Track<wbr></wbr>Recording<wbr></wbr>File<wbr></wbr>Name</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getTrackRecordingFileName</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getSongStepPos">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Song<wbr></wbr>Step<wbr></wbr>Pos</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getSongStepPos</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getCurrentTempo">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Current<wbr></wbr>Tempo</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getCurrentTempo</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getRecPPS">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Rec<wbr></wbr>PPS</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getRecPPS</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getSongTickPos">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Song<wbr></wbr>Tick<wbr></wbr>Pos</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getSongTickPos</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getLastPeakVol">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Last<wbr></wbr>Peak<wbr></wbr>Vol</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getLastPeakVol</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getTrackDockSide">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Track<wbr></wbr>Dock<wbr></wbr>Side</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getTrackDockSide</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.isTrackSlotsEnabled">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.is<wbr></wbr>Track<wbr></wbr>Slots<wbr></wbr>Enabled</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#isTrackSlotsEnabled</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.isTrackRevPolarity">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.is<wbr></wbr>Track<wbr></wbr>Rev<wbr></wbr>Polarity</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#isTrackRevPolarity</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.isTrackSwapChannels">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.is<wbr></wbr>Track<wbr></wbr>Swap<wbr></wbr>Channels</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#isTrackSwapChannels</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getActiveEffectIndex">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Active<wbr></wbr>Effect<wbr></wbr>Index</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getActiveEffectIndex</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getEqBandCount">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Eq<wbr></wbr>Band<wbr></wbr>Count</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getEqBandCount</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getEqGain">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Eq<wbr></wbr>Gain</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getEqGain</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getEqFrequency">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Eq<wbr></wbr>Frequency</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getEqFrequency</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.mixer.getEqBandwidth">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.mixer<wbr></wbr>.get<wbr></wbr>Eq<wbr></wbr>Bandwidth</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.mixer.html#getEqBandwidth</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html</div>
+            <div class="type">Class</div>
+            <div class="kind">Class</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">No class docstring; 37/37 class variables documented</span></div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.trackCount">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.track<wbr></wbr>Count</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#trackCount</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns the current track count.        1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.getTrackName">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.get<wbr></wbr>Track<wbr></wbr>Name</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#getTrackName</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns the name of the track at "index".       1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.setTrackName">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.set<wbr></wbr>Track<wbr></wbr>Name</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#setTrackName</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Changes the name of the track at "index" to "name".     1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.getTrackColor">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.get<wbr></wbr>Track<wbr></wbr>Color</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#getTrackColor</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns the color of the track at "index" as an RGBA value.     1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.setTrackColor">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.set<wbr></wbr>Track<wbr></wbr>Color</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#setTrackColor</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Changes the color of the track at "index" to the value of "color".      1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.isTrackMuted">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.is<wbr></wbr>Track<wbr></wbr>Muted</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#isTrackMuted</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns True if the track at "index" is muted.  1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.muteTrack">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.mute<wbr></wbr>Track</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#muteTrack</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Toggle whether the track at index is muted. An unmuted track will become muted and a muted track will become unmuted.Set optional value to 1(mute) or to 0(unmute) track.Set                     optional 'inGroup' to 1 to mute/unmute track group (alt + click in FL) 1, *30, *33...</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.isTrackMuteLock">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.is<wbr></wbr>Track<wbr></wbr>Mute<wbr></wbr>Lock</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#isTrackMuteLock</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns True if the Mute for track at "index" is locked.        2</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.muteTrackLock">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.mute<wbr></wbr>Track<wbr></wbr>Lock</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#muteTrackLock</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Toggles the Mute lock status of the track at "index".   2</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.isTrackSolo">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.is<wbr></wbr>Track<wbr></wbr>Solo</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#isTrackSolo</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns True if the track at "index" is currently solo'd.       1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.soloTrack">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.solo<wbr></wbr>Track</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#soloTrack</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">toggle the solo state of the track at "index"set optional 'value' to 1 to solo track or to 0 unsolo track set optional 'inGroup' to 1 to solo/unsolo track group (alt + right click in FL)      1, *30</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.isTrackSelected">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.is<wbr></wbr>Track<wbr></wbr>Selected</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#isTrackSelected</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns True if the track at "index" is selected.       12</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.selectTrack">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.select<wbr></wbr>Track</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#selectTrack</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Toggle selection of the track at "index".       12</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.selectAll">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.select<wbr></wbr>All</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#selectAll</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Select all playlist tracks.     12</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.deselectAll">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.deselect<wbr></wbr>All</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#deselectAll</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Deselect all playlist tracks.   12</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.getTrackActivityLevel">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.get<wbr></wbr>Track<wbr></wbr>Activity<wbr></wbr>Level</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#getTrackActivityLevel</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns the activity level of the track at "index" (zero if not active, &gt; 0 if active). 1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.getTrackActivityLevelVis">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.get<wbr></wbr>Track<wbr></wbr>Activity<wbr></wbr>Level<wbr></wbr>Vis</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#getTrackActivityLevelVis</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns the visual activity level of the track at "index" as a normalized value.        1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.getDisplayZone">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.get<wbr></wbr>Display<wbr></wbr>Zone</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#getDisplayZone</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns current display zone in the playlist or zero if none.   1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.lockDisplayZone">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.lock<wbr></wbr>Display<wbr></wbr>Zone</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#lockDisplayZone</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Lock display zone at "index".   1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.liveDisplayZone">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.live<wbr></wbr>Display<wbr></wbr>Zone</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#liveDisplayZone</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Set the display zone in the playlist to the specified co-ordinates - use optional 'duration' parameter to make display zone temporary   1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.getLiveLoopMode">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.get<wbr></wbr>Live<wbr></wbr>Loop<wbr></wbr>Mode</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#getLiveLoopMode</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Get live loop mode.     1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.getLiveTriggerMode">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.get<wbr></wbr>Live<wbr></wbr>Trigger<wbr></wbr>Mode</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#getLiveTriggerMode</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Get live trigger mode - Result is one of the constants  1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.getLivePosSnap">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.get<wbr></wbr>Live<wbr></wbr>Pos<wbr></wbr>Snap</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#getLivePosSnap</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Get live pos snap - Result is one of the constants      1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.getLiveTrigSnap">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.get<wbr></wbr>Live<wbr></wbr>Trig<wbr></wbr>Snap</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#getLiveTrigSnap</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Get live trig snap - Result is one of the constants     1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.getLiveStatus">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.get<wbr></wbr>Live<wbr></wbr>Status</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#getLiveStatus</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Get live status for track at "index" - Result depends on mode.  1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.getLiveBlockStatus">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.get<wbr></wbr>Live<wbr></wbr>Block<wbr></wbr>Status</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#getLiveBlockStatus</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Get live block status for track at "index" and for block "blockNum" Result depends on mode -    1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.getLiveBlockColor">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.get<wbr></wbr>Live<wbr></wbr>Block<wbr></wbr>Color</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#getLiveBlockColor</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Get live block color for track at "index" and for block "blockNum"      1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.triggerLiveClip">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.trigger<wbr></wbr>Live<wbr></wbr>Clip</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#triggerLiveClip</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Trigger live clip for track at "index" and for block "blockNum". Set blockNum to -1 and use the TLC_Fill flag to stop live clips on this track. 1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.refreshLiveClips">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.refresh<wbr></wbr>Live<wbr></wbr>Clips</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#refreshLiveClips</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Refresh live clips for track at "index".        1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.incLivePosSnap">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.inc<wbr></wbr>Live<wbr></wbr>Pos<wbr></wbr>Snap</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#incLivePosSnap</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Increase live pos snap for track at "index"     1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.incLiveTrigSnap">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.inc<wbr></wbr>Live<wbr></wbr>Trig<wbr></wbr>Snap</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#incLiveTrigSnap</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Increase live trig snap for track at "index".   1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.incLiveLoopMode">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.inc<wbr></wbr>Live<wbr></wbr>Loop<wbr></wbr>Mode</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#incLiveLoopMode</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Increase live loop mode for track at "index"    1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.incLiveTrigMode">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.inc<wbr></wbr>Live<wbr></wbr>Trig<wbr></wbr>Mode</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#incLiveTrigMode</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Increase live trig mode for track at "index"    1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.getVisTimeBar">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.get<wbr></wbr>Vis<wbr></wbr>Time<wbr></wbr>Bar</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#getVisTimeBar</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Get time bar.   1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.getVisTimeTick">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.get<wbr></wbr>Vis<wbr></wbr>Time<wbr></wbr>Tick</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#getVisTimeTick</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Get time tick.  1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.getVisTimeStep">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.get<wbr></wbr>Vis<wbr></wbr>Time<wbr></wbr>Step</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#getVisTimeStep</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Get time step.  1</div>
+          </li><li id="fl_controller_framework.core.event.FLEvents.playlist.getPerformanceModeState">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.event<wbr></wbr>.<wbr></wbr>FLEvents<wbr></wbr>.playlist<wbr></wbr>.get<wbr></wbr>Performance<wbr></wbr>Mode<wbr></wbr>State</div>
+            <div class="url">fl_controller_framework.core.event.FLEvents.playlist.html#getPerformanceModeState</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Class Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Returns 1 when the PL is in performance mode, 0 when it's not.  21</div>
           </li><li id="fl_controller_framework.util.midi.MIDI_STATUS">
             
             <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.util<wbr></wbr>.midi<wbr></wbr>.MIDI<wbr></wbr>_STATUS</div>
@@ -1258,6 +2492,214 @@
             <div class="kind">Constant</div>
             <div class="privacy">PUBLIC</div>
             <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.state.__pdoc__">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.state<wbr></wbr>.__pdoc__</div>
+            <div class="url">fl_controller_framework.core.state.html#__pdoc__</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.state.StateBase">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.state<wbr></wbr>.<wbr></wbr>State<wbr></wbr>Base</div>
+            <div class="url">fl_controller_framework.core.state.StateBase.html</div>
+            <div class="type">Class</div>
+            <div class="kind">Class</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">This is a base class the implements a basic state pattern. It has one method that checks the change of state, using a instance dictionary.</div>
+          </li><li id="fl_controller_framework.core.state.StateBase.__init__">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.state<wbr></wbr>.<wbr></wbr>State<wbr></wbr>Base<wbr></wbr>.__init__</div>
+            <div class="url">fl_controller_framework.core.state.StateBase.html#__init__</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.state.StateBase._state">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.state<wbr></wbr>.<wbr></wbr>State<wbr></wbr>Base<wbr></wbr>._state</div>
+            <div class="url">fl_controller_framework.core.state.StateBase.html#_state</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Instance Variable</div>
+            <div class="privacy">PRIVATE</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.state.StateBase.isChanged">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.state<wbr></wbr>.<wbr></wbr>State<wbr></wbr>Base<wbr></wbr>.is<wbr></wbr>Changed</div>
+            <div class="url">fl_controller_framework.core.state.StateBase.html#isChanged</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">This is the method that checks for state changes. It takes the state represented as a string, and the value for comparison. It returns true is the value passed into the function is different from the value stored in the dictionary...</div>
+          </li><li id="fl_controller_framework.core.state.StateBase.getValue">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.state<wbr></wbr>.<wbr></wbr>State<wbr></wbr>Base<wbr></wbr>.get<wbr></wbr>Value</div>
+            <div class="url">fl_controller_framework.core.state.StateBase.html#getValue</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.state.StateObject">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.state<wbr></wbr>.<wbr></wbr>State<wbr></wbr>Object</div>
+            <div class="url">fl_controller_framework.core.state.StateObject.html</div>
+            <div class="type">Class</div>
+            <div class="kind">Class</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.state.StateObject.__init__">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.state<wbr></wbr>.<wbr></wbr>State<wbr></wbr>Object<wbr></wbr>.__init__</div>
+            <div class="url">fl_controller_framework.core.state.StateObject.html#__init__</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.state.StateObject.event_object">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.state<wbr></wbr>.<wbr></wbr>State<wbr></wbr>Object<wbr></wbr>.event<wbr></wbr>_object</div>
+            <div class="url">fl_controller_framework.core.state.StateObject.html#event_object</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Instance Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.state.StateObject.state">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.state<wbr></wbr>.<wbr></wbr>State<wbr></wbr>Object<wbr></wbr>.state</div>
+            <div class="url">fl_controller_framework.core.state.StateObject.html#state</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Instance Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.state.StateObject.HandleState">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.state<wbr></wbr>.<wbr></wbr>State<wbr></wbr>Object<wbr></wbr>.<wbr></wbr>Handle<wbr></wbr>State</div>
+            <div class="url">fl_controller_framework.core.state.StateObject.html#HandleState</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.state.UIState">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.state<wbr></wbr>.<wbr></wbr>UIState</div>
+            <div class="url">fl_controller_framework.core.state.UIState.html</div>
+            <div class="type">Class</div>
+            <div class="kind">Class</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">This class handles the UI events sent from FL Studio.</div>
+          </li><li id="fl_controller_framework.core.state.UIState.__init__">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.state<wbr></wbr>.<wbr></wbr>UIState<wbr></wbr>.__init__</div>
+            <div class="url">fl_controller_framework.core.state.UIState.html#__init__</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.state.UIState.fl">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.state<wbr></wbr>.<wbr></wbr>UIState<wbr></wbr>.fl</div>
+            <div class="url">fl_controller_framework.core.state.UIState.html#fl</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Instance Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.state.UIState.HandleState">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.state<wbr></wbr>.<wbr></wbr>UIState<wbr></wbr>.<wbr></wbr>Handle<wbr></wbr>State</div>
+            <div class="url">fl_controller_framework.core.state.UIState.html#HandleState</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">This method handles the UI events sent from FL Studio. It is patched into the onIdle function. When onIdel is called, this method loops through the registered observers in the global event object. For every event_id that is registered, it calls that list of observer functions...</div>
+          </li><li id="fl_controller_framework.core.control_registry.ControlRegistry">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.control<wbr></wbr>_registry<wbr></wbr>.<wbr></wbr>Control<wbr></wbr>Registry</div>
+            <div class="url">fl_controller_framework.core.control_registry.ControlRegistry.html</div>
+            <div class="type">Class</div>
+            <div class="kind">Class</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.control_registry.ControlRegistry.__new__">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.control<wbr></wbr>_registry<wbr></wbr>.<wbr></wbr>Control<wbr></wbr>Registry<wbr></wbr>.__new__</div>
+            <div class="url">fl_controller_framework.core.control_registry.ControlRegistry.html#__new__</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.control_registry.ControlRegistry.__init__">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.control<wbr></wbr>_registry<wbr></wbr>.<wbr></wbr>Control<wbr></wbr>Registry<wbr></wbr>.__init__</div>
+            <div class="url">fl_controller_framework.core.control_registry.ControlRegistry.html#__init__</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.control_registry.ControlRegistry.event_object">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.control<wbr></wbr>_registry<wbr></wbr>.<wbr></wbr>Control<wbr></wbr>Registry<wbr></wbr>.event<wbr></wbr>_object</div>
+            <div class="url">fl_controller_framework.core.control_registry.ControlRegistry.html#event_object</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Instance Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.control_registry.ControlRegistry.map">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.control<wbr></wbr>_registry<wbr></wbr>.<wbr></wbr>Control<wbr></wbr>Registry<wbr></wbr>.map</div>
+            <div class="url">fl_controller_framework.core.control_registry.ControlRegistry.html#map</div>
+            <div class="type">Attribute</div>
+            <div class="kind">Instance Variable</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.control_registry.ControlRegistry._create_id_tuples">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.control<wbr></wbr>_registry<wbr></wbr>.<wbr></wbr>Control<wbr></wbr>Registry<wbr></wbr>._create<wbr></wbr>_id<wbr></wbr>_tuples</div>
+            <div class="url">fl_controller_framework.core.control_registry.ControlRegistry.html#_create_id_tuples</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PRIVATE</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.control_registry.ControlRegistry.register_control">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.control<wbr></wbr>_registry<wbr></wbr>.<wbr></wbr>Control<wbr></wbr>Registry<wbr></wbr>.register<wbr></wbr>_control</div>
+            <div class="url">fl_controller_framework.core.control_registry.ControlRegistry.html#register_control</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.control_registry.ControlRegistry.unregister_control">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.control<wbr></wbr>_registry<wbr></wbr>.<wbr></wbr>Control<wbr></wbr>Registry<wbr></wbr>.unregister<wbr></wbr>_control</div>
+            <div class="url">fl_controller_framework.core.control_registry.ControlRegistry.html#unregister_control</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.control_registry.ControlRegistry.HandleMidiMsg">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.control<wbr></wbr>_registry<wbr></wbr>.<wbr></wbr>Control<wbr></wbr>Registry<wbr></wbr>.<wbr></wbr>Handle<wbr></wbr>Midi<wbr></wbr>Msg</div>
+            <div class="url">fl_controller_framework.core.control_registry.ControlRegistry.html#HandleMidiMsg</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary"><span class="undocumented">Undocumented</span></div>
+          </li><li id="fl_controller_framework.core.skin.SkinColor">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.skin<wbr></wbr>.<wbr></wbr>Skin<wbr></wbr>Color</div>
+            <div class="url">fl_controller_framework.core.skin.SkinColor.html</div>
+            <div class="type">Class</div>
+            <div class="kind">Class</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Abstract base class for defining skin colors.</div>
+          </li><li id="fl_controller_framework.core.skin.SkinColor.draw">
+            
+            <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.core<wbr></wbr>.skin<wbr></wbr>.<wbr></wbr>Skin<wbr></wbr>Color<wbr></wbr>.draw</div>
+            <div class="url">fl_controller_framework.core.skin.SkinColor.html#draw</div>
+            <div class="type">Function</div>
+            <div class="kind">Method</div>
+            <div class="privacy">PUBLIC</div>
+            <div class="summary">Abstract method that should be implemented by subclasses to draw the control with the specific color scheme.</div>
           </li><li id="fl_controller_framework.controls.control.ControlBase">
             
             <div class="fullName">fl<wbr></wbr>_controller<wbr></wbr>_framework<wbr></wbr>.controls<wbr></wbr>.control<wbr></wbr>.<wbr></wbr>Control<wbr></wbr>Base</div>

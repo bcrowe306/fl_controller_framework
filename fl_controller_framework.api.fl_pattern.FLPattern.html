@@ -12,8 +12,8 @@
     </meta>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="apidocs.css" />
-    <link rel="stylesheet" type="text/css" href="readthedocstheme.css" />
     <link rel="stylesheet" type="text/css" href="extra.css" />
 </head>
 
@@ -59,14 +59,83 @@
 
       </div>
 
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
     </div>
 
-  </div>
 
+  </div>
+</nav>
     
-        <!-- Side navigation -->
-      <div class="sidebarcontainer">
-        <nav class="sidebar">
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
   
 
   <div>
@@ -219,84 +288,19 @@
   </div>
 
 </nav>
-        <!-- No sidebar toggle for read the docs theme, the sidebar is always
-          visible when the screen is width enough.
-        -->
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
       </div>
-
-    </nav>
-    
-    <div class="container-fluid">
 
       <div id="main" class="">
         
 
         
-
-        <div id="search-results-container" style="display: none;">
-        
-          <div id="search-buttons">
-            <span class="label label-default" id="search-docstrings-button">
-            <label class="checkbox-inline">
-              <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
-                search in docstrings
-              </input>
-            </label>
-            </span>
-            
-          </div>
-          
-          <noscript>
-              <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
-          </noscript>
-  
-          <div class="hint" id="search-help-box">
-            <p class="rst-last">
-        
-              Search bar offers the following options:
-              <ul>   
-                  <li>
-                    <strong>Term presence.</strong> The below example searches for documents that 
-                      must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
-                  </li> 
-  
-                  <li>
-                    <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
-                  </li> 
-  
-                  <li>
-                    <strong>Search in specific fields.</strong> The following search matches all objects 
-                    in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
-  
-                    <p>
-                      Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
-                      Last two fields are only applicable if "search in docstrings" is enabled.
-                    </p>
-                  </li>
-  
-                  <li>
-                    <strong>Fuzzy matches.</strong> The following search matches all documents 
-                    that have a word within 1 edit distance of “foo”: <code>foo~1</code>
-                  </li>
-              </ul>
-  
-            </p>
-          </div>
-  
-          <div id="search-status"> </div>
-  
-          <div class="warning" id="search-warn-box" style="display: none;">
-            <p class="rst-last"><span id="search-warn"></span></p>
-          </div>
-  
-          <table id="search-results">
-            <!-- Filled dynamically by JS -->
-          </table>
-          
-          <div style="margin-top: 8px;">
-            <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
-          </div>
-        </div>
 
         <div class="page-header">
           <h1 class="class"><code><code><a href="index.html" class="internal-link">fl_controller_framework</a></code><wbr></wbr>.<code><a href="fl_controller_framework.api.html" class="internal-link" title="fl_controller_framework.api">api</a></code><wbr></wbr>.<code><a href="fl_controller_framework.api.fl_pattern.html" class="internal-link" title="fl_controller_framework.api.fl_pattern">fl_pattern</a></code><wbr></wbr>.<code><a href="fl_controller_framework.api.fl_pattern.FLPattern.html" class="internal-link" title="fl_controller_framework.api.fl_pattern.FLPattern">FLPattern</a></code></code></h1>
@@ -310,7 +314,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">FLPattern</span>: <a href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/api/fl_pattern.py#L39" class="sourceLink">(source)</a></code></p><p>Constructors: <code><a href="#get_pattern" class="internal-link" title="fl_controller_framework.api.fl_pattern.FLPattern.get_pattern">FLPattern.get_pattern(pattern_number)</a></code>, <code><a href="#scroll_pattern" class="internal-link" title="fl_controller_framework.api.fl_pattern.FLPattern.scroll_pattern">FLPattern.scroll_pattern(direction)</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">FLPattern</span>: <a href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/api/fl_pattern.py#L39" class="sourceLink">(source)</a></code></p><p>Constructors: <code><a href="#get_pattern" class="internal-link" title="fl_controller_framework.api.fl_pattern.FLPattern.get_pattern">FLPattern.get_pattern(pattern_number)</a></code>, <code><a href="#scroll_pattern" class="internal-link" title="fl_controller_framework.api.fl_pattern.FLPattern.scroll_pattern">FLPattern.scroll_pattern(direction)</a></code></p>
           <p><a href="classIndex.html#fl_controller_framework.api.fl_pattern.FLPattern">View In Hierarchy</a></p>
         </div>
 
@@ -373,7 +377,7 @@
     
     @<a href="https://docs.python.org/3/library/functions.html#staticmethod" class="intersphinx-link">staticmethod</a><br />
     <span class="py-keyword">def</span> <span class="py-defname">get_pattern</span><span class="function-signature">(pattern_number: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>) -&gt; <code><a href="fl_controller_framework.api.fl_pattern.FLPattern.html" class="internal-link" title="fl_controller_framework.api.fl_pattern.FLPattern">FLPattern</a></code></span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/api/fl_pattern.py#L58">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/api/fl_pattern.py#L58">
       
       (source)
     </a>
@@ -400,7 +404,7 @@
     
     @<a href="https://docs.python.org/3/library/functions.html#staticmethod" class="intersphinx-link">staticmethod</a><br />
     <span class="py-keyword">def</span> <span class="py-defname">scroll_pattern</span><span class="function-signature">(direction: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>) -&gt; <code><a href="fl_controller_framework.api.fl_pattern.FLPattern.html" class="internal-link" title="fl_controller_framework.api.fl_pattern.FLPattern">FLPattern</a></code></span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/api/fl_pattern.py#L46">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/api/fl_pattern.py#L46">
       
       (source)
     </a>
@@ -426,7 +430,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">color</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#tuple" class="intersphinx-link">tuple</a>[<wbr></wbr><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a>, <wbr></wbr><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a>, <wbr></wbr><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a>]</code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/api/fl_pattern.py#L43">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/api/fl_pattern.py#L43">
       
       (source)
     </a>
@@ -453,7 +457,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">length</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/api/fl_pattern.py#L44">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/api/fl_pattern.py#L44">
       
       (source)
     </a>
@@ -480,7 +484,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">name</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/api/fl_pattern.py#L42">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/api/fl_pattern.py#L42">
       
       (source)
     </a>
@@ -507,7 +511,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">number</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/api/fl_pattern.py#L41">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/api/fl_pattern.py#L41">
       
       (source)
     </a>
@@ -529,20 +533,21 @@
     </div>
 
     <footer class="navbar navbar-default">
-    <hr />
-    
-    
-    <div class="container">
-      <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
-    generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-      24.3.3 at 2024-07-29 04:34:44.
-    </div>
-    
-    <script src="ajax.js" type="text/javascript"></script>
-    <script src="searchlib.js" type="text/javascript"></script>
-    <script src="search.js" type="text/javascript"></script>
+
   
-  </footer>
+  <div class="container">
+    <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-07-29 04:42:03.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
   
     <script src="pydoctor.js" type="text/javascript"></script>
 

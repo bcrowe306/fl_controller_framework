@@ -12,8 +12,8 @@
     </meta>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="apidocs.css" />
-    <link rel="stylesheet" type="text/css" href="readthedocstheme.css" />
     <link rel="stylesheet" type="text/css" href="extra.css" />
 </head>
 
@@ -59,14 +59,83 @@
 
       </div>
 
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
     </div>
 
-  </div>
 
+  </div>
+</nav>
     
-        <!-- Side navigation -->
-      <div class="sidebarcontainer">
-        <nav class="sidebar">
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
   
 
   <div>
@@ -254,6 +323,56 @@
 
         
             <div class="itemName"><code><a href="fl_controller_framework.controls.control.ControlBase.html#notify" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.notify">notify</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.core.event.EventObject.html#notify_listeners" class="internal-link" title="fl_controller_framework.core.event.EventObject.notify_listeners">notify<wbr></wbr>_listeners</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.core.event.EventObject.html#subscribe" class="internal-link" title="fl_controller_framework.core.event.EventObject.subscribe">subscribe</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.core.event.EventObject.html#unsubscribe" class="internal-link" title="fl_controller_framework.core.event.EventObject.unsubscribe">unsubscribe</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.core.state.StateBase.html#getValue" class="internal-link" title="fl_controller_framework.core.state.StateBase.getValue">get<wbr></wbr>Value</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.core.state.StateBase.html#isChanged" class="internal-link" title="fl_controller_framework.core.state.StateBase.isChanged">is<wbr></wbr>Changed</a></code>
             </div>
         
 
@@ -529,6 +648,16 @@
             </div>
         
 
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.core.event.EventObject.html#observers" class="internal-link" title="fl_controller_framework.core.event.EventObject.observers">observers</a></code>
+            </div>
+        
+
     </li><li class="private">
         
         
@@ -536,6 +665,16 @@
 
         
             <div class="itemName"><code><a href="fl_controller_framework.controls.control.Control.html#_skin" class="internal-link" title="fl_controller_framework.controls.control.Control._skin">_skin</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.core.state.StateBase.html#_state" class="internal-link" title="fl_controller_framework.core.state.StateBase._state">_state</a></code>
             </div>
         
 
@@ -588,84 +727,19 @@
   </div>
 
 </nav>
-        <!-- No sidebar toggle for read the docs theme, the sidebar is always
-          visible when the screen is width enough.
-        -->
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
       </div>
-
-    </nav>
-    
-    <div class="container-fluid">
 
       <div id="main" class="">
         
 
         
-
-        <div id="search-results-container" style="display: none;">
-        
-          <div id="search-buttons">
-            <span class="label label-default" id="search-docstrings-button">
-            <label class="checkbox-inline">
-              <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
-                search in docstrings
-              </input>
-            </label>
-            </span>
-            
-          </div>
-          
-          <noscript>
-              <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
-          </noscript>
-  
-          <div class="hint" id="search-help-box">
-            <p class="rst-last">
-        
-              Search bar offers the following options:
-              <ul>   
-                  <li>
-                    <strong>Term presence.</strong> The below example searches for documents that 
-                      must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
-                  </li> 
-  
-                  <li>
-                    <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
-                  </li> 
-  
-                  <li>
-                    <strong>Search in specific fields.</strong> The following search matches all objects 
-                    in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
-  
-                    <p>
-                      Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
-                      Last two fields are only applicable if "search in docstrings" is enabled.
-                    </p>
-                  </li>
-  
-                  <li>
-                    <strong>Fuzzy matches.</strong> The following search matches all documents 
-                    that have a word within 1 edit distance of “foo”: <code>foo~1</code>
-                  </li>
-              </ul>
-  
-            </p>
-          </div>
-  
-          <div id="search-status"> </div>
-  
-          <div class="warning" id="search-warn-box" style="display: none;">
-            <p class="rst-last"><span id="search-warn"></span></p>
-          </div>
-  
-          <table id="search-results">
-            <!-- Filled dynamically by JS -->
-          </table>
-          
-          <div style="margin-top: 8px;">
-            <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
-          </div>
-        </div>
 
         <div class="page-header">
           <h1 class="class"><code><code><a href="index.html" class="internal-link">fl_controller_framework</a></code><wbr></wbr>.<code><a href="fl_controller_framework.controls.html" class="internal-link" title="fl_controller_framework.controls">controls</a></code><wbr></wbr>.<code><a href="fl_controller_framework.controls.button.html" class="internal-link" title="fl_controller_framework.controls.button">button</a></code><wbr></wbr>.<code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code></code></h1>
@@ -679,7 +753,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">ButtonControl</span>(<a href="fl_controller_framework.controls.control.Control.html" class="internal-link" title="fl_controller_framework.controls.control.Control">Control</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/controls/button.py#L6" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.__init__">ButtonControl(name, channel, identifier, playable, ...)</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">ButtonControl</span>(<a href="fl_controller_framework.controls.control.Control.html" class="internal-link" title="fl_controller_framework.controls.control.Control">Control</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/controls/button.py#L6" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.__init__">ButtonControl(name, channel, identifier, playable, ...)</a></code></p>
           <p><a href="classIndex.html#fl_controller_framework.controls.button.ButtonControl">View In Hierarchy</a></p>
         </div>
 
@@ -710,7 +784,7 @@ Attributes:
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id28">
+          <table class="children sortable" id="id38">
   
   
   <tr class="class">
@@ -834,7 +908,7 @@ Attributes:
             <p class="inheritedFrom">
               Inherited from <code><a href="fl_controller_framework.controls.control.Control.html" class="internal-link" title="fl_controller_framework.controls.control.Control">Control</a></code>:
             </p>
-            <table class="children sortable" id="id29">
+            <table class="children sortable" id="id39">
   
   
   <tr class="basemethod">
@@ -888,7 +962,7 @@ Attributes:
             <p class="inheritedFrom">
               Inherited from <code><a href="fl_controller_framework.controls.control.ControlBase.html" class="internal-link" title="fl_controller_framework.controls.control.ControlBase">ControlBase</a></code> (via <code><a href="fl_controller_framework.controls.control.Control.html" class="internal-link" title="fl_controller_framework.controls.control.Control">Control</a></code>):
             </p>
-            <table class="children sortable" id="id30">
+            <table class="children sortable" id="id40">
   
   
   <tr class="basemethod">
@@ -949,6 +1023,59 @@ Attributes:
   </tr>
 </table>
             
+            <p class="inheritedFrom">
+              Inherited from <code><a href="fl_controller_framework.core.event.EventObject.html" class="internal-link" title="fl_controller_framework.core.event.EventObject">EventObject</a></code> (via <code><a href="fl_controller_framework.controls.control.Control.html" class="internal-link" title="fl_controller_framework.controls.control.Control">Control</a></code>, <code><a href="fl_controller_framework.controls.control.ControlBase.html" class="internal-link" title="fl_controller_framework.controls.control.ControlBase">ControlBase</a></code>):
+            </p>
+            <table class="children sortable" id="id41">
+  
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.core.event.EventObject.html#notify_listeners" class="internal-link" title="fl_controller_framework.core.event.EventObject.notify_listeners">notify<wbr></wbr>_listeners</a></code></td>
+    <td>This function is called whenever a new event(event_id) is received. All functions registered by subscribe are called by the specified event_id.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.core.event.EventObject.html#subscribe" class="internal-link" title="fl_controller_framework.core.event.EventObject.subscribe">subscribe</a></code></td>
+    <td>Subscribe to an event by event_id. This function add the supplied observer func to the list identified by event_id.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.core.event.EventObject.html#unsubscribe" class="internal-link" title="fl_controller_framework.core.event.EventObject.unsubscribe">unsubscribe</a></code></td>
+    <td>Unsubscribe removed the supplied function from the list of observers by event_id.</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.core.event.EventObject.html#observers" class="internal-link" title="fl_controller_framework.core.event.EventObject.observers">observers</a></code></td>
+    <td>dictionary instance variable that houses the registry of observer functions.  They key for this dictionary is a str of the event_id. Events are referenced by this key and the list of observers are called by it.</td>
+  </tr>
+</table>
+            
+            <p class="inheritedFrom">
+              Inherited from <code><a href="fl_controller_framework.core.state.StateBase.html" class="internal-link" title="fl_controller_framework.core.state.StateBase">StateBase</a></code> (via <code><a href="fl_controller_framework.controls.control.Control.html" class="internal-link" title="fl_controller_framework.controls.control.Control">Control</a></code>, <code><a href="fl_controller_framework.controls.control.ControlBase.html" class="internal-link" title="fl_controller_framework.controls.control.ControlBase">ControlBase</a></code>, <code><a href="fl_controller_framework.core.event.EventObject.html" class="internal-link" title="fl_controller_framework.core.event.EventObject">EventObject</a></code>):
+            </p>
+            <table class="children sortable" id="id42">
+  
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.core.state.StateBase.html#getValue" class="internal-link" title="fl_controller_framework.core.state.StateBase.getValue">get<wbr></wbr>Value</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.core.state.StateBase.html#isChanged" class="internal-link" title="fl_controller_framework.core.state.StateBase.isChanged">is<wbr></wbr>Changed</a></code></td>
+    <td>This is the method that checks for state changes. It takes the state represented as a string, and the value for comparison. It returns true is the value passed into the function is different from the value stored in the dictionary...</td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.core.state.StateBase.html#_state" class="internal-link" title="fl_controller_framework.core.state.StateBase._state">_state</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+            
 
             
         </div>
@@ -967,7 +1094,7 @@ Attributes:
     
     @<a href="https://docs.python.org/3/library/functions.html#staticmethod" class="intersphinx-link">staticmethod</a><br />
     <span class="py-keyword">def</span> <span class="py-defname">generate_button_events</span><span class="function-signature">(on_msg_status: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>, off_msg_status: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>, event_data: <code><a href="fl_controller_framework.api.fl_class.flMidiMsg.html" class="internal-link" title="fl_controller_framework.api.fl_class.flMidiMsg">flMidiMsg</a></code>) -&gt; <code><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="intersphinx-link">dict</a>[<wbr></wbr>str:any]</code></span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/controls/button.py#L45">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/controls/button.py#L45">
       
       (source)
     </a>
@@ -1002,7 +1129,7 @@ Returns:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, name, channel, identifier, playable=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, status=<a href="fl_controller_framework.util.midi.MIDI_STATUS.html#NOTE_ON_STATUS" class="internal-link" title="fl_controller_framework.util.midi.MIDI_STATUS.NOTE_ON_STATUS">MIDI_STATUS.NOTE_ON_STATUS</a>, feedback=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, feedback_process=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, default_color=<span class="rst-variable-quote">'</span><span class="rst-variable-string">Default</span><span class="rst-variable-quote">'</span>, blackout_color=<span class="rst-variable-quote">'</span><span class="rst-variable-string">Off</span><span class="rst-variable-quote">'</span>, skin=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, on_value=127, off_value=0, on_msg_type=<a href="fl_controller_framework.util.midi.MIDI_STATUS.html#NOTE_ON_STATUS" class="internal-link" title="fl_controller_framework.util.midi.MIDI_STATUS.NOTE_ON_STATUS">MIDI_STATUS.NOTE_ON_STATUS</a>, off_msg_type=<a href="fl_controller_framework.util.midi.MIDI_STATUS.html#NOTE_OFF_STATUS" class="internal-link" title="fl_controller_framework.util.midi.MIDI_STATUS.NOTE_OFF_STATUS">MIDI_STATUS.NOTE_OFF_STATUS</a>, hold_time=10, *a, **k)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/controls/button.py#L68">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/controls/button.py#L68">
       
       (source)
     </a>
@@ -1046,7 +1173,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">activate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/controls/button.py#L157">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/controls/button.py#L157">
       
       (source)
     </a>
@@ -1075,7 +1202,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">hold_time</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/controls/button.py#L113">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/controls/button.py#L113">
       
       (source)
     </a>
@@ -1102,7 +1229,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">off_msg_type</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/controls/button.py#L108">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/controls/button.py#L108">
       
       (source)
     </a>
@@ -1129,7 +1256,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">off_value</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/controls/button.py#L106">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/controls/button.py#L106">
       
       (source)
     </a>
@@ -1156,7 +1283,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">on_msg_type</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/controls/button.py#L107">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/controls/button.py#L107">
       
       (source)
     </a>
@@ -1183,7 +1310,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">on_value</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/controls/button.py#L105">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/controls/button.py#L105">
       
       (source)
     </a>
@@ -1210,7 +1337,7 @@ Returns:
   <div class="functionHeader">
     @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
     <span class="py-defname">isHold</span>: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/controls/button.py#L150">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/controls/button.py#L150">
       
       (source)
     </a>
@@ -1237,7 +1364,7 @@ Returns:
   <div class="functionHeader">
     @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
     <span class="py-defname">isPressed</span>: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/controls/button.py#L168">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/controls/button.py#L168">
       
       (source)
     </a>
@@ -1264,7 +1391,7 @@ Returns:
   <div class="functionHeader">
     @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
     <span class="py-defname">isToggled</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/controls/button.py#L116">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/controls/button.py#L116">
       
       (source)
     </a>
@@ -1292,7 +1419,7 @@ Returns:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_on_idle</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/controls/button.py#L124">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/controls/button.py#L124">
       
       (source)
     </a>
@@ -1319,7 +1446,7 @@ Returns:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_on_value</span><span class="function-signature">(self, event_data)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/controls/button.py#L204">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/controls/button.py#L204">
       
       (source)
     </a>
@@ -1349,7 +1476,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_set_hold</span><span class="function-signature">(self, hold)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/controls/button.py#L139">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/controls/button.py#L139">
       
       (source)
     </a>
@@ -1379,7 +1506,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_set_pressed</span><span class="function-signature">(self, value)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/controls/button.py#L182">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/controls/button.py#L182">
       
       (source)
     </a>
@@ -1409,7 +1536,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_set_released</span><span class="function-signature">(self, value)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/controls/button.py#L193">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/controls/button.py#L193">
       
       (source)
     </a>
@@ -1439,7 +1566,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_set_toggled</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/controls/button.py#L175">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/controls/button.py#L175">
       
       (source)
     </a>
@@ -1465,7 +1592,7 @@ Args:
   <div class="functionHeader">
     
     <span class="py-defname">_hold</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/controls/button.py#L111">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/controls/button.py#L111">
       
       (source)
     </a>
@@ -1492,7 +1619,7 @@ Args:
   <div class="functionHeader">
     
     <span class="py-defname">_hold_counter</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/controls/button.py#L112">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/controls/button.py#L112">
       
       (source)
     </a>
@@ -1519,7 +1646,7 @@ Args:
   <div class="functionHeader">
     
     <span class="py-defname">_pressed</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/controls/button.py#L110">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/controls/button.py#L110">
       
       (source)
     </a>
@@ -1546,7 +1673,7 @@ Args:
   <div class="functionHeader">
     
     <span class="py-defname">_released</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/controls/button.py#L201">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/controls/button.py#L201">
       
       (source)
     </a>
@@ -1573,7 +1700,7 @@ Args:
   <div class="functionHeader">
     
     <span class="py-defname">_toggled</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b0f5f887648ec10ae814a04decf11b4b12c2e3b3/controls/button.py#L109">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/1cb8f918ddc3f37624b0e164f8b3bf899d34e6bc/controls/button.py#L109">
       
       (source)
     </a>
@@ -1595,20 +1722,21 @@ Args:
     </div>
 
     <footer class="navbar navbar-default">
-    <hr />
-    
-    
-    <div class="container">
-      <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
-    generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-      24.3.3 at 2024-07-29 04:34:44.
-    </div>
-    
-    <script src="ajax.js" type="text/javascript"></script>
-    <script src="searchlib.js" type="text/javascript"></script>
-    <script src="search.js" type="text/javascript"></script>
+
   
-  </footer>
+  <div class="container">
+    <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-07-29 04:42:03.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
   
     <script src="pydoctor.js" type="text/javascript"></script>
 
