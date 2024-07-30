@@ -37,7 +37,7 @@ class Component(StateBase, EventObject):
         """A reference to the global event registry"""
         self.auto_active: bool = auto_active
         "Whether or not to automatically activate this component upon declaration"
-        self.fl = _fl
+        self.fl: _fl = _fl
         """FL Studio modules object: This object hold a reference to all Fl Studio modules and functions."""
 
     def notify(self, event_name: str, *a, **k):

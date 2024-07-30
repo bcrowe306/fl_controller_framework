@@ -1,8 +1,6 @@
 """event.py: This module contains the essential event/observer building blocks from the rest of the .. 
     Essentially, this whole framework is a bidirectional observer pattern with builtin state. Most classes in this framework inherit from EventObject class.
 """
-# from .fl_class import FL
-# fl = FL()
 
 class EventObject(object):
     """This object is a base class that implements the basic observer patter. """

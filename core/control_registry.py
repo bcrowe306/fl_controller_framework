@@ -14,7 +14,7 @@ class ControlRegistry(StateBase):
     def __init__(self) -> None:
         super(ControlRegistry, self).__init__()
         self.event_object = GlobalEventObject()
-        self.map = dict()
+        self.map = dict[tuple:list] = dict()
 
 
     def _create_id_tuples(self, control):
