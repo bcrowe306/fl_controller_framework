@@ -106,6 +106,8 @@ class ButtonControl(Control):
         self.off_value = off_value
         self.on_msg_type = on_msg_type
         self.off_msg_type = off_msg_type
+        self.on_color = "On"
+        self.default_feedback: bool = False
         self._toggled = False
         self._pressed = False
         self._hold = False
@@ -200,7 +202,20 @@ class ButtonControl(Control):
         """
         self._released = value
         self.notify('released', self._released)
+    def _show_default_feedback(self, event_data: flMidiMsg):
+        """
+        Shows the default feedback for the button control.
 
+        Args:
+            event_data (flMidiMsg): The MIDI message data.
+
+        """
+        if self.default_feedback and self.getValue('active'):
+            if event_data.status == self.on_msg_type:
+                self.set_light(self.on_color)
+            elif event_data.status == self.off_msg_type:
+                self.set_light(self.default_color)
+        
     def _on_value(self, event_data):
         """
         Handles the value change event of the button control.
@@ -209,6 +224,7 @@ class ButtonControl(Control):
             event_data (flMidiMsg): The MIDI message data.
 
         """
+        self._show_default_feedback(event_data)
         events = ButtonControl.generate_button_events(self.on_msg_type, self.off_msg_type, event_data)
         for event in events:
             setattr(self, '_{}'.format(event), events[event])

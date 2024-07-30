@@ -57,7 +57,7 @@ class ControlBase(EventObject, StateBase):
         """Override Method: Inheriting classes should override this method.. This turns the the control to blackout state."""
         pass
 
-
+# TODO: Do a better job at implementing default_feedback. It needs to be on a per/component basis. Maybe  the component can look for a default_feedback attribute on the control and use that to register auto functions for feedback.
 class Control(ControlBase):
     """This is the actual control Class. Inherit from this class when building your own controls if necessary. This is also the class from which the included controls are derived."""
     def __init__(self, name, channel, identifier, playable=False, status=MIDI_STATUS.NOTE_ON_STATUS, feedback=False, feedback_process=None, default_color='Default', blackout_color='Off', skin=None):
@@ -94,6 +94,7 @@ class Control(ControlBase):
         self._initialize()
         self.event_object.subscribe("{}.value".format(self.name), self._on_value)
         self.registry.register_control(self)
+        self.isChanged('active', True)
 
     def deactivate(self):
         """
@@ -103,6 +104,7 @@ class Control(ControlBase):
         self.reset()
         self.event_object.unsubscribe("{}.value".format(self.name), self._on_value)
         self.registry.unregister_control(self)
+        self.isChanged('active', False)
 
     def set_light(self, value, *a, **k):
         """
