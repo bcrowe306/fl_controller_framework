@@ -253,6 +253,16 @@
         
 
         
+            <div class="itemName"><code><a href="#blackout" class="internal-link" title="fl_controller_framework.components.component.Component.blackout">blackout</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="#deactivate" class="internal-link" title="fl_controller_framework.components.component.Component.deactivate">deactivate</a></code>
             </div>
         
@@ -520,7 +530,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">Component</span>(<a href="fl_controller_framework.core.state.StateBase.html" class="internal-link" title="fl_controller_framework.core.state.StateBase">StateBase</a>, <a href="fl_controller_framework.core.event.EventObject.html" class="internal-link" title="fl_controller_framework.core.event.EventObject">EventObject</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/components/component.py#L6" class="sourceLink">(source)</a></code></p><p>Known subclasses: <code><a href="fl_controller_framework.components.browser.BrowserComponent.html" class="internal-link">fl_controller_framework.components.browser.BrowserComponent</a></code>, <code><a href="fl_controller_framework.components.modes.ModesComponent.html" class="internal-link">fl_controller_framework.components.modes.ModesComponent</a></code>, <code><a href="fl_controller_framework.components.transport.TransportComponent.html" class="internal-link">fl_controller_framework.components.transport.TransportComponent</a></code>, <code><a href="fl_controller_framework.control_surface.ControlSurface.html" class="internal-link">fl_controller_framework.control_surface.ControlSurface</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.components.component.Component.__init__">Component(name, auto_active, *a, **k)</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">Component</span>(<a href="fl_controller_framework.core.state.StateBase.html" class="internal-link" title="fl_controller_framework.core.state.StateBase">StateBase</a>, <a href="fl_controller_framework.core.event.EventObject.html" class="internal-link" title="fl_controller_framework.core.event.EventObject">EventObject</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/b4853c4b1ac85e463b6231f11b6a58feabc26f36/components/component.py#L6" class="sourceLink">(source)</a></code></p><p>Known subclasses: <code><a href="fl_controller_framework.components.browser.BrowserComponent.html" class="internal-link">fl_controller_framework.components.browser.BrowserComponent</a></code>, <code><a href="fl_controller_framework.components.modes.ModesComponent.html" class="internal-link">fl_controller_framework.components.modes.ModesComponent</a></code>, <code><a href="fl_controller_framework.components.transport.TransportComponent.html" class="internal-link">fl_controller_framework.components.transport.TransportComponent</a></code>, <code><a href="fl_controller_framework.control_surface.ControlSurface.html" class="internal-link">fl_controller_framework.control_surface.ControlSurface</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.components.component.Component.__init__">Component(name, auto_active, *a, **k)</a></code></p>
           <p><a href="classIndex.html#fl_controller_framework.components.component.Component">View In Hierarchy</a></p>
         </div>
 
@@ -580,6 +590,11 @@ When inheriting from this class, create as many controls as necessary as instanc
     <td>Method</td>
     <td><code><a href="#before_deactivate" class="internal-link" title="fl_controller_framework.components.component.Component.before_deactivate">before<wbr></wbr>_deactivate</a></code></td>
     <td>This method is called before the component is deactivated. It is useful for cleaning up the component before deactivation.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#blackout" class="internal-link" title="fl_controller_framework.components.component.Component.blackout">blackout</a></code></td>
+    <td>Turn off all controls on this component</td>
   </tr><tr class="method">
     
     <td>Method</td>
@@ -709,7 +724,7 @@ When inheriting from this class, create as many controls as necessary as instanc
     
     @<a href="https://docs.python.org/3/library/functions.html#staticmethod" class="intersphinx-link">staticmethod</a><br />
     <span class="py-keyword">def</span> <span class="py-defname">listens</span><span class="function-signature">(event_path: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/components/component.py#L12">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b4853c4b1ac85e463b6231f11b6a58feabc26f36/components/component.py#L12">
       
       (source)
     </a>
@@ -737,7 +752,7 @@ Example: Component.listens("channels.selectedChannel"). This decorator will call
     
     @<a href="https://docs.python.org/3/library/functions.html#staticmethod" class="intersphinx-link">staticmethod</a><br />
     <span class="py-keyword">def</span> <span class="py-defname">subscribe</span><span class="function-signature">(control_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, event: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/components/component.py#L22">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b4853c4b1ac85e463b6231f11b6a58feabc26f36/components/component.py#L22">
       
       (source)
     </a>
@@ -765,7 +780,7 @@ This is how you listen to and react to event generated by controls. Example: Com
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, auto_active: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code> = <a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>, *a, **k)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/components/component.py#L32">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b4853c4b1ac85e463b6231f11b6a58feabc26f36/components/component.py#L32">
       
       (source)
     </a>
@@ -792,7 +807,7 @@ This is how you listen to and react to event generated by controls. Example: Com
     
     
     <span class="py-keyword">def</span> <span class="py-defname">activate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/components/component.py#L138">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b4853c4b1ac85e463b6231f11b6a58feabc26f36/components/component.py#L138">
       
       (source)
     </a>
@@ -819,7 +834,7 @@ This is how you listen to and react to event generated by controls. Example: Com
     
     
     <span class="py-keyword">def</span> <span class="py-defname">add_control_subscribe</span><span class="function-signature">(self, control_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, control: <code><a href="fl_controller_framework.controls.control.ControlBase.html" class="internal-link" title="fl_controller_framework.controls.control.ControlBase">ControlBase</a></code>, control_event: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, func)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/components/component.py#L102">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b4853c4b1ac85e463b6231f11b6a58feabc26f36/components/component.py#L102">
       
       (source)
     </a>
@@ -850,7 +865,7 @@ This means, if you call this method multiple times with the same control_name an
     
     
     <span class="py-keyword">def</span> <span class="py-defname">after_activate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/components/component.py#L188">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b4853c4b1ac85e463b6231f11b6a58feabc26f36/components/component.py#L188">
       
       (source)
     </a>
@@ -877,7 +892,7 @@ This means, if you call this method multiple times with the same control_name an
     
     
     <span class="py-keyword">def</span> <span class="py-defname">after_deactivate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/components/component.py#L196">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b4853c4b1ac85e463b6231f11b6a58feabc26f36/components/component.py#L196">
       
       (source)
     </a>
@@ -904,7 +919,7 @@ This means, if you call this method multiple times with the same control_name an
     
     
     <span class="py-keyword">def</span> <span class="py-defname">before_activate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/components/component.py#L184">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b4853c4b1ac85e463b6231f11b6a58feabc26f36/components/component.py#L184">
       
       (source)
     </a>
@@ -931,7 +946,7 @@ This means, if you call this method multiple times with the same control_name an
     
     
     <span class="py-keyword">def</span> <span class="py-defname">before_deactivate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/components/component.py#L192">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b4853c4b1ac85e463b6231f11b6a58feabc26f36/components/component.py#L192">
       
       (source)
     </a>
@@ -948,6 +963,33 @@ This means, if you call this method multiple times with the same control_name an
 </div><div class="basemethod">
   
   
+  <a name="fl_controller_framework.components.component.Component.blackout">
+    
+  </a>
+  <a name="blackout">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">blackout</span><span class="function-signature">(self)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b4853c4b1ac85e463b6231f11b6a58feabc26f36/components/component.py#L200">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#blackout" title="fl_controller_framework.components.component.Component.blackout">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Turn off all controls on this component</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
   <a name="fl_controller_framework.components.component.Component.deactivate">
     
   </a>
@@ -958,7 +1000,7 @@ This means, if you call this method multiple times with the same control_name an
     
     
     <span class="py-keyword">def</span> <span class="py-defname">deactivate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/components/component.py#L161">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b4853c4b1ac85e463b6231f11b6a58feabc26f36/components/component.py#L161">
       
       (source)
     </a>
@@ -985,7 +1027,7 @@ This means, if you call this method multiple times with the same control_name an
     
     
     <span class="py-keyword">def</span> <span class="py-defname">listens_event</span><span class="function-signature">(self, event_path: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, func)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/components/component.py#L128">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b4853c4b1ac85e463b6231f11b6a58feabc26f36/components/component.py#L128">
       
       (source)
     </a>
@@ -1015,7 +1057,7 @@ This means, if you call this method multiple times with the same event_path, and
     
     
     <span class="py-keyword">def</span> <span class="py-defname">notify</span><span class="function-signature">(self, event_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, *a, **k)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/components/component.py#L43">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b4853c4b1ac85e463b6231f11b6a58feabc26f36/components/component.py#L43">
       
       (source)
     </a>
@@ -1042,7 +1084,7 @@ This means, if you call this method multiple times with the same event_path, and
     
     
     <span class="py-keyword">def</span> <span class="py-defname">subscribe_control</span><span class="function-signature">(self, control_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, control_event: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, func)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/components/component.py#L116">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b4853c4b1ac85e463b6231f11b6a58feabc26f36/components/component.py#L116">
       
       (source)
     </a>
@@ -1071,7 +1113,7 @@ This means, if you call this method multiple times with the same control_name an
   <div class="functionHeader">
     
     <span class="py-defname">auto_active</span>: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/components/component.py#L38">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b4853c4b1ac85e463b6231f11b6a58feabc26f36/components/component.py#L38">
       
       (source)
     </a>
@@ -1098,7 +1140,7 @@ This means, if you call this method multiple times with the same control_name an
   <div class="functionHeader">
     
     <span class="py-defname">fl</span>: <code><a href="fl_controller_framework.api.fl_class._fl.html" class="internal-link" title="fl_controller_framework.api.fl_class._fl">_fl</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/components/component.py#L40">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b4853c4b1ac85e463b6231f11b6a58feabc26f36/components/component.py#L40">
       
       (source)
     </a>
@@ -1125,7 +1167,7 @@ This means, if you call this method multiple times with the same control_name an
   <div class="functionHeader">
     
     <span class="py-defname">global_event_object</span>: <code><a href="fl_controller_framework.core.event.GlobalEventObject.html" class="internal-link" title="fl_controller_framework.core.event.GlobalEventObject">GlobalEventObject</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/components/component.py#L36">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b4853c4b1ac85e463b6231f11b6a58feabc26f36/components/component.py#L36">
       
       (source)
     </a>
@@ -1152,7 +1194,7 @@ This means, if you call this method multiple times with the same control_name an
   <div class="functionHeader">
     
     <span class="py-defname">name</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/components/component.py#L34">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b4853c4b1ac85e463b6231f11b6a58feabc26f36/components/component.py#L34">
       
       (source)
     </a>
@@ -1180,7 +1222,7 @@ This means, if you call this method multiple times with the same control_name an
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_control_subscribe</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/components/component.py#L48">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b4853c4b1ac85e463b6231f11b6a58feabc26f36/components/component.py#L48">
       
       (source)
     </a>
@@ -1208,7 +1250,7 @@ It does this with the global event object. This is called at Component activatio
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_control_unsubscribe</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/components/component.py#L63">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b4853c4b1ac85e463b6231f11b6a58feabc26f36/components/component.py#L63">
       
       (source)
     </a>
@@ -1236,7 +1278,7 @@ It does on the global event object. This is called at deactivation with Componen
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_get_controls</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/components/component.py#L93">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b4853c4b1ac85e463b6231f11b6a58feabc26f36/components/component.py#L93">
       
       (source)
     </a>
@@ -1263,7 +1305,7 @@ It does on the global event object. This is called at deactivation with Componen
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_get_observers</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/components/component.py#L78">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/b4853c4b1ac85e463b6231f11b6a58feabc26f36/components/component.py#L78">
       
       (source)
     </a>
@@ -1289,7 +1331,7 @@ It does on the global event object. This is called at deactivation with Componen
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.3.3 at 2024-07-31 00:54:45.
+    24.3.3 at 2024-07-31 01:48:31.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 
