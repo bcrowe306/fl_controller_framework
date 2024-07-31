@@ -1,37 +1,3 @@
-# patternNumber	-	int	Returns the current pattern number.	1
-# patternCount	-	int	Returns the number of patterns.	1
-# patternMax	-	int	Returns the maximum pattern number.	1
-# getPatternName	int index	string	Returns the name of the pattern at "index".	1
-# setPatternName	int index, string name	-	Changes the name of the pattern at "index" to "name".	1
-# getPatternColor	int index	int	Returns the color of the pattern at "index".	1
-# setPatternColor	int index, int color	-	Changes the color of the pattern at "index" to "color".	1
-# getPatternLength	int index	int	Returns the length of the pattern at "index", in beats.	1
-# getBlockSetStatus	int left, int top, int right, int bottom	int	Returns the status of the live block - Result is one of the LB_Status_Simplest option constants	1
-# ensureValidNoteRecord	int index, (int playNow = 0)	-	Ensure valid note of the pattern at "index".	1
-# jumpToPattern	int index	-	Jum to the pattern at "index"	1
-# findFirstNextEmptyPat	int flags, (int x = -1), (int y = -1)	-	Find first empty pattern at position x, y	1
-# Picker panel functions:
-# isPatternSelected	int index	int	Returns True if patterns at "index" is selected in Picker panel.	2
-# isPatternDefault	int index	int	Returns True if patterns at "index" is default (empty and unchanged by user).	23
-# selectPattern	int index, (int value = -1), (int preview = 0)	-	Select pattern at "index" in Picker panel - value: -1 (toggle), 0 (deselect) 1 (select)
-# preview: set to 1 to preview pattern	2
-# clonePattern	(int index = -1)	-	Clone selected pattern(s), or clone panel specified by index (optional)	25
-# selectAll	-	-	Select all patterns in Picker panel.	2
-# deselectAll	-	-	Deselect all patterns in Picker panel.	2
-# burnLoop	int index, (int storeUndo = 1), (int updateUi = 1)	-	Returns activity level for channel at "index" - Set Optional storeUndo to 0 to not store undo step.
-# Set Optional updateUi to 0 to not update ui.
-# 9
-# Pattern groups:
-# getActivePatternGroup		int	Returns the index of the currently selected pattern group.
-# The default "All patterns" grouping has index -1. User-defined pattern groups have indexes starting from 0.	28
-# getPatternGroupCount		int	Returns the number of user-defined pattern groups.
-# The default "All patterns" grouping is not included.	28
-# getPatternGroupName	index int	str	Returns the name of the pattern group at index.
-# The default "All patterns" group's name cannot be accessed.	28
-# getPatternsInGroup	int	tuple[int, ...]	Returns a tuple containing all the patterns in the group at index.
-# The default "All patterns" group returns a tuple containing all the patterns that haven't been added to any other groups.
-
-
 from dataclasses import dataclass
 import patterns, channels
 from fl_controller_framework.util.colors import ColorToRGB, BGRIntToRGB
