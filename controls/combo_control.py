@@ -74,12 +74,13 @@ class ComboControl(ControlBase):
         Returns:
             None
         """
-        if event_data:
-            # self.registry.activate_control(self)
-            self.registry.add_modifier(self, self.primary_control)
-        else:
-            # self.registry.deactivate_control(self)
-            self.registry.remove_modifier(self, self.primary_control)
+        if self.getValue("active"):
+            if event_data:
+                # self.registry.activate_control(self)
+                self.registry.add_modifier(self, self.primary_control)
+            else:
+                # self.registry.deactivate_control(self)
+                self.registry.remove_modifier(self, self.primary_control)
 
     def _set_jogged(self, value):
         """
@@ -145,6 +146,7 @@ class ComboControl(ControlBase):
         self.modifier_button.activate()
         self.event_object.subscribe('{}.{}'.format(self.name, 'value'), self._on_modified_primary_value)
         self.event_object.subscribe('{}.{}'.format(self.modifier_button.name, self.modifier_button_event), self._on_modifier_button_event)
+        self.isChanged("active", True)
         return super().activate()
 
     def deactivate(self):
@@ -156,4 +158,5 @@ class ComboControl(ControlBase):
             "{}.{}".format(self.modifier_button.name, self.modifier_button_event),
             self._on_modifier_button_event,
         )
+        self.isChanged("active", False)
         return super().deactivate()

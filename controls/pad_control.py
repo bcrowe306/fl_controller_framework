@@ -334,4 +334,3 @@ class PadsControl(ControlBase):
         """
         Turns off the lights of the pads control.
         """
-        self.set_light(self.blackout_color)

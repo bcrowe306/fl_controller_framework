@@ -28,7 +28,16 @@ class ControlSurface(Component):
 
     def OnDeInit(self):
         self.deactivate()
+        self._blackout()
 
+    def _blackout(self):
+        components = self._get_components()
+        for component in components:
+            components[component].blackout()
+        controls = self._get_controls()
+        for control in controls:
+            controls[control].blackout()
+        
     def OnRefresh(self, event):
         on_refresh_event_flags :dict[int:str] = {
             1: "HW_Dirty_Mixer_Sel",
@@ -57,7 +66,6 @@ class ControlSurface(Component):
         for event_name in events:
             self.global_event_object.notify_listeners(event_name, event)
         self.global_event_object.notify_listeners('OnRefresh', event)
- 
 
     def OnUpdateMeters(self):
         self.global_event_object.notify_listeners('OnUpdateMeters')
@@ -106,7 +114,8 @@ class ControlSurface(Component):
                 components[component].activate()
 
     def deactivate(self):
-        super().deactivate()
+
         components = self._get_components()
         for component in components:
             components[component].deactivate()
+        super().deactivate()

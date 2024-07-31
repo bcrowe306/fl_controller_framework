@@ -196,3 +196,11 @@ class Component(StateBase, EventObject):
     def after_deactivate(self):
         """This method is called after the component is deactivated. It is useful for cleaning up the component after deactivation."""
         pass
+
+    def blackout(self):
+        """Turn off all controls on this component"""
+        controls = self._get_controls()
+        for control_key in controls:
+            control: ControlBase = controls[control_key]
+            if control is not None:
+                control.blackout()
