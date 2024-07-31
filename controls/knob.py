@@ -52,3 +52,9 @@ class KnobControl(Control):
         for event in events:
             setattr(self, "_{}".format(event), events[event])
             self.notify(event, events[event])
+
+    def __str__(self) -> str:
+        return f"{self.name} {self.status}:{self.channel}:{self.identifier}"
+
+    def __repr__(self) -> str:
+        return f"{self.name} {self.status}:{self.channel}:{self.identifier}"

@@ -56,6 +56,14 @@ class ComboControl(ControlBase):
         self._hold_counter: int = 0
         self.hold_time: int = 10
 
+    def __str__(self) -> str:
+        return f"{self.name} {self.status}:{self.channel}:{self.identifier}"
+
+    def __repr__(self) -> str:
+        return (
+            f"{self.name} {self.status}:{self.channel}:{self.identifier}"
+        )
+
     def _on_modifier_button_event(self, event_data):
         """
         Handles the modifier button event.
@@ -67,9 +75,11 @@ class ComboControl(ControlBase):
             None
         """
         if event_data:
-            self.registry.register_control(self)
+            # self.registry.activate_control(self)
+            self.registry.add_modifier(self, self.primary_control)
         else:
-            self.registry.unregister_control(self)
+            # self.registry.deactivate_control(self)
+            self.registry.remove_modifier(self, self.primary_control)
 
     def _set_jogged(self, value):
         """
@@ -135,3 +145,15 @@ class ComboControl(ControlBase):
         self.modifier_button.activate()
         self.event_object.subscribe('{}.{}'.format(self.name, 'value'), self._on_modified_primary_value)
         self.event_object.subscribe('{}.{}'.format(self.modifier_button.name, self.modifier_button_event), self._on_modifier_button_event)
+        return super().activate()
+
+    def deactivate(self):
+        self.modifier_button.deactivate()
+        self.event_object.unsubscribe(
+            "{}.{}".format(self.name, "value"), self._on_modified_primary_value
+        )
+        self.event_object.unsubscribe(
+            "{}.{}".format(self.modifier_button.name, self.modifier_button_event),
+            self._on_modifier_button_event,
+        )
+        return super().deactivate()

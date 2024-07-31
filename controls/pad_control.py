@@ -24,7 +24,7 @@ class PadControl(ControlBase):
     def __init__(self, name, channel, identifier, 
     number: int,
     color: tuple = None,
-    playable=False, 
+    playable=True, 
     on_msg_type: int = MIDI_STATUS.NOTE_ON_STATUS,
     off_msg_type: int = MIDI_STATUS.NOTE_OFF_STATUS,
     feedback=None, 
@@ -45,19 +45,19 @@ class PadControl(ControlBase):
             feedback (None, optional): Feedback function for the pad. Defaults to None.
             translation (None, optional): Translation function for the pad. Defaults to None.
         """
-        self.name: str = name or f'pad_{number}_{identifier}'
-        self.identifier: int = identifier
-        self.playable = playable
-        self.channel: int = channel
+        super(PadControl, self).__init__(name or f'pad_{number}_{identifier}', channel, identifier, on_msg_type, playable)
         self.number: int = number
         self.color: tuple = color
-        self.status = on_msg_type
         self.on_msg_type: int = on_msg_type
         self.off_msg_type: int = off_msg_type
         self.feedback = feedback
         self.translation = translation
-        super().__init__(self.name, channel, identifier, on_msg_type, playable,)
+        self.registry.register_control(self) 
 
+    
+    def __del__(self):
+        self.registry.unregister_control(self)
+    
     def set_light(self, *a, **k):
         """
         Sets the light of the pad.
@@ -292,7 +292,15 @@ class PadsControl(ControlBase):
         """
         for pad in self.pads:
             pad.translation = translation_func
+    def set_playable(self, playable: bool):
+        """
+        Sets the pads to be playable.
 
+        Args:
+            playable (bool): Whether the pads are playable.
+        """
+        for pad in self.pads:
+            pad.playable = playable
     def activate(self):
         """
         Activates the pads control.
@@ -300,7 +308,7 @@ class PadsControl(ControlBase):
         self.event_object.subscribe('idle', self._on_idle)
         for pad in self.pads:
             self.event_object.subscribe('{}.value'.format(pad.name), self._on_value)
-            self.registry.register_control(pad)
+            self.registry.activate_control(pad)
 
     def deactivate(self):
         """
@@ -308,7 +316,7 @@ class PadsControl(ControlBase):
         """
         for pad in self.pads:
             self.event_object.unsubscribe('{}.value'.format(pad.name), self._on_value)
-            self.registry.unregister_control(pad)
+            self.registry.deactivate_control(pad)
 
     def _initialize(self):
         """

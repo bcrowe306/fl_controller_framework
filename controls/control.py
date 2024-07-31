@@ -3,12 +3,14 @@ from ..util.midi import MIDI_STATUS
 from ..core.skin import SkinColor
 from ..core.event import EventObject, GlobalEventObject
 from ..core.state import StateBase
+from uuid import uuid4
 import device
 
 class ControlBase(EventObject, StateBase):
     """This class is the base class for the control object. It has the methods that should be implemented by any control the inherits from it. It is not to be used directly."""
     def __init__(self, name: str, channel: int, identifier: int, status=MIDI_STATUS.NOTE_ON_STATUS, playable=False, *a, **k):
         super(ControlBase, self).__init__(*a, **k)
+        self.uuid: str = str(uuid4())
         self.device = device
         """This is the FL Studio device module. It allows you to send midi messages directly from the control."""
         self.name: str = name
@@ -27,6 +29,7 @@ class ControlBase(EventObject, StateBase):
         """Global Event Object"""
         self.registry: ControlRegistry = ControlRegistry()
         """Global Control Registry"""
+
 
     def notify(self, event_name: str, *a, **k):
         """Alias convenience method for self.event_object.notify_listeners. Calling this method automatically prefixed the event name with the name of the control."""
@@ -57,6 +60,9 @@ class ControlBase(EventObject, StateBase):
         """Override Method: Inheriting classes should override this method.. This turns the the control to blackout state."""
         pass
 
+    def __str__(self) -> str:
+        return f"{self.name} {self.channel} {self.identifier} {self.status}"
+
 # TODO: Do a better job at implementing default_feedback. It needs to be on a per/component basis. Maybe  the component can look for a default_feedback attribute on the control and use that to register auto functions for feedback.
 class Control(ControlBase):
     """This is the actual control Class. Inherit from this class when building your own controls if necessary. This is also the class from which the included controls are derived."""
@@ -72,13 +78,13 @@ class Control(ControlBase):
         """This is the default color for the control. When it is activated, it will be set to this color if skin and default_color are provided."""
         self.blackout_color = blackout_color
         """This is the blackout color for the control. Can be called to blackout the control."""
+        self.registry.register_control(self)
 
     def _on_value(self, event):
         """This function is called whenever a value from the control is sent.
             Example. If you move a knob on a CC#37, the values for that control change are sent as event arguments to this function.
             This is useful for emitting your own custom events for a control, or reacting to the raw data sent by the control.
         """
-        print('original on_value')
         # self.notify_listeners('value', event)
 
     def _initialize(self):
@@ -93,7 +99,7 @@ class Control(ControlBase):
 
         self._initialize()
         self.event_object.subscribe("{}.value".format(self.name), self._on_value)
-        self.registry.register_control(self)
+        self.registry.activate_control(self)
         self.isChanged('active', True)
 
     def deactivate(self):
@@ -103,7 +109,7 @@ class Control(ControlBase):
         """
         self.reset()
         self.event_object.unsubscribe("{}.value".format(self.name), self._on_value)
-        self.registry.unregister_control(self)
+        self.registry.deactivate_control(self)
         self.isChanged('active', False)
 
     def set_light(self, value, *a, **k):
@@ -121,3 +127,10 @@ class Control(ControlBase):
     def reset(self):
         """Resets the control to its default color"""
         self.set_light(self.default_color)
+    
+    def __del__(self):
+        self.registry.unregister_control(self)
+    
+    def blackout(self):
+        """Turns the control off"""
+        self.set_light(self.blackout_color)

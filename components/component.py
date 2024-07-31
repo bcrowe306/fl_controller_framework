@@ -138,6 +138,9 @@ class Component(StateBase, EventObject):
     def activate(self):
         """Activate this Component and all its controls. This method also subscribes to all control events listed in the Component.subscribe(decorator, and register all functions decorated with Component.listens()) """
         if self.isChanged('active', True):
+
+            # Activation Hook
+            self.before_activate()
             # Activate each control instance of this component
             self._control_subscribe()
             controls = self._get_controls()
@@ -152,10 +155,16 @@ class Component(StateBase, EventObject):
                 for func in observers[event_path]:
                     self.global_event_object.subscribe(event_path, func)
 
+            # Activation Hook
+            self.after_activate()
+
     def deactivate(self):
         """Deactivate this Component and all its controls. This method also unsubscribes to all control events listed in the Component.subscribe(decorator, and unregister all functions decorated with Component.listens()) """
         if self.isChanged('active', False):
             # Deactivate Controls
+
+            # Deactivation Hook
+            self.before_deactivate()
             self._control_unsubscribe()
             controls: list[Control] = self._get_controls()
             for control_key in controls:
@@ -168,3 +177,22 @@ class Component(StateBase, EventObject):
             for event_path in observers:
                 for func in observers[event_path]:
                     self.global_event_object.unsubscribe(event_path, func)
+            
+            # Deactivation Hook 
+            self.after_deactivate()
+    
+    def before_activate(self):
+        """This method is called before the component is activated. It is useful for setting up the component before activation."""
+        pass
+
+    def after_activate(self):
+        """This method is called before the component is activated. It is useful for setting up the component before activation."""
+        pass
+
+    def before_deactivate(self):
+        """This method is called before the component is deactivated. It is useful for cleaning up the component before deactivation."""
+        pass
+
+    def after_deactivate(self):
+        """This method is called after the component is deactivated. It is useful for cleaning up the component after deactivation."""
+        pass

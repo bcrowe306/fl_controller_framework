@@ -64,7 +64,7 @@ class ButtonControl(Control):
             events[ButtonControl.Events.PRESSED] = False
             events[ButtonControl.Events.RELEASED] = True
         return events
-        
+
     def __init__(
         self, name, channel, identifier,
         playable=False,
@@ -113,7 +113,6 @@ class ButtonControl(Control):
         self._hold = False
         self._hold_counter = 0
         self.hold_time = hold_time
-        
 
     @property
     def isToggled(self):
@@ -122,21 +121,19 @@ class ButtonControl(Control):
         """
         return self._toggled
 
-
     def _on_idle(self):
         """
         Handles the idle event of the button control.
         """
         if self._pressed:
-          self.hold_counter += 1
-          if self.hold_counter > self.hold_time:
-            if self.isChanged('_hold', True):
-                self._set_hold(True)
+            self.hold_counter += 1
+            if self.hold_counter > self.hold_time:
+                if self.isChanged('_hold', True):
+                    self._set_hold(True)
         else:
             self.hold_counter = 0
             if self.isChanged('_hold', False):
                 self._set_hold(False)
-
 
     def _set_hold(self, hold):
         """
@@ -173,7 +170,7 @@ class ButtonControl(Control):
         bool: Whether the button control is currently pressed.
         """
         return self._pressed
-        
+
     def _set_toggled(self):
         """
         Toggles the state of the button control.
@@ -215,7 +212,7 @@ class ButtonControl(Control):
                 self.set_light(self.on_color)
             elif event_data.status == self.off_msg_type:
                 self.set_light(self.default_color)
-        
+
     def _on_value(self, event_data):
         """
         Handles the value change event of the button control.
@@ -229,3 +226,9 @@ class ButtonControl(Control):
         for event in events:
             setattr(self, '_{}'.format(event), events[event])
             self.notify(event, events[event])
+
+    def __str__(self) -> str:
+        return f"{self.name} {self.status}:{self.channel}:{self.identifier}"
+
+    def __repr__(self) -> str:
+        return f"{self.name} {self.status}:{self.channel}:{self.identifier}"

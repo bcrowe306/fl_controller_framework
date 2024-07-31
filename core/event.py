@@ -16,10 +16,7 @@ class EventObject(object):
             self.observers[event_id] = []
         if(func not in self.observers[event_id]):
             self.observers[event_id].append(func)
-        # if event_id == 'erase_button.pressed':
-        #     for f in self.observers[event_id]:
-        #         print(f.__name__)
-
+            
     def unsubscribe(self, event_id: str, func):
         """Unsubscribe removed the supplied function from the list of observers by event_id."""
         handlers: list = self.observers[event_id]

@@ -78,3 +78,9 @@ class EncoderControl(Control):
             self.status, self.inc_value, self.dec_value, event_data)
         for event in events:
             self.notify(event, events[event])
+
+    def __str__(self) -> str:
+        return f"{self.name} {self.status}:{self.channel}:{self.identifier}"
+
+    def __repr__(self) -> str:
+        return f"{self.name} {self.status}:{self.channel}:{self.identifier}"
