@@ -173,7 +173,37 @@
         
 
         
+            <div class="itemName"><code><a href="#__repr__" class="internal-link" title="fl_controller_framework.controls.combo_control.ComboControl.__repr__">__repr__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__str__" class="internal-link" title="fl_controller_framework.controls.combo_control.ComboControl.__str__">__str__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="#activate" class="internal-link" title="fl_controller_framework.controls.combo_control.ComboControl.activate">activate</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#deactivate" class="internal-link" title="fl_controller_framework.controls.combo_control.ComboControl.deactivate">deactivate</a></code>
             </div>
         
 
@@ -230,16 +260,6 @@
 
         
             <div class="itemName"><code><a href="fl_controller_framework.controls.control.ControlBase.html#broadcast" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.broadcast">broadcast</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
-            <div class="itemName"><code><a href="fl_controller_framework.controls.control.ControlBase.html#deactivate" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.deactivate">deactivate</a></code>
             </div>
         
 
@@ -501,6 +521,16 @@
         
 
         
+            <div class="itemName"><code><a href="fl_controller_framework.controls.control.ControlBase.html#uuid" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.uuid">uuid</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="fl_controller_framework.core.event.EventObject.html#observers" class="internal-link" title="fl_controller_framework.core.event.EventObject.observers">observers</a></code>
             </div>
         
@@ -600,7 +630,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">ComboControl</span>(<a href="fl_controller_framework.controls.control.ControlBase.html" class="internal-link" title="fl_controller_framework.controls.control.ControlBase">ControlBase</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/combo_control.py#L14" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.controls.combo_control.ComboControl.__init__">ComboControl(name, primary_control, modifier_button, modifier_button_event, ...)</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">ComboControl</span>(<a href="fl_controller_framework.controls.control.ControlBase.html" class="internal-link" title="fl_controller_framework.controls.control.ControlBase">ControlBase</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/combo_control.py#L14" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.controls.combo_control.ComboControl.__init__">ComboControl(name, primary_control, modifier_button, modifier_button_event, ...)</a></code></p>
           <p><a href="classIndex.html#fl_controller_framework.controls.combo_control.ComboControl">View In Hierarchy</a></p>
         </div>
 
@@ -645,8 +675,23 @@ Methods:
   </tr><tr class="method">
     
     <td>Method</td>
+    <td><code><a href="#__repr__" class="internal-link" title="fl_controller_framework.controls.combo_control.ComboControl.__repr__">__repr__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__str__" class="internal-link" title="fl_controller_framework.controls.combo_control.ComboControl.__str__">__str__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
     <td><code><a href="#activate" class="internal-link" title="fl_controller_framework.controls.combo_control.ComboControl.activate">activate</a></code></td>
     <td>Activates the combo control.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#deactivate" class="internal-link" title="fl_controller_framework.controls.combo_control.ComboControl.deactivate">deactivate</a></code></td>
+    <td>Override Method. Inheriting classes should override this method. This method is called by the component it is attached to when the component activates.</td>
   </tr><tr class="instancevariable">
     
     <td>Instance Variable</td>
@@ -739,11 +784,6 @@ Methods:
   </tr><tr class="basemethod">
     
     <td>Method</td>
-    <td><code><a href="fl_controller_framework.controls.control.ControlBase.html#deactivate" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.deactivate">deactivate</a></code></td>
-    <td>Override Method. Inheriting classes should override this method. This method is called by the component it is attached to when the component activates.</td>
-  </tr><tr class="basemethod">
-    
-    <td>Method</td>
     <td><code><a href="fl_controller_framework.controls.control.ControlBase.html#notify" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.notify">notify</a></code></td>
     <td>Alias convenience method for self.event_object.notify_listeners. Calling this method automatically prefixed the event name with the name of the control.</td>
   </tr><tr class="basemethod">
@@ -776,6 +816,11 @@ Methods:
     <td>Instance Variable</td>
     <td><code><a href="fl_controller_framework.controls.control.ControlBase.html#status" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.status">status</a></code></td>
     <td>This is the status byte of the midi msg. The default is a midi note state. Do not include the full status byte with the channel bits.</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="fl_controller_framework.controls.control.ControlBase.html#uuid" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.uuid">uuid</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="basemethod private">
     
     <td>Method</td>
@@ -855,7 +900,7 @@ Methods:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, primary_control: <code><a href="fl_controller_framework.controls.control.Control.html" class="internal-link" title="fl_controller_framework.controls.control.Control">Control</a></code>, modifier_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code>, modifier_button_event: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> = <span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>, *a, **k)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/combo_control.py#L45">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/combo_control.py#L45">
       
       (source)
     </a>
@@ -872,6 +917,60 @@ Methods:
 </div><div class="basemethod">
   
   
+  <a name="fl_controller_framework.controls.combo_control.ComboControl.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__repr__</span><span class="function-signature">(self) -&gt; <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code></span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/combo_control.py#L62">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#__repr__" title="fl_controller_framework.controls.combo_control.ComboControl.__repr__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.controls.combo_control.ComboControl.__str__">
+    
+  </a>
+  <a name="__str__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__str__</span><span class="function-signature">(self) -&gt; <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code></span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/combo_control.py#L59">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#__str__" title="fl_controller_framework.controls.combo_control.ComboControl.__str__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.controls.control.ControlBase.html#__str__" class="internal-link">fl_controller_framework.controls.control.ControlBase.__str__</a></code></div>
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
   <a name="fl_controller_framework.controls.combo_control.ComboControl.activate">
     
   </a>
@@ -882,7 +981,7 @@ Methods:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">activate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/combo_control.py#L128">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/combo_control.py#L138">
       
       (source)
     </a>
@@ -899,6 +998,33 @@ Methods:
 Returns:
     None</p></div>
   </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.controls.combo_control.ComboControl.deactivate">
+    
+  </a>
+  <a name="deactivate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">deactivate</span><span class="function-signature">(self)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/combo_control.py#L150">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#deactivate" title="fl_controller_framework.controls.combo_control.ComboControl.deactivate">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.controls.control.ControlBase.html#deactivate" class="internal-link">fl_controller_framework.controls.control.ControlBase.deactivate</a></code></div>
+    <div><p class="pre">Override Method. Inheriting classes should override this method. This method is called by the component it is attached to when the component activates.</p></div>
+  </div>
 </div><div class="baseinstancevariable">
   
   
@@ -911,7 +1037,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">channel</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/combo_control.py#L48">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/combo_control.py#L48">
       
       (source)
     </a>
@@ -938,7 +1064,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">hold_time</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/combo_control.py#L57">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/combo_control.py#L57">
       
       (source)
     </a>
@@ -965,7 +1091,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">identifier</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/combo_control.py#L49">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/combo_control.py#L49">
       
       (source)
     </a>
@@ -994,7 +1120,7 @@ Example: identifier=0, "This would note C0" </p></div>
   <div class="functionHeader">
     
     <span class="py-defname">modifier_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/combo_control.py#L51">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/combo_control.py#L51">
       
       (source)
     </a>
@@ -1021,7 +1147,7 @@ Example: identifier=0, "This would note C0" </p></div>
   <div class="functionHeader">
     
     <span class="py-defname">modifier_button_event</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/combo_control.py#L52">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/combo_control.py#L52">
       
       (source)
     </a>
@@ -1048,7 +1174,7 @@ Example: identifier=0, "This would note C0" </p></div>
   <div class="functionHeader">
     
     <span class="py-defname">name</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/combo_control.py#L47">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/combo_control.py#L47">
       
       (source)
     </a>
@@ -1075,7 +1201,7 @@ Example: identifier=0, "This would note C0" </p></div>
   <div class="functionHeader">
     
     <span class="py-defname">primary_control</span>: <code><a href="fl_controller_framework.controls.control.Control.html" class="internal-link" title="fl_controller_framework.controls.control.Control">Control</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/combo_control.py#L50">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/combo_control.py#L50">
       
       (source)
     </a>
@@ -1103,7 +1229,7 @@ Example: identifier=0, "This would note C0" </p></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_on_modified_primary_value</span><span class="function-signature">(self, event_data: <code><a href="fl_controller_framework.api.fl_class.flMidiMsg.html" class="internal-link" title="fl_controller_framework.api.fl_class.flMidiMsg">flMidiMsg</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/combo_control.py#L87">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/combo_control.py#L97">
       
       (source)
     </a>
@@ -1136,7 +1262,7 @@ Returns:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_on_modifier_button_event</span><span class="function-signature">(self, event_data)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/combo_control.py#L59">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/combo_control.py#L67">
       
       (source)
     </a>
@@ -1169,7 +1295,7 @@ Returns:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_set_jogged</span><span class="function-signature">(self, value)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/combo_control.py#L74">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/combo_control.py#L84">
       
       (source)
     </a>
@@ -1201,7 +1327,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">_hold</span>: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/combo_control.py#L55">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/combo_control.py#L55">
       
       (source)
     </a>
@@ -1228,7 +1354,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">_hold_counter</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/combo_control.py#L56">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/combo_control.py#L56">
       
       (source)
     </a>
@@ -1255,7 +1381,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">_pressed</span>: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/combo_control.py#L54">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/combo_control.py#L54">
       
       (source)
     </a>
@@ -1282,7 +1408,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">_toggled</span>: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/combo_control.py#L53">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/combo_control.py#L53">
       
       (source)
     </a>
@@ -1309,7 +1435,7 @@ Returns:
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.3.3 at 2024-07-30 10:40:55.
+    24.3.3 at 2024-07-31 00:54:45.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

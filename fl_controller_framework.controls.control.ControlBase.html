@@ -173,6 +173,16 @@
         
 
         
+            <div class="itemName"><code><a href="#__str__" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.__str__">__str__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="#activate" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.activate">activate</a></code>
             </div>
         
@@ -379,6 +389,16 @@
             </div>
         
 
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#uuid" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.uuid">uuid</a></code>
+            </div>
+        
+
     </li>
 </ul> 
 
@@ -490,7 +510,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">ControlBase</span>(<a href="fl_controller_framework.core.event.EventObject.html" class="internal-link" title="fl_controller_framework.core.event.EventObject">EventObject</a>, <a href="fl_controller_framework.core.state.StateBase.html" class="internal-link" title="fl_controller_framework.core.state.StateBase">StateBase</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/control.py#L8" class="sourceLink">(source)</a></code></p><p>Known subclasses: <code><a href="fl_controller_framework.controls.combo_control.CC.html" class="internal-link">fl_controller_framework.controls.combo_control.CC</a></code>, <code><a href="fl_controller_framework.controls.combo_control.ComboControl.html" class="internal-link">fl_controller_framework.controls.combo_control.ComboControl</a></code>, <code><a href="fl_controller_framework.controls.control.Control.html" class="internal-link">fl_controller_framework.controls.control.Control</a></code>, <code><a href="fl_controller_framework.controls.pad_control.cc.html" class="internal-link">fl_controller_framework.controls.pad_control.cc</a></code>, <code><a href="fl_controller_framework.controls.pad_control.PadControl.html" class="internal-link">fl_controller_framework.controls.pad_control.PadControl</a></code>, <code><a href="fl_controller_framework.controls.pad_control.PadsControl.html" class="internal-link">fl_controller_framework.controls.pad_control.PadsControl</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.__init__">ControlBase(name, channel, identifier, status, ...)</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">ControlBase</span>(<a href="fl_controller_framework.core.event.EventObject.html" class="internal-link" title="fl_controller_framework.core.event.EventObject">EventObject</a>, <a href="fl_controller_framework.core.state.StateBase.html" class="internal-link" title="fl_controller_framework.core.state.StateBase">StateBase</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/control.py#L9" class="sourceLink">(source)</a></code></p><p>Known subclasses: <code><a href="fl_controller_framework.controls.combo_control.CC.html" class="internal-link">fl_controller_framework.controls.combo_control.CC</a></code>, <code><a href="fl_controller_framework.controls.combo_control.ComboControl.html" class="internal-link">fl_controller_framework.controls.combo_control.ComboControl</a></code>, <code><a href="fl_controller_framework.controls.control.Control.html" class="internal-link">fl_controller_framework.controls.control.Control</a></code>, <code><a href="fl_controller_framework.controls.pad_control.cc.html" class="internal-link">fl_controller_framework.controls.pad_control.cc</a></code>, <code><a href="fl_controller_framework.controls.pad_control.PadControl.html" class="internal-link">fl_controller_framework.controls.pad_control.PadControl</a></code>, <code><a href="fl_controller_framework.controls.pad_control.PadsControl.html" class="internal-link">fl_controller_framework.controls.pad_control.PadsControl</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.__init__">ControlBase(name, channel, identifier, status, ...)</a></code></p>
           <p><a href="classIndex.html#fl_controller_framework.controls.control.ControlBase">View In Hierarchy</a></p>
         </div>
 
@@ -506,6 +526,11 @@
     
     <td>Method</td>
     <td><code><a href="#__init__" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.__init__">__init__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__str__" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.__str__">__str__</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="method">
     
@@ -577,6 +602,11 @@
     <td>Instance Variable</td>
     <td><code><a href="#status" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.status">status</a></code></td>
     <td>This is the status byte of the midi msg. The default is a midi note state. Do not include the full status byte with the channel bits.</td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#uuid" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.uuid">uuid</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="method private">
     
     <td>Method</td>
@@ -656,7 +686,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, channel: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>, identifier: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>, status=<a href="fl_controller_framework.util.midi.MIDI_STATUS.html#NOTE_ON_STATUS" class="internal-link" title="fl_controller_framework.util.midi.MIDI_STATUS.NOTE_ON_STATUS">MIDI_STATUS.NOTE_ON_STATUS</a>, playable=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, *a, **k)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/control.py#L10">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/control.py#L11">
       
       (source)
     </a>
@@ -673,6 +703,33 @@
 </div><div class="basemethod">
   
   
+  <a name="fl_controller_framework.controls.control.ControlBase.__str__">
+    
+  </a>
+  <a name="__str__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__str__</span><span class="function-signature">(self) -&gt; <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code></span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/control.py#L63">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#__str__" title="fl_controller_framework.controls.control.ControlBase.__str__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link">fl_controller_framework.controls.button.ButtonControl</a></code>, <code><a href="fl_controller_framework.controls.combo_control.ComboControl.html" class="internal-link">fl_controller_framework.controls.combo_control.ComboControl</a></code>, <code><a href="fl_controller_framework.controls.encoder.EncoderControl.html" class="internal-link">fl_controller_framework.controls.encoder.EncoderControl</a></code>, <code><a href="fl_controller_framework.controls.fader.FaderControl.html" class="internal-link">fl_controller_framework.controls.fader.FaderControl</a></code>, <code><a href="fl_controller_framework.controls.jog_control.JogControl.html" class="internal-link">fl_controller_framework.controls.jog_control.JogControl</a></code>, <code><a href="fl_controller_framework.controls.knob.KnobControl.html" class="internal-link">fl_controller_framework.controls.knob.KnobControl</a></code></div>
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
   <a name="fl_controller_framework.controls.control.ControlBase.activate">
     
   </a>
@@ -683,7 +740,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">activate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/control.py#L40">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/control.py#L43">
       
       (source)
     </a>
@@ -710,7 +767,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">blackout</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/control.py#L56">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/control.py#L59">
       
       (source)
     </a>
@@ -721,7 +778,7 @@
     </a>
   </div>
   <div class="docstring functionBody">
-    <div class="interfaceinfo">overridden in <code><a href="fl_controller_framework.controls.pad_control.PadsControl.html" class="internal-link">fl_controller_framework.controls.pad_control.PadsControl</a></code></div>
+    <div class="interfaceinfo">overridden in <code><a href="fl_controller_framework.controls.control.Control.html" class="internal-link">fl_controller_framework.controls.control.Control</a></code>, <code><a href="fl_controller_framework.controls.pad_control.PadsControl.html" class="internal-link">fl_controller_framework.controls.pad_control.PadsControl</a></code></div>
     <div><p class="pre">Override Method: Inheriting classes should override this method.. This turns the the control to blackout state.</p></div>
   </div>
 </div><div class="basemethod">
@@ -737,7 +794,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">broadcast</span><span class="function-signature">(self, event_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, *a, **k)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/control.py#L36">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/control.py#L39">
       
       (source)
     </a>
@@ -764,7 +821,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">deactivate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/control.py#L44">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/control.py#L47">
       
       (source)
     </a>
@@ -775,7 +832,7 @@
     </a>
   </div>
   <div class="docstring functionBody">
-    <div class="interfaceinfo">overridden in <code><a href="fl_controller_framework.controls.control.Control.html" class="internal-link">fl_controller_framework.controls.control.Control</a></code>, <code><a href="fl_controller_framework.controls.pad_control.PadsControl.html" class="internal-link">fl_controller_framework.controls.pad_control.PadsControl</a></code></div>
+    <div class="interfaceinfo">overridden in <code><a href="fl_controller_framework.controls.combo_control.ComboControl.html" class="internal-link">fl_controller_framework.controls.combo_control.ComboControl</a></code>, <code><a href="fl_controller_framework.controls.control.Control.html" class="internal-link">fl_controller_framework.controls.control.Control</a></code>, <code><a href="fl_controller_framework.controls.pad_control.PadsControl.html" class="internal-link">fl_controller_framework.controls.pad_control.PadsControl</a></code></div>
     <div><p class="pre">Override Method. Inheriting classes should override this method. This method is called by the component it is attached to when the component activates.</p></div>
   </div>
 </div><div class="basemethod">
@@ -791,7 +848,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">notify</span><span class="function-signature">(self, event_name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, *a, **k)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/control.py#L31">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/control.py#L34">
       
       (source)
     </a>
@@ -818,7 +875,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">reset</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/control.py#L52">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/control.py#L55">
       
       (source)
     </a>
@@ -844,7 +901,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">channel</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/control.py#L18">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/control.py#L20">
       
       (source)
     </a>
@@ -855,7 +912,7 @@
     </a>
   </div>
   <div class="functionBody">
-    <div class="interfaceinfo">overridden in <code><a href="fl_controller_framework.controls.combo_control.ComboControl.html" class="internal-link">fl_controller_framework.controls.combo_control.ComboControl</a></code>, <code><a href="fl_controller_framework.controls.pad_control.PadControl.html" class="internal-link">fl_controller_framework.controls.pad_control.PadControl</a></code>, <code><a href="fl_controller_framework.controls.pad_control.PadsControl.html" class="internal-link">fl_controller_framework.controls.pad_control.PadsControl</a></code></div>
+    <div class="interfaceinfo">overridden in <code><a href="fl_controller_framework.controls.combo_control.ComboControl.html" class="internal-link">fl_controller_framework.controls.combo_control.ComboControl</a></code>, <code><a href="fl_controller_framework.controls.pad_control.PadsControl.html" class="internal-link">fl_controller_framework.controls.pad_control.PadsControl</a></code></div>
     <div><p class="pre">Midi Channel the control is registered to. 0-15</p></div>
     
   </div>
@@ -871,7 +928,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">device</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/control.py#L12">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/control.py#L14">
       
       (source)
     </a>
@@ -898,7 +955,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">event_object</span>: <code><a href="fl_controller_framework.core.event.GlobalEventObject.html" class="internal-link" title="fl_controller_framework.core.event.GlobalEventObject">GlobalEventObject</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/control.py#L26">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/control.py#L28">
       
       (source)
     </a>
@@ -925,7 +982,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">identifier</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/control.py#L20">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/control.py#L22">
       
       (source)
     </a>
@@ -936,7 +993,7 @@
     </a>
   </div>
   <div class="functionBody">
-    <div class="interfaceinfo">overridden in <code><a href="fl_controller_framework.controls.combo_control.ComboControl.html" class="internal-link">fl_controller_framework.controls.combo_control.ComboControl</a></code>, <code><a href="fl_controller_framework.controls.pad_control.PadControl.html" class="internal-link">fl_controller_framework.controls.pad_control.PadControl</a></code></div>
+    <div class="interfaceinfo">overridden in <code><a href="fl_controller_framework.controls.combo_control.ComboControl.html" class="internal-link">fl_controller_framework.controls.combo_control.ComboControl</a></code></div>
     <div><p class="pre">Midi Data1 of the Midi message. This is the note/CC the control transmits on. 
 Valid input = 0-127. 
 Example: identifier=0, "This would note C0" </p></div>
@@ -954,7 +1011,7 @@ Example: identifier=0, "This would note C0" </p></div>
   <div class="functionHeader">
     
     <span class="py-defname">name</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/control.py#L14">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/control.py#L16">
       
       (source)
     </a>
@@ -965,7 +1022,7 @@ Example: identifier=0, "This would note C0" </p></div>
     </a>
   </div>
   <div class="functionBody">
-    <div class="interfaceinfo">overridden in <code><a href="fl_controller_framework.controls.combo_control.ComboControl.html" class="internal-link">fl_controller_framework.controls.combo_control.ComboControl</a></code>, <code><a href="fl_controller_framework.controls.pad_control.PadControl.html" class="internal-link">fl_controller_framework.controls.pad_control.PadControl</a></code>, <code><a href="fl_controller_framework.controls.pad_control.PadsControl.html" class="internal-link">fl_controller_framework.controls.pad_control.PadsControl</a></code></div>
+    <div class="interfaceinfo">overridden in <code><a href="fl_controller_framework.controls.combo_control.ComboControl.html" class="internal-link">fl_controller_framework.controls.combo_control.ComboControl</a></code>, <code><a href="fl_controller_framework.controls.pad_control.PadsControl.html" class="internal-link">fl_controller_framework.controls.pad_control.PadsControl</a></code></div>
     <div><p class="pre">Name of the control. Must be unique. The name of the control is used to identify and subscribe to events generated by the control.</p></div>
     
   </div>
@@ -981,7 +1038,7 @@ Example: identifier=0, "This would note C0" </p></div>
   <div class="functionHeader">
     
     <span class="py-defname">playable</span>: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/control.py#L24">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/control.py#L26">
       
       (source)
     </a>
@@ -992,7 +1049,7 @@ Example: identifier=0, "This would note C0" </p></div>
     </a>
   </div>
   <div class="functionBody">
-    <div class="interfaceinfo">overridden in <code><a href="fl_controller_framework.controls.pad_control.PadControl.html" class="internal-link">fl_controller_framework.controls.pad_control.PadControl</a></code>, <code><a href="fl_controller_framework.controls.pad_control.PadsControl.html" class="internal-link">fl_controller_framework.controls.pad_control.PadsControl</a></code></div>
+    <div class="interfaceinfo">overridden in <code><a href="fl_controller_framework.controls.pad_control.PadsControl.html" class="internal-link">fl_controller_framework.controls.pad_control.PadsControl</a></code></div>
     <div><p class="pre">Is this control playable. This will determine if the values sent by this control are forwarded into FL Studio for playing devices.</p></div>
     
   </div>
@@ -1008,7 +1065,7 @@ Example: identifier=0, "This would note C0" </p></div>
   <div class="functionHeader">
     
     <span class="py-defname">registry</span>: <code><a href="fl_controller_framework.core.control_registry.ControlRegistry.html" class="internal-link" title="fl_controller_framework.core.control_registry.ControlRegistry">ControlRegistry</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/control.py#L28">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/control.py#L30">
       
       (source)
     </a>
@@ -1035,7 +1092,7 @@ Example: identifier=0, "This would note C0" </p></div>
   <div class="functionHeader">
     
     <span class="py-defname">status</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/control.py#L16">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/control.py#L18">
       
       (source)
     </a>
@@ -1046,8 +1103,35 @@ Example: identifier=0, "This would note C0" </p></div>
     </a>
   </div>
   <div class="functionBody">
-    <div class="interfaceinfo">overridden in <code><a href="fl_controller_framework.controls.encoder.EncoderControl.html" class="internal-link">fl_controller_framework.controls.encoder.EncoderControl</a></code>, <code><a href="fl_controller_framework.controls.jog_control.JogControl.html" class="internal-link">fl_controller_framework.controls.jog_control.JogControl</a></code>, <code><a href="fl_controller_framework.controls.pad_control.PadControl.html" class="internal-link">fl_controller_framework.controls.pad_control.PadControl</a></code></div>
+    <div class="interfaceinfo">overridden in <code><a href="fl_controller_framework.controls.encoder.EncoderControl.html" class="internal-link">fl_controller_framework.controls.encoder.EncoderControl</a></code>, <code><a href="fl_controller_framework.controls.jog_control.JogControl.html" class="internal-link">fl_controller_framework.controls.jog_control.JogControl</a></code></div>
     <div><p class="pre">This is the status byte of the midi msg. The default is a midi note state. Do not include the full status byte with the channel bits.</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.controls.control.ControlBase.uuid">
+    
+  </a>
+  <a name="uuid">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">uuid</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/control.py#L13">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#uuid" title="fl_controller_framework.controls.control.ControlBase.uuid">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
     
   </div>
 </div><div class="basemethod private">
@@ -1063,7 +1147,7 @@ Example: identifier=0, "This would note C0" </p></div>
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_on_value</span><span class="function-signature">(self, event)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/8d36f4b152e0fa4e4262d72bd9419672902e056b/controls/control.py#L48">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/cf9b2d4ae4064ee1e3e70bd7952c2bb88e09659e/controls/control.py#L51">
       
       (source)
     </a>
@@ -1089,7 +1173,7 @@ Example: identifier=0, "This would note C0" </p></div>
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.3.3 at 2024-07-30 10:40:55.
+    24.3.3 at 2024-07-31 00:54:45.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 
