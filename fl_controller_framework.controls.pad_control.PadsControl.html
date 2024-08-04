@@ -525,26 +525,6 @@
         
 
         
-            <div class="itemName"><code><a href="#off_msg_type" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.off_msg_type">off<wbr></wbr>_msg<wbr></wbr>_type</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
-            <div class="itemName"><code><a href="#on_msg_type" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.on_msg_type">on<wbr></wbr>_msg<wbr></wbr>_type</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
             <div class="itemName"><code><a href="#pad_mapping" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.pad_mapping">pad<wbr></wbr>_mapping</a></code>
             </div>
         
@@ -615,6 +595,16 @@
         
 
         
+            <div class="itemName"><code><a href="#status" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.status">status</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="#translation" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.translation">translation</a></code>
             </div>
         
@@ -642,16 +632,6 @@
 
         
             <div class="itemName"><code><a href="fl_controller_framework.controls.control.ControlBase.html#identifier" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.identifier">identifier</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
-            <div class="itemName"><code><a href="fl_controller_framework.controls.control.ControlBase.html#status" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.status">status</a></code>
             </div>
         
 
@@ -780,7 +760,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">PadsControl</span>(<a href="fl_controller_framework.controls.control.ControlBase.html" class="internal-link" title="fl_controller_framework.controls.control.ControlBase">ControlBase</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L72" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.__init__">PadsControl(name, channel, pad_mapping, on_msg_type, ...)</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">PadsControl</span>(<a href="fl_controller_framework.controls.control.ControlBase.html" class="internal-link" title="fl_controller_framework.controls.control.ControlBase">ControlBase</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L69" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.__init__">PadsControl(name, channel, pad_mapping, status, ...)</a></code></p>
           <p><a href="classIndex.html#fl_controller_framework.controls.pad_control.PadsControl">View In Hierarchy</a></p>
         </div>
 
@@ -885,16 +865,6 @@
   </tr><tr class="instancevariable">
     
     <td>Instance Variable</td>
-    <td><code><a href="#off_msg_type" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.off_msg_type">off<wbr></wbr>_msg<wbr></wbr>_type</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
-  </tr><tr class="instancevariable">
-    
-    <td>Instance Variable</td>
-    <td><code><a href="#on_msg_type" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.on_msg_type">on<wbr></wbr>_msg<wbr></wbr>_type</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
-  </tr><tr class="instancevariable">
-    
-    <td>Instance Variable</td>
     <td><code><a href="#pad_mapping" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.pad_mapping">pad<wbr></wbr>_mapping</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="instancevariable">
@@ -927,6 +897,11 @@
     <td>Instance Variable</td>
     <td><code><a href="#short_press_time" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.short_press_time">short<wbr></wbr>_press<wbr></wbr>_time</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#status" class="internal-link" title="fl_controller_framework.controls.pad_control.PadsControl.status">status</a></code></td>
+    <td>This is the status byte of the midi msg. The default is a midi note state. Do not include the full status byte with the channel bits.</td>
   </tr><tr class="instancevariable">
     
     <td>Instance Variable</td>
@@ -1014,11 +989,6 @@
   </tr><tr class="baseinstancevariable">
     
     <td>Instance Variable</td>
-    <td><code><a href="fl_controller_framework.controls.control.ControlBase.html#status" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.status">status</a></code></td>
-    <td>This is the status byte of the midi msg. The default is a midi note state. Do not include the full status byte with the channel bits.</td>
-  </tr><tr class="baseinstancevariable">
-    
-    <td>Instance Variable</td>
     <td><code><a href="fl_controller_framework.controls.control.ControlBase.html#uuid" class="internal-link" title="fl_controller_framework.controls.control.ControlBase.uuid">uuid</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr>
@@ -1094,8 +1064,8 @@
   <div class="functionHeader">
     
     
-    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, channel: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>, pad_mapping: <code><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="intersphinx-link">dict</a>[<wbr></wbr>int:int]</code>, on_msg_type: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> = <a href="fl_controller_framework.util.midi.MIDI_STATUS.html#NOTE_ON_STATUS" class="internal-link" title="fl_controller_framework.util.midi.MIDI_STATUS.NOTE_ON_STATUS">MIDI_STATUS.NOTE_ON_STATUS</a>, off_msg_type: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> = <a href="fl_controller_framework.util.midi.MIDI_STATUS.html#NOTE_OFF_STATUS" class="internal-link" title="fl_controller_framework.util.midi.MIDI_STATUS.NOTE_OFF_STATUS">MIDI_STATUS.NOTE_OFF_STATUS</a>, hold_time=10, short_press_time=2, playable=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>, feedback=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, translation=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, draw=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L73">
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, name: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code>, channel: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>, pad_mapping: <code><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="intersphinx-link">dict</a>[<wbr></wbr>int:int]</code>, status: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> = <a href="fl_controller_framework.util.midi.MIDI_STATUS.html#NOTE_ON_STATUS" class="internal-link" title="fl_controller_framework.util.midi.MIDI_STATUS.NOTE_ON_STATUS">MIDI_STATUS.NOTE_ON_STATUS</a>, hold_time=10, short_press_time=2, playable=<a href="https://docs.python.org/3/library/constants.html#True" class="intersphinx-link">True</a>, feedback=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, translation=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, draw=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L70">
       
       (source)
     </a>
@@ -1113,8 +1083,7 @@ Args:
     name (str): The name of the control.
     channel (int): The MIDI channel of the control.
     pad_mapping (dict[int: int]): The mapping of pad IDs to pad numbers.
-    on_msg_type (int, optional): The MIDI status byte for note on messages. Defaults to MIDI_STATUS.NOTE_ON_STATUS.
-    off_msg_type (int, optional): The MIDI status byte for note off messages. Defaults to MIDI_STATUS.NOTE_OFF_STATUS.
+    status (int, optional): The MIDI status byte for note on messages. Defaults to MIDI_STATUS.NOTE_ON_STATUS.
     hold_time (int, optional): The hold time in milliseconds. Defaults to 10.
     short_press_time (int, optional): The short press time in milliseconds. Defaults to 2.
     playable (bool, optional): Whether the pads are playable. Defaults to True.
@@ -1135,7 +1104,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">activate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L304">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L317">
       
       (source)
     </a>
@@ -1162,7 +1131,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">blackout</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L333">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L346">
       
       (source)
     </a>
@@ -1189,7 +1158,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">deactivate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L313">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L326">
       
       (source)
     </a>
@@ -1216,7 +1185,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">get_pad_event_state</span><span class="function-signature">(self, pad_number, event_name)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L147">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L153">
       
       (source)
     </a>
@@ -1250,7 +1219,7 @@ Returns:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">reset</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L327">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L340">
       
       (source)
     </a>
@@ -1277,7 +1246,7 @@ Returns:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">set_feedback</span><span class="function-signature">(self, feedback_func)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L276">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L289">
       
       (source)
     </a>
@@ -1307,7 +1276,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">set_pad_event_state</span><span class="function-signature">(self, pad_number, event_name, value)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L160">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L166">
       
       (source)
     </a>
@@ -1339,7 +1308,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">set_playable</span><span class="function-signature">(self, playable: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L295">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L308">
       
       (source)
     </a>
@@ -1369,7 +1338,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">set_translation</span><span class="function-signature">(self, translation_func)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L286">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L299">
       
       (source)
     </a>
@@ -1399,7 +1368,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">size</span><span class="function-signature">(self) -&gt; <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code></span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L115">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L121">
       
       (source)
     </a>
@@ -1428,7 +1397,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">channel</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L94">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L101">
       
       (source)
     </a>
@@ -1455,7 +1424,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">draw</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L101">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L107">
       
       (source)
     </a>
@@ -1482,7 +1451,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">event_object</span>: <code><a href="fl_controller_framework.core.event.GlobalEventObject.html" class="internal-link" title="fl_controller_framework.core.event.GlobalEventObject">GlobalEventObject</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L91">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L98">
       
       (source)
     </a>
@@ -1509,7 +1478,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">feedback</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L99">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L105">
       
       (source)
     </a>
@@ -1536,7 +1505,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">hold_time</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L104">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L110">
       
       (source)
     </a>
@@ -1563,7 +1532,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">multi_hold</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L107">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L113">
       
       (source)
     </a>
@@ -1590,7 +1559,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">name</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L93">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L100">
       
       (source)
     </a>
@@ -1608,60 +1577,6 @@ Returns:
 </div><div class="baseinstancevariable">
   
   
-  <a name="fl_controller_framework.controls.pad_control.PadsControl.off_msg_type">
-    
-  </a>
-  <a name="off_msg_type">
-    
-  </a>
-  <div class="functionHeader">
-    
-    <span class="py-defname">off_msg_type</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L96">
-      
-      (source)
-    </a>
-    <a class="headerLink" href="#off_msg_type" title="fl_controller_framework.controls.pad_control.PadsControl.off_msg_type">
-      
-      
-      ¶
-    </a>
-  </div>
-  <div class="functionBody">
-    
-    <div><p class="undocumented">Undocumented</p></div>
-    
-  </div>
-</div><div class="baseinstancevariable">
-  
-  
-  <a name="fl_controller_framework.controls.pad_control.PadsControl.on_msg_type">
-    
-  </a>
-  <a name="on_msg_type">
-    
-  </a>
-  <div class="functionHeader">
-    
-    <span class="py-defname">on_msg_type</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L95">
-      
-      (source)
-    </a>
-    <a class="headerLink" href="#on_msg_type" title="fl_controller_framework.controls.pad_control.PadsControl.on_msg_type">
-      
-      
-      ¶
-    </a>
-  </div>
-  <div class="functionBody">
-    
-    <div><p class="undocumented">Undocumented</p></div>
-    
-  </div>
-</div><div class="baseinstancevariable">
-  
-  
   <a name="fl_controller_framework.controls.pad_control.PadsControl.pad_mapping">
     
   </a>
@@ -1671,7 +1586,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">pad_mapping</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="intersphinx-link">dict</a>[<wbr></wbr>int:int]</code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L97">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L103">
       
       (source)
     </a>
@@ -1698,7 +1613,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">pad_state</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L106">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L112">
       
       (source)
     </a>
@@ -1725,7 +1640,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">pads</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="fl_controller_framework.controls.pad_control.PadControl.html" class="internal-link" title="fl_controller_framework.controls.pad_control.PadControl">PadControl</a>]</code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L103">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L109">
       
       (source)
     </a>
@@ -1752,7 +1667,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">playable</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L98">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L104">
       
       (source)
     </a>
@@ -1779,7 +1694,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">registry</span>: <code><a href="fl_controller_framework.core.control_registry.ControlRegistry.html" class="internal-link" title="fl_controller_framework.core.control_registry.ControlRegistry">ControlRegistry</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L92">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L99">
       
       (source)
     </a>
@@ -1806,7 +1721,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">shift</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L102">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L108">
       
       (source)
     </a>
@@ -1833,7 +1748,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">short_press_time</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L105">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L111">
       
       (source)
     </a>
@@ -1851,6 +1766,33 @@ Returns:
 </div><div class="baseinstancevariable">
   
   
+  <a name="fl_controller_framework.controls.pad_control.PadsControl.status">
+    
+  </a>
+  <a name="status">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">status</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L102">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#status" title="fl_controller_framework.controls.pad_control.PadsControl.status">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <code><a href="fl_controller_framework.controls.control.ControlBase.html#status" class="internal-link">fl_controller_framework.controls.control.ControlBase.status</a></code></div>
+    <div><p class="pre">This is the status byte of the midi msg. The default is a midi note state. Do not include the full status byte with the channel bits.</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
   <a name="fl_controller_framework.controls.pad_control.PadsControl.translation">
     
   </a>
@@ -1860,7 +1802,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">translation</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L100">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L106">
       
       (source)
     </a>
@@ -1888,7 +1830,7 @@ Returns:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__generate_pad_control</span><span class="function-signature">(self, pad_id)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L252">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L266">
       
       (source)
     </a>
@@ -1921,7 +1863,7 @@ Returns:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_initialize</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L321">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L334">
       
       (source)
     </a>
@@ -1948,7 +1890,7 @@ Returns:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_on_idle</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L171">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L177">
       
       (source)
     </a>
@@ -1975,7 +1917,7 @@ Returns:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_on_value</span><span class="function-signature">(self, event)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L235">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L241">
       
       (source)
     </a>
@@ -2005,7 +1947,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_pad_state_is_changed</span><span class="function-signature">(self, pad_number, event_name, value)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L124">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L130">
       
       (source)
     </a>
@@ -2040,7 +1982,7 @@ Returns:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_set_hold</span><span class="function-signature">(self, pad_number, hold)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L197">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L203">
       
       (source)
     </a>
@@ -2071,7 +2013,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_set_multi_hold</span><span class="function-signature">(self, pad_number, hold)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L186">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L192">
       
       (source)
     </a>
@@ -2102,7 +2044,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_set_pressed</span><span class="function-signature">(self, pad_number: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>, pressed: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code>, event)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L208">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L214">
       
       (source)
     </a>
@@ -2134,7 +2076,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_set_released</span><span class="function-signature">(self, pad_number: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>, released: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code>, event)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/pad_control.py#L220">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/pad_control.py#L226">
       
       (source)
     </a>
@@ -2165,7 +2107,7 @@ Args:
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.3.3 at 2024-08-02 23:47:53.
+    24.3.3 at 2024-08-04 18:00:21.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

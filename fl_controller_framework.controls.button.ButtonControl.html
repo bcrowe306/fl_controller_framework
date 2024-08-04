@@ -458,47 +458,7 @@
         
 
         
-            <div class="itemName"><code><a href="#off_msg_type" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.off_msg_type">off<wbr></wbr>_msg<wbr></wbr>_type</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
-            <div class="itemName"><code><a href="#off_value" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.off_value">off<wbr></wbr>_value</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
             <div class="itemName"><code><a href="#on_color" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.on_color">on<wbr></wbr>_color</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
-            <div class="itemName"><code><a href="#on_msg_type" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.on_msg_type">on<wbr></wbr>_msg<wbr></wbr>_type</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
-            <div class="itemName"><code><a href="#on_value" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.on_value">on<wbr></wbr>_value</a></code>
             </div>
         
 
@@ -823,7 +783,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">ButtonControl</span>(<a href="fl_controller_framework.controls.control.Control.html" class="internal-link" title="fl_controller_framework.controls.control.Control">Control</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L6" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.__init__">ButtonControl(name, channel, identifier, playable, ...)</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">ButtonControl</span>(<a href="fl_controller_framework.controls.control.Control.html" class="internal-link" title="fl_controller_framework.controls.control.Control">Control</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L6" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.__init__">ButtonControl(name, channel, identifier, playable, ...)</a></code></p>
           <p><a href="classIndex.html#fl_controller_framework.controls.button.ButtonControl">View In Hierarchy</a></p>
         </div>
 
@@ -841,10 +801,6 @@ Args:
     default_color (str, optional): The default color of the button control. Defaults to 'Default'.
     blackout_color (str, optional): The blackout color of the button control. Defaults to 'Off'.
     skin (any, optional): The skin of the button control. Defaults to None.
-    on_value (int, optional): The MIDI value when the button is turned on. Defaults to 127.
-    off_value (int, optional): The MIDI value when the button is turned off. Defaults to 0.
-    on_msg_type (int, optional): The MIDI message type when the button is turned on. Defaults to MIDI_STATUS.NOTE_ON_STATUS.
-    off_msg_type (int, optional): The MIDI message type when the button is turned off. Defaults to MIDI_STATUS.NOTE_OFF_STATUS.
     hold_time (int, optional): The hold time in milliseconds for the button control. Defaults to 10.
 
 Attributes:
@@ -900,27 +856,7 @@ Attributes:
   </tr><tr class="instancevariable">
     
     <td>Instance Variable</td>
-    <td><code><a href="#off_msg_type" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.off_msg_type">off<wbr></wbr>_msg<wbr></wbr>_type</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
-  </tr><tr class="instancevariable">
-    
-    <td>Instance Variable</td>
-    <td><code><a href="#off_value" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.off_value">off<wbr></wbr>_value</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
-  </tr><tr class="instancevariable">
-    
-    <td>Instance Variable</td>
     <td><code><a href="#on_color" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.on_color">on<wbr></wbr>_color</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
-  </tr><tr class="instancevariable">
-    
-    <td>Instance Variable</td>
-    <td><code><a href="#on_msg_type" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.on_msg_type">on<wbr></wbr>_msg<wbr></wbr>_type</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
-  </tr><tr class="instancevariable">
-    
-    <td>Instance Variable</td>
-    <td><code><a href="#on_value" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl.on_value">on<wbr></wbr>_value</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="property">
     
@@ -1198,8 +1134,8 @@ Attributes:
   <div class="functionHeader">
     
     @<a href="https://docs.python.org/3/library/functions.html#staticmethod" class="intersphinx-link">staticmethod</a><br />
-    <span class="py-keyword">def</span> <span class="py-defname">generate_button_events</span><span class="function-signature">(on_msg_status: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>, off_msg_status: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>, event_data: <code><a href="fl_controller_framework.api.fl_class.flMidiMsg.html" class="internal-link" title="fl_controller_framework.api.fl_class.flMidiMsg">flMidiMsg</a></code>) -&gt; <code><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="intersphinx-link">dict</a>[<wbr></wbr>str:any]</code></span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L45">
+    <span class="py-keyword">def</span> <span class="py-defname">generate_button_events</span><span class="function-signature">(status: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>, event_data: <code><a href="fl_controller_framework.api.fl_class.flMidiMsg.html" class="internal-link" title="fl_controller_framework.api.fl_class.flMidiMsg">flMidiMsg</a></code>) -&gt; <code><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="intersphinx-link">dict</a>[<wbr></wbr>str:any]</code></span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L41">
       
       (source)
     </a>
@@ -1233,8 +1169,8 @@ Returns:
   <div class="functionHeader">
     
     
-    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, name, channel, identifier, playable=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, status=<a href="fl_controller_framework.util.midi.MIDI_STATUS.html#NOTE_ON_STATUS" class="internal-link" title="fl_controller_framework.util.midi.MIDI_STATUS.NOTE_ON_STATUS">MIDI_STATUS.NOTE_ON_STATUS</a>, feedback=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, feedback_process=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, default_color=<span class="rst-variable-quote">'</span><span class="rst-variable-string">Default</span><span class="rst-variable-quote">'</span>, blackout_color=<span class="rst-variable-quote">'</span><span class="rst-variable-string">Off</span><span class="rst-variable-quote">'</span>, skin=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, on_value=127, off_value=0, on_msg_type=<a href="fl_controller_framework.util.midi.MIDI_STATUS.html#NOTE_ON_STATUS" class="internal-link" title="fl_controller_framework.util.midi.MIDI_STATUS.NOTE_ON_STATUS">MIDI_STATUS.NOTE_ON_STATUS</a>, off_msg_type=<a href="fl_controller_framework.util.midi.MIDI_STATUS.html#NOTE_OFF_STATUS" class="internal-link" title="fl_controller_framework.util.midi.MIDI_STATUS.NOTE_OFF_STATUS">MIDI_STATUS.NOTE_OFF_STATUS</a>, hold_time=10, *a, **k)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L68">
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, name, channel, identifier, playable=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, status=<a href="fl_controller_framework.util.midi.MIDI_STATUS.html#NOTE_ON_STATUS" class="internal-link" title="fl_controller_framework.util.midi.MIDI_STATUS.NOTE_ON_STATUS">MIDI_STATUS.NOTE_ON_STATUS</a>, feedback=<a href="https://docs.python.org/3/library/constants.html#False" class="intersphinx-link">False</a>, feedback_process=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, default_color=<span class="rst-variable-quote">'</span><span class="rst-variable-string">DEFAULT</span><span class="rst-variable-quote">'</span>, blackout_color=<span class="rst-variable-quote">'</span><span class="rst-variable-string">OFF</span><span class="rst-variable-quote">'</span>, skin=<a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, hold_time=10, *a, **k)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L75">
       
       (source)
     </a>
@@ -1259,10 +1195,6 @@ Args:
     default_color (str, optional): The default color of the button control. Defaults to 'Default'.
     blackout_color (str, optional): The blackout color of the button control. Defaults to 'Off'.
     skin (any, optional): The skin of the button control. Defaults to None.
-    on_value (int, optional): The MIDI value when the button is turned on. Defaults to 127.
-    off_value (int, optional): The MIDI value when the button is turned off. Defaults to 0.
-    on_msg_type (int, optional): The MIDI message type when the button is turned on. Defaults to MIDI_STATUS.NOTE_ON_STATUS.
-    off_msg_type (int, optional): The MIDI message type when the button is turned off. Defaults to MIDI_STATUS.NOTE_OFF_STATUS.
     hold_time (int, optional): The hold time in milliseconds for the button control. Defaults to 10.</p></div>
   </div>
 </div><div class="basemethod">
@@ -1278,7 +1210,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__repr__</span><span class="function-signature">(self) -&gt; <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code></span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L233">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L236">
       
       (source)
     </a>
@@ -1305,7 +1237,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__str__</span><span class="function-signature">(self) -&gt; <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code></span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L230">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L233">
       
       (source)
     </a>
@@ -1332,7 +1264,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">activate</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L156">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L151">
       
       (source)
     </a>
@@ -1361,7 +1293,7 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">default_feedback</span>: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L110">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L105">
       
       (source)
     </a>
@@ -1388,65 +1320,11 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">hold_time</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L115">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L110">
       
       (source)
     </a>
     <a class="headerLink" href="#hold_time" title="fl_controller_framework.controls.button.ButtonControl.hold_time">
-      
-      
-      ¶
-    </a>
-  </div>
-  <div class="functionBody">
-    
-    <div><p class="undocumented">Undocumented</p></div>
-    
-  </div>
-</div><div class="baseinstancevariable">
-  
-  
-  <a name="fl_controller_framework.controls.button.ButtonControl.off_msg_type">
-    
-  </a>
-  <a name="off_msg_type">
-    
-  </a>
-  <div class="functionHeader">
-    
-    <span class="py-defname">off_msg_type</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L108">
-      
-      (source)
-    </a>
-    <a class="headerLink" href="#off_msg_type" title="fl_controller_framework.controls.button.ButtonControl.off_msg_type">
-      
-      
-      ¶
-    </a>
-  </div>
-  <div class="functionBody">
-    
-    <div><p class="undocumented">Undocumented</p></div>
-    
-  </div>
-</div><div class="baseinstancevariable">
-  
-  
-  <a name="fl_controller_framework.controls.button.ButtonControl.off_value">
-    
-  </a>
-  <a name="off_value">
-    
-  </a>
-  <div class="functionHeader">
-    
-    <span class="py-defname">off_value</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L106">
-      
-      (source)
-    </a>
-    <a class="headerLink" href="#off_value" title="fl_controller_framework.controls.button.ButtonControl.off_value">
       
       
       ¶
@@ -1469,65 +1347,11 @@ Returns:
   <div class="functionHeader">
     
     <span class="py-defname">on_color</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L109">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L104">
       
       (source)
     </a>
     <a class="headerLink" href="#on_color" title="fl_controller_framework.controls.button.ButtonControl.on_color">
-      
-      
-      ¶
-    </a>
-  </div>
-  <div class="functionBody">
-    
-    <div><p class="undocumented">Undocumented</p></div>
-    
-  </div>
-</div><div class="baseinstancevariable">
-  
-  
-  <a name="fl_controller_framework.controls.button.ButtonControl.on_msg_type">
-    
-  </a>
-  <a name="on_msg_type">
-    
-  </a>
-  <div class="functionHeader">
-    
-    <span class="py-defname">on_msg_type</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L107">
-      
-      (source)
-    </a>
-    <a class="headerLink" href="#on_msg_type" title="fl_controller_framework.controls.button.ButtonControl.on_msg_type">
-      
-      
-      ¶
-    </a>
-  </div>
-  <div class="functionBody">
-    
-    <div><p class="undocumented">Undocumented</p></div>
-    
-  </div>
-</div><div class="baseinstancevariable">
-  
-  
-  <a name="fl_controller_framework.controls.button.ButtonControl.on_value">
-    
-  </a>
-  <a name="on_value">
-    
-  </a>
-  <div class="functionHeader">
-    
-    <span class="py-defname">on_value</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L105">
-      
-      (source)
-    </a>
-    <a class="headerLink" href="#on_value" title="fl_controller_framework.controls.button.ButtonControl.on_value">
       
       
       ¶
@@ -1550,7 +1374,7 @@ Returns:
   <div class="functionHeader">
     @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
     <span class="py-defname">isHold</span>: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L149">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L144">
       
       (source)
     </a>
@@ -1577,7 +1401,7 @@ Returns:
   <div class="functionHeader">
     @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
     <span class="py-defname">isPressed</span>: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L167">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L162">
       
       (source)
     </a>
@@ -1604,7 +1428,7 @@ Returns:
   <div class="functionHeader">
     @<a href="https://docs.python.org/3/library/functions.html#property" class="intersphinx-link">property</a><br />
     <span class="py-defname">isToggled</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L117">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L112">
       
       (source)
     </a>
@@ -1632,7 +1456,7 @@ Returns:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_on_idle</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L124">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L119">
       
       (source)
     </a>
@@ -1659,7 +1483,7 @@ Returns:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_on_value</span><span class="function-signature">(self, event_data)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L216">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L219">
       
       (source)
     </a>
@@ -1689,7 +1513,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_set_hold</span><span class="function-signature">(self, hold)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L138">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L133">
       
       (source)
     </a>
@@ -1719,7 +1543,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_set_pressed</span><span class="function-signature">(self, value)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L181">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L176">
       
       (source)
     </a>
@@ -1749,7 +1573,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_set_released</span><span class="function-signature">(self, value)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L192">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L187">
       
       (source)
     </a>
@@ -1779,7 +1603,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_set_toggled</span><span class="function-signature">(self)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L174">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L169">
       
       (source)
     </a>
@@ -1806,7 +1630,7 @@ Args:
     
     
     <span class="py-keyword">def</span> <span class="py-defname">_show_default_feedback</span><span class="function-signature">(self, event_data: <code><a href="fl_controller_framework.api.fl_class.flMidiMsg.html" class="internal-link" title="fl_controller_framework.api.fl_class.flMidiMsg">flMidiMsg</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L202">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L197">
       
       (source)
     </a>
@@ -1835,7 +1659,7 @@ Args:
   <div class="functionHeader">
     
     <span class="py-defname">_hold</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L113">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L108">
       
       (source)
     </a>
@@ -1862,7 +1686,7 @@ Args:
   <div class="functionHeader">
     
     <span class="py-defname">_hold_counter</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L114">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L109">
       
       (source)
     </a>
@@ -1889,7 +1713,7 @@ Args:
   <div class="functionHeader">
     
     <span class="py-defname">_pressed</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L112">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L107">
       
       (source)
     </a>
@@ -1916,7 +1740,7 @@ Args:
   <div class="functionHeader">
     
     <span class="py-defname">_released</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L200">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L195">
       
       (source)
     </a>
@@ -1943,7 +1767,7 @@ Args:
   <div class="functionHeader">
     
     <span class="py-defname">_toggled</span> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/36ba45fd51cc1e0d56d290281e46a1db5d6f93ce/controls/button.py#L111">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/2f59a0bc701db5850ec8262865fcac9089abba03/controls/button.py#L106">
       
       (source)
     </a>
@@ -1970,7 +1794,7 @@ Args:
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.3.3 at 2024-08-02 23:47:53.
+    24.3.3 at 2024-08-04 18:00:21.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 
