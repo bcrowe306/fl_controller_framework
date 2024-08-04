@@ -75,9 +75,9 @@ class TransportComponent(Component):
     @Component.listens('transport.getLoopMode')
     def _on_loop_mode(self, loop_mode):
         if loop_mode == 1:
-            self.song_mode_button.set_light('BRIGHT_2')
+            self.song_mode_button.set_light('ON')
         else:
-            self.song_mode_button.set_light('BRIGHT_1')
+            self.song_mode_button.set_light('ON')
     @Component.subscribe('metronome_button', 'toggled')
     def _on_metronome_button_toggled(self, _):
         self.fl.transport.globalTransport(110, 2)
@@ -85,14 +85,14 @@ class TransportComponent(Component):
     @Component.listens('ui.isMetronomeEnabled')
     def _set_metronome_button(self, metronome_enabled):
         if metronome_enabled:
-            self.metronome_button.set_light('BRIGHT_1')
+            self.metronome_button.set_light('ON')
         else:
-            self.metronome_button.set_light('DEFAULT_1')
+            self.metronome_button.set_light('DEFAULT')
 
     @Component.subscribe('shift_button', 'pressed')
     def _on_shift_button_pressed(self, pressed: bool):
         if pressed:
-            self.shift_button.set_light("BRIGHT_1")
+            self.shift_button.set_light("ON")
         else:
             self.shift_button.set_light("DEFAULT")
             
@@ -104,17 +104,17 @@ class TransportComponent(Component):
     def _on_undo_button_pressed(self, pressed):
         if pressed:
             self.fl.general.undoUp()
-            self.undo_button.set_light('BRIGHT_1')
+            self.undo_button.set_light('ON')
         else:
-            self.undo_button.set_light('DEFAULT_1')
+            self.undo_button.set_light('DEFAULT')
 
     @Component.subscribe('tap_tempo_button', 'pressed')
     def _on_tap_tempo_button_pressed(self, pressed):
         if pressed:
             self.fl.transport.globalTransport(106,1)
-            self.tap_tempo_button.set_light('BRIGHT_1')
+            self.tap_tempo_button.set_light('ON')
         else:
-            self.tap_tempo_button.set_light('Default')
+            self.tap_tempo_button.set_light('DEFAULT')
 
     @Component.listens('beat')
     def _on_beat(self, beat):
@@ -166,7 +166,7 @@ class TransportComponent(Component):
     @Component.listens('transport.isRecording')
     def _on_isRecording(self, isRecording):
         if isRecording == 1:
-            self.record_button.set_light('BRIGHT')
+            self.record_button.set_light('ON')
         else:
             self.record_button.set_light('DEFAULT')
 

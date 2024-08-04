@@ -113,7 +113,7 @@ class ComboControl(ControlBase):
 
         elif isinstance(self.primary_control, ButtonControl):
             button_events = ButtonControl.generate_button_events(
-                self.primary_control.on_msg_type, self.primary_control.off_msg_type, event_data)
+                self.primary_control.status, event_data)
             for event in button_events:
                 setattr(self, '_{}'.format(event), button_events[event])
                 self.notify(event, button_events[event])

@@ -119,7 +119,7 @@ class Control(ControlBase):
         """
         try:
             if self._skin:
-                color: SkinColor = getattr(self._skin, value)
+                color: SkinColor = getattr(self._skin, str(value).lstrip().rstrip())
                 color.draw(self, *a, **k)
         except AttributeError:
             print(f'Skin Color: {self._skin}.{value} Not found')

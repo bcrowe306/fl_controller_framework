@@ -18,10 +18,6 @@ class ButtonControl(Control):
         default_color (str, optional): The default color of the button control. Defaults to 'Default'.
         blackout_color (str, optional): The blackout color of the button control. Defaults to 'Off'.
         skin (any, optional): The skin of the button control. Defaults to None.
-        on_value (int, optional): The MIDI value when the button is turned on. Defaults to 127.
-        off_value (int, optional): The MIDI value when the button is turned off. Defaults to 0.
-        on_msg_type (int, optional): The MIDI message type when the button is turned on. Defaults to MIDI_STATUS.NOTE_ON_STATUS.
-        off_msg_type (int, optional): The MIDI message type when the button is turned off. Defaults to MIDI_STATUS.NOTE_OFF_STATUS.
         hold_time (int, optional): The hold time in milliseconds for the button control. Defaults to 10.
 
     Attributes:
@@ -43,7 +39,7 @@ class ButtonControl(Control):
         HOLD: str = 'hold'
         """Button hold event."""
     @staticmethod
-    def generate_button_events(on_msg_status: int, off_msg_status: int, event_data: flMidiMsg) -> dict[str: any]:
+    def generate_button_events(status: int, event_data: flMidiMsg) -> dict[str: any]:
         """
         Generates button events based on the MIDI message status.
 
@@ -57,12 +53,23 @@ class ButtonControl(Control):
 
         """
         events: dict[str: any] = dict()
-        if event_data.status == on_msg_status:
-            events[ButtonControl.Events.TOGGLED] = None
-            events[ButtonControl.Events.PRESSED] = True
-        elif event_data.status == off_msg_status:
-            events[ButtonControl.Events.PRESSED] = False
-            events[ButtonControl.Events.RELEASED] = True
+        # generate button events for notes
+        if status == MIDI_STATUS.NOTE_ON_STATUS:
+            if flMidiMsg.isNoteOn(event_data):
+                events[ButtonControl.Events.TOGGLED] = None
+                events[ButtonControl.Events.PRESSED] = True
+            elif flMidiMsg.isNoteOff(event_data):
+                events[ButtonControl.Events.PRESSED] = False
+                events[ButtonControl.Events.RELEASED] = True
+
+        # generate button events for CC
+        elif status == MIDI_STATUS.CC_STATUS:
+            if event_data.data2 > 0:
+                events[ButtonControl.Events.TOGGLED] = None
+                events[ButtonControl.Events.PRESSED] = True
+            elif event_data.data2 == 0:
+                events[ButtonControl.Events.PRESSED] = False
+                events[ButtonControl.Events.RELEASED] = True
         return events
 
     def __init__(
@@ -71,13 +78,9 @@ class ButtonControl(Control):
         status=MIDI_STATUS.NOTE_ON_STATUS,
         feedback=False, 
         feedback_process=None, 
-        default_color='Default', 
-        blackout_color='Off', 
+        default_color='DEFAULT', 
+        blackout_color='OFF', 
         skin=None,
-        on_value=127, 
-        off_value=0, 
-        on_msg_type=MIDI_STATUS.NOTE_ON_STATUS, 
-        off_msg_type=MIDI_STATUS.NOTE_OFF_STATUS, 
         hold_time=10, *a, **k):
         """
         Initializes a new instance of the ButtonControl class.
@@ -93,19 +96,11 @@ class ButtonControl(Control):
             default_color (str, optional): The default color of the button control. Defaults to 'Default'.
             blackout_color (str, optional): The blackout color of the button control. Defaults to 'Off'.
             skin (any, optional): The skin of the button control. Defaults to None.
-            on_value (int, optional): The MIDI value when the button is turned on. Defaults to 127.
-            off_value (int, optional): The MIDI value when the button is turned off. Defaults to 0.
-            on_msg_type (int, optional): The MIDI message type when the button is turned on. Defaults to MIDI_STATUS.NOTE_ON_STATUS.
-            off_msg_type (int, optional): The MIDI message type when the button is turned off. Defaults to MIDI_STATUS.NOTE_OFF_STATUS.
             hold_time (int, optional): The hold time in milliseconds for the button control. Defaults to 10.
 
         """
         super().__init__(name, channel, identifier, playable, status,
                          feedback, feedback_process, default_color, blackout_color, skin)
-        self.on_value = on_value
-        self.off_value = off_value
-        self.on_msg_type = on_msg_type
-        self.off_msg_type = off_msg_type
         self.on_color = "On"
         self.default_feedback: bool = False
         self._toggled = False
@@ -207,11 +202,19 @@ class ButtonControl(Control):
             event_data (flMidiMsg): The MIDI message data.
 
         """
-        if self.default_feedback and self.getValue('active'):
-            if event_data.status == self.on_msg_type:
-                self.set_light(self.on_color)
-            elif event_data.status == self.off_msg_type:
-                self.set_light(self.default_color)
+        if self.default_feedback:
+            if self.status == MIDI_STATUS.NOTE_ON_STATUS:
+                if flMidiMsg.isNoteOn(event_data):
+                    self.set_light(self.on_color)
+                elif flMidiMsg.isNoteOff(event_data):
+                    self.set_light(self.default_color)
+
+            # generate button events for CC
+            elif self.status == MIDI_STATUS.CC_STATUS:
+                if event_data.data2 > 0:
+                    self.set_light(self.on_color)
+                elif event_data.data2 == 0:
+                    self.set_light(self.default_color)
 
     def _on_value(self, event_data):
         """
@@ -222,7 +225,7 @@ class ButtonControl(Control):
 
         """
         self._show_default_feedback(event_data)
-        events = ButtonControl.generate_button_events(self.on_msg_type, self.off_msg_type, event_data)
+        events = ButtonControl.generate_button_events(self.status, event_data)
         for event in events:
             setattr(self, '_{}'.format(event), events[event])
             self.notify(event, events[event])

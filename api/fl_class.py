@@ -57,3 +57,8 @@ class flMidiMsg:
     def isNoteOn(msg: 'flMidiMsg') -> bool:
         """Check if the midi message is a note on message"""
         return msg.status & 0xf0 == 144 and msg.data2 > 0
+    
+    def isNoteOff(msg: 'flMidiMsg') -> bool:
+        """Check if the midi message is a note off message"""
+        return msg.status & 0xf0 == 128 or (msg.status & 0xf0 == 144 and msg.data2 == 0)
+

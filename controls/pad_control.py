@@ -1,6 +1,7 @@
 from ..util.midi import MIDI_STATUS
 from ..core.event import GlobalEventObject
 from ..core.control_registry import ControlRegistry
+from fl_controller_framework.api.fl_class import flMidiMsg
 from .control import ControlBase
 
 class cc(ControlBase):
@@ -25,8 +26,7 @@ class PadControl(ControlBase):
     number: int,
     color: tuple = None,
     playable=True, 
-    on_msg_type: int = MIDI_STATUS.NOTE_ON_STATUS,
-    off_msg_type: int = MIDI_STATUS.NOTE_OFF_STATUS,
+    status: int = MIDI_STATUS.NOTE_ON_STATUS,
     feedback=None, 
     translation=None
     ):
@@ -40,16 +40,13 @@ class PadControl(ControlBase):
             number (int): The pad number of the control.
             color (tuple, optional): The color of the pad. Defaults to None.
             playable (bool, optional): Whether the pad is playable. Defaults to False.
-            on_msg_type (int, optional): The MIDI status byte for note on messages. Defaults to MIDI_STATUS.NOTE_ON_STATUS.
-            off_msg_type (int, optional): The MIDI status byte for note off messages. Defaults to MIDI_STATUS.NOTE_OFF_STATUS.
             feedback (None, optional): Feedback function for the pad. Defaults to None.
             translation (None, optional): Translation function for the pad. Defaults to None.
         """
-        super(PadControl, self).__init__(name or f'pad_{number}_{identifier}', channel, identifier, on_msg_type, playable)
+        super(PadControl, self).__init__(name or f'pad_{number}_{identifier}', channel, identifier, status, playable)
         self.number: int = number
         self.color: tuple = color
-        self.on_msg_type: int = on_msg_type
-        self.off_msg_type: int = off_msg_type
+        self.status: int = status
         self.feedback = feedback
         self.translation = translation
         self.registry.register_control(self) 
@@ -70,8 +67,19 @@ class PadControl(ControlBase):
             self.draw(self, *a, **k)
 
 class PadsControl(ControlBase):
-    def __init__(self, name: str, channel: int, pad_mapping: dict[int: int], on_msg_type: int = MIDI_STATUS.NOTE_ON_STATUS,
-                 off_msg_type: int = MIDI_STATUS.NOTE_OFF_STATUS, hold_time=10, short_press_time=2, playable=True, feedback=None, translation=None, draw=None):
+    def __init__(
+            self, 
+            name: str, 
+            channel: int, 
+            pad_mapping: dict[int: int], 
+            status: int = MIDI_STATUS.NOTE_ON_STATUS,
+            hold_time=10, 
+            short_press_time=2, 
+            playable=True, 
+            feedback=None, 
+            translation=None, 
+            draw=None
+        ):
         """
         Represents a group of pad controls.
 
@@ -79,8 +87,7 @@ class PadsControl(ControlBase):
             name (str): The name of the control.
             channel (int): The MIDI channel of the control.
             pad_mapping (dict[int: int]): The mapping of pad IDs to pad numbers.
-            on_msg_type (int, optional): The MIDI status byte for note on messages. Defaults to MIDI_STATUS.NOTE_ON_STATUS.
-            off_msg_type (int, optional): The MIDI status byte for note off messages. Defaults to MIDI_STATUS.NOTE_OFF_STATUS.
+            status (int, optional): The MIDI status byte for note on messages. Defaults to MIDI_STATUS.NOTE_ON_STATUS.
             hold_time (int, optional): The hold time in milliseconds. Defaults to 10.
             short_press_time (int, optional): The short press time in milliseconds. Defaults to 2.
             playable (bool, optional): Whether the pads are playable. Defaults to True.
@@ -92,8 +99,7 @@ class PadsControl(ControlBase):
         self.registry: ControlRegistry = ControlRegistry()
         self.name: str = name
         self.channel: int = channel
-        self.on_msg_type: int = on_msg_type
-        self.off_msg_type: int = off_msg_type
+        self.status: int = status
         self.pad_mapping: dict[int: int] = pad_mapping
         self.playable = playable
         self.feedback = feedback
@@ -242,12 +248,20 @@ class PadsControl(ControlBase):
         self.notify('value', event)
         pad_number = self.pad_mapping[event.data1]
         self.notify('pad', pad_number, event)
-        if event.status == (self.on_msg_type + self.channel):
-            self.notify('toggled', pad_number, event)
-            self._set_pressed(pad_number, True, event)
-        elif event.status == (self.off_msg_type + self.channel):
-            self._set_pressed(pad_number, False, event)
-            self._set_released(pad_number, True, event)
+        if self.status == MIDI_STATUS.NOTE_ON_STATUS:
+            if flMidiMsg.isNoteOn(event):
+                self.notify('toggled', pad_number, event)
+                self._set_pressed(pad_number, True, event)
+            elif flMidiMsg.isNoteOff(event):
+                self._set_pressed(pad_number, False, event)
+                self._set_released(pad_number, True, event)
+        elif self.status == MIDI_STATUS.CC_STATUS:
+            if event.data2 > 0:
+                self.notify("toggled", pad_number, event)
+                self._set_pressed(pad_number, True, event)
+            elif event.data2 == 0:
+                self._set_pressed(pad_number, False, event)
+                self._set_released(pad_number, True, event)
 
     def __generate_pad_control(self, pad_id):
         """
@@ -265,8 +279,7 @@ class PadsControl(ControlBase):
             name=pad_name,
             channel=self.channel,
             identifier=pad_id,
-            on_msg_type= self.on_msg_type,
-            off_msg_type=self.off_msg_type,
+            status= self.status,
             number=self.pad_mapping[pad_id],
             playable=self.playable,
             translation=self.translation,
