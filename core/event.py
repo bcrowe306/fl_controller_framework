@@ -216,7 +216,6 @@ Set optional 'indexGlobal' to 1 to return global channel index instead of index 
 
         getActivityLevel: str = "channels.getActivityLevel"
         """Returns activity level for channel at "index"."""
-
     class mixer:
         trackNumber: str = "mixer.trackNumber"
         getTrackInfo: str = "mixer.getTrackInfo"
@@ -368,3 +367,13 @@ Set optional 'indexGlobal' to 1 to return global channel index instead of index 
 
         getPerformanceModeState: str = "playlist.getPerformanceModeState"
         """Returns 1 when the PL is in performance mode, 0 when it's not.	21"""
+    class patterns:
+        patternNumber:str = "patterns.patternNumber"
+        patternCount: str  = "patterns.patternCount"
+        patternMax: str = "patterns.patternMax"
+
+    class transport:
+        isRecording: str = "transport.isRecording"
+        isPlaying: str = "transport.isPlaying"
+        getSongPosHint: str = "transport.getSongPosHint"
+        getLoopMode: str = "transport.getLoopMode"

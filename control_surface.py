@@ -66,7 +66,6 @@ class ControlSurface(Component):
         for event_name in events:
             self.global_event_object.notify_listeners(event_name, event)
         self.global_event_object.notify_listeners('OnRefresh', event)
-        print(f"Refresh event: {event}")
 
     def OnUpdateMeters(self):
         self.global_event_object.notify_listeners('OnUpdateMeters')
