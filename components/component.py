@@ -9,6 +9,7 @@ class Component(StateBase, EventObject):
         A component makes it easy to group controls together and activate and deactivate them when necessary. Using this method you can create components for any functionality.
         When inheriting from this class, create as many controls as necessary as instance objects, use the Component.subscribe(), and Component.listens() decorators to react to those controls and FL events, and program you login in various methods.
     """
+    component_registry = dict()
     @staticmethod
     def listens(event_path: str):
         """A static method the is used to listen to FL studio event and react to them by the function they are decorating. Upon component activation, each function that is decorated with Component.listens() will be registered in the global event object.
@@ -33,12 +34,18 @@ class Component(StateBase, EventObject):
         super(Component, self).__init__(*a, **k)
         self.name: str = name
         """Component Name: Must be unique. The name is used when publishing events from this component."""
+
+        Component.component_registry[name] = self
+
         self.global_event_object: GlobalEventObject = GlobalEventObject()
         """A reference to the global event registry"""
         self.auto_active: bool = auto_active
         "Whether or not to automatically activate this component upon declaration"
         self.fl: _fl = _fl
-        """FL Studio modules object: This object hold a reference to all Fl Studio modules and functions."""
+        """FL Studio modules object: This object hold a reference to all Fl Studio modules and functions."""\
+        
+    def __del__(self):
+        del Component.component_registry[self.name]
 
     def notify(self, event_name: str, *a, **k):
         """Helper method to publish event sourced form this component. The event_id is component_name.event. This is useful for communication between components if you need."""

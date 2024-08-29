@@ -60,3 +60,23 @@ def limit_bounds(new_index: int, length: int) -> int:
     if new_index < 0:
         new_index = 0
     return new_index
+
+
+def scroll_bank(array_list: list, bank_amount: int, bank_index: int = 0) -> list:
+    """
+    Scroll through a list of items in banks of a specified amount.
+
+    :param array_list: List of items to scroll through
+    :param bank_amount: Amount of items per bank
+    :param bank_index: Index of the bank to view
+    :return: List of items in the specified bank
+
+    """
+    total = len(array_list)
+    bank_max = total // bank_amount if total > bank_amount else 1
+    if total % bank_amount != 0 and total > bank_amount:
+        bank_max += 1
+    bank_index = bank_index % bank_max
+    start = bank_index * bank_amount
+    end = start + bank_amount
+    return array_list[start:end]
