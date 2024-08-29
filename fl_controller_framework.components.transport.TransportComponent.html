@@ -419,6 +419,16 @@
         
 
         
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#__del__" class="internal-link" title="fl_controller_framework.components.component.Component.__del__">__del__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#activate" class="internal-link" title="fl_controller_framework.components.component.Component.activate">activate</a></code>
             </div>
         
@@ -781,6 +791,16 @@
         
 
         
+            <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#component_registry" class="internal-link" title="fl_controller_framework.components.component.Component.component_registry">component<wbr></wbr>_registry</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="fl_controller_framework.components.component.Component.html#auto_active" class="internal-link" title="fl_controller_framework.components.component.Component.auto_active">auto<wbr></wbr>_active</a></code>
             </div>
         
@@ -910,7 +930,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">TransportComponent</span>(<a href="fl_controller_framework.components.component.Component.html" class="internal-link" title="fl_controller_framework.components.component.Component">Component</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L4" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.__init__">TransportComponent(play_button, loop_recording, stop_button, record_button, ...)</a></code></p>
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">TransportComponent</span>(<a href="fl_controller_framework.components.component.Component.html" class="internal-link" title="fl_controller_framework.components.component.Component">Component</a>): <a href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L4" class="sourceLink">(source)</a></code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="fl_controller_framework.components.transport.TransportComponent.__init__">TransportComponent(play_button, loop_recording, stop_button, record_button, ...)</a></code></p>
           <p><a href="classIndex.html#fl_controller_framework.components.transport.TransportComponent">View In Hierarchy</a></p>
         </div>
 
@@ -919,7 +939,7 @@
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id34">
+          <table class="children sortable" id="id41">
   
   
   <tr class="method">
@@ -1123,7 +1143,7 @@
             <p class="inheritedFrom">
               Inherited from <code><a href="fl_controller_framework.components.component.Component.html" class="internal-link" title="fl_controller_framework.components.component.Component">Component</a></code>:
             </p>
-            <table class="children sortable" id="id35">
+            <table class="children sortable" id="id42">
   
   
   <tr class="basestaticmethod">
@@ -1136,6 +1156,11 @@
     <td>Static Method</td>
     <td><code><a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">subscribe</a></code></td>
     <td>A static method that is used to subscribe functions to a Control on the Component instance. Upon component activation, each function that is decorated with Component.subscribe will be subscribed using the global event object...</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#__del__" class="internal-link" title="fl_controller_framework.components.component.Component.__del__">__del__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="basemethod">
     
     <td>Method</td>
@@ -1191,6 +1216,11 @@
     <td>Method</td>
     <td><code><a href="fl_controller_framework.components.component.Component.html#subscribe_control" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe_control">subscribe<wbr></wbr>_control</a></code></td>
     <td>Subscribe to a control event. This is useful if you want to subscribe to a control event outside of the Component class. This method will attach the function to the component object if it is not already attached using the "on_control_name_event_name" pattern...</td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><code><a href="fl_controller_framework.components.component.Component.html#component_registry" class="internal-link" title="fl_controller_framework.components.component.Component.component_registry">component<wbr></wbr>_registry</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="baseinstancevariable">
     
     <td>Instance Variable</td>
@@ -1237,7 +1267,7 @@
             <p class="inheritedFrom">
               Inherited from <code><a href="fl_controller_framework.core.state.StateBase.html" class="internal-link" title="fl_controller_framework.core.state.StateBase">StateBase</a></code> (via <code><a href="fl_controller_framework.components.component.Component.html" class="internal-link" title="fl_controller_framework.components.component.Component">Component</a></code>):
             </p>
-            <table class="children sortable" id="id36">
+            <table class="children sortable" id="id43">
   
   
   <tr class="basemethod">
@@ -1261,7 +1291,7 @@
             <p class="inheritedFrom">
               Inherited from <code><a href="fl_controller_framework.core.event.EventObject.html" class="internal-link" title="fl_controller_framework.core.event.EventObject">EventObject</a></code> (via <code><a href="fl_controller_framework.components.component.Component.html" class="internal-link" title="fl_controller_framework.components.component.Component">Component</a></code>, <code><a href="fl_controller_framework.core.state.StateBase.html" class="internal-link" title="fl_controller_framework.core.state.StateBase">StateBase</a></code>):
             </p>
-            <table class="children sortable" id="id37">
+            <table class="children sortable" id="id44">
   
   
   <tr class="basemethod">
@@ -1300,7 +1330,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, play_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, loop_recording: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, stop_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, record_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, overdub_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, seek_forward_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, seek_back_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, locate_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, tap_tempo_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, undo_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, shift_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, undo_shift_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, metronome_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, song_mode_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, quantize_button: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> = <a href="https://docs.python.org/3/library/constants.html#None" class="intersphinx-link">None</a>, beat_color_map: <code><a href="https://docs.python.org/3/library/stdtypes.html#dict" class="intersphinx-link">dict</a>[<wbr></wbr><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a>, <wbr></wbr><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a>]</code> = {<wbr></wbr>0: <span class="rst-variable-quote">'</span><span class="rst-variable-string">OFF</span><span class="rst-variable-quote">'</span>, <wbr></wbr>1: <span class="rst-variable-quote">'</span><span class="rst-variable-string">BRIGHT</span><span class="rst-variable-quote">'</span>, <wbr></wbr>2: <span class="rst-variable-quote">'</span><span class="rst-variable-string">BRIGHT</span><span class="rst-variable-quote">'</span>}, *a, **k)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L6">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L6">
       
       (source)
     </a>
@@ -1327,7 +1357,7 @@
     
     
     <span class="py-keyword">def</span> <span class="py-defname">change_song_position</span><span class="function-signature">(self, direction: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L49">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L49">
       
       (source)
     </a>
@@ -1354,7 +1384,7 @@
     
     @<a href="fl_controller_framework.components.component.Component.html#listens" class="internal-link" title="fl_controller_framework.components.component.Component.listens">Component.listens</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">transport.isPlaying</span><span class="rst-variable-quote">'</span>)<br />
     <span class="py-keyword">def</span> <span class="py-defname">on_isPlaying</span><span class="function-signature">(self, isPlaying)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L173">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L173">
       
       (source)
     </a>
@@ -1380,7 +1410,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">beat_color_map</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L46">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L46">
       
       (source)
     </a>
@@ -1407,7 +1437,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">locate_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L37">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L37">
       
       (source)
     </a>
@@ -1434,7 +1464,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">loop_recording</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L31">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L31">
       
       (source)
     </a>
@@ -1461,7 +1491,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">metronome_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L42">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L42">
       
       (source)
     </a>
@@ -1488,7 +1518,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">overdub_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L34">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L34">
       
       (source)
     </a>
@@ -1515,7 +1545,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">play_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L30">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L30">
       
       (source)
     </a>
@@ -1542,7 +1572,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">quantize_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L44">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L44">
       
       (source)
     </a>
@@ -1569,7 +1599,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">record_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L33">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L33">
       
       (source)
     </a>
@@ -1596,7 +1626,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">seek_back_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L36">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L36">
       
       (source)
     </a>
@@ -1623,7 +1653,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">seek_forward_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L35">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L35">
       
       (source)
     </a>
@@ -1650,7 +1680,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">shift_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L40">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L40">
       
       (source)
     </a>
@@ -1677,7 +1707,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">song_mode_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L43">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L43">
       
       (source)
     </a>
@@ -1704,7 +1734,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">stop_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L32">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L32">
       
       (source)
     </a>
@@ -1731,7 +1761,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">tap_tempo_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L38">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L38">
       
       (source)
     </a>
@@ -1758,7 +1788,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">undo_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L39">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L39">
       
       (source)
     </a>
@@ -1785,7 +1815,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">undo_shift_button</span>: <code><a href="fl_controller_framework.controls.button.ButtonControl.html" class="internal-link" title="fl_controller_framework.controls.button.ButtonControl">ButtonControl</a></code> =
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L41">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L41">
       
       (source)
     </a>
@@ -1813,7 +1843,7 @@
     
     @<a href="fl_controller_framework.components.component.Component.html#listens" class="internal-link" title="fl_controller_framework.components.component.Component.listens">Component.listens</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">beat</span><span class="rst-variable-quote">'</span>)<br />
     <span class="py-keyword">def</span> <span class="py-defname">_on_beat</span><span class="function-signature">(self, beat)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L119">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L119">
       
       (source)
     </a>
@@ -1840,7 +1870,7 @@
     
     @<a href="fl_controller_framework.components.component.Component.html#listens" class="internal-link" title="fl_controller_framework.components.component.Component.listens">Component.listens</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">ui.isLoopRecEnabled</span><span class="rst-variable-quote">'</span>)<br />
     <span class="py-keyword">def</span> <span class="py-defname">_on_isLoopRecEnabled</span><span class="function-signature">(self, isLoopRecEnabled)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L63">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L63">
       
       (source)
     </a>
@@ -1867,7 +1897,7 @@
     
     @<a href="fl_controller_framework.components.component.Component.html#listens" class="internal-link" title="fl_controller_framework.components.component.Component.listens">Component.listens</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">transport.isRecording</span><span class="rst-variable-quote">'</span>)<br />
     <span class="py-keyword">def</span> <span class="py-defname">_on_isRecording</span><span class="function-signature">(self, isRecording)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L166">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L166">
       
       (source)
     </a>
@@ -1894,7 +1924,7 @@
     
     @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">locate_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
     <span class="py-keyword">def</span> <span class="py-defname">_on_locate_button_pressed</span><span class="function-signature">(self, pressed)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L123">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L123">
       
       (source)
     </a>
@@ -1921,7 +1951,7 @@
     
     @<a href="fl_controller_framework.components.component.Component.html#listens" class="internal-link" title="fl_controller_framework.components.component.Component.listens">Component.listens</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">transport.getLoopMode</span><span class="rst-variable-quote">'</span>)<br />
     <span class="py-keyword">def</span> <span class="py-defname">_on_loop_mode</span><span class="function-signature">(self, loop_mode)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L75">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L75">
       
       (source)
     </a>
@@ -1948,7 +1978,7 @@
     
     @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">loop_recording</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">toggled</span><span class="rst-variable-quote">'</span>)<br />
     <span class="py-keyword">def</span> <span class="py-defname">_on_loop_recording_toggled</span><span class="function-signature">(self, _)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L67">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L67">
       
       (source)
     </a>
@@ -1975,7 +2005,7 @@
     
     @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">metronome_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">toggled</span><span class="rst-variable-quote">'</span>)<br />
     <span class="py-keyword">def</span> <span class="py-defname">_on_metronome_button_toggled</span><span class="function-signature">(self, _)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L81">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L81">
       
       (source)
     </a>
@@ -2002,7 +2032,7 @@
     
     @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">overdub_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
     <span class="py-keyword">def</span> <span class="py-defname">_on_overdub_button_pressed</span><span class="function-signature">(self, pressed)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L147">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L147">
       
       (source)
     </a>
@@ -2029,7 +2059,7 @@
     
     @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">play_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
     <span class="py-keyword">def</span> <span class="py-defname">_on_play_pressed</span><span class="function-signature">(self, pressed)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L152">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L152">
       
       (source)
     </a>
@@ -2056,7 +2086,7 @@
     
     @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">quantize_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
     <span class="py-keyword">def</span> <span class="py-defname">_on_quantize_button_pressed</span><span class="function-signature">(self, pressed)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L55">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L55">
       
       (source)
     </a>
@@ -2083,7 +2113,7 @@
     
     @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">record_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
     <span class="py-keyword">def</span> <span class="py-defname">_on_record_button_pressed</span><span class="function-signature">(self, pressed)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L161">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L161">
       
       (source)
     </a>
@@ -2110,7 +2140,7 @@
     
     @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">seek_back_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
     <span class="py-keyword">def</span> <span class="py-defname">_on_seek_back_button_pressed</span><span class="function-signature">(self, pressed)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L139">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L139">
       
       (source)
     </a>
@@ -2137,7 +2167,7 @@
     
     @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">seek_forward_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
     <span class="py-keyword">def</span> <span class="py-defname">_on_seek_forward_button_pressed</span><span class="function-signature">(self, pressed)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L131">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L131">
       
       (source)
     </a>
@@ -2164,7 +2194,7 @@
     
     @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">shift_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
     <span class="py-keyword">def</span> <span class="py-defname">_on_shift_button_pressed</span><span class="function-signature">(self, pressed: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code>)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L92">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L92">
       
       (source)
     </a>
@@ -2191,7 +2221,7 @@
     
     @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">song_mode_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">toggled</span><span class="rst-variable-quote">'</span>)<br />
     <span class="py-keyword">def</span> <span class="py-defname">_on_song_mode_button_toggled</span><span class="function-signature">(self, _)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L71">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L71">
       
       (source)
     </a>
@@ -2218,7 +2248,7 @@
     
     @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">stop_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
     <span class="py-keyword">def</span> <span class="py-defname">_on_stop_pressed</span><span class="function-signature">(self, _)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L157">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L157">
       
       (source)
     </a>
@@ -2245,7 +2275,7 @@
     
     @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">tap_tempo_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
     <span class="py-keyword">def</span> <span class="py-defname">_on_tap_tempo_button_pressed</span><span class="function-signature">(self, pressed)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L111">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L111">
       
       (source)
     </a>
@@ -2272,7 +2302,7 @@
     
     @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">undo_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
     <span class="py-keyword">def</span> <span class="py-defname">_on_undo_button_pressed</span><span class="function-signature">(self, pressed)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L103">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L103">
       
       (source)
     </a>
@@ -2299,7 +2329,7 @@
     
     @<a href="fl_controller_framework.components.component.Component.html#subscribe" class="internal-link" title="fl_controller_framework.components.component.Component.subscribe">Component.subscribe</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">undo_shift_button</span><span class="rst-variable-quote">'</span>, <wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">pressed</span><span class="rst-variable-quote">'</span>)<br />
     <span class="py-keyword">def</span> <span class="py-defname">_on_undo_shift_button_pressed</span><span class="function-signature">(self, pressed)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L99">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L99">
       
       (source)
     </a>
@@ -2326,7 +2356,7 @@
     
     @<a href="fl_controller_framework.components.component.Component.html#listens" class="internal-link" title="fl_controller_framework.components.component.Component.listens">Component.listens</a>(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">ui.isMetronomeEnabled</span><span class="rst-variable-quote">'</span>)<br />
     <span class="py-keyword">def</span> <span class="py-defname">_set_metronome_button</span><span class="function-signature">(self, metronome_enabled)</span>:
-    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/dfaebf757a885159e15c83f7733e0196a38aec39/components/transport.py#L85">
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/components/transport.py#L85">
       
       (source)
     </a>
@@ -2352,7 +2382,7 @@
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    24.3.3 at 2024-08-06 15:23:34.
+    24.3.3 at 2024-08-29 20:23:48.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

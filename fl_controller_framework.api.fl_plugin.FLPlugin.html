@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>fl_controller_framework.api.fl_plugin.FLPlugin</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a> <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="fl_controller_framework.api.fl_plugin.FLPlugin.html" class="internal-link" title="This class"><wbr></wbr>FLPlugin</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#from_selected_channel" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.from_selected_channel">from<wbr></wbr>_selected<wbr></wbr>_channel</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_plugin" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.get_plugin">get<wbr></wbr>_plugin</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_plugin_name_for_channel" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.get_plugin_name_for_channel">get<wbr></wbr>_plugin<wbr></wbr>_name<wbr></wbr>_for<wbr></wbr>_channel</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__repr__" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.__repr__">__repr__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__str__" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.__str__">__str__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_parameter_value" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.get_parameter_value">get<wbr></wbr>_parameter<wbr></wbr>_value</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_parameter_value_as_string" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.get_parameter_value_as_string">get<wbr></wbr>_parameter<wbr></wbr>_value<wbr></wbr>_as<wbr></wbr>_string</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_selected_plugin_position" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.get_selected_plugin_position">get<wbr></wbr>_selected<wbr></wbr>_plugin<wbr></wbr>_position</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set_parameter_value" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.set_parameter_value">set<wbr></wbr>_parameter<wbr></wbr>_value</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set_sampler_parameter_value" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.set_sampler_parameter_value">set<wbr></wbr>_sampler<wbr></wbr>_parameter<wbr></wbr>_value</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#update" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.update">update</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#update_from_selected" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.update_from_selected">update<wbr></wbr>_from<wbr></wbr>_selected</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#update_params" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.update_params">update<wbr></wbr>_params</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#is_valid" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.is_valid">is<wbr></wbr>_valid</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#channel_index" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.channel_index">channel<wbr></wbr>_index</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#name" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.name">name</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#parameters" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.parameters">parameters</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#slot_index" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.slot_index">slot<wbr></wbr>_index</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="fl_controller_framework.api.fl_plugin.html" class="internal-link" title="The parent of this class">fl<wbr></wbr>_plugin</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.api.fl_plugin.FLPlugin.html" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin"><wbr></wbr>FLPlugin</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.api.fl_plugin.html#make_discrete_regions_from_midpoints" class="internal-link" title="fl_controller_framework.api.fl_plugin.make_discrete_regions_from_midpoints">make<wbr></wbr>_discrete<wbr></wbr>_regions<wbr></wbr>_from<wbr></wbr>_midpoints</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.api.fl_plugin.html#make_equal_discrete_regions" class="internal-link" title="fl_controller_framework.api.fl_plugin.make_equal_discrete_regions">make<wbr></wbr>_equal<wbr></wbr>_discrete<wbr></wbr>_regions</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.api.fl_plugin.html#native_parameter_regions" class="internal-link" title="fl_controller_framework.api.fl_plugin.native_parameter_regions">native<wbr></wbr>_parameter<wbr></wbr>_regions</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="fl_controller_framework.api.fl_plugin.html#native_plugin_parameter_mappings" class="internal-link" title="fl_controller_framework.api.fl_plugin.native_plugin_parameter_mappings">native<wbr></wbr>_plugin<wbr></wbr>_parameter<wbr></wbr>_mappings</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">fl_controller_framework</a></code><wbr></wbr>.<code><a href="fl_controller_framework.api.html" class="internal-link" title="fl_controller_framework.api">api</a></code><wbr></wbr>.<code><a href="fl_controller_framework.api.fl_plugin.html" class="internal-link" title="fl_controller_framework.api.fl_plugin">fl_plugin</a></code><wbr></wbr>.<code><a href="fl_controller_framework.api.fl_plugin.FLPlugin.html" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin">FLPlugin</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">FLPlugin</span>: <a href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/api/fl_plugin.py#L898" class="sourceLink">(source)</a></code></p><p>Constructors: <code><a href="#from_selected_channel" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.from_selected_channel">FLPlugin.from_selected_channel(slot_index)</a></code>, <code><a href="#get_plugin" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.get_plugin">FLPlugin.get_plugin(channel_index, slot_index)</a></code></p>
+          <p><a href="classIndex.html#fl_controller_framework.api.fl_plugin.FLPlugin">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="undocumented">Undocumented</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id21">
+  
+  
+  <tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#from_selected_channel" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.from_selected_channel">from<wbr></wbr>_selected<wbr></wbr>_channel</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#get_plugin" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.get_plugin">get<wbr></wbr>_plugin</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#get_plugin_name_for_channel" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.get_plugin_name_for_channel">get<wbr></wbr>_plugin<wbr></wbr>_name<wbr></wbr>_for<wbr></wbr>_channel</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__repr__" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.__repr__">__repr__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__str__" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.__str__">__str__</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get_parameter_value" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.get_parameter_value">get<wbr></wbr>_parameter<wbr></wbr>_value</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get_parameter_value_as_string" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.get_parameter_value_as_string">get<wbr></wbr>_parameter<wbr></wbr>_value<wbr></wbr>_as<wbr></wbr>_string</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get_selected_plugin_position" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.get_selected_plugin_position">get<wbr></wbr>_selected<wbr></wbr>_plugin<wbr></wbr>_position</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_parameter_value" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.set_parameter_value">set<wbr></wbr>_parameter<wbr></wbr>_value</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set_sampler_parameter_value" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.set_sampler_parameter_value">set<wbr></wbr>_sampler<wbr></wbr>_parameter<wbr></wbr>_value</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#update" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.update">update</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#update_from_selected" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.update_from_selected">update<wbr></wbr>_from<wbr></wbr>_selected</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#update_params" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.update_params">update<wbr></wbr>_params</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><code><a href="#is_valid" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.is_valid">is<wbr></wbr>_valid</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#channel_index" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.channel_index">channel<wbr></wbr>_index</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#name" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.name">name</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#parameters" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.parameters">parameters</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#slot_index" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin.slot_index">slot<wbr></wbr>_index</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basestaticmethod">
+  
+  
+  <a name="fl_controller_framework.api.fl_plugin.FLPlugin.from_selected_channel">
+    
+  </a>
+  <a name="from_selected_channel">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="https://docs.python.org/3/library/functions.html#staticmethod" class="intersphinx-link">staticmethod</a><br />
+    <span class="py-keyword">def</span> <span class="py-defname">from_selected_channel</span><span class="function-signature">(slot_index: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> = -1) -&gt; <code><a href="fl_controller_framework.api.fl_plugin.FLPlugin.html" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin">FLPlugin</a></code></span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/api/fl_plugin.py#L906">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#from_selected_channel" title="fl_controller_framework.api.fl_plugin.FLPlugin.from_selected_channel">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="fl_controller_framework.api.fl_plugin.FLPlugin.get_plugin">
+    
+  </a>
+  <a name="get_plugin">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="https://docs.python.org/3/library/functions.html#staticmethod" class="intersphinx-link">staticmethod</a><br />
+    <span class="py-keyword">def</span> <span class="py-defname">get_plugin</span><span class="function-signature">(channel_index: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>, slot_index: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> = -1) -&gt; <code><a href="fl_controller_framework.api.fl_plugin.FLPlugin.html" class="internal-link" title="fl_controller_framework.api.fl_plugin.FLPlugin">FLPlugin</a></code></span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/api/fl_plugin.py#L911">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#get_plugin" title="fl_controller_framework.api.fl_plugin.FLPlugin.get_plugin">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="fl_controller_framework.api.fl_plugin.FLPlugin.get_plugin_name_for_channel">
+    
+  </a>
+  <a name="get_plugin_name_for_channel">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @<a href="https://docs.python.org/3/library/functions.html#staticmethod" class="intersphinx-link">staticmethod</a><br />
+    <span class="py-keyword">def</span> <span class="py-defname">get_plugin_name_for_channel</span><span class="function-signature">(group_channel) -&gt; <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code></span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/api/fl_plugin.py#L940">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#get_plugin_name_for_channel" title="fl_controller_framework.api.fl_plugin.FLPlugin.get_plugin_name_for_channel">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.api.fl_plugin.FLPlugin.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__repr__</span><span class="function-signature">(self) -&gt; <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code></span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/api/fl_plugin.py#L957">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#__repr__" title="fl_controller_framework.api.fl_plugin.FLPlugin.__repr__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.api.fl_plugin.FLPlugin.__str__">
+    
+  </a>
+  <a name="__str__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__str__</span><span class="function-signature">(self) -&gt; <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code></span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/api/fl_plugin.py#L954">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#__str__" title="fl_controller_framework.api.fl_plugin.FLPlugin.__str__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.api.fl_plugin.FLPlugin.get_parameter_value">
+    
+  </a>
+  <a name="get_parameter_value">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_parameter_value</span><span class="function-signature">(self, parameter: <code><a href="fl_controller_framework.api.fl_parameters.PluginParameter.html" class="internal-link" title="fl_controller_framework.api.fl_parameters.PluginParameter">PluginParameter</a></code>) -&gt; <code><a href="https://docs.python.org/3/library/functions.html#float" class="intersphinx-link">float</a></code></span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/api/fl_plugin.py#L960">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#get_parameter_value" title="fl_controller_framework.api.fl_plugin.FLPlugin.get_parameter_value">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.api.fl_plugin.FLPlugin.get_parameter_value_as_string">
+    
+  </a>
+  <a name="get_parameter_value_as_string">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_parameter_value_as_string</span><span class="function-signature">(self, parameter_index: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>) -&gt; <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code></span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/api/fl_plugin.py#L972">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#get_parameter_value_as_string" title="fl_controller_framework.api.fl_plugin.FLPlugin.get_parameter_value_as_string">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.api.fl_plugin.FLPlugin.get_selected_plugin_position">
+    
+  </a>
+  <a name="get_selected_plugin_position">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_selected_plugin_position</span><span class="function-signature">(self)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/api/fl_plugin.py#L977">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#get_selected_plugin_position" title="fl_controller_framework.api.fl_plugin.FLPlugin.get_selected_plugin_position">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.api.fl_plugin.FLPlugin.set_parameter_value">
+    
+  </a>
+  <a name="set_parameter_value">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_parameter_value</span><span class="function-signature">(self, parameter: <code><a href="fl_controller_framework.api.fl_parameters.PluginParameter.html" class="internal-link" title="fl_controller_framework.api.fl_parameters.PluginParameter">PluginParameter</a></code>, value: <code><a href="https://docs.python.org/3/library/functions.html#float" class="intersphinx-link">float</a></code>)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/api/fl_plugin.py#L992">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#set_parameter_value" title="fl_controller_framework.api.fl_plugin.FLPlugin.set_parameter_value">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.api.fl_plugin.FLPlugin.set_sampler_parameter_value">
+    
+  </a>
+  <a name="set_sampler_parameter_value">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set_sampler_parameter_value</span><span class="function-signature">(self, parameter, value)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/api/fl_plugin.py#L984">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#set_sampler_parameter_value" title="fl_controller_framework.api.fl_plugin.FLPlugin.set_sampler_parameter_value">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.api.fl_plugin.FLPlugin.update">
+    
+  </a>
+  <a name="update">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">update</span><span class="function-signature">(self, channel_index: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code>, slot_index: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> = -1)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/api/fl_plugin.py#L925">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#update" title="fl_controller_framework.api.fl_plugin.FLPlugin.update">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.api.fl_plugin.FLPlugin.update_from_selected">
+    
+  </a>
+  <a name="update_from_selected">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">update_from_selected</span><span class="function-signature">(self)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/api/fl_plugin.py#L933">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#update_from_selected" title="fl_controller_framework.api.fl_plugin.FLPlugin.update_from_selected">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="fl_controller_framework.api.fl_plugin.FLPlugin.update_params">
+    
+  </a>
+  <a name="update_params">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">update_params</span><span class="function-signature">(self)</span>:
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/api/fl_plugin.py#L936">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#update_params" title="fl_controller_framework.api.fl_plugin.FLPlugin.update_params">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  
+  <a name="fl_controller_framework.api.fl_plugin.FLPlugin.is_valid">
+    
+  </a>
+  <a name="is_valid">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">is_valid</span>: <code><a href="https://docs.python.org/3/library/functions.html#bool" class="intersphinx-link">bool</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/api/fl_plugin.py#L900">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#is_valid" title="fl_controller_framework.api.fl_plugin.FLPlugin.is_valid">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.api.fl_plugin.FLPlugin.channel_index">
+    
+  </a>
+  <a name="channel_index">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">channel_index</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/api/fl_plugin.py#L901">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#channel_index" title="fl_controller_framework.api.fl_plugin.FLPlugin.channel_index">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.api.fl_plugin.FLPlugin.name">
+    
+  </a>
+  <a name="name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">name</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#str" class="intersphinx-link">str</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/api/fl_plugin.py#L903">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#name" title="fl_controller_framework.api.fl_plugin.FLPlugin.name">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.api.fl_plugin.FLPlugin.parameters">
+    
+  </a>
+  <a name="parameters">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">parameters</span>: <code><a href="https://docs.python.org/3/library/stdtypes.html#list" class="intersphinx-link">list</a>[<wbr></wbr><a href="fl_controller_framework.api.fl_parameters.PluginParameter.html" class="internal-link" title="fl_controller_framework.api.fl_parameters.PluginParameter">PluginParameter</a>]</code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/api/fl_plugin.py#L904">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#parameters" title="fl_controller_framework.api.fl_plugin.FLPlugin.parameters">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="fl_controller_framework.api.fl_plugin.FLPlugin.slot_index">
+    
+  </a>
+  <a name="slot_index">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">slot_index</span>: <code><a href="https://docs.python.org/3/library/functions.html#int" class="intersphinx-link">int</a></code> =
+    <a class="sourceLink" href="https://github.com/bcrowe306/fl_controller_framework/tree/f2883164e8c18c04956dff868a26ebcf5a636068/api/fl_plugin.py#L902">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#slot_index" title="fl_controller_framework.api.fl_plugin.FLPlugin.slot_index">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for <a href="https://github.com/bcrowe306/fl_controller_framework" class="projecthome">FruityFramework</a>,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-08-29 20:23:48.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>
